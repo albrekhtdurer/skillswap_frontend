@@ -10,7 +10,12 @@
     "description": "Обожаю превращать хаос в структуру. Когда все процессы отлажены - это настоящая магия!",
     "avatarUrl": "https://img.freepik.com/free-photo/closeup-shot-fashionable-handsome-male-blue-classic-shirt_181624-29628.jpg?t=st=1764349495~exp=1764353095~hmac=134058621e3c1446f340b5d65521749a48420f013db0837d188f2d472c75d1c1&w=1480",
     "skillCanTeach": ["Проектное управление"],
-    "subcategoriesWantToLearn": ["Английский", "Китайский", "Маркетинг и реклама", "Коучинг"],
+    "subcategoriesWantToLearn": [
+      "Английский",
+      "Китайский",
+      "Маркетинг и реклама",
+      "Коучинг"
+    ],
     "gender": "male",
     "images": [
       "https://vhs-stuttgart.de/fileadmin/_processed_/c/8/csm_Beruf_copy_NDABCREATIVITY__AdobeStock_67b03f67c0.jpeg",
@@ -59,7 +64,12 @@
     "description": "Вдохновляюсь историями брендов-легенд. Маркетинг для меня - искусство рассказывать правильные истории.",
     "avatarUrl": "https://img.freepik.com/free-photo/vertical-shot-young-handsome-guy-autumn-park_181624-51688.jpg?t=st=1764349565~exp=1764353165~hmac=8111be9f7876b1f2a791fca1c61138c1098660f813acf717eeb287b2fda20882&w=1060",
     "skillCanTeach": ["Маркетинг и реклама"],
-    "subcategoriesWantToLearn": ["Немецкий", "Фотография", "Скорочтение", "Физические тренировки"],
+    "subcategoriesWantToLearn": [
+      "Немецкий",
+      "Фотография",
+      "Скорочтение",
+      "Физические тренировки"
+    ],
     "gender": "male",
     "images": [
       "https://scpk.pro/media/img/courses/i_24.webp",
@@ -108,7 +118,12 @@
     "description": "Обожаю момент, когда переговоры превращаются в взаимовыгодное партнерство. Это как шахматная партия!",
     "avatarUrl": "https://img.freepik.com/free-photo/front-view-smiley-man-outdoors-city_23-2148955558.jpg?t=st=1764349724~exp=1764353324~hmac=b7fdf7b5f4ab4a524cc8f52a7e47671fde8eb707284255c14364408e4f3d6e1f&w=1060",
     "skillCanTeach": ["Продажи и переговоры"],
-    "subcategoriesWantToLearn": ["Японский", "Видеомонтаж", "Навыки обучения", "Осознанность"],
+    "subcategoriesWantToLearn": [
+      "Японский",
+      "Видеомонтаж",
+      "Навыки обучения",
+      "Осознанность"
+    ],
     "gender": "male",
     "images": [
       "https://vhs-stuttgart.de/fileadmin/_processed_/c/8/csm_Beruf_copy_NDABCREATIVITY__AdobeStock_67b03f67c0.jpeg",
@@ -267,7 +282,12 @@
     "description": "Немецкий для меня - это точность и порядок. Люблю, когда каждое слово стоит на своем месте.",
     "avatarUrl": "https://img.freepik.com/free-photo/vertical-shot-caucasian-male-with-red-t-shirt_181624-52255.jpg?t=st=1764349884~exp=1764353484~hmac=a99a6bb87686fbd0270a20cae16fe38d1a49af0940c71ba1f34c5dbb28a1daae&w=1060",
     "skillCanTeach": ["Немецкий"],
-    "subcategoriesWantToLearn": ["Маркетинг и реклама", "Видеомонтаж", "Осознанность", "Ремонт"],
+    "subcategoriesWantToLearn": [
+      "Маркетинг и реклама",
+      "Видеомонтаж",
+      "Осознанность",
+      "Ремонт"
+    ],
     "gender": "male",
     "images": [
       "https://static.tildacdn.one/tild3032-3461-4165-b661-656464323064/yabanci.jpeg",
@@ -478,7 +498,12 @@
     "description": "Ремонт для меня - это творчество. Люблю, когда из старого и невзрачного рождается новое и красивое!",
     "avatarUrl": "https://img.freepik.com/free-photo/smiley-man-relaxing-outdoors_23-2148739334.jpg?t=st=1764350059~exp=1764353659~hmac=ae1852693f53e74971baa253ce928dcde68466bef8b50f94747318fa1431af6d&w=1060",
     "skillCanTeach": ["Ремонт"],
-    "subcategoriesWantToLearn": ["Японский", "Маркетинг и реклама", "Арт-терапия", "Осознанность"],
+    "subcategoriesWantToLearn": [
+      "Японский",
+      "Маркетинг и реклама",
+      "Арт-терапия",
+      "Осознанность"
+    ],
     "gender": "male",
     "images": [
       "https://image.cdn2.seaart.me/2024-02-20/cnadq8le878c73d9mjeg/50e9d15c61f3d620bb3c10687bf3eded50dc2954_high.webp",
@@ -662,7 +687,12 @@
     "description": "Коучинг для меня - это искусство задавать правильные вопросы. Люблю, когда люди находят свои ответы!",
     "avatarUrl": "https://img.freepik.com/free-photo/beautiful-young-woman-portrait-black-background_158595-1652.jpg?t=st=1764351137~exp=1764354737~hmac=114d0e70c4af6da63c3eb2e233b3d760d488fe3875f910c545905344388d6c82&w=1060",
     "skillCanTeach": ["Коучинг"],
-    "subcategoriesWantToLearn": ["Немецкий", "Музыка и звук", "Декор и DIY", "Осознанность"],
+    "subcategoriesWantToLearn": [
+      "Немецкий",
+      "Музыка и звук",
+      "Декор и DIY",
+      "Осознанность"
+    ],
     "gender": "female",
     "images": [
       "https://www.cgd13.fr/media/miniatures/formation_.png",
@@ -684,7 +714,12 @@
     "description": "Управление командой для меня - это дирижирование оркестром талантов. Люблю, когда команда синергетит!",
     "avatarUrl": "https://img.freepik.com/free-photo/man-therapy-holding-coffee-cup_23-2148913050.jpg?t=st=1764350219~exp=1764353819~hmac=11e2a649048304dcf02c03e8185416ab5d1eb9337a12ca00eb47073f78bf4353&w=1060",
     "skillCanTeach": ["Управление командой"],
-    "subcategoriesWantToLearn": ["Японский", "Фотография", "Домашние финансы", "Йога и медитация"],
+    "subcategoriesWantToLearn": [
+      "Японский",
+      "Фотография",
+      "Домашние финансы",
+      "Йога и медитация"
+    ],
     "gender": "male",
     "images": [
       "https://vhs-stuttgart.de/fileadmin/_processed_/c/8/csm_Beruf_copy_NDABCREATIVITY__AdobeStock_67b03f67c0.jpeg",
@@ -841,7 +876,12 @@
     "description": "Китайский для меня - это головоломка, где каждый иероглиф рассказывает свою историю. 很有意思!",
     "avatarUrl": "https://img.freepik.com/free-photo/portrait-young-stylish-man-model-sitting-leg-leg-thoughtful_158595-2949.jpg?t=st=1764350375~exp=1764353975~hmac=fa917813986ac5e360afd8dd65db1a9f9240b42e1fd8a5b1e3fcb4f78e441be2&w=1060",
     "skillCanTeach": ["Китайский"],
-    "subcategoriesWantToLearn": ["Управление командой", "Фотография", "Осознанность", "Ремонт"],
+    "subcategoriesWantToLearn": [
+      "Управление командой",
+      "Фотография",
+      "Осознанность",
+      "Ремонт"
+    ],
     "gender": "male",
     "images": [
       "https://static.tildacdn.one/tild3032-3461-4165-b661-656464323064/yabanci.jpeg",
@@ -890,7 +930,12 @@
     "description": "Личный бренд для меня - это аутентичность. Люблю, когда человек находит свой уникальный голос в digital!",
     "avatarUrl": "https://img.freepik.com/free-photo/portrait-male-model-wearing-reading-glasses_23-2148760664.jpg?t=st=1764350421~exp=1764354021~hmac=deb497b9f559f882e65b70f731091f5c0424f6782866be7cddc706c457fb76f3&w=1060",
     "skillCanTeach": ["Личный бренд"],
-    "subcategoriesWantToLearn": ["Японский", "Музыка и звук", "Домашние финансы", "Питание и ЗОЖ"],
+    "subcategoriesWantToLearn": [
+      "Японский",
+      "Музыка и звук",
+      "Домашние финансы",
+      "Питание и ЗОЖ"
+    ],
     "gender": "male",
     "images": [
       "https://vhs-stuttgart.de/fileadmin/_processed_/c/8/csm_Beruf_copy_NDABCREATIVITY__AdobeStock_67b03f67c0.jpeg",
@@ -939,7 +984,12 @@
     "description": "Управление проектами для меня - это пазл ресурсов и сроков. Люблю, когда все части складываются в идеальную картину!",
     "avatarUrl": "https://img.freepik.com/free-photo/portrait-handsome-man-sitting-sofa_329181-2737.jpg?t=st=1764350466~exp=1764354066~hmac=16dd05b9f9612abeb30d6f47de690a763958fa1b738d07faa5d9aefa621f6ec9&w=1060",
     "skillCanTeach": ["Проектное управление"],
-    "subcategoriesWantToLearn": ["Немецкий", "Видеомонтаж", "Коучинг", "Баланс жизни и работы"],
+    "subcategoriesWantToLearn": [
+      "Немецкий",
+      "Видеомонтаж",
+      "Коучинг",
+      "Баланс жизни и работы"
+    ],
     "gender": "male",
     "images": [
       "https://vhs-stuttgart.de/fileadmin/_processed_/c/8/csm_Beruf_copy_NDABCREATIVITY__AdobeStock_67b03f67c0.jpeg",
@@ -1069,7 +1119,12 @@
     "description": "Письмо для меня - это полет мысли на бумаге. Люблю, когда слова складываются в захватывающие истории!",
     "avatarUrl": "https://img.freepik.com/free-photo/cute-young-woman-casual-wear-outdoor_624325-1123.jpg?t=st=1764350800~exp=1764354400~hmac=4b1e158a167a9d1172d2c4aa10945a32f82ccd804b92be8513a6bfae4de1fc83&w=1060",
     "skillCanTeach": ["Креативное письмо"],
-    "subcategoriesWantToLearn": ["Немецкий", "Декор и DIY", "Коучинг", "Питание и ЗОЖ"],
+    "subcategoriesWantToLearn": [
+      "Немецкий",
+      "Декор и DIY",
+      "Коучинг",
+      "Питание и ЗОЖ"
+    ],
     "gender": "female",
     "images": [
       "https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_659d5d53aa8dfa366d5efca2_659d5e719c148f78a1586f1e/scale_1200",
