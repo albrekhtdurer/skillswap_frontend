@@ -1,7 +1,7 @@
-import cities from "../public/db/cities.json";
-import skills from "../public/db/skills.json";
+import cities from "../../public/db/cities.json";
+import skills from "../../public/db/categories.json";
 
-import type { City, SkillCategory } from "./types";
+import type { City, SkillCategory } from "../entities/types";
 
 const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms)); //для иммитации реального запроса
 
