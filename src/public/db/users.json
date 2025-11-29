@@ -12,7 +12,13 @@
     "teach": ["Проектное управление"],
     "learn": ["Английский", "Китайский", "Маркетинг и реклама", "Коучинг"],
     "gender": "male",
-    "skillsImage": ["https://vhs-stuttgart.de/fileadmin/_processed_/c/8/csm_Beruf_copy_NDABCREATIVITY__AdobeStock_67b03f67c0.jpeg", "https://sun6-23.userapi.com/s/v1/if1/PWH2hrudcjYil3kIR6BSXuXiGtOB-fvgFl1uyftcBYrmaUZkCny703C1ki8QCiA9FKk84RD2.jpg?size=691x691&quality=96&crop=154,0,691,691&ava=1", "https://mittalblowers.com/wp-content/uploads/2025/03/career-1.webp", "https://i.pinimg.com/originals/6a/e4/70/6ae47003679a20512bc46fb88e4ee288.jpg", "https://sun6-20.userapi.com/s/v1/ig2/xDz_ZMkcr8iPWTjglREpbMUBCFSi2lopLDx3dsmoRICsH2S-7ayjPOtMjmD1Y2qhyAx-Q6HTYulbAp2GiMhjmSF-.jpg?size=1129x1131&quality=95&crop=159,198,1129,1131&ava=1"],
+    "skillsImage": [
+      "https://vhs-stuttgart.de/fileadmin/_processed_/c/8/csm_Beruf_copy_NDABCREATIVITY__AdobeStock_67b03f67c0.jpeg",
+      "https://sun6-23.userapi.com/s/v1/if1/PWH2hrudcjYil3kIR6BSXuXiGtOB-fvgFl1uyftcBYrmaUZkCny703C1ki8QCiA9FKk84RD2.jpg?size=691x691&quality=96&crop=154,0,691,691&ava=1",
+      "https://mittalblowers.com/wp-content/uploads/2025/03/career-1.webp",
+      "https://i.pinimg.com/originals/6a/e4/70/6ae47003679a20512bc46fb88e4ee288.jpg",
+      "https://sun6-20.userapi.com/s/v1/ig2/xDz_ZMkcr8iPWTjglREpbMUBCFSi2lopLDx3dsmoRICsH2S-7ayjPOtMjmD1Y2qhyAx-Q6HTYulbAp2GiMhjmSF-.jpg?size=1129x1131&quality=95&crop=159,198,1129,1131&ava=1"
+    ],
     "fullDescription": "Помогу освоить инструменты проектного управления: от постановки целей до контроля исполнения. Научу создавать четкие дорожные карты, распределять ресурсы и управлять рисками. Вместе разберем кейсы из реальной практики и создадим работающую систему управления вашими проектами."
   },
   {
@@ -26,9 +32,20 @@
     "description": "Живу в ритме английской речи. Для меня язык - это музыка, а грамматика - её гармония.",
     "img": "https://img.freepik.com/free-photo/playful-woman-holding-yellow-balloon_23-2148490462.jpg?t=st=1764351743~exp=1764355343~hmac=ca9acce9f20bbb69f7893691f1f197068d09a24784b3b630db5af8836207c337&w=1060",
     "teach": ["Английский"],
-    "learn": ["Рисование и иллюстрация", "Йога и медитация", "Декор и DIY", "Питание и ЗОЖ"],
+    "learn": [
+      "Рисование и иллюстрация",
+      "Йога и медитация",
+      "Декор и DIY",
+      "Питание и ЗОЖ"
+    ],
     "gender": "female",
-    "skillsImage": ["https://static.tildacdn.one/tild3032-3461-4165-b661-656464323064/yabanci.jpeg", "https://is4-ssl.mzstatic.com/image/thumb/Podcasts126/v4/90/85/4f/90854f21-d484-1041-eda7-6c24810338bf/mza_16670632695750822409.jpg/1200x1200bb.jpg", "https://sneg.top/uploads/posts/2023-04/1681977836_sneg-top-p-inostrannie-yaziki-kartinki-dlya-prezentat-49.jpg", "https://hcenter-irk.info/sites/default/files/578b4e4f24a5b489f1cdc346e589d10b.jpg", "https://www.formatformazione.com/wp/wp-content/uploads/2022/10/Laurea-in-lingue-sbocchi-professionali-e-lavoro-Format.jpg"],
+    "skillsImage": [
+      "https://static.tildacdn.one/tild3032-3461-4165-b661-656464323064/yabanci.jpeg",
+      "https://is4-ssl.mzstatic.com/image/thumb/Podcasts126/v4/90/85/4f/90854f21-d484-1041-eda7-6c24810338bf/mza_16670632695750822409.jpg/1200x1200bb.jpg",
+      "https://sneg.top/uploads/posts/2023-04/1681977836_sneg-top-p-inostrannie-yaziki-kartinki-dlya-prezentat-49.jpg",
+      "https://hcenter-irk.info/sites/default/files/578b4e4f24a5b489f1cdc346e589d10b.jpg",
+      "https://www.formatformazione.com/wp/wp-content/uploads/2022/10/Laurea-in-lingue-sbocchi-professionali-e-lavoro-Format.jpg"
+    ],
     "fullDescription": "Преподаю английский с акцентом на живое общение и практическое применение. Разрабатываю индивидуальные программы с учетом ваших целей: бизнес-английский, подготовка к экзаменам или повседневное общение. Использую интерактивные методики, фильмы, музыку и реальные жизненные ситуации для погружения в язык."
   },
   {
@@ -44,7 +61,13 @@
     "teach": ["Маркетинг и реклама"],
     "learn": ["Немецкий", "Фотография", "Скорочтение", "Физические тренировки"],
     "gender": "male",
-    "skillsImage": ["https://scpk.pro/media/img/courses/i_24.webp", "https://i.pinimg.com/736x/7f/22/e3/7f22e398704702c7eb1c20463501fd67.jpg", "https://www.crantia.com/wp-content/uploads/2024/11/WhatsApp-Image-2024-11-04-at-2.52.50-PM-2.jpeg", "https://i.pinimg.com/736x/37/d8/5a/37d85a7f85100a61ac37f37e80880d7c.jpg", "https://ra-av.ru/wp-content/uploads/2018/12/маркетолог.jpg"],
+    "skillsImage": [
+      "https://scpk.pro/media/img/courses/i_24.webp",
+      "https://i.pinimg.com/736x/7f/22/e3/7f22e398704702c7eb1c20463501fd67.jpg",
+      "https://www.crantia.com/wp-content/uploads/2024/11/WhatsApp-Image-2024-11-04-at-2.52.50-PM-2.jpeg",
+      "https://i.pinimg.com/736x/37/d8/5a/37d85a7f85100a61ac37f37e80880d7c.jpg",
+      "https://ra-av.ru/wp-content/uploads/2018/12/маркетолог.jpg"
+    ],
     "fullDescription": "Научу строить эффективные маркетинговые стратегии с нуля. Разберем таргетированную рекламу, контент-маркетинг, аналитику и брендинг. Практические кейсы по продвижению в соцсетях, созданию воронок продаж и работе с клиентской аудиторией. Помогу найти ваш уникальный голос на рынке."
   },
   {
@@ -58,9 +81,20 @@
     "description": "Превращаю хаос в гармонию. Для меня порядок в пространстве - это порядок в мыслях.",
     "img": "https://img.freepik.com/free-photo/side-view-woman-holding-notebook-pencil_23-2148372248.jpg?t=st=1764351703~exp=1764355303~hmac=706e79372e880b0366e27bf70b90fd426a34041babd9af3a0f626ec31ae62f51&w=1060",
     "teach": ["Уборка и организация"],
-    "learn": ["Французский", "Актёрское мастерство", "Ментальное здоровье", "Личностное развитие"],
+    "learn": [
+      "Французский",
+      "Актёрское мастерство",
+      "Ментальное здоровье",
+      "Личностное развитие"
+    ],
     "gender": "female",
-    "skillsImage": ["https://image.cdn2.seaart.me/2024-02-20/cnadq8le878c73d9mjeg/50e9d15c61f3d620bb3c10687bf3eded50dc2954_high.webp", "https://i.pinimg.com/736x/0f/94/11/0f94114633e8257fca8c730cc3a72c7a.jpg", "https://avatars.mds.yandex.net/get-shedevrum/15236108/img_43932ae3297a11f09593aa6a96a2c431/orig", "https://fastly.4sqi.net/img/general/600x600/398869057_Pca4ZCVny1V6zp0oQBDbvkL_YDOz8hejH2Rce20nmak.jpg", "https://avatars.mds.yandex.net/i?id=fe70bc9bb7e51ce4d4c31dbc745e4215_l-8209628-images-thumbs&n=13"],
+    "skillsImage": [
+      "https://image.cdn2.seaart.me/2024-02-20/cnadq8le878c73d9mjeg/50e9d15c61f3d620bb3c10687bf3eded50dc2954_high.webp",
+      "https://i.pinimg.com/736x/0f/94/11/0f94114633e8257fca8c730cc3a72c7a.jpg",
+      "https://avatars.mds.yandex.net/get-shedevrum/15236108/img_43932ae3297a11f09593aa6a96a2c431/orig",
+      "https://fastly.4sqi.net/img/general/600x600/398869057_Pca4ZCVny1V6zp0oQBDbvkL_YDOz8hejH2Rce20nmak.jpg",
+      "https://avatars.mds.yandex.net/i?id=fe70bc9bb7e51ce4d4c31dbc745e4215_l-8209628-images-thumbs&n=13"
+    ],
     "fullDescription": "Научу системам организации пространства по методу КонМари и не только. Покажу как оптимизировать хранение вещей, создать функциональные зоны и поддерживать порядок без усилий. Практические техники для разных типов жилья: от студий до больших квартир. Помогу найти радость в процессе наведения порядка."
   },
   {
@@ -76,7 +110,13 @@
     "teach": ["Продажи и переговоры"],
     "learn": ["Японский", "Видеомонтаж", "Навыки обучения", "Осознанность"],
     "gender": "male",
-    "skillsImage": ["https://vhs-stuttgart.de/fileadmin/_processed_/c/8/csm_Beruf_copy_NDABCREATIVITY__AdobeStock_67b03f67c0.jpeg", "https://sun6-23.userapi.com/s/v1/if1/PWH2hrudcjYil3kIR6BSXuXiGtOB-fvgFl1uyftcBYrmaUZkCny703C1ki8QCiA9FKk84RD2.jpg?size=691x691&quality=96&crop=154,0,691,691&ava=1", "https://mittalblowers.com/wp-content/uploads/2025/03/career-1.webp", "https://i.pinimg.com/originals/6a/e4/70/6ae47003679a20512bc46fb88e4ee288.jpg", "https://sun6-20.userapi.com/s/v1/ig2/xDz_ZMkcr8iPWTjglREpbMUBCFSi2lopLDx3dsmoRICsH2S-7ayjPOtMjmD1Y2qhyAx-Q6HTYulbAp2GiMhjmSF-.jpg?size=1129x1131&quality=95&crop=159,198,1129,1131&ava=1"],
+    "skillsImage": [
+      "https://vhs-stuttgart.de/fileadmin/_processed_/c/8/csm_Beruf_copy_NDABCREATIVITY__AdobeStock_67b03f67c0.jpeg",
+      "https://sun6-23.userapi.com/s/v1/if1/PWH2hrudcjYil3kIR6BSXuXiGtOB-fvgFl1uyftcBYrmaUZkCny703C1ki8QCiA9FKk84RD2.jpg?size=691x691&quality=96&crop=154,0,691,691&ava=1",
+      "https://mittalblowers.com/wp-content/uploads/2025/03/career-1.webp",
+      "https://i.pinimg.com/originals/6a/e4/70/6ae47003679a20512bc46fb88e4ee288.jpg",
+      "https://sun6-20.userapi.com/s/v1/ig2/xDz_ZMkcr8iPWTjglREpbMUBCFSi2lopLDx3dsmoRICsH2S-7ayjPOtMjmD1Y2qhyAx-Q6HTYulbAp2GiMhjmSF-.jpg?size=1129x1131&quality=95&crop=159,198,1129,1131&ava=1"
+    ],
     "fullDescription": "Научу техникам эффективных продаж и ведения переговоров любой сложности. Разберем психологические аспекты коммуникации, работу с возражениями, методы убеждения и закрытия сделок. Практикуем на реальных кейсах из B2B и B2C сегментов. Помогу развить уверенность в общении с клиентами."
   },
   {
@@ -90,9 +130,21 @@
     "description": "Живопись для меня - это медитация. Люблю, когда краски на холсте оживают и рассказывают истории.",
     "img": "https://img.freepik.com/free-photo/thinking-long-haired-girl_1398-438.jpg?t=st=1764351671~exp=1764355271~hmac=300fc0756b7facea36a12df4330a68c0ff6b6098d5a5ddaefb9f9c7bb529c0e3&w=1060",
     "teach": ["Рисование и иллюстрация"],
-    "learn": ["Испанский", "Домашние растения", "Креативное письмо", "Сон и восстановление"],
+    "learn": [
+      "Испанский",
+      "Домашние растения",
+      "Креативное письмо",
+      "Сон и восстановление"
+    ],
     "gender": "female",
-    "skillsImage": ["https://i.pinimg.com/736x/9d/17/c4/9d17c4ade3f5245dfd109b87c2c134df.jpg", "https://avatars.mds.yandex.net/i?id=66c959494ead1c4da8595d31913bdf85_l-12937750-images-thumbs&n=13", "https://static.tildacdn.com/stor6233-3337-4335-b836-353764326535/78969050.jpg", "https://avatars.mds.yandex.net/i?id=2f3f405091a808b2138ae11335c7658c_l-4979110-images-thumbs&n=13", "https://i2.wp.com/static.cornelsen.de/_Resources/Persistent/2/5/4/f/254f67a74ced9fb71eba75d1fa980553b33f5ea9/first-steps-kunst-im%20unterricht-magazin-neu-1200x1200.jpg", "https://i.pinimg.com/originals/86/f5/37/86f5372132c62f90eb0172f4bc8c735e.jpg"],
+    "skillsImage": [
+      "https://i.pinimg.com/736x/9d/17/c4/9d17c4ade3f5245dfd109b87c2c134df.jpg",
+      "https://avatars.mds.yandex.net/i?id=66c959494ead1c4da8595d31913bdf85_l-12937750-images-thumbs&n=13",
+      "https://static.tildacdn.com/stor6233-3337-4335-b836-353764326535/78969050.jpg",
+      "https://avatars.mds.yandex.net/i?id=2f3f405091a808b2138ae11335c7658c_l-4979110-images-thumbs&n=13",
+      "https://i2.wp.com/static.cornelsen.de/_Resources/Persistent/2/5/4/f/254f67a74ced9fb71eba75d1fa980553b33f5ea9/first-steps-kunst-im%20unterricht-magazin-neu-1200x1200.jpg",
+      "https://i.pinimg.com/originals/86/f5/37/86f5372132c62f90eb0172f4bc8c735e.jpg"
+    ],
     "fullDescription": "Научу основам академического рисунка, живописи и цифровой иллюстрации. Индивидуальный подход для начинающих и продолжающих. Работа с различными материалами: акварель, масло, акрил, цифровые инструменты. Развиваем чувство композиции, цвета и перспективы. Помогу найти ваш уникальный стиль в искусстве."
   },
   {
@@ -106,9 +158,20 @@
     "description": "Живу по принципу 'сделал дело - гуляй смело'. Для меня тайм-менеджмент - это свобода, а не ограничение.",
     "img": "https://img.freepik.com/free-photo/medium-shot-young-man-holding-flower_23-2149438497.jpg?t=st=1764349633~exp=1764353233~hmac=976dfe50cfca32afbdcc459e82c9dfff4dade63f8cc5beaa63efea2e17411996&w=1060",
     "teach": ["Тайм-менеджмент"],
-    "learn": ["Английский", "Приготовление еды", "Музыка и звук", "Баланс жизни и работы"],
+    "learn": [
+      "Английский",
+      "Приготовление еды",
+      "Музыка и звук",
+      "Баланс жизни и работы"
+    ],
     "gender": "male",
-    "skillsImage": ["https://cdn.xl.pt/notasemdia/uploads/2017/06/Dicas-para-rentabilizar-o-seu-tempo-768x768.jpg", "https://avatars.mds.yandex.net/i?id=0b9de3ee0de2d1c4d82cef5ba9d9dc62_l-6356719-images-thumbs&n=13", "https://static.vecteezy.com/system/resources/previews/016/177/688/large_2x/timetable-planning-illustration-concept-character-managing-work-tasks-time-management-and-organization-concept-deadline-using-calendar-illustration-vector.jpg", "https://img.freepik.com/premium-photo/digital-dreams-ai-imagined-time-management-efficient-meetings_1290175-1056.jpg", "https://jagoanlanyard.com/userfiles/images/450x450-crop-mengatur-waktu-dengan-baik.jpg"],
+    "skillsImage": [
+      "https://cdn.xl.pt/notasemdia/uploads/2017/06/Dicas-para-rentabilizar-o-seu-tempo-768x768.jpg",
+      "https://avatars.mds.yandex.net/i?id=0b9de3ee0de2d1c4d82cef5ba9d9dc62_l-6356719-images-thumbs&n=13",
+      "https://static.vecteezy.com/system/resources/previews/016/177/688/large_2x/timetable-planning-illustration-concept-character-managing-work-tasks-time-management-and-organization-concept-deadline-using-calendar-illustration-vector.jpg",
+      "https://img.freepik.com/premium-photo/digital-dreams-ai-imagined-time-management-efficient-meetings_1290175-1056.jpg",
+      "https://jagoanlanyard.com/userfiles/images/450x450-crop-mengatur-waktu-dengan-baik.jpg"
+    ],
     "fullDescription": "Помогу освоить современные системы управления временем: GTD, Pomodoro, матрица Эйзенхауэра. Научу планировать день, неделю и год так, чтобы успевать больше без выгорания. Практические инструменты для борьбы с прокрастинацией, расстановки приоритетов и создания продуктивных ритуалов. Индивидуальный подход к организации вашего времени."
   },
   {
@@ -122,9 +185,21 @@
     "description": "Верю, что творчество лечит душу. Арт-терапия для меня - мостик между внутренним миром и реальностью.",
     "img": "https://img.freepik.com/free-photo/side-view-full-length-attractive-brunette-lady-with-tail-wearing-blue-coat-light-blue-trousers-white-heels-she-is-moving-smiling-camera-urban-street_132075-9407.jpg?t=st=1764351610~exp=1764355210~hmac=a61d36402515afcebbba0df991cc023c410900316191ae0b2a23741cf63e9d73&w=1060",
     "teach": ["Арт-терапия"],
-    "learn": ["Французский", "Уборка и организация", "Коучинг", "Питание и ЗОЖ"],
+    "learn": [
+      "Французский",
+      "Уборка и организация",
+      "Коучинг",
+      "Питание и ЗОЖ"
+    ],
     "gender": "female",
-    "skillsImage": ["https://i.pinimg.com/736x/9d/17/c4/9d17c4ade3f5245dfd109b87c2c134df.jpg", "https://avatars.mds.yandex.net/i?id=66c959494ead1c4da8595d31913bdf85_l-12937750-images-thumbs&n=13", "https://static.tildacdn.com/stor6233-3337-4335-b836-353764326535/78969050.jpg", "https://avatars.mds.yandex.net/i?id=2f3f405091a808b2138ae11335c7658c_l-4979110-images-thumbs&n=13", "https://i2.wp.com/static.cornelsen.de/_Resources/Persistent/2/5/4/f/254f67a74ced9fb71eba75d1fa980553b33f5ea9/first-steps-kunst-im%20unterricht-magazin-neu-1200x1200.jpg", "https://i.pinimg.com/originals/86/f5/37/86f5372132c62f90eb0172f4bc8c735e.jpg"],
+    "skillsImage": [
+      "https://i.pinimg.com/736x/9d/17/c4/9d17c4ade3f5245dfd109b87c2c134df.jpg",
+      "https://avatars.mds.yandex.net/i?id=66c959494ead1c4da8595d31913bdf85_l-12937750-images-thumbs&n=13",
+      "https://static.tildacdn.com/stor6233-3337-4335-b836-353764326535/78969050.jpg",
+      "https://avatars.mds.yandex.net/i?id=2f3f405091a808b2138ae11335c7658c_l-4979110-images-thumbs&n=13",
+      "https://i2.wp.com/static.cornelsen.de/_Resources/Persistent/2/5/4/f/254f67a74ced9fb71eba75d1fa980553b33f5ea9/first-steps-kunst-im%20unterricht-magazin-neu-1200x1200.jpg",
+      "https://i.pinimg.com/originals/86/f5/37/86f5372132c62f90eb0172f4bc8c735e.jpg"
+    ],
     "fullDescription": "Провожу сеансы арт-терапии для снятия стресса, решения внутренних конфликтов и самопознания. Используем различные техники: мандалы, коллажи, свободное рисование, работу с глиной. Без требований к художественным навыкам! Создаем безопасное пространство для выражения эмоций через творчество. Индивидуальные и групповые занятия."
   },
   {
@@ -138,9 +213,20 @@
     "description": "Обожаю видеть, как у людей загораются глаза, когда они находят работу мечты. Это лучшая награда!",
     "img": "https://img.freepik.com/free-photo/portrait-man-posing-beach-grey-coat_613910-9568.jpg?t=st=1764349802~exp=1764353402~hmac=07093728944046012766a2096ff27de96d0a89f24e77a0f884decafc2eced04b&w=1060",
     "teach": ["Резюме и собеседование"],
-    "learn": ["Китайский", "Фотография", "Домашние финансы", "Ментальное здоровье"],
+    "learn": [
+      "Китайский",
+      "Фотография",
+      "Домашние финансы",
+      "Ментальное здоровье"
+    ],
     "gender": "male",
-    "skillsImage": ["https://solia-paref.com/wp-content/uploads/2024/05/AdobeStock_552746789-1-scaled-1.jpg", "https://www.jobasv.net/wp-content/uploads/2021/06/Menanggapi-Pertanyaan-HRD-Ketika-Interview-Kerja-666x666.jpg", "https://blagoevgrad-news.com/wp-content/uploads/2019/02/zx640c_2905622.jpg", "https://image.lexica.art/full_webp/c7b5752c-2d0a-4134-9a4a-18f437eba432", "https://a.storyblok.com/f/255383/2005x1494/d4961e10fb/new-opportunity-support-coordination-and-employment.jpg/m/280x280/filters:quality(90):format(jpg)"],
+    "skillsImage": [
+      "https://solia-paref.com/wp-content/uploads/2024/05/AdobeStock_552746789-1-scaled-1.jpg",
+      "https://www.jobasv.net/wp-content/uploads/2021/06/Menanggapi-Pertanyaan-HRD-Ketika-Interview-Kerja-666x666.jpg",
+      "https://blagoevgrad-news.com/wp-content/uploads/2019/02/zx640c_2905622.jpg",
+      "https://image.lexica.art/full_webp/c7b5752c-2d0a-4134-9a4a-18f437eba432",
+      "https://a.storyblok.com/f/255383/2005x1494/d4961e10fb/new-opportunity-support-coordination-and-employment.jpg/m/280x280/filters:quality(90):format(jpg)"
+    ],
     "fullDescription": "Научу создавать резюме, которое заметят рекрутеры, и готовиться к собеседованиям так, чтобы получать офферы. Разберем составление сопроводительных писений, профилей в LinkedIn, самопрезентацию и ответы на каверзные вопросы. Практикуем стресс-интервью и технику переговоров о зарплате. Помогу найти ваши сильные стороны и правильно их подать."
   },
   {
@@ -154,9 +240,20 @@
     "description": "Вдохновляюсь историями успешных стартапов. Для меня предпринимательство - это искусство возможного.",
     "img": "https://img.freepik.com/free-photo/woman-wrapping-christmas-gift-while-sitting-carped-living-room_158595-7285.jpg?t=st=1764351547~exp=1764355147~hmac=9d45c0011168d1449687c347eedd2b16d06887303ecbcdcc25e58126a202a067&w=1060",
     "teach": ["Предпринимательство"],
-    "learn": ["Английский", "Рисование и иллюстрация", "Йога и медитация", "Личностное развитие"],
+    "learn": [
+      "Английский",
+      "Рисование и иллюстрация",
+      "Йога и медитация",
+      "Личностное развитие"
+    ],
     "gender": "female",
-    "skillsImage": ["https://vhs-stuttgart.de/fileadmin/_processed_/c/8/csm_Beruf_copy_NDABCREATIVITY__AdobeStock_67b03f67c0.jpeg", "https://sun6-23.userapi.com/s/v1/if1/PWH2hrudcjYil3kIR6BSXuXiGtOB-fvgFl1uyftcBYrmaUZkCny703C1ki8QCiA9FKk84RD2.jpg?size=691x691&quality=96&crop=154,0,691,691&ava=1", "https://mittalblowers.com/wp-content/uploads/2025/03/career-1.webp", "https://i.pinimg.com/originals/6a/e4/70/6ae47003679a20512bc46fb88e4ee288.jpg", "https://sun6-20.userapi.com/s/v1/ig2/xDz_ZMkcr8iPWTjglREpbMUBCFSi2lopLDx3dsmoRICsH2S-7ayjPOtMjmD1Y2qhyAx-Q6HTYulbAp2GiMhjmSF-.jpg?size=1129x1131&quality=95&crop=159,198,1129,1131&ava=1"],
+    "skillsImage": [
+      "https://vhs-stuttgart.de/fileadmin/_processed_/c/8/csm_Beruf_copy_NDABCREATIVITY__AdobeStock_67b03f67c0.jpeg",
+      "https://sun6-23.userapi.com/s/v1/if1/PWH2hrudcjYil3kIR6BSXuXiGtOB-fvgFl1uyftcBYrmaUZkCny703C1ki8QCiA9FKk84RD2.jpg?size=691x691&quality=96&crop=154,0,691,691&ava=1",
+      "https://mittalblowers.com/wp-content/uploads/2025/03/career-1.webp",
+      "https://i.pinimg.com/originals/6a/e4/70/6ae47003679a20512bc46fb88e4ee288.jpg",
+      "https://sun6-20.userapi.com/s/v1/ig2/xDz_ZMkcr8iPWTjglREpbMUBCFSi2lopLDx3dsmoRICsH2S-7ayjPOtMjmD1Y2qhyAx-Q6HTYulbAp2GiMhjmSF-.jpg?size=1129x1131&quality=95&crop=159,198,1129,1131&ava=1"
+    ],
     "fullDescription": "Помогу с запуском и развитием бизнеса с нуля. Разберем создание бизнес-модели, финансовое планирование, маркетинговую стратегию и управление командой. Практические инструменты для стартаперов: бережливый стартап, работа с инвесторами, масштабирование. На основе реальных кейсов из разных отраслей. Поддержка на каждом этапе становления бизнеса."
   },
   {
@@ -172,7 +269,13 @@
     "teach": ["Немецкий"],
     "learn": ["Маркетинг и реклама", "Видеомонтаж", "Осознанность", "Ремонт"],
     "gender": "male",
-    "skillsImage": ["https://static.tildacdn.one/tild3032-3461-4165-b661-656464323064/yabanci.jpeg", "https://is4-ssl.mzstatic.com/image/thumb/Podcasts126/v4/90/85/4f/90854f21-d484-1041-eda7-6c24810338bf/mza_16670632695750822409.jpg/1200x1200bb.jpg", "https://sneg.top/uploads/posts/2023-04/1681977836_sneg-top-p-inostrannie-yaziki-kartinki-dlya-prezentat-49.jpg", "https://hcenter-irk.info/sites/default/files/578b4e4f24a5b489f1cdc346e589d10b.jpg", "https://www.formatformazione.com/wp/wp-content/uploads/2022/10/Laurea-in-lingue-sbocchi-professionali-e-lavoro-Format.jpg"],
+    "skillsImage": [
+      "https://static.tildacdn.one/tild3032-3461-4165-b661-656464323064/yabanci.jpeg",
+      "https://is4-ssl.mzstatic.com/image/thumb/Podcasts126/v4/90/85/4f/90854f21-d484-1041-eda7-6c24810338bf/mza_16670632695750822409.jpg/1200x1200bb.jpg",
+      "https://sneg.top/uploads/posts/2023-04/1681977836_sneg-top-p-inostrannie-yaziki-kartinki-dlya-prezentat-49.jpg",
+      "https://hcenter-irk.info/sites/default/files/578b4e4f24a5b489f1cdc346e589d10b.jpg",
+      "https://www.formatformazione.com/wp/wp-content/uploads/2022/10/Laurea-in-lingue-sbocchi-professionali-e-lavoro-Format.jpg"
+    ],
     "fullDescription": "Преподаю немецкий язык с фокусом на практическое применение и подготовку к международным экзаменам. Индивидуальный подход к изучению грамматики, лексики и произношения. Использую современные методики, немецкую литературу, фильмы и музыку для погружения в языковую среду. Помогу достичь ваших целей в изучении немецкого."
   },
   {
@@ -186,9 +289,20 @@
     "description": "Йога для меня - это диалог с собственным телом. Люблю момент, когда напряжение уходит, а приходит покой.",
     "img": "https://img.freepik.com/free-photo/young-business-woman-using-phone-vacation_1303-23960.jpg?t=st=1764351507~exp=1764355107~hmac=5b1fcf2dfb49c05ff1a15e2d0f2730d6c2f3873fad9aee38e6839de74505ef18&w=1060",
     "teach": ["Йога и медитация"],
-    "learn": ["Испанский", "Декор и DIY", "Навыки преподавания", "Домашние растения"],
+    "learn": [
+      "Испанский",
+      "Декор и DIY",
+      "Навыки преподавания",
+      "Домашние растения"
+    ],
     "gender": "female",
-    "skillsImage": ["https://i.pinimg.com/originals/c0/60/21/c060215015e6d46a234cb4127af3237f.jpg", "https://i.pinimg.com/originals/4d/db/13/4ddb136fa723f55ce3b7bcb20f8f0f42.jpg", "https://www.nutritionbliss.com/wp-content/uploads/2020/01/iStock-876656828-e1580342485220.jpg", "https://ocmp.zdrav76.ru/wp-content/uploads/2024/12/Псих-здоров-и-активностьНа-сайт.jpg", "https://img.freepik.com/premium-vector/diet-plan-slim-woman-doing-exercise-planning-diet-with-fruit-vegetable-girl-doing-yoga-dietary-eating-meal-planning-nutrition-consultation-healthy-food-sport-health-lifestyle-fitness_458444-702.jpg?semt=ais_hybrid&w=740"],
+    "skillsImage": [
+      "https://i.pinimg.com/originals/c0/60/21/c060215015e6d46a234cb4127af3237f.jpg",
+      "https://i.pinimg.com/originals/4d/db/13/4ddb136fa723f55ce3b7bcb20f8f0f42.jpg",
+      "https://www.nutritionbliss.com/wp-content/uploads/2020/01/iStock-876656828-e1580342485220.jpg",
+      "https://ocmp.zdrav76.ru/wp-content/uploads/2024/12/Псих-здоров-и-активностьНа-сайт.jpg",
+      "https://img.freepik.com/premium-vector/diet-plan-slim-woman-doing-exercise-planning-diet-with-fruit-vegetable-girl-doing-yoga-dietary-eating-meal-planning-nutrition-consultation-healthy-food-sport-health-lifestyle-fitness_458444-702.jpg?semt=ais_hybrid&w=740"
+    ],
     "fullDescription": "Провожу занятия по хатха йоге и медитации для всех уровней подготовки. Индивидуальный подход к построению практики с учетом особенностей здоровья и целей. Изучаем асаны, пранаямы, техники релаксации и mindfulness. Помогу развить гибкость, силу и найти внутренний баланс. Занятия онлайн и офлайн для начинающих и продвинутых."
   },
   {
@@ -202,9 +316,20 @@
     "description": "Монтаж для меня - это магия превращения сырого материала в историю. Люблю, когда кадры оживают!",
     "img": "https://img.freepik.com/free-photo/portrait-young-handsome-caucasian-man-park_181624-52207.jpg?t=st=1764349921~exp=1764353521~hmac=d1b63ce207d217d0efdc1bd650e8f45ba6de2b749ae17bf35d6602e7e195c29d&w=1060",
     "teach": ["Видеомонтаж"],
-    "learn": ["Английский", "Продажи и переговоры", "Когнитивные техники", "Физические тренировки"],
+    "learn": [
+      "Английский",
+      "Продажи и переговоры",
+      "Когнитивные техники",
+      "Физические тренировки"
+    ],
     "gender": "male",
-    "skillsImage": ["https://i.pinimg.com/originals/15/c0/fb/15c0fb976ca1dbb3540864b79ab50670.png", "https://yt3.googleusercontent.com/0gjXJ4oiUJnR1GMDiXDxdNdvjT89wO2oYJHpde0bBAu7QQ-nzyHIAJsO1-Ybwhe2_tVLTaZ5VA=s900-c-k-c0x00ffffff-no-rj", "https://i.pinimg.com/736x/77/b0/4c/77b04cd32dfe88482dfa5630991cf2f8.jpg", "https://frankfurt.apollo.olxcdn.com/v1/files/4vh1c88q87d73-KZ/image;s=1000x969", "https://full-frame.pro/wp-content/uploads/2024/11/full-frejm.jpg"],
+    "skillsImage": [
+      "https://i.pinimg.com/originals/15/c0/fb/15c0fb976ca1dbb3540864b79ab50670.png",
+      "https://yt3.googleusercontent.com/0gjXJ4oiUJnR1GMDiXDxdNdvjT89wO2oYJHpde0bBAu7QQ-nzyHIAJsO1-Ybwhe2_tVLTaZ5VA=s900-c-k-c0x00ffffff-no-rj",
+      "https://i.pinimg.com/736x/77/b0/4c/77b04cd32dfe88482dfa5630991cf2f8.jpg",
+      "https://frankfurt.apollo.olxcdn.com/v1/files/4vh1c88q87d73-KZ/image;s=1000x969",
+      "https://full-frame.pro/wp-content/uploads/2024/11/full-frejm.jpg"
+    ],
     "fullDescription": "Научу профессиональному видеомонтажу в Adobe Premiere Pro, After Effects и DaVinci Resolve. От базовых навыков до продвинутых техник: цветокоррекция, звуковой дизайн, работа с эффектами и анимацией. Практические проекты для YouTube, социальных сетей и коммерческих заказов. Помогу развить ваш уникальный стиль в монтаже."
   },
   {
@@ -218,9 +343,20 @@
     "description": "Здоровое питание для меня - это не диета, а образ жизни. Люблю, когда еда приносит и удовольствие, и пользу!",
     "img": "https://img.freepik.com/free-photo/teenage-girl-lifestyle-concept_23-2148093980.jpg?t=st=1764351473~exp=1764355073~hmac=eaac03d0c6f646104e3731b0cd0e51f6a61f710ed62cc583d84ff76422ea275b&w=1060",
     "teach": ["Питание и ЗОЖ"],
-    "learn": ["Французский", "Актёрское мастерство", "Уборка и организация", "Коучинг"],
+    "learn": [
+      "Французский",
+      "Актёрское мастерство",
+      "Уборка и организация",
+      "Коучинг"
+    ],
     "gender": "female",
-    "skillsImage": ["https://i.pinimg.com/originals/c0/60/21/c060215015e6d46a234cb4127af3237f.jpg", "https://i.pinimg.com/originals/4d/db/13/4ddb136fa723f55ce3b7bcb20f8f0f42.jpg", "https://www.nutritionbliss.com/wp-content/uploads/2020/01/iStock-876656828-e1580342485220.jpg", "https://ocmp.zdrav76.ru/wp-content/uploads/2024/12/Псих-здоров-и-активностьНа-сайт.jpg", "https://img.freepik.com/premium-vector/diet-plan-slim-woman-doing-exercise-planning-diet-with-fruit-vegetable-girl-doing-yoga-dietary-eating-meal-planning-nutrition-consultation-healthy-food-sport-health-lifestyle-fitness_458444-702.jpg?semt=ais_hybrid&w=740"],
+    "skillsImage": [
+      "https://i.pinimg.com/originals/c0/60/21/c060215015e6d46a234cb4127af3237f.jpg",
+      "https://i.pinimg.com/originals/4d/db/13/4ddb136fa723f55ce3b7bcb20f8f0f42.jpg",
+      "https://www.nutritionbliss.com/wp-content/uploads/2020/01/iStock-876656828-e1580342485220.jpg",
+      "https://ocmp.zdrav76.ru/wp-content/uploads/2024/12/Псих-здоров-и-активностьНа-сайт.jpg",
+      "https://img.freepik.com/premium-vector/diet-plan-slim-woman-doing-exercise-planning-diet-with-fruit-vegetable-girl-doing-yoga-dietary-eating-meal-planning-nutrition-consultation-healthy-food-sport-health-lifestyle-fitness_458444-702.jpg?semt=ais_hybrid&w=740"
+    ],
     "fullDescription": "Научу основам сбалансированного питания и здорового образа жизни. Разберем составление рациона, чтение этикеток, приготовление полезных блюд и формирование здоровых привычек. Индивидуальный подход с учетом ваших целей: снижение веса, улучшение самочувствия или спортивные результаты. Практические рекомендации для повседневной жизни."
   },
   {
@@ -234,9 +370,20 @@
     "description": "Финансы для меня - это пазл, где все детали должны сложиться в красивую картину финансовой свободы.",
     "img": "https://img.freepik.com/free-photo/portrait-young-handsome-man-with-curly-hair_1303-27415.jpg?t=st=1764349990~exp=1764353590~hmac=82510b1916196dd702938fd08a30313f9e03094e4e2739f9228d53f9ff1d3b58&w=1060",
     "teach": ["Домашние финансы"],
-    "learn": ["Китайский", "Фотография", "Личный бренд", "Сон и восстановление"],
+    "learn": [
+      "Китайский",
+      "Фотография",
+      "Личный бренд",
+      "Сон и восстановление"
+    ],
     "gender": "male",
-    "skillsImage": ["https://m.foolcdn.com/media/affiliates/images/Couple_paying_bills-1_tEyxqjE.2e16d0ba.fill-1080x1080.jpg", "https://sun9-45.userapi.com/impg/t30-v7tlugixjIVCCJN1W-qkfxYDTAllNhg9DA/SDPtbHlvD38.jpg?size=807x807&quality=96&sign=25a3cf298ebf520a0d1213e71850053b&c_uniq_tag=MTIVchtMq0JjkL1atREDtojYCaj_DGvuS_AikRDnopM&type=album", "https://avatars.mds.yandex.net/i?id=24efbd92b2f32a429eb9ab88d689160b_l-4793215-images-thumbs&n=13", "https://avatars.mds.yandex.net/i?id=15c2d153a0bfefe03b4cb9323c2850a3_sr-5099351-images-thumbs&n=13", "https://orvalho.online/wp-content/uploads/2022/10/Meu_projeto-1_10_.webp"],
+    "skillsImage": [
+      "https://m.foolcdn.com/media/affiliates/images/Couple_paying_bills-1_tEyxqjE.2e16d0ba.fill-1080x1080.jpg",
+      "https://sun9-45.userapi.com/impg/t30-v7tlugixjIVCCJN1W-qkfxYDTAllNhg9DA/SDPtbHlvD38.jpg?size=807x807&quality=96&sign=25a3cf298ebf520a0d1213e71850053b&c_uniq_tag=MTIVchtMq0JjkL1atREDtojYCaj_DGvuS_AikRDnopM&type=album",
+      "https://avatars.mds.yandex.net/i?id=24efbd92b2f32a429eb9ab88d689160b_l-4793215-images-thumbs&n=13",
+      "https://avatars.mds.yandex.net/i?id=15c2d153a0bfefe03b4cb9323c2850a3_sr-5099351-images-thumbs&n=13",
+      "https://orvalho.online/wp-content/uploads/2022/10/Meu_projeto-1_10_.webp"
+    ],
     "fullDescription": "Помогу навести порядок в личных финансах и создать систему управления бюджетом. Научу ведению учета доходов и расходов, планированию крупных покупок, созданию финансовой подушки и началу инвестирования. Практические инструменты для достижения финансовых целей и формирования здоровых денежных привычек для всей семьи."
   },
   {
@@ -250,9 +397,20 @@
     "description": "Французский для меня - это не просто язык, а целый мир элегантности и изысканности. C'est magnifique!",
     "img": "https://img.freepik.com/free-photo/smiling-blonde-young-woman-holding-disposable-coffee-cup-standing-street-winter_23-2147928529.jpg?t=st=1764351409~exp=1764355009~hmac=8aed590921a2749be399222e35f5f2f1c35264b1aff50c62771f9a4862f0d2c8&w=1060",
     "teach": ["Французский"],
-    "learn": ["Рисование и иллюстрация", "Проектное управление", "Ментальное здоровье", "Декор и DIY"],
+    "learn": [
+      "Рисование и иллюстрация",
+      "Проектное управление",
+      "Ментальное здоровье",
+      "Декор и DIY"
+    ],
     "gender": "female",
-    "skillsImage": ["https://static.tildacdn.one/tild3032-3461-4165-b661-656464323064/yabanci.jpeg", "https://is4-ssl.mzstatic.com/image/thumb/Podcasts126/v4/90/85/4f/90854f21-d484-1041-eda7-6c24810338bf/mza_16670632695750822409.jpg/1200x1200bb.jpg", "https://sneg.top/uploads/posts/2023-04/1681977836_sneg-top-p-inostrannie-yaziki-kartinki-dlya-prezentat-49.jpg", "https://hcenter-irk.info/sites/default/files/578b4e4f24a5b489f1cdc346e589d10b.jpg", "https://www.formatformazione.com/wp/wp-content/uploads/2022/10/Laurea-in-lingue-sbocchi-professionali-e-lavoro-Format.jpg"],
+    "skillsImage": [
+      "https://static.tildacdn.one/tild3032-3461-4165-b661-656464323064/yabanci.jpeg",
+      "https://is4-ssl.mzstatic.com/image/thumb/Podcasts126/v4/90/85/4f/90854f21-d484-1041-eda7-6c24810338bf/mza_16670632695750822409.jpg/1200x1200bb.jpg",
+      "https://sneg.top/uploads/posts/2023-04/1681977836_sneg-top-p-inostrannie-yaziki-kartinki-dlya-prezentat-49.jpg",
+      "https://hcenter-irk.info/sites/default/files/578b4e4f24a5b489f1cdc346e589d10b.jpg",
+      "https://www.formatformazione.com/wp/wp-content/uploads/2022/10/Laurea-in-lingue-sbocchi-professionali-e-lavoro-Format.jpg"
+    ],
     "fullDescription": "Преподаю французский язык с погружением в культуру и традиции Франции. Индивидуальные программы для разных уровней: от начального до продвинутого. Акцент на разговорную практику, произношение и понимание живой речи. Использую французские фильмы, музыку и литературу для создания аутентичной языковой среды."
   },
   {
@@ -266,9 +424,20 @@
     "description": "Музыка для меня - это универсальный язык эмоций. Люблю, когда звук рождает мурашки по коже!",
     "img": "https://img.freepik.com/free-photo/low-angle-portrait-man-looking-away_23-2148194054.jpg?t=st=1764350022~exp=1764353622~hmac=47d52cfa62c84c007b62aa976e6a621c0dd926cb626c6485c20c4aa165a3fcb0&w=1060",
     "teach": ["Музыка и звук"],
-    "learn": ["Английский", "Предпринимательство", "Скорочтение", "Баланс жизни и работы"],
+    "learn": [
+      "Английский",
+      "Предпринимательство",
+      "Скорочтение",
+      "Баланс жизни и работы"
+    ],
     "gender": "male",
-    "skillsImage": ["https://mvc-tver.ru/templates/yootheme/cache/anons-86f4491e.jpeg", "https://yt3.ggpht.com/a/AATXAJzur3ClKPaJ6wP2f5d6if9RECtVSDxgwitRNQ=s900-c-k-c0xffffffff-no-rj-mo", "https://cdn.culture.ru/images/0906b37f-31b7-5994-9c3e-69d711ea8aa0", "https://avatars.yandex.net/get-music-content/14299670/44a609f1.a.33402634-1/m1000x1000", "https://i.pinimg.com/736x/65/ce/03/65ce0371e2d0334ab1e78e8e3e6ffaeb.jpg"],
+    "skillsImage": [
+      "https://mvc-tver.ru/templates/yootheme/cache/anons-86f4491e.jpeg",
+      "https://yt3.ggpht.com/a/AATXAJzur3ClKPaJ6wP2f5d6if9RECtVSDxgwitRNQ=s900-c-k-c0xffffffff-no-rj-mo",
+      "https://cdn.culture.ru/images/0906b37f-31b7-5994-9c3e-69d711ea8aa0",
+      "https://avatars.yandex.net/get-music-content/14299670/44a609f1.a.33402634-1/m1000x1000",
+      "https://i.pinimg.com/736x/65/ce/03/65ce0371e2d0334ab1e78e8e3e6ffaeb.jpg"
+    ],
     "fullDescription": "Научу основам музыкального продюссирования и работы со звуком в домашних условиях. Работа в DAW (Ableton Live, FL Studio), сведение, мастеринг, звукозапись и создание аранжировок. Практические навыки для создания собственной музыки, подкастов или саунд-дизайна. Индивидуальный подход для начинающих музыкантов и продюсеров."
   },
   {
@@ -282,9 +451,20 @@
     "description": "Растения для меня - это тихие друзья, которые делают дом уютнее. Люблю наблюдать, как они растут!",
     "img": "https://img.freepik.com/free-photo/smiling-lady-smart-trendy-wear-is-sitting-armchair-with-cup-tea_158595-7467.jpg?t=st=1764351374~exp=1764354974~hmac=ede4d9062cfc440f045ef26d1a50b02712e72c6019c93d048faf9f47b4a57e5f&w=1060",
     "teach": ["Домашние растения"],
-    "learn": ["Немецкий", "Креативное письмо", "Тайм-менеджмент", "Питание и ЗОЖ"],
+    "learn": [
+      "Немецкий",
+      "Креативное письмо",
+      "Тайм-менеджмент",
+      "Питание и ЗОЖ"
+    ],
     "gender": "female",
-    "skillsImage": ["https://i.pinimg.com/originals/08/54/4f/08544fae757659a2808827d362ee694a.webp", "https://orton.ru/upload/iblock/8df/yr5c0q2203w1h5v0m9x21hc23ynkog7y.jpg", "https://64.media.tumblr.com/b3ccb570338a868e649d3e1820e91483/4ba63a61ae633ba5-6d/s1280x1920/a85a374dd7a35945570ef44acc3629e5810a09cd.jpg", "https://s3.eu-central-1.amazonaws.com/pressland-cms/cache/metatags_image/sk/19694808-zimowe-nawozy-podajemy-w-formie-wodnych-roztworow.jpeg", "https://i.pinimg.com/474x/4d/ba/b1/4dbab1094ef818af0fcba0c0e0108d20.jpg"],
+    "skillsImage": [
+      "https://i.pinimg.com/originals/08/54/4f/08544fae757659a2808827d362ee694a.webp",
+      "https://orton.ru/upload/iblock/8df/yr5c0q2203w1h5v0m9x21hc23ynkog7y.jpg",
+      "https://64.media.tumblr.com/b3ccb570338a868e649d3e1820e91483/4ba63a61ae633ba5-6d/s1280x1920/a85a374dd7a35945570ef44acc3629e5810a09cd.jpg",
+      "https://s3.eu-central-1.amazonaws.com/pressland-cms/cache/metatags_image/sk/19694808-zimowe-nawozy-podajemy-w-formie-wodnych-roztworow.jpeg",
+      "https://i.pinimg.com/474x/4d/ba/b1/4dbab1094ef818af0fcba0c0e0108d20.jpg"
+    ],
     "fullDescription": "Научу уходу за комнатными растениями и созданию зеленых уголков в городской квартире. Разберем подбор растений для разных условий, правильный полив, освещение, пересадку и борьбу с вредителями. Практические советы по созданию фито-дизайна и уходу за редкими видами. Помогу превратить ваш дом в цветущий сад."
   },
   {
@@ -300,7 +480,13 @@
     "teach": ["Ремонт"],
     "learn": ["Японский", "Маркетинг и реклама", "Арт-терапия", "Осознанность"],
     "gender": "male",
-    "skillsImage": ["https://image.cdn2.seaart.me/2024-02-20/cnadq8le878c73d9mjeg/50e9d15c61f3d620bb3c10687bf3eded50dc2954_high.webp", "https://i.pinimg.com/736x/0f/94/11/0f94114633e8257fca8c730cc3a72c7a.jpg", "https://avatars.mds.yandex.net/get-shedevrum/15236108/img_43932ae3297a11f09593aa6a96a2c431/orig", "https://fastly.4sqi.net/img/general/600x600/398869057_Pca4ZCVny1V6zp0oQBDbvkL_YDOz8hejH2Rce20nmak.jpg", "https://avatars.mds.yandex.net/i?id=fe70bc9bb7e51ce4d4c31dbc745e4215_l-8209628-images-thumbs&n=13"],
+    "skillsImage": [
+      "https://image.cdn2.seaart.me/2024-02-20/cnadq8le878c73d9mjeg/50e9d15c61f3d620bb3c10687bf3eded50dc2954_high.webp",
+      "https://i.pinimg.com/736x/0f/94/11/0f94114633e8257fca8c730cc3a72c7a.jpg",
+      "https://avatars.mds.yandex.net/get-shedevrum/15236108/img_43932ae3297a11f09593aa6a96a2c431/orig",
+      "https://fastly.4sqi.net/img/general/600x600/398869057_Pca4ZCVny1V6zp0oQBDbvkL_YDOz8hejH2Rce20nmak.jpg",
+      "https://avatars.mds.yandex.net/i?id=fe70bc9bb7e51ce4d4c31dbc745e4215_l-8209628-images-thumbs&n=13"
+    ],
     "fullDescription": "Научу основам капитального ремонта и отделочных работ своими руками. Разберем планирование ремонта, выбор материалов, монтажные и отделочные работы: штукатурка, покраска, укладка плитки, установка сантехники и электрики. Практические навыки для экономии на услугах мастеров и создания комфортного пространства."
   },
   {
@@ -314,9 +500,20 @@
     "description": "Актерское мастерство для меня - это ключ к раскрытию личности. Люблю, когда люди находят свой голос!",
     "img": "https://img.freepik.com/free-photo/redhead-young-female-winking-looking-camera_23-2148183402.jpg?t=st=1764351316~exp=1764354916~hmac=28a2fe37ee0646f8114f7fbce8b0c351a036b113c58ccc1bcba3278cd94f3fee&w=1060",
     "teach": ["Актёрское мастерство"],
-    "learn": ["Испанский", "Домашние финансы", "Личностное развитие", "Йога и медитация"],
+    "learn": [
+      "Испанский",
+      "Домашние финансы",
+      "Личностное развитие",
+      "Йога и медитация"
+    ],
     "gender": "female",
-    "skillsImage": ["https://90f1661d-2ff4-4f29-b07c-0e47453ca691.selstorage.ru/site752179/dcaa2452-306d-4628-b50f-82289bc96355/dcaa2452-306d-4628-b50f-82289bc96355-5236384.jpeg", "https://uzmansertifika.com.tr/wp-content/uploads/cocuklarda-tiyatro-terapi-semineri-sertifika-programi-768x768.jpg", "https://leto.kulturazao.ru/upload/images/news/2025/2025-05-12-14-47-22.jpg", "https://mf.b37mrtl.ru/russian/images/2020.05/original/5eb5453b02e8bd0cd52778b8.jpg", "https://avatars.mds.yandex.net/get-ydo/12829871/2a00000192cd70d4f26f8c8af938ceaf061c/diploma"],
+    "skillsImage": [
+      "https://90f1661d-2ff4-4f29-b07c-0e47453ca691.selstorage.ru/site752179/dcaa2452-306d-4628-b50f-82289bc96355/dcaa2452-306d-4628-b50f-82289bc96355-5236384.jpeg",
+      "https://uzmansertifika.com.tr/wp-content/uploads/cocuklarda-tiyatro-terapi-semineri-sertifika-programi-768x768.jpg",
+      "https://leto.kulturazao.ru/upload/images/news/2025/2025-05-12-14-47-22.jpg",
+      "https://mf.b37mrtl.ru/russian/images/2020.05/original/5eb5453b02e8bd0cd52778b8.jpg",
+      "https://avatars.mds.yandex.net/get-ydo/12829871/2a00000192cd70d4f26f8c8af938ceaf061c/diploma"
+    ],
     "fullDescription": "Провожу занятия по актерскому мастерству и технике речи для раскрытия творческого потенциала и улучшения коммуникативных навыков. Работа с голосом, дикцией, эмоциями, импровизацией и сценическим движением. Индивидуальный подход для подготовки к кастингам, публичным выступлениям или личностного роста. Групповые и индивидуальные занятия."
   },
   {
@@ -330,9 +527,20 @@
     "description": "Скорочтение для меня - это суперсила в современном мире информации. Люблю, когда книги 'проглатываются' за часы!",
     "img": "https://img.freepik.com/free-photo/selfie-portrait-videocall_23-2149186127.jpg?t=st=1764350098~exp=1764353698~hmac=a1521de8baab1514f8c08456554d171ed87bf759caa311248a4e0c32befaa58f&w=1060",
     "teach": ["Скорочтение"],
-    "learn": ["Английский", "Фотография", "Предпринимательство", "Физические тренировки"],
+    "learn": [
+      "Английский",
+      "Фотография",
+      "Предпринимательство",
+      "Физические тренировки"
+    ],
     "gender": "male",
-    "skillsImage": ["https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_659d5d53aa8dfa366d5efca2_659d5e719c148f78a1586f1e/scale_1200", "https://i.pinimg.com/736x/ef/29/9a/ef299a275f6aa390d658710232d493d8.jpg", "https://i.pinimg.com/736x/a5/7a/c2/a57ac23282da4f1bab6b5a8a8ed2a6ce.jpg", "https://static.wixstatic.com/media/9dd5f3_29b67dfb052d41c89205874196beb6e0~mv2.jpg/v1/fill/w_601,h_601,al_c,lg_1,q_85/9dd5f3_29b67dfb052d41c89205874196beb6e0~mv2.jpg", "https://images.squarespace-cdn.com/content/v1/5464cface4b033545b7e31af/1613240262321-OSD6OPJ0ML6DX9TL7LAR/image.jpg?format=2500w"],
+    "skillsImage": [
+      "https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_659d5d53aa8dfa366d5efca2_659d5e719c148f78a1586f1e/scale_1200",
+      "https://i.pinimg.com/736x/ef/29/9a/ef299a275f6aa390d658710232d493d8.jpg",
+      "https://i.pinimg.com/736x/a5/7a/c2/a57ac23282da4f1bab6b5a8a8ed2a6ce.jpg",
+      "https://static.wixstatic.com/media/9dd5f3_29b67dfb052d41c89205874196beb6e0~mv2.jpg/v1/fill/w_601,h_601,al_c,lg_1,q_85/9dd5f3_29b67dfb052d41c89205874196beb6e0~mv2.jpg",
+      "https://images.squarespace-cdn.com/content/v1/5464cface4b033545b7e31af/1613240262321-OSD6OPJ0ML6DX9TL7LAR/image.jpg?format=2500w"
+    ],
     "fullDescription": "Научу техникам скорочтения и эффективной работы с информацией. Развиваем периферическое зрение, подавляем артикуляцию, учимся структурировать и запоминать прочитанное. Практические упражнения для увеличения скорости чтения в 2-5 раз с сохранением понимания. Индивидуальный подход для студентов, профессионалов и всех, кто работает с большими объемами текстов."
   },
   {
@@ -346,9 +554,20 @@
     "description": "DIY для меня - это магия превращения простых вещей в уникальные. Люблю давать вторую жизнь старым предметам!",
     "img": "https://img.freepik.com/free-photo/portrait-young-woman-stretching-home-mat_23-2148896448.jpg?t=st=1764351230~exp=1764354830~hmac=c75979c3d619266d6808fe43def7ff09e09f6a43fa8428a89b9e4d5c0d26cda1&w=1060",
     "teach": ["Декор и DIY"],
-    "learn": ["Французский", "Уборка и организация", "Коучинг", "Ментальное здоровье"],
+    "learn": [
+      "Французский",
+      "Уборка и организация",
+      "Коучинг",
+      "Ментальное здоровье"
+    ],
     "gender": "female",
-    "skillsImage": ["https://image.cdn2.seaart.me/2024-02-20/cnadq8le878c73d9mjeg/50e9d15c61f3d620bb3c10687bf3eded50dc2954_high.webp", "https://i.pinimg.com/736x/0f/94/11/0f94114633e8257fca8c730cc3a72c7a.jpg", "https://avatars.mds.yandex.net/get-shedevrum/15236108/img_43932ae3297a11f09593aa6a96a2c431/orig", "https://fastly.4sqi.net/img/general/600x600/398869057_Pca4ZCVny1V6zp0oQBDbvkL_YDOz8hejH2Rce20nmak.jpg", "https://avatars.mds.yandex.net/i?id=fe70bc9bb7e51ce4d4c31dbc745e4215_l-8209628-images-thumbs&n=13"],
+    "skillsImage": [
+      "https://image.cdn2.seaart.me/2024-02-20/cnadq8le878c73d9mjeg/50e9d15c61f3d620bb3c10687bf3eded50dc2954_high.webp",
+      "https://i.pinimg.com/736x/0f/94/11/0f94114633e8257fca8c730cc3a72c7a.jpg",
+      "https://avatars.mds.yandex.net/get-shedevrum/15236108/img_43932ae3297a11f09593aa6a96a2c431/orig",
+      "https://fastly.4sqi.net/img/general/600x600/398869057_Pca4ZCVny1V6zp0oQBDbvkL_YDOz8hejH2Rce20nmak.jpg",
+      "https://avatars.mds.yandex.net/i?id=fe70bc9bb7e51ce4d4c31dbc745e4215_l-8209628-images-thumbs&n=13"
+    ],
     "fullDescription": "Научу создавать уникальный домашний декор и DIY проекты из доступных материалов. Работа с деревом, текстилем, красками и переделкой старых вещей. Практические мастер-классы по созданию предметов интерьера, подарков ручной работы и оформлению пространства. Помогу развить творческое мышление и найти вдохновение в повседневных вещах."
   },
   {
@@ -362,9 +581,20 @@
     "description": "Ментальное здоровье для меня - это фундамент счастливой жизни. Люблю, когда люди обретают внутренний покой.",
     "img": "https://img.freepik.com/free-photo/close-up-sad-man_23-2150896109.jpg?t=st=1764350141~exp=1764353741~hmac=8e7d8211590baa193e555c6ebab3a31878e1fa4306655066707db26cfd3e2bbb&w=1060",
     "teach": ["Ментальное здоровье"],
-    "learn": ["Китайский", "Видеомонтаж", "Продажи и переговоры", "Домашние растения"],
+    "learn": [
+      "Китайский",
+      "Видеомонтаж",
+      "Продажи и переговоры",
+      "Домашние растения"
+    ],
     "gender": "male",
-    "skillsImage": ["https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_659d5d53aa8dfa366d5efca2_659d5e719c148f78a1586f1e/scale_1200", "https://i.pinimg.com/736x/ef/29/9a/ef299a275f6aa390d658710232d493d8.jpg", "https://i.pinimg.com/736x/a5/7a/c2/a57ac23282da4f1bab6b5a8a8ed2a6ce.jpg", "https://static.wixstatic.com/media/9dd5f3_29b67dfb052d41c89205874196beb6e0~mv2.jpg/v1/fill/w_601,h_601,al_c,lg_1,q_85/9dd5f3_29b67dfb052d41c89205874196beb6e0~mv2.jpg", "https://images.squarespace-cdn.com/content/v1/5464cface4b033545b7e31af/1613240262321-OSD6OPJ0ML6DX9TL7LAR/image.jpg?format=2500w"],
+    "skillsImage": [
+      "https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_659d5d53aa8dfa366d5efca2_659d5e719c148f78a1586f1e/scale_1200",
+      "https://i.pinimg.com/736x/ef/29/9a/ef299a275f6aa390d658710232d493d8.jpg",
+      "https://i.pinimg.com/736x/a5/7a/c2/a57ac23282da4f1bab6b5a8a8ed2a6ce.jpg",
+      "https://static.wixstatic.com/media/9dd5f3_29b67dfb052d41c89205874196beb6e0~mv2.jpg/v1/fill/w_601,h_601,al_c,lg_1,q_85/9dd5f3_29b67dfb052d41c89205874196beb6e0~mv2.jpg",
+      "https://images.squarespace-cdn.com/content/v1/5464cface4b033545b7e31af/1613240262321-OSD6OPJ0ML6DX9TL7LAR/image.jpg?format=2500w"
+    ],
     "fullDescription": "Помогу освоить практики для поддержания ментального здоровья и управления стрессом. Техники mindfulness, медитации, работы с тревогой и эмоциональным интеллектом. Индивидуальный подход к созданию персональной системы заботы о психическом благополучии. Без медицинских консультаций - фокус на профилактике и саморазвитии."
   },
   {
@@ -378,9 +608,20 @@
     "description": "Испанский для меня - это страсть и огонь. ¡Me encanta cómo suena este idioma apasionado!",
     "img": "https://img.freepik.com/free-photo/sideways-woman-posing-green-house_23-2148261255.jpg?t=st=1764351192~exp=1764354792~hmac=8271b9aa8ff279947e09d95a33b847dadd333967cf11dc997c986c9875f16cf8&w=1060",
     "teach": ["Испанский"],
-    "learn": ["Рисование и иллюстрация", "Резюме и собеседование", "Питание и ЗОЖ", "Арт-терапия"],
+    "learn": [
+      "Рисование и иллюстрация",
+      "Резюме и собеседование",
+      "Питание и ЗОЖ",
+      "Арт-терапия"
+    ],
     "gender": "female",
-    "skillsImage": ["https://static.tildacdn.one/tild3032-3461-4165-b661-656464323064/yabanci.jpeg", "https://is4-ssl.mzstatic.com/image/thumb/Podcasts126/v4/90/85/4f/90854f21-d484-1041-eda7-6c24810338bf/mza_16670632695750822409.jpg/1200x1200bb.jpg", "https://sneg.top/uploads/posts/2023-04/1681977836_sneg-top-p-inostrannie-yaziki-kartinki-dlya-prezentat-49.jpg", "https://hcenter-irk.info/sites/default/files/578b4e4f24a5b489f1cdc346e589d10b.jpg", "https://www.formatformazione.com/wp/wp-content/uploads/2022/10/Laurea-in-lingue-sbocchi-professionali-e-lavoro-Format.jpg"],
+    "skillsImage": [
+      "https://static.tildacdn.one/tild3032-3461-4165-b661-656464323064/yabanci.jpeg",
+      "https://is4-ssl.mzstatic.com/image/thumb/Podcasts126/v4/90/85/4f/90854f21-d484-1041-eda7-6c24810338bf/mza_16670632695750822409.jpg/1200x1200bb.jpg",
+      "https://sneg.top/uploads/posts/2023-04/1681977836_sneg-top-p-inostrannie-yaziki-kartinki-dlya-prezentat-49.jpg",
+      "https://hcenter-irk.info/sites/default/files/578b4e4f24a5b489f1cdc346e589d10b.jpg",
+      "https://www.formatformazione.com/wp/wp-content/uploads/2022/10/Laurea-in-lingue-sbocchi-professionali-e-lavoro-Format.jpg"
+    ],
     "fullDescription": "Преподаю испанский язык с погружением в культуру Испании и Латинской Америки. Индивидуальные программы для разных целей: туризм, работа, подготовка к DELE. Акцент на живое общение, произношение и понимание различных акцентов. Использую испанскую музыку, кино и литературу для создания аутентичной атмосферы обучения."
   },
   {
@@ -394,9 +635,20 @@
     "description": "Фитнес для меня - это диалог с телом. Люблю момент, когда мышцы 'поют' после хорошей тренировки!",
     "img": "https://img.freepik.com/free-photo/young-successful-businessman-thinking-posing-beige-wall_176420-145.jpg?t=st=1764350182~exp=1764353782~hmac=fb1dac1cfdb23741a2daf188d3af94aeaf846f21ad568535438dcd2de5bf2991&w=1060",
     "teach": ["Физические тренировки"],
-    "learn": ["Английский", "Управление командой", "Креативное письмо", "Ремонт"],
+    "learn": [
+      "Английский",
+      "Управление командой",
+      "Креативное письмо",
+      "Ремонт"
+    ],
     "gender": "male",
-    "skillsImage": ["https://i.pinimg.com/originals/c0/60/21/c060215015e6d46a234cb4127af3237f.jpg", "https://i.pinimg.com/originals/4d/db/13/4ddb136fa723f55ce3b7bcb20f8f0f42.jpg", "https://www.nutritionbliss.com/wp-content/uploads/2020/01/iStock-876656828-e1580342485220.jpg", "https://ocmp.zdrav76.ru/wp-content/uploads/2024/12/Псих-здоров-и-активностьНа-сайт.jpg", "https://img.freepik.com/premium-vector/diet-plan-slim-woman-doing-exercise-planning-diet-with-fruit-vegetable-girl-doing-yoga-dietary-eating-meal-planning-nutrition-consultation-healthy-food-sport-health-lifestyle-fitness_458444-702.jpg?semt=ais_hybrid&w=740"],
+    "skillsImage": [
+      "https://i.pinimg.com/originals/c0/60/21/c060215015e6d46a234cb4127af3237f.jpg",
+      "https://i.pinimg.com/originals/4d/db/13/4ddb136fa723f55ce3b7bcb20f8f0f42.jpg",
+      "https://www.nutritionbliss.com/wp-content/uploads/2020/01/iStock-876656828-e1580342485220.jpg",
+      "https://ocmp.zdrav76.ru/wp-content/uploads/2024/12/Псих-здоров-и-активностьНа-сайт.jpg",
+      "https://img.freepik.com/premium-vector/diet-plan-slim-woman-doing-exercise-planning-diet-with-fruit-vegetable-girl-doing-yoga-dietary-eating-meal-planning-nutrition-consultation-healthy-food-sport-health-lifestyle-fitness_458444-702.jpg?semt=ais_hybrid&w=740"
+    ],
     "fullDescription": "Научу основам функциональных тренировок и составлению эффективных программ для дома и зала. Работа с техникой упражнений, планирование нагрузок, питание для тренировок и восстановление. Индивидуальный подход для разных целей: похудение, набор массы, повышение выносливости. Помогу сделать тренировки регулярными и enjoyable."
   },
   {
@@ -412,7 +664,13 @@
     "teach": ["Коучинг"],
     "learn": ["Немецкий", "Музыка и звук", "Декор и DIY", "Осознанность"],
     "gender": "female",
-    "skillsImage": ["https://www.cgd13.fr/media/miniatures/formation_.png", "https://static.tildacdn.com/tild6461-6435-4630-b362-306439383266/1HhnXn9XR6EFDwE04Tom.jpg", "https://opositocorreos.com/wp-content/uploads/2020/05/equipo-docente.jpg", "https://imageio.forbes.com/blogs-images/forbescoachescouncil/files/2020/02/a-25.jpg?format=jpg&amp;width=1200", "https://cdn.vectorstock.com/i/1000v/65/79/flat-design-young-man-and-woman-characters-vector-21206579.jpg"],
+    "skillsImage": [
+      "https://www.cgd13.fr/media/miniatures/formation_.png",
+      "https://static.tildacdn.com/tild6461-6435-4630-b362-306439383266/1HhnXn9XR6EFDwE04Tom.jpg",
+      "https://opositocorreos.com/wp-content/uploads/2020/05/equipo-docente.jpg",
+      "https://imageio.forbes.com/blogs-images/forbescoachescouncil/files/2020/02/a-25.jpg?format=jpg&amp;width=1200",
+      "https://cdn.vectorstock.com/i/1000v/65/79/flat-design-young-man-and-woman-characters-vector-21206579.jpg"
+    ],
     "fullDescription": "Научу основам коучинга и техникам помощи в достижении личных и профессиональных целей. Работа с постановкой SMART-целей, преодолением ограничивающих убеждений, планированием действий и accountability. Практические инструменты для проведения коучинговых сессий и развития навыков активного слушания и задавания мощных вопросов."
   },
   {
@@ -428,7 +686,13 @@
     "teach": ["Управление командой"],
     "learn": ["Японский", "Фотография", "Домашние финансы", "Йога и медитация"],
     "gender": "male",
-    "skillsImage": ["https://vhs-stuttgart.de/fileadmin/_processed_/c/8/csm_Beruf_copy_NDABCREATIVITY__AdobeStock_67b03f67c0.jpeg", "https://sun6-23.userapi.com/s/v1/if1/PWH2hrudcjYil3kIR6BSXuXiGtOB-fvgFl1uyftcBYrmaUZkCny703C1ki8QCiA9FKk84RD2.jpg?size=691x691&quality=96&crop=154,0,691,691&ava=1", "https://mittalblowers.com/wp-content/uploads/2025/03/career-1.webp", "https://i.pinimg.com/originals/6a/e4/70/6ae47003679a20512bc46fb88e4ee288.jpg", "https://sun6-20.userapi.com/s/v1/ig2/xDz_ZMkcr8iPWTjglREpbMUBCFSi2lopLDx3dsmoRICsH2S-7ayjPOtMjmD1Y2qhyAx-Q6HTYulbAp2GiMhjmSF-.jpg?size=1129x1131&quality=95&crop=159,198,1129,1131&ava=1"],
+    "skillsImage": [
+      "https://vhs-stuttgart.de/fileadmin/_processed_/c/8/csm_Beruf_copy_NDABCREATIVITY__AdobeStock_67b03f67c0.jpeg",
+      "https://sun6-23.userapi.com/s/v1/if1/PWH2hrudcjYil3kIR6BSXuXiGtOB-fvgFl1uyftcBYrmaUZkCny703C1ki8QCiA9FKk84RD2.jpg?size=691x691&quality=96&crop=154,0,691,691&ava=1",
+      "https://mittalblowers.com/wp-content/uploads/2025/03/career-1.webp",
+      "https://i.pinimg.com/originals/6a/e4/70/6ae47003679a20512bc46fb88e4ee288.jpg",
+      "https://sun6-20.userapi.com/s/v1/ig2/xDz_ZMkcr8iPWTjglREpbMUBCFSi2lopLDx3dsmoRICsH2S-7ayjPOtMjmD1Y2qhyAx-Q6HTYulbAp2GiMhjmSF-.jpg?size=1129x1131&quality=95&crop=159,198,1129,1131&ava=1"
+    ],
     "fullDescription": "Научу эффективному управлению командой и развитию лидерских качеств. Разберем постановку задач, мотивацию сотрудников, проведение совещаний, решение конфликтов и создание продуктивной атмосферы. Практические инструменты для руководителей разного уровня: от тимлидов до топ-менеджеров. На основе реальных кейсов из бизнес-практики."
   },
   {
@@ -442,9 +706,20 @@
     "description": "Когнитивные техники для меня - это гимнастика для ума. Люблю, когда мозг 'щелкает' сложные задачи!",
     "img": "https://img.freepik.com/free-photo/beautiful-smiling-tourist-woman-having-fun-amusement-park-hot-summer-day-trip_346278-454.jpg?t=st=1764351106~exp=1764354706~hmac=3132d0153ba669c7577a84a40809b6ce3fe8739e7ccc2ac5539c39f0c0b257eb&w=1060",
     "teach": ["Когнитивные техники"],
-    "learn": ["Французский", "Актёрское мастерство", "Предпринимательство", "Питание и ЗОЖ"],
+    "learn": [
+      "Французский",
+      "Актёрское мастерство",
+      "Предпринимательство",
+      "Питание и ЗОЖ"
+    ],
     "gender": "female",
-    "skillsImage": ["https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_659d5d53aa8dfa366d5efca2_659d5e719c148f78a1586f1e/scale_1200", "https://i.pinimg.com/736x/ef/29/9a/ef299a275f6aa390d658710232d493d8.jpg", "https://i.pinimg.com/736x/a5/7a/c2/a57ac23282da4f1bab6b5a8a8ed2a6ce.jpg", "https://static.wixstatic.com/media/9dd5f3_29b67dfb052d41c89205874196beb6e0~mv2.jpg/v1/fill/w_601,h_601,al_c,lg_1,q_85/9dd5f3_29b67dfb052d41c89205874196beb6e0~mv2.jpg", "https://images.squarespace-cdn.com/content/v1/5464cface4b033545b7e31af/1613240262321-OSD6OPJ0ML6DX9TL7LAR/image.jpg?format=2500w"],
+    "skillsImage": [
+      "https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_659d5d53aa8dfa366d5efca2_659d5e719c148f78a1586f1e/scale_1200",
+      "https://i.pinimg.com/736x/ef/29/9a/ef299a275f6aa390d658710232d493d8.jpg",
+      "https://i.pinimg.com/736x/a5/7a/c2/a57ac23282da4f1bab6b5a8a8ed2a6ce.jpg",
+      "https://static.wixstatic.com/media/9dd5f3_29b67dfb052d41c89205874196beb6e0~mv2.jpg/v1/fill/w_601,h_601,al_c,lg_1,q_85/9dd5f3_29b67dfb052d41c89205874196beb6e0~mv2.jpg",
+      "https://images.squarespace-cdn.com/content/v1/5464cface4b033545b7e31af/1613240262321-OSD6OPJ0ML6DX9TL7LAR/image.jpg?format=2500w"
+    ],
     "fullDescription": "Научу техникам развития мышления, памяти и концентрации внимания. Мнемотехники, майнд-мэппинг, методы решения сложных задач и развития критического мышления. Практические упражнения для улучшения когнитивных функций в любом возрасте. Индивидуальный подход для студентов, профессионалов и всех, кто хочет держать мозг в тонусе."
   },
   {
@@ -458,9 +733,20 @@
     "description": "Японский для меня - это путь самурая. Люблю красоту иероглифов и глубину японской культуры!",
     "img": "https://img.freepik.com/free-photo/medium-shot-man-with-delicious-pina-colada_23-2150184025.jpg?t=st=1764350274~exp=1764353874~hmac=e5fda90e2aad095a5a45dc40e231dd0365d8471b120b0b4748fc3747227155ea&w=1060",
     "teach": ["Японский"],
-    "learn": ["Маркетинг и реклама", "Видеомонтаж", "Личный бренд", "Баланс жизни и работы"],
+    "learn": [
+      "Маркетинг и реклама",
+      "Видеомонтаж",
+      "Личный бренд",
+      "Баланс жизни и работы"
+    ],
     "gender": "male",
-    "skillsImage": ["https://static.tildacdn.one/tild3032-3461-4165-b661-656464323064/yabanci.jpeg", "https://is4-ssl.mzstatic.com/image/thumb/Podcasts126/v4/90/85/4f/90854f21-d484-1041-eda7-6c24810338bf/mza_16670632695750822409.jpg/1200x1200bb.jpg", "https://sneg.top/uploads/posts/2023-04/1681977836_sneg-top-p-inostrannie-yaziki-kartinki-dlya-prezentat-49.jpg", "https://hcenter-irk.info/sites/default/files/578b4e4f24a5b489f1cdc346e589d10b.jpg", "https://www.formatformazione.com/wp/wp-content/uploads/2022/10/Laurea-in-lingue-sbocchi-professionali-e-lavoro-Format.jpg"],
+    "skillsImage": [
+      "https://static.tildacdn.one/tild3032-3461-4165-b661-656464323064/yabanci.jpeg",
+      "https://is4-ssl.mzstatic.com/image/thumb/Podcasts126/v4/90/85/4f/90854f21-d484-1041-eda7-6c24810338bf/mza_16670632695750822409.jpg/1200x1200bb.jpg",
+      "https://sneg.top/uploads/posts/2023-04/1681977836_sneg-top-p-inostrannie-yaziki-kartinki-dlya-prezentat-49.jpg",
+      "https://hcenter-irk.info/sites/default/files/578b4e4f24a5b489f1cdc346e589d10b.jpg",
+      "https://www.formatformazione.com/wp/wp-content/uploads/2022/10/Laurea-in-lingue-sbocchi-professionali-e-lavoro-Format.jpg"
+    ],
     "fullDescription": "Преподаю японский язык с погружением в культуру и традиции Японии. Изучаем иероглифы (кандзи), грамматику, произношение и этикет общения. Подготовка к JLPT, разговорная практика и чтение оригинальных текстов. Использую японские аниме, мангу и фильмы для создания увлекательного процесса обучения. Для начинающих и продолжающих."
   },
   {
@@ -474,9 +760,20 @@
     "description": "Баланс жизни для меня - это искусство жонглирования приоритетами. Люблю, когда все сферы жизни в гармонии!",
     "img": "https://img.freepik.com/free-photo/elegant-young-woman-hat-eyeglasses_23-2148068353.jpg?t=st=1764351072~exp=1764354672~hmac=0475e2f9d8af310d667389594ccaace64d34cd543c73f94db991365e9d91842b&w=1060",
     "teach": ["Баланс жизни и работы"],
-    "learn": ["Испанский", "Рисование и иллюстрация", "Тайм-менеджмент", "Ментальное здоровье"],
+    "learn": [
+      "Испанский",
+      "Рисование и иллюстрация",
+      "Тайм-менеджмент",
+      "Ментальное здоровье"
+    ],
     "gender": "female",
-    "skillsImage": ["https://cdn.xl.pt/notasemdia/uploads/2017/06/Dicas-para-rentabilizar-o-seu-tempo-768x768.jpg", "https://avatars.mds.yandex.net/i?id=0b9de3ee0de2d1c4d82cef5ba9d9dc62_l-6356719-images-thumbs&n=13", "https://static.vecteezy.com/system/resources/previews/016/177/688/large_2x/timetable-planning-illustration-concept-character-managing-work-tasks-time-management-and-organization-concept-deadline-using-calendar-illustration-vector.jpg", "https://img.freepik.com/premium-photo/digital-dreams-ai-imagined-time-management-efficient-meetings_1290175-1056.jpg", "https://jagoanlanyard.com/userfiles/images/450x450-crop-mengatur-waktu-dengan-baik.jpg"],
+    "skillsImage": [
+      "https://cdn.xl.pt/notasemdia/uploads/2017/06/Dicas-para-rentabilizar-o-seu-tempo-768x768.jpg",
+      "https://avatars.mds.yandex.net/i?id=0b9de3ee0de2d1c4d82cef5ba9d9dc62_l-6356719-images-thumbs&n=13",
+      "https://static.vecteezy.com/system/resources/previews/016/177/688/large_2x/timetable-planning-illustration-concept-character-managing-work-tasks-time-management-and-organization-concept-deadline-using-calendar-illustration-vector.jpg",
+      "https://img.freepik.com/premium-photo/digital-dreams-ai-imagined-time-management-efficient-meetings_1290175-1056.jpg",
+      "https://jagoanlanyard.com/userfiles/images/450x450-crop-mengatur-waktu-dengan-baik.jpg"
+    ],
     "fullDescription": "Помогу найти баланс между работой, личной жизнью и саморазвитием. Разберем расстановку приоритетов, создание здоровых границ, управление энергией и профилактику выгорания. Практические инструменты для гармонизации всех сфер жизни. Индивидуальный подход для профессионалов, предпринимателей и всех, кто ищет equilibrium в современном ритме."
   },
   {
@@ -490,9 +787,20 @@
     "description": "Преподавание для меня - это зажигание искры в глазах учеников. Люблю моменты 'эврики'!",
     "img": "https://img.freepik.com/free-photo/front-view-man-with-dog-jetty_23-2150558036.jpg?t=st=1764350301~exp=1764353901~hmac=d102c6e489931b925df6cf5c67c2cfc28a3f29a3e9fee58e9ec84b5f3759e5a5&w=1060",
     "teach": ["Навыки преподавания"],
-    "learn": ["Английский", "Продажи и переговоры", "Домашние растения", "Физические тренировки"],
+    "learn": [
+      "Английский",
+      "Продажи и переговоры",
+      "Домашние растения",
+      "Физические тренировки"
+    ],
     "gender": "male",
-    "skillsImage": ["https://www.cgd13.fr/media/miniatures/formation_.png", "https://static.tildacdn.com/tild6461-6435-4630-b362-306439383266/1HhnXn9XR6EFDwE04Tom.jpg", "https://opositocorreos.com/wp-content/uploads/2020/05/equipo-docente.jpg", "https://imageio.forbes.com/blogs-images/forbescoachescouncil/files/2020/02/a-25.jpg?format=jpg&amp;width=1200", "https://cdn.vectorstock.com/i/1000v/65/79/flat-design-young-man-and-woman-characters-vector-21206579.jpg"],
+    "skillsImage": [
+      "https://www.cgd13.fr/media/miniatures/formation_.png",
+      "https://static.tildacdn.com/tild6461-6435-4630-b362-306439383266/1HhnXn9XR6EFDwE04Tom.jpg",
+      "https://opositocorreos.com/wp-content/uploads/2020/05/equipo-docente.jpg",
+      "https://imageio.forbes.com/blogs-images/forbescoachescouncil/files/2020/02/a-25.jpg?format=jpg&amp;width=1200",
+      "https://cdn.vectorstock.com/i/1000v/65/79/flat-design-young-man-and-woman-characters-vector-21206579.jpg"
+    ],
     "fullDescription": "Научу современным методикам преподавания и создания эффективных образовательных программ. Разберем планирование уроков, интерактивные форматы, работу с разными типами учащихся и оценку результатов. Практические инструменты для преподавателей, тренеров и всех, кто передает знания. Помогу найти ваш уникальный стиль преподавания."
   },
   {
@@ -506,9 +814,20 @@
     "description": "Кулинария для меня - это алхимия вкусов. Люблю, когда простые ингредиенты превращаются в кулинарный шедевр!",
     "img": "https://img.freepik.com/free-photo/woman-takes-off-headphones-speak-with-friend-walks-outdoors-has-fitness-training-burned-calories-after-eating-high-calories-food-looks-satisfied-after-exercising-wellbeing-sport_273609-54124.jpg?t=st=1764351028~exp=1764354628~hmac=579124493d051eca83ad5af35cc969b48d920f764e7631d0de3628c9af4610bf&w=1060",
     "teach": ["Приготовление еды"],
-    "learn": ["Китайский", "Креативное письмо", "Коучинг", "Сон и восстановление"],
+    "learn": [
+      "Китайский",
+      "Креативное письмо",
+      "Коучинг",
+      "Сон и восстановление"
+    ],
     "gender": "female",
-    "skillsImage": ["https://www.nutritionbliss.com/wp-content/uploads/2020/01/iStock-876656828-e1580342485220.jpg", "https://ocmp.zdrav76.ru/wp-content/uploads/2024/12/Псих-здоров-и-активностьНа-сайт.jpg", "https://img.freepik.com/premium-vector/diet-plan-slim-woman-doing-exercise-planning-diet-with-fruit-vegetable-girl-doing-yoga-dietary-eating-meal-planning-nutrition-consultation-healthy-food-sport-health-lifestyle-fitness_458444-702.jpg?semt=ais_hybrid&w=740", "https://i.pinimg.com/originals/c0/60/21/c060215015e6d46a234cb4127af3237f.jpg", "https://i.pinimg.com/originals/4d/db/13/4ddb136fa723f55ce3b7bcb20f8f0f42.jpg"],
+    "skillsImage": [
+      "https://www.nutritionbliss.com/wp-content/uploads/2020/01/iStock-876656828-e1580342485220.jpg",
+      "https://ocmp.zdrav76.ru/wp-content/uploads/2024/12/Псих-здоров-и-активностьНа-сайт.jpg",
+      "https://img.freepik.com/premium-vector/diet-plan-slim-woman-doing-exercise-planning-diet-with-fruit-vegetable-girl-doing-yoga-dietary-eating-meal-planning-nutrition-consultation-healthy-food-sport-health-lifestyle-fitness_458444-702.jpg?semt=ais_hybrid&w=740",
+      "https://i.pinimg.com/originals/c0/60/21/c060215015e6d46a234cb4127af3237f.jpg",
+      "https://i.pinimg.com/originals/4d/db/13/4ddb136fa723f55ce3b7bcb20f8f0f42.jpg"
+    ],
     "fullDescription": "Научу готовить вкусные и полезные блюда из простых продуктов. Освоим базовые техники: ножевой навык, термическая обработка, соусы и презентация. Практические рецепты для повседневного питания и особых occasions. Индивидуальный подход для начинающих кулинаров и тех, кто хочет разнообразить свой рацион. Онлайн и офлайн мастер-классы."
   },
   {
@@ -524,7 +843,13 @@
     "teach": ["Китайский"],
     "learn": ["Управление командой", "Фотография", "Осознанность", "Ремонт"],
     "gender": "male",
-    "skillsImage": ["https://static.tildacdn.one/tild3032-3461-4165-b661-656464323064/yabanci.jpeg", "https://is4-ssl.mzstatic.com/image/thumb/Podcasts126/v4/90/85/4f/90854f21-d484-1041-eda7-6c24810338bf/mza_16670632695750822409.jpg/1200x1200bb.jpg", "https://sneg.top/uploads/posts/2023-04/1681977836_sneg-top-p-inostrannie-yaziki-kartinki-dlya-prezentat-49.jpg", "https://hcenter-irk.info/sites/default/files/578b4e4f24a5b489f1cdc346e589d10b.jpg", "https://www.formatformazione.com/wp/wp-content/uploads/2022/10/Laurea-in-lingue-sbocchi-professionali-e-lavoro-Format.jpg"],
+    "skillsImage": [
+      "https://static.tildacdn.one/tild3032-3461-4165-b661-656464323064/yabanci.jpeg",
+      "https://is4-ssl.mzstatic.com/image/thumb/Podcasts126/v4/90/85/4f/90854f21-d484-1041-eda7-6c24810338bf/mza_16670632695750822409.jpg/1200x1200bb.jpg",
+      "https://sneg.top/uploads/posts/2023-04/1681977836_sneg-top-p-inostrannie-yaziki-kartinki-dlya-prezentat-49.jpg",
+      "https://hcenter-irk.info/sites/default/files/578b4e4f24a5b489f1cdc346e589d10b.jpg",
+      "https://www.formatformazione.com/wp/wp-content/uploads/2022/10/Laurea-in-lingue-sbocchi-professionali-e-lavoro-Format.jpg"
+    ],
     "fullDescription": "Преподаю китайский язык с акцентом на иероглифику и тоны. Индивидуальные программы для разных уровней: от начального до продвинутого. Подготовка к HSK, разговорная практика и деловой китайский. Использую современные методики запоминания иероглифов и погружения в языковую среду. Помогу преодолеть страх перед сложностью китайского."
   },
   {
@@ -538,9 +863,20 @@
     "description": "Фотография для меня - это замороженное мгновение. Люблю ловить эмоции в объектив камеры!",
     "img": "https://img.freepik.com/free-photo/waiting-beauty-background-lonely-lady_1303-566.jpg?t=st=1764350997~exp=1764354597~hmac=ace1f322e5246db5a553d821306e828e944f3df0aa31e96e00465d80f8d5140b&w=1060",
     "teach": ["Фотография"],
-    "learn": ["Французский", "Декор и DIY", "Личностное развитие", "Йога и медитация"],
+    "learn": [
+      "Французский",
+      "Декор и DIY",
+      "Личностное развитие",
+      "Йога и медитация"
+    ],
     "gender": "female",
-    "skillsImage": ["https://i.pinimg.com/originals/15/c0/fb/15c0fb976ca1dbb3540864b79ab50670.png", "https://yt3.googleusercontent.com/0gjXJ4oiUJnR1GMDiXDxdNdvjT89wO2oYJHpde0bBAu7QQ-nzyHIAJsO1-Ybwhe2_tVLTaZ5VA=s900-c-k-c0x00ffffff-no-rj", "https://i.pinimg.com/736x/77/b0/4c/77b04cd32dfe88482dfa5630991cf2f8.jpg", "https://frankfurt.apollo.olxcdn.com/v1/files/4vh1c88q87d73-KZ/image;s=1000x969", "https://full-frame.pro/wp-content/uploads/2024/11/full-frejm.jpg"],
+    "skillsImage": [
+      "https://i.pinimg.com/originals/15/c0/fb/15c0fb976ca1dbb3540864b79ab50670.png",
+      "https://yt3.googleusercontent.com/0gjXJ4oiUJnR1GMDiXDxdNdvjT89wO2oYJHpde0bBAu7QQ-nzyHIAJsO1-Ybwhe2_tVLTaZ5VA=s900-c-k-c0x00ffffff-no-rj",
+      "https://i.pinimg.com/736x/77/b0/4c/77b04cd32dfe88482dfa5630991cf2f8.jpg",
+      "https://frankfurt.apollo.olxcdn.com/v1/files/4vh1c88q87d73-KZ/image;s=1000x969",
+      "https://full-frame.pro/wp-content/uploads/2024/11/full-frejm.jpg"
+    ],
     "fullDescription": "Научу основам фотографии и созданию качественных снимков на любую технику. Разберем композицию, работу со светом, настройки камеры и постобработку в Lightroom и Photoshop. Практические занятия по портретной, пейзажной и предметной съемке. Индивидуальный подход для начинающих фотографов и любителей. Помогу найти ваш стиль в фотографии."
   },
   {
@@ -556,7 +892,13 @@
     "teach": ["Личный бренд"],
     "learn": ["Японский", "Музыка и звук", "Домашние финансы", "Питание и ЗОЖ"],
     "gender": "male",
-    "skillsImage": ["https://vhs-stuttgart.de/fileadmin/_processed_/c/8/csm_Beruf_copy_NDABCREATIVITY__AdobeStock_67b03f67c0.jpeg", "https://sun6-23.userapi.com/s/v1/if1/PWH2hrudcjYil3kIR6BSXuXiGtOB-fvgFl1uyftcBYrmaUZkCny703C1ki8QCiA9FKk84RD2.jpg?size=691x691&quality=96&crop=154,0,691,691&ava=1", "https://mittalblowers.com/wp-content/uploads/2025/03/career-1.webp", "https://i.pinimg.com/originals/6a/e4/70/6ae47003679a20512bc46fb88e4ee288.jpg", "https://sun6-20.userapi.com/s/v1/ig2/xDz_ZMkcr8iPWTjglREpbMUBCFSi2lopLDx3dsmoRICsH2S-7ayjPOtMjmD1Y2qhyAx-Q6HTYulbAp2GiMhjmSF-.jpg?size=1129x1131&quality=95&crop=159,198,1129,1131&ava=1"],
+    "skillsImage": [
+      "https://vhs-stuttgart.de/fileadmin/_processed_/c/8/csm_Beruf_copy_NDABCREATIVITY__AdobeStock_67b03f67c0.jpeg",
+      "https://sun6-23.userapi.com/s/v1/if1/PWH2hrudcjYil3kIR6BSXuXiGtOB-fvgFl1uyftcBYrmaUZkCny703C1ki8QCiA9FKk84RD2.jpg?size=691x691&quality=96&crop=154,0,691,691&ava=1",
+      "https://mittalblowers.com/wp-content/uploads/2025/03/career-1.webp",
+      "https://i.pinimg.com/originals/6a/e4/70/6ae47003679a20512bc46fb88e4ee288.jpg",
+      "https://sun6-20.userapi.com/s/v1/ig2/xDz_ZMkcr8iPWTjglREpbMUBCFSi2lopLDx3dsmoRICsH2S-7ayjPOtMjmD1Y2qhyAx-Q6HTYulbAp2GiMhjmSF-.jpg?size=1129x1131&quality=95&crop=159,198,1129,1131&ava=1"
+    ],
     "fullDescription": "Помогу создать и развить сильный личный бренд в социальных сетях и за их пределами. Разберем позиционирование, контент-стратегию, визуал и коммуникацию с аудиторией. Практические инструменты для самопрезентации, нетворкинга и монетизации экспертизы. Индивидуальный подход для профессионалов, предпринимателей и творческих личностей."
   },
   {
@@ -570,9 +912,20 @@
     "description": "Уборка для меня - это терапевтический ритуал. Люблю, когда после наведения порядка проясняются и мысли!",
     "img": "https://img.freepik.com/free-photo/young-beautiful-girl-uses-smartphone-street-surfing-internet-listening-music_1296-910.jpg?t=st=1764350961~exp=1764354561~hmac=878cedce169e8d4da54a452d5be968e2304cb37ecfcbdf44e5d868f6234b5d08&w=1060",
     "teach": ["Уборка и организация"],
-    "learn": ["Английский", "Актёрское мастерство", "Предпринимательство", "Ментальное здоровье"],
+    "learn": [
+      "Английский",
+      "Актёрское мастерство",
+      "Предпринимательство",
+      "Ментальное здоровье"
+    ],
     "gender": "female",
-    "skillsImage": ["https://image.cdn2.seaart.me/2024-02-20/cnadq8le878c73d9mjeg/50e9d15c61f3d620bb3c10687bf3eded50dc2954_high.webp", "https://i.pinimg.com/736x/0f/94/11/0f94114633e8257fca8c730cc3a72c7a.jpg", "https://avatars.mds.yandex.net/get-shedevrum/15236108/img_43932ae3297a11f09593aa6a96a2c431/orig", "https://fastly.4sqi.net/img/general/600x600/398869057_Pca4ZCVny1V6zp0oQBDbvkL_YDOz8hejH2Rce20nmak.jpg", "https://avatars.mds.yandex.net/i?id=fe70bc9bb7e51ce4d4c31dbc745e4215_l-8209628-images-thumbs&n=13"],
+    "skillsImage": [
+      "https://image.cdn2.seaart.me/2024-02-20/cnadq8le878c73d9mjeg/50e9d15c61f3d620bb3c10687bf3eded50dc2954_high.webp",
+      "https://i.pinimg.com/736x/0f/94/11/0f94114633e8257fca8c730cc3a72c7a.jpg",
+      "https://avatars.mds.yandex.net/get-shedevrum/15236108/img_43932ae3297a11f09593aa6a96a2c431/orig",
+      "https://fastly.4sqi.net/img/general/600x600/398869057_Pca4ZCVny1V6zp0oQBDbvkL_YDOz8hejH2Rce20nmak.jpg",
+      "https://avatars.mds.yandex.net/i?id=fe70bc9bb7e51ce4d4c31dbc745e4215_l-8209628-images-thumbs&n=13"
+    ],
     "fullDescription": "Научу эффективным системам уборки и организации домашнего пространства. Разберем планирование уборки, создание функциональных систем хранения, экологичные средства и поддержание порядка без усилий. Практические техники для разных типов жилья и семейных ситуаций. Помогу превратить рутину в приятный ритуал и создать дом, в котором хочется жить."
   },
   {
@@ -588,7 +941,13 @@
     "teach": ["Проектное управление"],
     "learn": ["Немецкий", "Видеомонтаж", "Коучинг", "Баланс жизни и работы"],
     "gender": "male",
-    "skillsImage": ["https://vhs-stuttgart.de/fileadmin/_processed_/c/8/csm_Beruf_copy_NDABCREATIVITY__AdobeStock_67b03f67c0.jpeg", "https://sun6-23.userapi.com/s/v1/if1/PWH2hrudcjYil3kIR6BSXuXiGtOB-fvgFl1uyftcBYrmaUZkCny703C1ki8QCiA9FKk84RD2.jpg?size=691x691&quality=96&crop=154,0,691,691&ava=1", "https://mittalblowers.com/wp-content/uploads/2025/03/career-1.webp", "https://i.pinimg.com/originals/6a/e4/70/6ae47003679a20512bc46fb88e4ee288.jpg", "https://sun6-20.userapi.com/s/v1/ig2/xDz_ZMkcr8iPWTjglREpbMUBCFSi2lopLDx3dsmoRICsH2S-7ayjPOtMjmD1Y2qhyAx-Q6HTYulbAp2GiMhjmSF-.jpg?size=1129x1131&quality=95&crop=159,198,1129,1131&ava=1"],
+    "skillsImage": [
+      "https://vhs-stuttgart.de/fileadmin/_processed_/c/8/csm_Beruf_copy_NDABCREATIVITY__AdobeStock_67b03f67c0.jpeg",
+      "https://sun6-23.userapi.com/s/v1/if1/PWH2hrudcjYil3kIR6BSXuXiGtOB-fvgFl1uyftcBYrmaUZkCny703C1ki8QCiA9FKk84RD2.jpg?size=691x691&quality=96&crop=154,0,691,691&ava=1",
+      "https://mittalblowers.com/wp-content/uploads/2025/03/career-1.webp",
+      "https://i.pinimg.com/originals/6a/e4/70/6ae47003679a20512bc46fb88e4ee288.jpg",
+      "https://sun6-20.userapi.com/s/v1/ig2/xDz_ZMkcr8iPWTjglREpbMUBCFSi2lopLDx3dsmoRICsH2S-7ayjPOtMjmD1Y2qhyAx-Q6HTYulbAp2GiMhjmSF-.jpg?size=1129x1131&quality=95&crop=159,198,1129,1131&ava=1"
+    ],
     "fullDescription": "Научу инструментам проектного управления в IT и других отраслях. Освоим Agile, Scrum, Kanban, управление рисками, бюджетами и командами. Практические кейсы по планированию, исполнению и контролю проектов. Индивидуальный подход для project-менеджеров, тимлидов и всех, кто хочет систематизировать свою работу. Подготовка к сертификациям."
   },
   {
@@ -602,9 +961,20 @@
     "description": "Ментальное здоровье для меня - это сад, который нужно регулярно поливать. Люблю видеть, как расцветают люди!",
     "img": "https://img.freepik.com/free-photo/side-view-woman-posing-chair_23-2149915943.jpg?t=st=1764350909~exp=1764354509~hmac=74e240ee053916adad3543b9b195c3774b24bbf094318a0f5b42093a642a4a9d&w=1060",
     "teach": ["Ментальное здоровье"],
-    "learn": ["Испанский", "Рисование и иллюстрация", "Тайм-менеджмент", "Домашние растения"],
+    "learn": [
+      "Испанский",
+      "Рисование и иллюстрация",
+      "Тайм-менеджмент",
+      "Домашние растения"
+    ],
     "gender": "female",
-    "skillsImage": ["https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_659d5d53aa8dfa366d5efca2_659d5e719c148f78a1586f1e/scale_1200", "https://i.pinimg.com/736x/ef/29/9a/ef299a275f6aa390d658710232d493d8.jpg", "https://i.pinimg.com/736x/a5/7a/c2/a57ac23282da4f1bab6b5a8a8ed2a6ce.jpg", "https://static.wixstatic.com/media/9dd5f3_29b67dfb052d41c89205874196beb6e0~mv2.jpg/v1/fill/w_601,h_601,al_c,lg_1,q_85/9dd5f3_29b67dfb052d41c89205874196beb6e0~mv2.jpg", "https://images.squarespace-cdn.com/content/v1/5464cface4b033545b7e31af/1613240262321-OSD6OPJ0ML6DX9TL7LAR/image.jpg?format=2500w"],
+    "skillsImage": [
+      "https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_659d5d53aa8dfa366d5efca2_659d5e719c148f78a1586f1e/scale_1200",
+      "https://i.pinimg.com/736x/ef/29/9a/ef299a275f6aa390d658710232d493d8.jpg",
+      "https://i.pinimg.com/736x/a5/7a/c2/a57ac23282da4f1bab6b5a8a8ed2a6ce.jpg",
+      "https://static.wixstatic.com/media/9dd5f3_29b67dfb052d41c89205874196beb6e0~mv2.jpg/v1/fill/w_601,h_601,al_c,lg_1,q_85/9dd5f3_29b67dfb052d41c89205874196beb6e0~mv2.jpg",
+      "https://images.squarespace-cdn.com/content/v1/5464cface4b033545b7e31af/1613240262321-OSD6OPJ0ML6DX9TL7LAR/image.jpg?format=2500w"
+    ],
     "fullDescription": "Провожу занятия по поддержанию ментального здоровья и управлению эмоциональным состоянием. Техники mindfulness, дыхательные практики, работа со стрессом и тревогой. Создаем индивидуальную систему self-care и эмоциональной гигиены. Без медицинских диагнозов - фокус на профилактике и развитии эмоционального интеллекта для улучшения качества жизни."
   },
   {
@@ -618,9 +988,20 @@
     "description": "Продажи для меня - это психологический танец. Люблю момент, когда клиент говорит 'да' и мы оба в выигрыше!",
     "img": "https://img.freepik.com/free-photo/stylish-young-handsome-man-classy-outfit_1303-22501.jpg?t=st=1764350527~exp=1764354127~hmac=64dd08c665ebe34cdc56146461420b69fd0578f89a37a886dfd5ce9cfa93ccf5&w=1060",
     "teach": ["Продажи и переговоры"],
-    "learn": ["Китайский", "Фотография", "Личностное развитие", "Физические тренировки"],
+    "learn": [
+      "Китайский",
+      "Фотография",
+      "Личностное развитие",
+      "Физические тренировки"
+    ],
     "gender": "male",
-    "skillsImage": ["https://vhs-stuttgart.de/fileadmin/_processed_/c/8/csm_Beruf_copy_NDABCREATIVITY__AdobeStock_67b03f67c0.jpeg", "https://sun6-23.userapi.com/s/v1/if1/PWH2hrudcjYil3kIR6BSXuXiGtOB-fvgFl1uyftcBYrmaUZkCny703C1ki8QCiA9FKk84RD2.jpg?size=691x691&quality=96&crop=154,0,691,691&ava=1", "https://mittalblowers.com/wp-content/uploads/2025/03/career-1.webp", "https://i.pinimg.com/originals/6a/e4/70/6ae47003679a20512bc46fb88e4ee288.jpg", "https://sun6-20.userapi.com/s/v1/ig2/xDz_ZMkcr8iPWTjglREpbMUBCFSi2lopLDx3dsmoRICsH2S-7ayjPOtMjmD1Y2qhyAx-Q6HTYulbAp2GiMhjmSF-.jpg?size=1129x1131&quality=95&crop=159,198,1129,1131&ava=1"],
+    "skillsImage": [
+      "https://vhs-stuttgart.de/fileadmin/_processed_/c/8/csm_Beruf_copy_NDABCREATIVITY__AdobeStock_67b03f67c0.jpeg",
+      "https://sun6-23.userapi.com/s/v1/if1/PWH2hrudcjYil3kIR6BSXuXiGtOB-fvgFl1uyftcBYrmaUZkCny703C1ki8QCiA9FKk84RD2.jpg?size=691x691&quality=96&crop=154,0,691,691&ava=1",
+      "https://mittalblowers.com/wp-content/uploads/2025/03/career-1.webp",
+      "https://i.pinimg.com/originals/6a/e4/70/6ae47003679a20512bc46fb88e4ee288.jpg",
+      "https://sun6-20.userapi.com/s/v1/ig2/xDz_ZMkcr8iPWTjglREpbMUBCFSi2lopLDx3dsmoRICsH2S-7ayjPOtMjmD1Y2qhyAx-Q6HTYulbAp2GiMhjmSF-.jpg?size=1129x1131&quality=95&crop=159,198,1129,1131&ava=1"
+    ],
     "fullDescription": "Научу техникам эффективных продаж и ведения сложных переговоров в B2B и B2C сегментах. Разберем воронку продаж, работу с возражениями, методы убеждения и закрытия сделок. Практикуем скрипты, холодные звонки и презентации. Индивидуальный подход для менеджеров по продажам, предпринимателей и всех, кто хочет улучшить свои коммуникативные навыки в бизнесе."
   },
   {
@@ -634,9 +1015,20 @@
     "description": "Скорочтение для меня - это суперспособность в мире информации. Люблю 'проглатывать' книги за один присест!",
     "img": "https://img.freepik.com/free-photo/elegant-businesswoman-standing-office_1157-33427.jpg?t=st=1764350845~exp=1764354445~hmac=af5f6b7e006dfdb09652ec6b1d46ac8511bfe91f6474cf76f979132e7ebd6841&w=1060",
     "teach": ["Скорочтение"],
-    "learn": ["Французский", "Креативное письмо", "Управление командой", "Осознанность"],
+    "learn": [
+      "Французский",
+      "Креативное письмо",
+      "Управление командой",
+      "Осознанность"
+    ],
     "gender": "female",
-    "skillsImage": ["https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_659d5d53aa8dfa366d5efca2_659d5e719c148f78a1586f1e/scale_1200", "https://i.pinimg.com/736x/ef/29/9a/ef299a275f6aa390d658710232d493d8.jpg", "https://i.pinimg.com/736x/a5/7a/c2/a57ac23282da4f1bab6b5a8a8ed2a6ce.jpg", "https://static.wixstatic.com/media/9dd5f3_29b67dfb052d41c89205874196beb6e0~mv2.jpg/v1/fill/w_601,h_601,al_c,lg_1,q_85/9dd5f3_29b67dfb052d41c89205874196beb6e0~mv2.jpg", "https://images.squarespace-cdn.com/content/v1/5464cface4b033545b7e31af/1613240262321-OSD6OPJ0ML6DX9TL7LAR/image.jpg?format=2500w"],
+    "skillsImage": [
+      "https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_659d5d53aa8dfa366d5efca2_659d5e719c148f78a1586f1e/scale_1200",
+      "https://i.pinimg.com/736x/ef/29/9a/ef299a275f6aa390d658710232d493d8.jpg",
+      "https://i.pinimg.com/736x/a5/7a/c2/a57ac23282da4f1bab6b5a8a8ed2a6ce.jpg",
+      "https://static.wixstatic.com/media/9dd5f3_29b67dfb052d41c89205874196beb6e0~mv2.jpg/v1/fill/w_601,h_601,al_c,lg_1,q_85/9dd5f3_29b67dfb052d41c89205874196beb6e0~mv2.jpg",
+      "https://images.squarespace-cdn.com/content/v1/5464cface4b033545b7e31af/1613240262321-OSD6OPJ0ML6DX9TL7LAR/image.jpg?format=2500w"
+    ],
     "fullDescription": "Научу техникам скорочтения и эффективной работы с большими объемами информации. Развиваем периферическое зрение, подавляем субвокализацию, учимся структурировать и запоминать прочитанное. Практические упражнения для увеличения скорости чтения в 3-5 раз с сохранением понимания. Индивидуальный подход для студентов, исследователей и профессионалов."
   },
   {
@@ -650,9 +1042,20 @@
     "description": "Ремонт для меня - это магия превращения. Люблю, когда из старого хаоса рождается новая красота!",
     "img": "https://img.freepik.com/free-photo/close-up-male-carpenter-looking-digital-tablet-measuring-wooden-block_23-2147945073.jpg?t=st=1764350577~exp=1764354177~hmac=4f032f41355338af3c3d922b9dec9ce816b70678f3a0a2512868a2013ffe0f36&w=1060",
     "teach": ["Ремонт"],
-    "learn": ["Английский", "Маркетинг и реклама", "Арт-терапия", "Сон и восстановление"],
+    "learn": [
+      "Английский",
+      "Маркетинг и реклама",
+      "Арт-терапия",
+      "Сон и восстановление"
+    ],
     "gender": "male",
-    "skillsImage": ["https://image.cdn2.seaart.me/2024-02-20/cnadq8le878c73d9mjeg/50e9d15c61f3d620bb3c10687bf3eded50dc2954_high.webp", "https://i.pinimg.com/736x/0f/94/11/0f94114633e8257fca8c730cc3a72c7a.jpg", "https://avatars.mds.yandex.net/get-shedevrum/15236108/img_43932ae3297a11f09593aa6a96a2c431/orig", "https://fastly.4sqi.net/img/general/600x600/398869057_Pca4ZCVny1V6zp0oQBDbvkL_YDOz8hejH2Rce20nmak.jpg", "https://avatars.mds.yandex.net/i?id=fe70bc9bb7e51ce4d4c31dbc745e4215_l-8209628-images-thumbs&n=13"],
+    "skillsImage": [
+      "https://image.cdn2.seaart.me/2024-02-20/cnadq8le878c73d9mjeg/50e9d15c61f3d620bb3c10687bf3eded50dc2954_high.webp",
+      "https://i.pinimg.com/736x/0f/94/11/0f94114633e8257fca8c730cc3a72c7a.jpg",
+      "https://avatars.mds.yandex.net/get-shedevrum/15236108/img_43932ae3297a11f09593aa6a96a2c431/orig",
+      "https://fastly.4sqi.net/img/general/600x600/398869057_Pca4ZCVny1V6zp0oQBDbvkL_YDOz8hejH2Rce20nmak.jpg",
+      "https://avatars.mds.yandex.net/i?id=fe70bc9bb7e51ce4d4c31dbc745e4215_l-8209628-images-thumbs&n=13"
+    ],
     "fullDescription": "Научу основам капитального ремонта и отделочных работ своими руками. Разберем планирование бюджета, выбор материалов, монтажные работы: штукатурка, покраска, укладка плитки, установка сантехники и электрики. Практические навыки для экономии на услугах мастеров и создания комфортного living space. Для начинающих домашних мастеров."
   },
   {
@@ -668,7 +1071,13 @@
     "teach": ["Креативное письмо"],
     "learn": ["Немецкий", "Декор и DIY", "Коучинг", "Питание и ЗОЖ"],
     "gender": "female",
-    "skillsImage": ["https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_659d5d53aa8dfa366d5efca2_659d5e719c148f78a1586f1e/scale_1200", "https://i.pinimg.com/736x/ef/29/9a/ef299a275f6aa390d658710232d493d8.jpg", "https://i.pinimg.com/736x/a5/7a/c2/a57ac23282da4f1bab6b5a8a8ed2a6ce.jpg", "https://static.wixstatic.com/media/9dd5f3_29b67dfb052d41c89205874196beb6e0~mv2.jpg/v1/fill/w_601,h_601,al_c,lg_1,q_85/9dd5f3_29b67dfb052d41c89205874196beb6e0~mv2.jpg", "https://images.squarespace-cdn.com/content/v1/5464cface4b033545b7e31af/1613240262321-OSD6OPJ0ML6DX9TL7LAR/image.jpg?format=2500w"],
+    "skillsImage": [
+      "https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_659d5d53aa8dfa366d5efca2_659d5e719c148f78a1586f1e/scale_1200",
+      "https://i.pinimg.com/736x/ef/29/9a/ef299a275f6aa390d658710232d493d8.jpg",
+      "https://i.pinimg.com/736x/a5/7a/c2/a57ac23282da4f1bab6b5a8a8ed2a6ce.jpg",
+      "https://static.wixstatic.com/media/9dd5f3_29b67dfb052d41c89205874196beb6e0~mv2.jpg/v1/fill/w_601,h_601,al_c,lg_1,q_85/9dd5f3_29b67dfb052d41c89205874196beb6e0~mv2.jpg",
+      "https://images.squarespace-cdn.com/content/v1/5464cface4b033545b7e31af/1613240262321-OSD6OPJ0ML6DX9TL7LAR/image.jpg?format=2500w"
+    ],
     "fullDescription": "Научу основам креативного письма и сторителлинга. Разберем создание персонажей, построение сюжета, диалоги и стилистику. Практические упражнения для развития писательских навыков и преодоления творческих блоков. Индивидуальный подход для начинающих авторов, блогеров и всех, кто хочет научиться выражать мысли через текст."
   },
   {
@@ -682,9 +1091,20 @@
     "description": "Финансы для меня - это пазл, где каждая деталь важна. Люблю, когда цифры складываются в красивую картину!",
     "img": "https://img.freepik.com/free-photo/smiling-young-african-man-wearing-hat_171337-15958.jpg?t=st=1764350639~exp=1764354239~hmac=dcf3fe402f63eba7b27887ae98920d02e830dfc7b6c1b9f44ab8dcb4fff11601&w=1060",
     "teach": ["Домашние финансы"],
-    "learn": ["Японский", "Видеомонтаж", "Предпринимательство", "Йога и медитация"],
+    "learn": [
+      "Японский",
+      "Видеомонтаж",
+      "Предпринимательство",
+      "Йога и медитация"
+    ],
     "gender": "male",
-    "skillsImage": ["https://m.foolcdn.com/media/affiliates/images/Couple_paying_bills-1_tEyxqjE.2e16d0ba.fill-1080x1080.jpg", "https://sun9-45.userapi.com/impg/t30-v7tlugixjIVCCJN1W-qkfxYDTAllNhg9DA/SDPtbHlvD38.jpg?size=807x807&quality=96&sign=25a3cf298ebf520a0d1213e71850053b&c_uniq_tag=MTIVchtMq0JjkL1atREDtojYCaj_DGvuS_AikRDnopM&type=album", "https://avatars.mds.yandex.net/i?id=24efbd92b2f32a429eb9ab88d689160b_l-4793215-images-thumbs&n=13", "https://avatars.mds.yandex.net/i?id=15c2d153a0bfefe03b4cb9323c2850a3_sr-5099351-images-thumbs&n=13", "https://orvalho.online/wp-content/uploads/2022/10/Meu_projeto-1_10_.webp"],
+    "skillsImage": [
+      "https://m.foolcdn.com/media/affiliates/images/Couple_paying_bills-1_tEyxqjE.2e16d0ba.fill-1080x1080.jpg",
+      "https://sun9-45.userapi.com/impg/t30-v7tlugixjIVCCJN1W-qkfxYDTAllNhg9DA/SDPtbHlvD38.jpg?size=807x807&quality=96&sign=25a3cf298ebf520a0d1213e71850053b&c_uniq_tag=MTIVchtMq0JjkL1atREDtojYCaj_DGvuS_AikRDnopM&type=album",
+      "https://avatars.mds.yandex.net/i?id=24efbd92b2f32a429eb9ab88d689160b_l-4793215-images-thumbs&n=13",
+      "https://avatars.mds.yandex.net/i?id=15c2d153a0bfefe03b4cb9323c2850a3_sr-5099351-images-thumbs&n=13",
+      "https://orvalho.online/wp-content/uploads/2022/10/Meu_projeto-1_10_.webp"
+    ],
     "fullDescription": "Помогу навести порядок в личных финансах и создать работающую систему управления бюджетом. Научу ведению учета, планированию, созданию финансовой подушки и началу инвестирования. Практические инструменты для достижения финансовых целей семьи. Индивидуальный подход для разных уровней доходов и жизненных ситуаций."
   },
   {
@@ -698,9 +1118,20 @@
     "description": "Осознанность для меня - это якорь в бушующем море жизни. Люблю моменты полного присутствия 'здесь и сейчас'!",
     "img": "https://img.freepik.com/free-photo/attractive-girl-window-shows-different-emotions-mood_78826-2793.jpg?t=st=1764350763~exp=1764354363~hmac=bbeafee19cff395c4ffe80da0b01282a43f1397143c675bcd026414a0b7bad71&w=1060",
     "teach": ["Осознанность"],
-    "learn": ["Испанский", "Актёрское мастерство", "Личный бренд", "Ментальное здоровье"],
+    "learn": [
+      "Испанский",
+      "Актёрское мастерство",
+      "Личный бренд",
+      "Ментальное здоровье"
+    ],
     "gender": "female",
-    "skillsImage": ["https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_659d5d53aa8dfa366d5efca2_659d5e719c148f78a1586f1e/scale_1200", "https://i.pinimg.com/736x/ef/29/9a/ef299a275f6aa390d658710232d493d8.jpg", "https://i.pinimg.com/736x/a5/7a/c2/a57ac23282da4f1bab6b5a8a8ed2a6ce.jpg", "https://static.wixstatic.com/media/9dd5f3_29b67dfb052d41c89205874196beb6e0~mv2.jpg/v1/fill/w_601,h_601,al_c,lg_1,q_85/9dd5f3_29b67dfb052d41c89205874196beb6e0~mv2.jpg", "https://images.squarespace-cdn.com/content/v1/5464cface4b033545b7e31af/1613240262321-OSD6OPJ0ML6DX9TL7LAR/image.jpg?format=2500w"],
+    "skillsImage": [
+      "https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_659d5d53aa8dfa366d5efca2_659d5e719c148f78a1586f1e/scale_1200",
+      "https://i.pinimg.com/736x/ef/29/9a/ef299a275f6aa390d658710232d493d8.jpg",
+      "https://i.pinimg.com/736x/a5/7a/c2/a57ac23282da4f1bab6b5a8a8ed2a6ce.jpg",
+      "https://static.wixstatic.com/media/9dd5f3_29b67dfb052d41c89205874196beb6e0~mv2.jpg/v1/fill/w_601,h_601,al_c,lg_1,q_85/9dd5f3_29b67dfb052d41c89205874196beb6e0~mv2.jpg",
+      "https://images.squarespace-cdn.com/content/v1/5464cface4b033545b7e31af/1613240262321-OSD6OPJ0ML6DX9TL7LAR/image.jpg?format=2500w"
+    ],
     "fullDescription": "Научу практикам осознанности (mindfulness) для снижения стресса и улучшения качества жизни. Медитации, дыхательные техники, body scan и практики присутствия в повседневности. Индивидуальный подход к созданию персональной mindfulness-рутины. Помогу развить навык осознанного проживания каждого момента и управления вниманием в современном мире."
   },
   {
@@ -714,9 +1145,20 @@
     "description": "Предпринимательство для меня - это искусство создавать value. Люблю, когда идея превращается в работающий бизнес!",
     "img": "https://img.freepik.com/free-photo/asian-business-man-calling-phone-outside_1262-3452.jpg?t=st=1764350676~exp=1764354276~hmac=f3366f994993aa3fad416fb0bdbbfe27d5642cb3aa1e61b408b510ea10696371&w=1060",
     "teach": ["Предпринимательство"],
-    "learn": ["Английский", "Фотография", "Проектное управление", "Баланс жизни и работы"],
+    "learn": [
+      "Английский",
+      "Фотография",
+      "Проектное управление",
+      "Баланс жизни и работы"
+    ],
     "gender": "male",
-    "skillsImage": ["https://vhs-stuttgart.de/fileadmin/_processed_/c/8/csm_Beruf_copy_NDABCREATIVITY__AdobeStock_67b03f67c0.jpeg", "https://sun6-23.userapi.com/s/v1/if1/PWH2hrudcjYil3kIR6BSXuXiGtOB-fvgFl1uyftcBYrmaUZkCny703C1ki8QCiA9FKk84RD2.jpg?size=691x691&quality=96&crop=154,0,691,691&ava=1", "https://mittalblowers.com/wp-content/uploads/2025/03/career-1.webp", "https://i.pinimg.com/originals/6a/e4/70/6ae47003679a20512bc46fb88e4ee288.jpg", "https://sun6-20.userapi.com/s/v1/ig2/xDz_ZMkcr8iPWTjglREpbMUBCFSi2lopLDx3dsmoRICsH2S-7ayjPOtMjmD1Y2qhyAx-Q6HTYulbAp2GiMhjmSF-.jpg?size=1129x1131&quality=95&crop=159,198,1129,1131&ava=1"],
+    "skillsImage": [
+      "https://vhs-stuttgart.de/fileadmin/_processed_/c/8/csm_Beruf_copy_NDABCREATIVITY__AdobeStock_67b03f67c0.jpeg",
+      "https://sun6-23.userapi.com/s/v1/if1/PWH2hrudcjYil3kIR6BSXuXiGtOB-fvgFl1uyftcBYrmaUZkCny703C1ki8QCiA9FKk84RD2.jpg?size=691x691&quality=96&crop=154,0,691,691&ava=1",
+      "https://mittalblowers.com/wp-content/uploads/2025/03/career-1.webp",
+      "https://i.pinimg.com/originals/6a/e4/70/6ae47003679a20512bc46fb88e4ee288.jpg",
+      "https://sun6-20.userapi.com/s/v1/ig2/xDz_ZMkcr8iPWTjglREpbMUBCFSi2lopLDx3dsmoRICsH2S-7ayjPOtMjmD1Y2qhyAx-Q6HTYulbAp2GiMhjmSF-.jpg?size=1129x1131&quality=95&crop=159,198,1129,1131&ava=1"
+    ],
     "fullDescription": "Помогу с запуском и развитием бизнеса с нуля. Разберем создание бизнес-модели, финансовое планирование, маркетинговую стратегию и управление командой. Практические инструменты для стартаперов: бережливый стартап, работа с инвесторами, масштабирование. На основе реальных кейсов из IT, retail и service-отраслей. Поддержка на каждом этапе."
   }
 ]

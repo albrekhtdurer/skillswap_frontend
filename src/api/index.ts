@@ -1,6 +1,6 @@
 import cities from "../public/db/cities.json";
 import skills from "../public/db/skills.json";
-import usersData from "../public/db/users.json"
+import usersData from "../public/db/users.json";
 
 import type { City, SkillCategory, User } from "./types";
 
@@ -17,8 +17,8 @@ export const api = {
     return skills;
   },
 
-   async getAllUsers(): Promise<User[]> {
+  async getAllUsers(): Promise<User[]> {
     await delay(300);
     return usersData as User[];
-  }
+  },
 };

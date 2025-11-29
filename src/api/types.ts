@@ -20,7 +20,7 @@ export interface User {
   img: string;
   teach: string[];
   learn: string[];
-  gender: 'male' | 'female';
+  gender: "male" | "female";
   skillsImage: string[];
   fullDescription: string;
 }
