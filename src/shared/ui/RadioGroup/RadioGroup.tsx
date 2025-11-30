@@ -1,5 +1,5 @@
 import { Option, type OptionType } from "./Option";
-import './style.css'
+import "./style.css";
 
 type RadioGroupProps = {
   name: string;
@@ -14,7 +14,7 @@ export const RadioGroup = ({
   onChange,
   options,
   title,
-  selected
+  selected,
 }: RadioGroupProps) => {
   return (
     <div className="radio-group">
