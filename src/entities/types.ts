@@ -36,5 +36,4 @@ export interface User {
   subcategoriesWantToLearn: Subcategory[];
   gender: "male" | "female";
   images: string[];
-  fullDescription: string;
 }
