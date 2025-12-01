@@ -1,7 +1,11 @@
-import { Logo } from "../shared/ui/Logo/logo";
+import { Footer } from "../widgets/footer/footer";
 
 function App() {
-  return <div><Logo /></div>;
+  return (
+    <div>
+      <Footer allSkillsOnClick={() => console.log("all skills click")} />
+    </div>
+  );
 }
 
 export default App;
