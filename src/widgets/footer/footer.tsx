@@ -15,18 +15,16 @@ export const Footer = ({ allSkillsOnClick }: FooterProps) => {
       </div>
       <nav className={style.footer_nav_section}>
         <div className={style.footer_nav_subsection}>
-          <TextLink link="/">О проекте</TextLink>
-          <TextLink link="/" onClick={allSkillsOnClick}>
-            Все навыки
-          </TextLink>
+          <TextLink>О проекте</TextLink>
+          <TextLink onClick={allSkillsOnClick}>Все навыки</TextLink>
         </div>
         <div className={style.footer_nav_subsection}>
-          <TextLink link="/">Контакты</TextLink>
-          <TextLink link="/">Блог</TextLink>
+          <TextLink>Контакты</TextLink>
+          <TextLink>Блог</TextLink>
         </div>
         <div className={style.footer_nav_subsection}>
-          <TextLink link="/">Политика конфиденциальности</TextLink>
-          <TextLink link="/">Пользовательское соглашение</TextLink>
+          <TextLink>Политика конфиденциальности</TextLink>
+          <TextLink>Пользовательское соглашение</TextLink>
         </div>
       </nav>
     </div>

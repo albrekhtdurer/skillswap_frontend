@@ -17,7 +17,9 @@
 .footer_nav_section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  justify-self: center;
   gap: 24px;
+  max-inline-size: 1020px;
   max-block-size: 60px;
   margin-block: auto;
 }

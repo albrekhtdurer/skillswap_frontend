@@ -1,22 +1,12 @@
 import style from "./text-link.module.css";
 
 export type TextLinkProps = {
-  link: string;
   children: React.ReactNode;
 } & React.ComponentPropsWithoutRef<"a">;
 
-export const TextLink = ({
-  children,
-  link,
-  className,
-  ...props
-}: TextLinkProps) => {
+export const TextLink = ({ children, className, ...props }: TextLinkProps) => {
   return (
-    <a
-      href={link}
-      className={`${style.text_link} ${className ?? ""}`}
-      {...props}
-    >
+    <a className={`${style.text_link} ${className ?? ""}`} {...props}>
       {children}
     </a>
   );

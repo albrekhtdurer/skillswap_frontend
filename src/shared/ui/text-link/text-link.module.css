@@ -3,4 +3,5 @@
   max-width: fit-content;
   color: var(--text-color);
   text-decoration: none;
+  cursor: pointer;
 }
