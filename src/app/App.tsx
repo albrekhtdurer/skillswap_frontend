@@ -17,21 +17,21 @@ function App() {
       value: "female",
     },
   ];
-  
+
   const [state, setState] = useState(options[0]);
-  
+
   const handleChange = (option: OptionType) => {
-    setState(option)
-    console.log(option)
-  }
+    setState(option);
+    console.log(option);
+  };
 
   return (
     <div>
-      <RadioGroup 
-        name="authorSex" 
-        onChange={handleChange} 
-        options={options} 
-        selected={state} 
+      <RadioGroup
+        name="authorSex"
+        onChange={handleChange}
+        options={options}
+        selected={state}
         title="Пол автора"
       />
     </div>
