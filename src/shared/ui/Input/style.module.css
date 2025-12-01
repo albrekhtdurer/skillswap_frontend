@@ -1,12 +1,3 @@
-/* убрать перед мерджем */
-
-body {
-  padding: 10px;
-  background-color: bisque;
-}
-
-/* !!!  */
-
 /* общие стили  */
 
 .input__element {
@@ -14,6 +5,7 @@ body {
   width: 100%;
   padding: 12px 20px;
   color: var(--text-color);
+  font-family: var(--font-main);
   font-size: var(--font-size-main);
   line-height: var(--line-height-main);
   background-color: var(--card-input-color);
@@ -23,6 +15,7 @@ body {
 
 .input__element::placeholder {
   color: var(--caption-color);
+  font-family: inherit;
 }
 
 /* лейблы */
