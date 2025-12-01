@@ -1,7 +1,10 @@
 import { useRef, useState, type ChangeEvent } from "react";
-import { Input } from "../shared/ui/Input/Input";
-import searchIcon from "../assets/icons/search.svg";
-import eyeIcon from "../assets/icons/eye.svg";
+import {
+  Input,
+  PasswordInput,
+  SearchInput,
+  EditInput,
+} from "../shared/ui/Input";
 
 function App() {
   const [state, setState] = useState({
@@ -9,10 +12,12 @@ function App() {
     password: "",
   });
 
-  const [showPassword, setShowPassword] = useState(false);
-
   const searchInputRef = useRef<HTMLInputElement>(null);
   const [search, setSearch] = useState("");
+
+  const editInputRef = useRef<HTMLInputElement>(null);
+  const [edit, setEdit] = useState("");
+
   const [errors] = useState({
     email: "ошибка",
     password: "",
@@ -34,29 +39,38 @@ function App() {
 
   return (
     <div>
-      <Input
+      <SearchInput
         ref={searchInputRef}
         name="search"
         value={search}
-        placeholder="Поиск"
-        className="search-input"
-        classNameError="input_error"
-        icon={{
-          url: searchIcon,
-          alt: "",
-          className: "search__icon",
-          onClick() {
-            if (searchInputRef.current)
-              console.log(searchInputRef.current.value);
-          },
+        onSearch={() => {
+          if (searchInputRef.current)
+            console.log("Ищу!", searchInputRef.current.value);
         }}
         onChange={(e) => {
-          console.log(e.target.value);
+          console.log("Ввод в поиск");
           setSearch(e.target.value);
+        }}
+      />
+      <EditInput
+        label="С изменением"
+        id="edit"
+        ref={editInputRef}
+        name="edit"
+        value={edit}
+        placeholder="Изменить что-то"
+        onEdit={() => {
+          if (editInputRef.current)
+            console.log("Имзеняюсь!", editInputRef.current.value);
+        }}
+        onChange={(e) => {
+          console.log("Ввод в изменяемый");
+          setEdit(e.target.value);
         }}
       />
       <form action="">
         <Input
+          id="email"
           label="Email"
           name="email"
           value={state.email}
@@ -64,32 +78,19 @@ function App() {
           hint={errors.email}
           isError={!!errors.email || false}
           placeholder="Введите email"
-          className="input"
-          classNameError="input_error"
           onChange={(e) => {
-            console.log(e.target.value);
+            console.log("Ввод в email");
             handleEmailChange(e);
           }}
         />
-        <Input
+        <PasswordInput
           label="Пароль"
           name="password"
+          id="password"
           value={state.password}
-          type={showPassword ? undefined : "password"}
-          hint="подсказка"
-          placeholder="Введите пароль"
-          className=""
           classNameError="input_error"
-          icon={{
-            url: eyeIcon,
-            alt: "показать пароль",
-            className: "show-password-icon",
-            onClick() {
-              setShowPassword(!showPassword);
-            },
-          }}
           onChange={(e) => {
-            console.log(e.target.value);
+            console.log("Ввод пароля");
             handlePasswordChange(e);
           }}
         />

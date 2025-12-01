@@ -1,77 +1,37 @@
-import React, { type ChangeEvent } from "react";
-import "./style.css";
+import React, { type ReactNode } from "react";
+import style from "./style.module.css";
+import { InputElement, type InputElementProps } from "./InputElement";
 
-type InputProps = {
-  placeholder: string;
-  className: string;
-  classNameError: string;
-  onChange: (e: ChangeEvent<HTMLInputElement>) => void;
-  name: string;
-  hint?: string;
-  id?: string;
+export type InputProps = InputElementProps & {
+  className?: string;
   label?: string;
-  icon?: {
-    url: string;
-    alt: string;
-    className?: string;
-    onClick?: () => void;
-  };
-  value?: string;
+  hint?: string;
   isError?: boolean;
-  type?: "password" | "email";
+  children?: ReactNode;
+  classNameError?: string;
 };
 
 export const Input = React.forwardRef<HTMLInputElement, InputProps>(
   (
     {
-      classNameError,
-      className,
-      onChange,
-      isError,
-      placeholder,
-      type,
-      label,
-      value,
-      name,
-      id,
+      className = style.input,
       hint,
-      icon,
+      label,
+      isError,
+      classNameError = style.input_error,
+      children,
+      id,
+      ...props
     },
     ref,
-  ) => {
-    return (
-      <div className={`input ${className} ${isError ? classNameError : ""}`}>
-        {label && (
-          <label className={"input__label"} htmlFor={id || name}>
-            {label}
-          </label>
-        )}
-        <div className="input__cover">
-          <input
-            ref={ref}
-            name={name}
-            id={id || name}
-            value={value}
-            type={type || "text"}
-            className={"input__input-element"}
-            placeholder={placeholder}
-            onChange={onChange}
-          />
-          {icon &&
-            (icon.onClick ? (
-              <button
-                type="button"
-                className={icon.className && `${icon.className}-button`}
-                onClick={icon.onClick}
-              >
-                <img className={icon.className} src={icon.url} alt={icon.alt} />
-              </button>
-            ) : (
-              <img className={icon.className} src={icon.url} alt={icon.alt} />
-            ))}
-        </div>
-        {hint && <p className={"input__hint"}>{hint}</p>}
+  ) => (
+    <div className={`${className} ${isError ? classNameError : ""}`}>
+      {label && <label htmlFor={id}>{label}</label>}
+      <div>
+        <InputElement ref={ref} id={id} {...props} />
+        {children}
       </div>
-    );
-  },
+      {hint && <p>{hint}</p>}
+    </div>
+  ),
 );
