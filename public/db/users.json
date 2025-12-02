@@ -24,7 +24,7 @@
     ],
     "gender": "male",
     "images": [
-     "https://i.pinimg.com/originals/c0/60/21/c060215015e6d46a234cb4127af3237f.jpg",
+      "https://i.pinimg.com/originals/c0/60/21/c060215015e6d46a234cb4127af3237f.jpg",
       "https://cdn-image.zvuk.com/pic?hash=ab2801f2-5d2b-426e-81a2-015945decd50&id=39822077&size=large&type=release",
       "https://yt3.googleusercontent.com/ytc/AIdro_mEd9XuERpSaJ-D0Td4tLTLDWwZly9QSNp2d36ptN5gvg=s900-c-k-c0x00ffffff-no-rj",
       "https://digital-basket-01.wbbasket.ru/vol1/382/a6daf446c5ea49a2df10caf185ffcac4/1920.jpg",
@@ -76,9 +76,9 @@
     "skillCanTeach": {
       "id": 3,
       "name": "Домашние растения",
-    "fullDescription": "Научу уходу за комнатными растениями и созданию зеленых уголков в городской квартире. Разберем подбор растений для разных условий, правильный полив, освещение, пересадку и борьбу с вредителями. Практические советы по созданию фито-дизайна и уходу за редкими видами. Помогу превратить ваш дом в цветущий сад.",
-     "categoryId": 5,
-    "subCategoryId": 33
+      "fullDescription": "Научу уходу за комнатными растениями и созданию зеленых уголков в городской квартире. Разберем подбор растений для разных условий, правильный полив, освещение, пересадку и борьбу с вредителями. Практические советы по созданию фито-дизайна и уходу за редкими видами. Помогу превратить ваш дом в цветущий сад.",
+      "categoryId": 5,
+      "subCategoryId": 33
     },
     "subcategoriesWantToLearn": [
       { "id": 20, "name": "Немецкий" },
@@ -88,7 +88,7 @@
     ],
     "gender": "male",
     "images": [
-     "https://i.pinimg.com/originals/08/54/4f/08544fae757659a2808827d362ee694a.webp",
+      "https://i.pinimg.com/originals/08/54/4f/08544fae757659a2808827d362ee694a.webp",
       "https://orton.ru/upload/iblock/8df/yr5c0q2203w1h5v0m9x21hc23ynkog7y.jpg",
       "https://64.media.tumblr.com/b3ccb570338a868e649d3e1820e91483/4ba63a61ae633ba5-6d/s1280x1920/a85a374dd7a35945570ef44acc3629e5810a09cd.jpg",
       "https://s3.eu-central-1.amazonaws.com/pressland-cms/cache/metatags_image/sk/19694808-zimowe-nawozy-podajemy-w-formie-wodnych-roztworow.jpeg",
@@ -108,9 +108,9 @@
     "skillCanTeach": {
       "id": 4,
       "name": "Коучинг",
-    "fullDescription": "Научу основам коучинга и техникам помощи в достижении личных и профессиональных целей. Работа с постановкой SMART-целей, преодолением ограничивающих убеждений, планированием действий и accountability. Практические инструменты для проведения коучинговых сессий и развития навыков активного слушания и задавания мощных вопросов.",
-    "categoryId": 4,
-    "subCategoryId": 29
+      "fullDescription": "Научу основам коучинга и техникам помощи в достижении личных и профессиональных целей. Работа с постановкой SMART-целей, преодолением ограничивающих убеждений, планированием действий и accountability. Практические инструменты для проведения коучинговых сессий и развития навыков активного слушания и задавания мощных вопросов.",
+      "categoryId": 4,
+      "subCategoryId": 29
     },
     "subcategoriesWantToLearn": [
       { "id": 18, "name": "Французский" },
@@ -139,10 +139,10 @@
     "avatarUrl": "https://img.freepik.com/free-photo/front-view-smiley-man-outdoors-city_23-2148955558.jpg?t=st=1764349724~exp=1764353324~hmac=b7fdf7b5f4ab4a524cc8f52a7e47671fde8eb707284255c14364408e4f3d6e1f&w=1060",
     "skillCanTeach": {
       "id": 5,
-     "name": "Живопись",
-    "fullDescription": "Научу основам академического рисунка, живописи и цифровой иллюстрации. Индивидуальный подход для начинающих и продолжающих. Работа с различными материалами: акварель, масло, акрил, цифровые инструменты. Развиваем чувство композиции, цвета и перспективы. Помогу найти ваш уникальный стиль в искусстве.",
-     "categoryId": 2,
-    "subCategoryId": 9
+      "name": "Живопись",
+      "fullDescription": "Научу основам академического рисунка, живописи и цифровой иллюстрации. Индивидуальный подход для начинающих и продолжающих. Работа с различными материалами: акварель, масло, акрил, цифровые инструменты. Развиваем чувство композиции, цвета и перспективы. Помогу найти ваш уникальный стиль в искусстве.",
+      "categoryId": 2,
+      "subCategoryId": 9
     },
     "subcategoriesWantToLearn": [
       { "id": 22, "name": "Японский" },
@@ -172,10 +172,10 @@
     "avatarUrl": "https://img.freepik.com/free-photo/thinking-long-haired-girl_1398-438.jpg?t=st=1764351671~exp=1764355271~hmac=300fc0756b7facea36a12df4330a68c0ff6b6098d5a5ddaefb9f9c7bb529c0e3&w=1060",
     "skillCanTeach": {
       "id": 6,
-     "name": "Составление резюме",
-    "fullDescription": "Научу создавать резюме, которое заметят рекрутеры, и готовиться к собеседованиям так, чтобы получать офферы. Разберем составление сопроводительных писений, профилей в LinkedIn, самопрезентацию и ответы на каверзные вопросы. Практикуем стресс-интервью и технику переговоров о зарплате. Помогу найти ваши сильные стороны и правильно их подать.",
-     "categoryId": 1,
-    "subCategoryId": 5
+      "name": "Составление резюме",
+      "fullDescription": "Научу создавать резюме, которое заметят рекрутеры, и готовиться к собеседованиям так, чтобы получать офферы. Разберем составление сопроводительных писений, профилей в LinkedIn, самопрезентацию и ответы на каверзные вопросы. Практикуем стресс-интервью и технику переговоров о зарплате. Помогу найти ваши сильные стороны и правильно их подать.",
+      "categoryId": 1,
+      "subCategoryId": 5
     },
     "subcategoriesWantToLearn": [
       { "id": 19, "name": "Испанский" },
@@ -204,10 +204,10 @@
     "avatarUrl": "https://img.freepik.com/free-photo/medium-shot-young-man-holding-flower_23-2149438497.jpg?t=st=1764349633~exp=1764353233~hmac=976dfe50cfca32afbdcc459e82c9dfff4dade63f8cc5beaa63efea2e17411996&w=1060",
     "skillCanTeach": {
       "id": 7,
-     "name": "Предпринимательство",
-    "fullDescription": "Помогу с запуском и развитием бизнеса с нуля. Разберем создание бизнес-модели, финансовое планирование, маркетинговую стратегию и управление командой. Практические инструменты для стартаперов: бережливый стартап, работа с инвесторами, масштабирование. На основе реальных кейсов из разных отраслей. Поддержка на каждом этапе становления бизнеса.",
-     "categoryId": 1,
-    "subCategoryId": 8
+      "name": "Предпринимательство",
+      "fullDescription": "Помогу с запуском и развитием бизнеса с нуля. Разберем создание бизнес-модели, финансовое планирование, маркетинговую стратегию и управление командой. Практические инструменты для стартаперов: бережливый стартап, работа с инвесторами, масштабирование. На основе реальных кейсов из разных отраслей. Поддержка на каждом этапе становления бизнеса.",
+      "categoryId": 1,
+      "subCategoryId": 8
     },
     "subcategoriesWantToLearn": [
       { "id": 17, "name": "Английский" },
@@ -219,7 +219,7 @@
     "images": [
       "https://vhs-stuttgart.de/fileadmin/_processed_/c/8/csm_Beruf_copy_NDABCREATIVITY__AdobeStock_67b03f67c0.jpeg",
       "https://sun6-23.userapi.com/s/v1/if1/PWH2hrudcjYil3kIR6BSXuXiGtOB-fvgFl1uyftcBYrmaUZkCny703C1ki8QCiA9FKk84RD2.jpg?size=691x691&quality=96&crop=154,0,691,691&ava=1",
-       "https://sun6-20.userapi.com/s/v1/ig2/xDz_ZMkcr8iPWTjglREpbMUBCFSi2lopLDx3dsmoRICsH2S-7ayjPOtMjmD1Y2qhyAx-Q6HTYulbAp2GiMhjmSF-.jpg?size=1129x1131&quality=95&crop=159,198,1129,1131&ava=1",
+      "https://sun6-20.userapi.com/s/v1/ig2/xDz_ZMkcr8iPWTjglREpbMUBCFSi2lopLDx3dsmoRICsH2S-7ayjPOtMjmD1Y2qhyAx-Q6HTYulbAp2GiMhjmSF-.jpg?size=1129x1131&quality=95&crop=159,198,1129,1131&ava=1",
       "https://i.pinimg.com/originals/6a/e4/70/6ae47003679a20512bc46fb88e4ee288.jpg",
       "https://mittalblowers.com/wp-content/uploads/2025/03/career-1.webp"
     ]
@@ -236,10 +236,10 @@
     "avatarUrl": "https://img.freepik.com/free-photo/side-view-full-length-attractive-brunette-lady-with-tail-wearing-blue-coat-light-blue-trousers-white-heels-she-is-moving-smiling-camera-urban-street_132075-9407.jpg?t=st=1764351610~exp=1764355210~hmac=a61d36402515afcebbba0df991cc023c410900316191ae0b2a23741cf63e9d73&w=1060",
     "skillCanTeach": {
       "id": 1,
-    "name": "Медитация",
-    "fullDescription": "Провожу занятия по хатха йоге и медитации для всех уровней подготовки. Индивидуальный подход к построению практики с учетом особенностей здоровья и целей. Изучаем асаны, пранаямы, техники релаксации и mindfulness. Помогу развить гибкость, силу и найти внутренний баланс. Занятия онлайн и офлайн для начинающих и продвинутых.",
-    "categoryId": 6,
-    "subCategoryId": 36
+      "name": "Медитация",
+      "fullDescription": "Провожу занятия по хатха йоге и медитации для всех уровней подготовки. Индивидуальный подход к построению практики с учетом особенностей здоровья и целей. Изучаем асаны, пранаямы, техники релаксации и mindfulness. Помогу развить гибкость, силу и найти внутренний баланс. Занятия онлайн и офлайн для начинающих и продвинутых.",
+      "categoryId": 6,
+      "subCategoryId": 36
     },
     "subcategoriesWantToLearn": [
       { "id": 18, "name": "Французский" },
@@ -249,7 +249,7 @@
     ],
     "gender": "female",
     "images": [
-     "https://i.pinimg.com/originals/c0/60/21/c060215015e6d46a234cb4127af3237f.jpg",
+      "https://i.pinimg.com/originals/c0/60/21/c060215015e6d46a234cb4127af3237f.jpg",
       "https://cdn-image.zvuk.com/pic?hash=ab2801f2-5d2b-426e-81a2-015945decd50&id=39822077&size=large&type=release",
       "https://yt3.googleusercontent.com/ytc/AIdro_mEd9XuERpSaJ-D0Td4tLTLDWwZly9QSNp2d36ptN5gvg=s900-c-k-c0x00ffffff-no-rj",
       "https://digital-basket-01.wbbasket.ru/vol1/382/a6daf446c5ea49a2df10caf185ffcac4/1920.jpg",
@@ -268,10 +268,10 @@
     "avatarUrl": "https://img.freepik.com/free-photo/portrait-man-posing-beach-grey-coat_613910-9568.jpg?t=st=1764349802~exp=1764353402~hmac=07093728944046012766a2096ff27de96d0a89f24e77a0f884decafc2eced04b&w=1060",
     "skillCanTeach": {
       "id": 2,
-    "name": "Английский язык",
-    "fullDescription": "Преподаю английский с акцентом на живое общение и практическое применение. Разрабатываю индивидуальные программы с учетом ваших целей: бизнес-английский, подготовка к экзаменам или повседневное общение. Использую интерактивные методики, фильмы, музыку и реальные жизненные ситуации для погружения в язык.",
-    "categoryId": 3,
-    "subCategoryId": 17
+      "name": "Английский язык",
+      "fullDescription": "Преподаю английский с акцентом на живое общение и практическое применение. Разрабатываю индивидуальные программы с учетом ваших целей: бизнес-английский, подготовка к экзаменам или повседневное общение. Использую интерактивные методики, фильмы, музыку и реальные жизненные ситуации для погружения в язык.",
+      "categoryId": 3,
+      "subCategoryId": 17
     },
     "subcategoriesWantToLearn": [
       { "id": 21, "name": "Китайский" },
@@ -301,9 +301,9 @@
     "skillCanTeach": {
       "id": 3,
       "name": "Домашние растения",
-    "fullDescription": "Научу уходу за комнатными растениями и созданию зеленых уголков в городской квартире. Разберем подбор растений для разных условий, правильный полив, освещение, пересадку и борьбу с вредителями. Практические советы по созданию фито-дизайна и уходу за редкими видами. Помогу превратить ваш дом в цветущий сад.",
-     "categoryId": 5,
-    "subCategoryId": 33
+      "fullDescription": "Научу уходу за комнатными растениями и созданию зеленых уголков в городской квартире. Разберем подбор растений для разных условий, правильный полив, освещение, пересадку и борьбу с вредителями. Практические советы по созданию фито-дизайна и уходу за редкими видами. Помогу превратить ваш дом в цветущий сад.",
+      "categoryId": 5,
+      "subCategoryId": 33
     },
     "subcategoriesWantToLearn": [
       { "id": 17, "name": "Английский" },
@@ -313,7 +313,7 @@
     ],
     "gender": "female",
     "images": [
-     "https://i.pinimg.com/originals/08/54/4f/08544fae757659a2808827d362ee694a.webp",
+      "https://i.pinimg.com/originals/08/54/4f/08544fae757659a2808827d362ee694a.webp",
       "https://orton.ru/upload/iblock/8df/yr5c0q2203w1h5v0m9x21hc23ynkog7y.jpg",
       "https://64.media.tumblr.com/b3ccb570338a868e649d3e1820e91483/4ba63a61ae633ba5-6d/s1280x1920/a85a374dd7a35945570ef44acc3629e5810a09cd.jpg",
       "https://s3.eu-central-1.amazonaws.com/pressland-cms/cache/metatags_image/sk/19694808-zimowe-nawozy-podajemy-w-formie-wodnych-roztworow.jpeg",
@@ -333,9 +333,9 @@
     "skillCanTeach": {
       "id": 4,
       "name": "Коучинг",
-    "fullDescription": "Научу основам коучинга и техникам помощи в достижении личных и профессиональных целей. Работа с постановкой SMART-целей, преодолением ограничивающих убеждений, планированием действий и accountability. Практические инструменты для проведения коучинговых сессий и развития навыков активного слушания и задавания мощных вопросов.",
-    "categoryId": 4,
-    "subCategoryId": 29
+      "fullDescription": "Научу основам коучинга и техникам помощи в достижении личных и профессиональных целей. Работа с постановкой SMART-целей, преодолением ограничивающих убеждений, планированием действий и accountability. Практические инструменты для проведения коучинговых сессий и развития навыков активного слушания и задавания мощных вопросов.",
+      "categoryId": 4,
+      "subCategoryId": 29
     },
     "subcategoriesWantToLearn": [
       { "id": 2, "name": "Маркетинг и реклама" },
@@ -364,10 +364,10 @@
     "avatarUrl": "https://img.freepik.com/free-photo/young-business-woman-using-phone-vacation_1303-23960.jpg?t=st=1764351507~exp=1764355107~hmac=5b1fcf2dfb49c05ff1a15e2d0f2730d6c2f3873fad9aee38e6839de74505ef18&w=1060",
     "skillCanTeach": {
       "id": 5,
-     "name": "Живопись",
-    "fullDescription": "Научу основам академического рисунка, живописи и цифровой иллюстрации. Индивидуальный подход для начинающих и продолжающих. Работа с различными материалами: акварель, масло, акрил, цифровые инструменты. Развиваем чувство композиции, цвета и перспективы. Помогу найти ваш уникальный стиль в искусстве.",
-     "categoryId": 2,
-    "subCategoryId": 9
+      "name": "Живопись",
+      "fullDescription": "Научу основам академического рисунка, живописи и цифровой иллюстрации. Индивидуальный подход для начинающих и продолжающих. Работа с различными материалами: акварель, масло, акрил, цифровые инструменты. Развиваем чувство композиции, цвета и перспективы. Помогу найти ваш уникальный стиль в искусстве.",
+      "categoryId": 2,
+      "subCategoryId": 9
     },
     "subcategoriesWantToLearn": [
       { "id": 19, "name": "Испанский" },
@@ -377,7 +377,7 @@
     ],
     "gender": "female",
     "images": [
-       "https://i.pinimg.com/736x/9d/17/c4/9d17c4ade3f5245dfd109b87c2c134df.jpg",
+      "https://i.pinimg.com/736x/9d/17/c4/9d17c4ade3f5245dfd109b87c2c134df.jpg",
       "https://avatars.mds.yandex.net/i?id=66c959494ead1c4da8595d31913bdf85_l-12937750-images-thumbs&n=13",
       "https://static.tildacdn.com/stor6233-3337-4335-b836-353764326535/78969050.jpg",
       "https://avatars.mds.yandex.net/i?id=2f3f405091a808b2138ae11335c7658c_l-4979110-images-thumbs&n=13",
@@ -397,10 +397,10 @@
     "avatarUrl": "https://img.freepik.com/free-photo/portrait-young-handsome-caucasian-man-park_181624-52207.jpg?t=st=1764349921~exp=1764353521~hmac=d1b63ce207d217d0efdc1bd650e8f45ba6de2b749ae17bf35d6602e7e195c29d&w=1060",
     "skillCanTeach": {
       "id": 6,
-     "name": "Составление резюме",
-    "fullDescription": "Научу создавать резюме, которое заметят рекрутеры, и готовиться к собеседованиям так, чтобы получать офферы. Разберем составление сопроводительных писений, профилей в LinkedIn, самопрезентацию и ответы на каверзные вопросы. Практикуем стресс-интервью и технику переговоров о зарплате. Помогу найти ваши сильные стороны и правильно их подать.",
-     "categoryId": 1,
-    "subCategoryId": 5
+      "name": "Составление резюме",
+      "fullDescription": "Научу создавать резюме, которое заметят рекрутеры, и готовиться к собеседованиям так, чтобы получать офферы. Разберем составление сопроводительных писений, профилей в LinkedIn, самопрезентацию и ответы на каверзные вопросы. Практикуем стресс-интервью и технику переговоров о зарплате. Помогу найти ваши сильные стороны и правильно их подать.",
+      "categoryId": 1,
+      "subCategoryId": 5
     },
     "subcategoriesWantToLearn": [
       { "id": 17, "name": "Английский" },
@@ -410,7 +410,7 @@
     ],
     "gender": "male",
     "images": [
-     "https://solia-paref.com/wp-content/uploads/2024/05/AdobeStock_552746789-1-scaled-1.jpg",
+      "https://solia-paref.com/wp-content/uploads/2024/05/AdobeStock_552746789-1-scaled-1.jpg",
       "https://www.jobasv.net/wp-content/uploads/2021/06/Menanggapi-Pertanyaan-HRD-Ketika-Interview-Kerja-666x666.jpg",
       "https://blagoevgrad-news.com/wp-content/uploads/2019/02/zx640c_2905622.jpg",
       "https://image.lexica.art/full_webp/c7b5752c-2d0a-4134-9a4a-18f437eba432",
@@ -429,10 +429,10 @@
     "avatarUrl": "https://img.freepik.com/free-photo/teenage-girl-lifestyle-concept_23-2148093980.jpg?t=st=1764351473~exp=1764355073~hmac=eaac03d0c6f646104e3731b0cd0e51f6a61f710ed62cc583d84ff76422ea275b&w=1060",
     "skillCanTeach": {
       "id": 7,
-     "name": "Предпринимательство",
-    "fullDescription": "Помогу с запуском и развитием бизнеса с нуля. Разберем создание бизнес-модели, финансовое планирование, маркетинговую стратегию и управление командой. Практические инструменты для стартаперов: бережливый стартап, работа с инвесторами, масштабирование. На основе реальных кейсов из разных отраслей. Поддержка на каждом этапе становления бизнеса.",
-     "categoryId": 1,
-    "subCategoryId": 8
+      "name": "Предпринимательство",
+      "fullDescription": "Помогу с запуском и развитием бизнеса с нуля. Разберем создание бизнес-модели, финансовое планирование, маркетинговую стратегию и управление командой. Практические инструменты для стартаперов: бережливый стартап, работа с инвесторами, масштабирование. На основе реальных кейсов из разных отраслей. Поддержка на каждом этапе становления бизнеса.",
+      "categoryId": 1,
+      "subCategoryId": 8
     },
     "subcategoriesWantToLearn": [
       { "id": 18, "name": "Французский" },
@@ -442,9 +442,9 @@
     ],
     "gender": "female",
     "images": [
-     "https://vhs-stuttgart.de/fileadmin/_processed_/c/8/csm_Beruf_copy_NDABCREATIVITY__AdobeStock_67b03f67c0.jpeg",
+      "https://vhs-stuttgart.de/fileadmin/_processed_/c/8/csm_Beruf_copy_NDABCREATIVITY__AdobeStock_67b03f67c0.jpeg",
       "https://sun6-23.userapi.com/s/v1/if1/PWH2hrudcjYil3kIR6BSXuXiGtOB-fvgFl1uyftcBYrmaUZkCny703C1ki8QCiA9FKk84RD2.jpg?size=691x691&quality=96&crop=154,0,691,691&ava=1",
-       "https://sun6-20.userapi.com/s/v1/ig2/xDz_ZMkcr8iPWTjglREpbMUBCFSi2lopLDx3dsmoRICsH2S-7ayjPOtMjmD1Y2qhyAx-Q6HTYulbAp2GiMhjmSF-.jpg?size=1129x1131&quality=95&crop=159,198,1129,1131&ava=1",
+      "https://sun6-20.userapi.com/s/v1/ig2/xDz_ZMkcr8iPWTjglREpbMUBCFSi2lopLDx3dsmoRICsH2S-7ayjPOtMjmD1Y2qhyAx-Q6HTYulbAp2GiMhjmSF-.jpg?size=1129x1131&quality=95&crop=159,198,1129,1131&ava=1",
       "https://i.pinimg.com/originals/6a/e4/70/6ae47003679a20512bc46fb88e4ee288.jpg",
       "https://mittalblowers.com/wp-content/uploads/2025/03/career-1.webp"
     ]
@@ -457,14 +457,14 @@
     "isLiked": false,
     "age": "23 года",
     "createdAt": "2025-11-18T11:55:00.000Z",
-     "description": "Йога для меня - это диалог с собственным телом. Люблю момент, когда напряжение уходит, а приходит покой.",
+    "description": "Йога для меня - это диалог с собственным телом. Люблю момент, когда напряжение уходит, а приходит покой.",
     "avatarUrl": "https://img.freepik.com/free-photo/portrait-young-handsome-man-with-curly-hair_1303-27415.jpg?t=st=1764349990~exp=1764353590~hmac=82510b1916196dd702938fd08a30313f9e03094e4e2739f9228d53f9ff1d3b58&w=1060",
     "skillCanTeach": {
       "id": 1,
-    "name": "Медитация",
-    "fullDescription": "Провожу занятия по хатха йоге и медитации для всех уровней подготовки. Индивидуальный подход к построению практики с учетом особенностей здоровья и целей. Изучаем асаны, пранаямы, техники релаксации и mindfulness. Помогу развить гибкость, силу и найти внутренний баланс. Занятия онлайн и офлайн для начинающих и продвинутых.",
-    "categoryId": 6,
-    "subCategoryId": 36
+      "name": "Медитация",
+      "fullDescription": "Провожу занятия по хатха йоге и медитации для всех уровней подготовки. Индивидуальный подход к построению практики с учетом особенностей здоровья и целей. Изучаем асаны, пранаямы, техники релаксации и mindfulness. Помогу развить гибкость, силу и найти внутренний баланс. Занятия онлайн и офлайн для начинающих и продвинутых.",
+      "categoryId": 6,
+      "subCategoryId": 36
     },
     "subcategoriesWantToLearn": [
       { "id": 21, "name": "Китайский" },
@@ -474,7 +474,7 @@
     ],
     "gender": "male",
     "images": [
-     "https://i.pinimg.com/originals/c0/60/21/c060215015e6d46a234cb4127af3237f.jpg",
+      "https://i.pinimg.com/originals/c0/60/21/c060215015e6d46a234cb4127af3237f.jpg",
       "https://cdn-image.zvuk.com/pic?hash=ab2801f2-5d2b-426e-81a2-015945decd50&id=39822077&size=large&type=release",
       "https://yt3.googleusercontent.com/ytc/AIdro_mEd9XuERpSaJ-D0Td4tLTLDWwZly9QSNp2d36ptN5gvg=s900-c-k-c0x00ffffff-no-rj",
       "https://digital-basket-01.wbbasket.ru/vol1/382/a6daf446c5ea49a2df10caf185ffcac4/1920.jpg",
@@ -489,14 +489,14 @@
     "isLiked": false,
     "age": "31 год",
     "createdAt": "2025-10-08T13:25:00.000Z",
-   "description": "Живу в ритме английской речи. Для меня язык - это музыка, а грамматика - её гармония.",
+    "description": "Живу в ритме английской речи. Для меня язык - это музыка, а грамматика - её гармония.",
     "avatarUrl": "https://img.freepik.com/free-photo/smiling-blonde-young-woman-holding-disposable-coffee-cup-standing-street-winter_23-2147928529.jpg?t=st=1764351409~exp=1764355009~hmac=8aed590921a2749be399222e35f5f2f1c35264b1aff50c62771f9a4862f0d2c8&w=1060",
     "skillCanTeach": {
       "id": 2,
-    "name": "Английский язык",
-    "fullDescription": "Преподаю английский с акцентом на живое общение и практическое применение. Разрабатываю индивидуальные программы с учетом ваших целей: бизнес-английский, подготовка к экзаменам или повседневное общение. Использую интерактивные методики, фильмы, музыку и реальные жизненные ситуации для погружения в язык.",
-    "categoryId": 3,
-    "subCategoryId": 17
+      "name": "Английский язык",
+      "fullDescription": "Преподаю английский с акцентом на живое общение и практическое применение. Разрабатываю индивидуальные программы с учетом ваших целей: бизнес-английский, подготовка к экзаменам или повседневное общение. Использую интерактивные методики, фильмы, музыку и реальные жизненные ситуации для погружения в язык.",
+      "categoryId": 3,
+      "subCategoryId": 17
     },
     "subcategoriesWantToLearn": [
       { "id": 9, "name": "Рисование и иллюстрация" },
@@ -526,9 +526,9 @@
     "skillCanTeach": {
       "id": 3,
       "name": "Домашние растения",
-    "fullDescription": "Научу уходу за комнатными растениями и созданию зеленых уголков в городской квартире. Разберем подбор растений для разных условий, правильный полив, освещение, пересадку и борьбу с вредителями. Практические советы по созданию фито-дизайна и уходу за редкими видами. Помогу превратить ваш дом в цветущий сад.",
-     "categoryId": 5,
-    "subCategoryId": 33
+      "fullDescription": "Научу уходу за комнатными растениями и созданию зеленых уголков в городской квартире. Разберем подбор растений для разных условий, правильный полив, освещение, пересадку и борьбу с вредителями. Практические советы по созданию фито-дизайна и уходу за редкими видами. Помогу превратить ваш дом в цветущий сад.",
+      "categoryId": 5,
+      "subCategoryId": 33
     },
     "subcategoriesWantToLearn": [
       { "id": 17, "name": "Английский" },
@@ -538,7 +538,7 @@
     ],
     "gender": "male",
     "images": [
-    "https://i.pinimg.com/originals/08/54/4f/08544fae757659a2808827d362ee694a.webp",
+      "https://i.pinimg.com/originals/08/54/4f/08544fae757659a2808827d362ee694a.webp",
       "https://orton.ru/upload/iblock/8df/yr5c0q2203w1h5v0m9x21hc23ynkog7y.jpg",
       "https://64.media.tumblr.com/b3ccb570338a868e649d3e1820e91483/4ba63a61ae633ba5-6d/s1280x1920/a85a374dd7a35945570ef44acc3629e5810a09cd.jpg",
       "https://s3.eu-central-1.amazonaws.com/pressland-cms/cache/metatags_image/sk/19694808-zimowe-nawozy-podajemy-w-formie-wodnych-roztworow.jpeg",
@@ -558,9 +558,9 @@
     "skillCanTeach": {
       "id": 4,
       "name": "Коучинг",
-    "fullDescription": "Научу основам коучинга и техникам помощи в достижении личных и профессиональных целей. Работа с постановкой SMART-целей, преодолением ограничивающих убеждений, планированием действий и accountability. Практические инструменты для проведения коучинговых сессий и развития навыков активного слушания и задавания мощных вопросов.",
-    "categoryId": 4,
-    "subCategoryId": 29
+      "fullDescription": "Научу основам коучинга и техникам помощи в достижении личных и профессиональных целей. Работа с постановкой SMART-целей, преодолением ограничивающих убеждений, планированием действий и accountability. Практические инструменты для проведения коучинговых сессий и развития навыков активного слушания и задавания мощных вопросов.",
+      "categoryId": 4,
+      "subCategoryId": 29
     },
     "subcategoriesWantToLearn": [
       { "id": 20, "name": "Немецкий" },
@@ -589,10 +589,10 @@
     "avatarUrl": "https://img.freepik.com/free-photo/smiley-man-relaxing-outdoors_23-2148739334.jpg?t=st=1764350059~exp=1764353659~hmac=ae1852693f53e74971baa253ce928dcde68466bef8b50f94747318fa1431af6d&w=1060",
     "skillCanTeach": {
       "id": 5,
-     "name": "Живопись",
-    "fullDescription": "Научу основам академического рисунка, живописи и цифровой иллюстрации. Индивидуальный подход для начинающих и продолжающих. Работа с различными материалами: акварель, масло, акрил, цифровые инструменты. Развиваем чувство композиции, цвета и перспективы. Помогу найти ваш уникальный стиль в искусстве.",
-     "categoryId": 2,
-    "subCategoryId": 9
+      "name": "Живопись",
+      "fullDescription": "Научу основам академического рисунка, живописи и цифровой иллюстрации. Индивидуальный подход для начинающих и продолжающих. Работа с различными материалами: акварель, масло, акрил, цифровые инструменты. Развиваем чувство композиции, цвета и перспективы. Помогу найти ваш уникальный стиль в искусстве.",
+      "categoryId": 2,
+      "subCategoryId": 9
     },
     "subcategoriesWantToLearn": [
       { "id": 22, "name": "Японский" },
@@ -602,7 +602,7 @@
     ],
     "gender": "male",
     "images": [
-       "https://i.pinimg.com/736x/9d/17/c4/9d17c4ade3f5245dfd109b87c2c134df.jpg",
+      "https://i.pinimg.com/736x/9d/17/c4/9d17c4ade3f5245dfd109b87c2c134df.jpg",
       "https://avatars.mds.yandex.net/i?id=66c959494ead1c4da8595d31913bdf85_l-12937750-images-thumbs&n=13",
       "https://static.tildacdn.com/stor6233-3337-4335-b836-353764326535/78969050.jpg",
       "https://avatars.mds.yandex.net/i?id=2f3f405091a808b2138ae11335c7658c_l-4979110-images-thumbs&n=13",
@@ -622,10 +622,10 @@
     "avatarUrl": "https://img.freepik.com/free-photo/redhead-young-female-winking-looking-camera_23-2148183402.jpg?t=st=1764351316~exp=1764354916~hmac=28a2fe37ee0646f8114f7fbce8b0c351a036b113c58ccc1bcba3278cd94f3fee&w=1060",
     "skillCanTeach": {
       "id": 6,
-     "name": "Составление резюме",
-    "fullDescription": "Научу создавать резюме, которое заметят рекрутеры, и готовиться к собеседованиям так, чтобы получать офферы. Разберем составление сопроводительных писений, профилей в LinkedIn, самопрезентацию и ответы на каверзные вопросы. Практикуем стресс-интервью и технику переговоров о зарплате. Помогу найти ваши сильные стороны и правильно их подать.",
-     "categoryId": 1,
-    "subCategoryId": 5
+      "name": "Составление резюме",
+      "fullDescription": "Научу создавать резюме, которое заметят рекрутеры, и готовиться к собеседованиям так, чтобы получать офферы. Разберем составление сопроводительных писений, профилей в LinkedIn, самопрезентацию и ответы на каверзные вопросы. Практикуем стресс-интервью и технику переговоров о зарплате. Помогу найти ваши сильные стороны и правильно их подать.",
+      "categoryId": 1,
+      "subCategoryId": 5
     },
     "subcategoriesWantToLearn": [
       { "id": 19, "name": "Испанский" },
@@ -635,7 +635,7 @@
     ],
     "gender": "female",
     "images": [
-     "https://solia-paref.com/wp-content/uploads/2024/05/AdobeStock_552746789-1-scaled-1.jpg",
+      "https://solia-paref.com/wp-content/uploads/2024/05/AdobeStock_552746789-1-scaled-1.jpg",
       "https://www.jobasv.net/wp-content/uploads/2021/06/Menanggapi-Pertanyaan-HRD-Ketika-Interview-Kerja-666x666.jpg",
       "https://blagoevgrad-news.com/wp-content/uploads/2019/02/zx640c_2905622.jpg",
       "https://image.lexica.art/full_webp/c7b5752c-2d0a-4134-9a4a-18f437eba432",
@@ -654,10 +654,10 @@
     "avatarUrl": "https://img.freepik.com/free-photo/selfie-portrait-videocall_23-2149186127.jpg?t=st=1764350098~exp=1764353698~hmac=a1521de8baab1514f8c08456554d171ed87bf759caa311248a4e0c32befaa58f&w=1060",
     "skillCanTeach": {
       "id": 7,
-     "name": "Предпринимательство",
-    "fullDescription": "Помогу с запуском и развитием бизнеса с нуля. Разберем создание бизнес-модели, финансовое планирование, маркетинговую стратегию и управление командой. Практические инструменты для стартаперов: бережливый стартап, работа с инвесторами, масштабирование. На основе реальных кейсов из разных отраслей. Поддержка на каждом этапе становления бизнеса.",
-     "categoryId": 1,
-    "subCategoryId": 8
+      "name": "Предпринимательство",
+      "fullDescription": "Помогу с запуском и развитием бизнеса с нуля. Разберем создание бизнес-модели, финансовое планирование, маркетинговую стратегию и управление командой. Практические инструменты для стартаперов: бережливый стартап, работа с инвесторами, масштабирование. На основе реальных кейсов из разных отраслей. Поддержка на каждом этапе становления бизнеса.",
+      "categoryId": 1,
+      "subCategoryId": 8
     },
     "subcategoriesWantToLearn": [
       { "id": 17, "name": "Английский" },
@@ -669,7 +669,7 @@
     "images": [
       "https://vhs-stuttgart.de/fileadmin/_processed_/c/8/csm_Beruf_copy_NDABCREATIVITY__AdobeStock_67b03f67c0.jpeg",
       "https://sun6-23.userapi.com/s/v1/if1/PWH2hrudcjYil3kIR6BSXuXiGtOB-fvgFl1uyftcBYrmaUZkCny703C1ki8QCiA9FKk84RD2.jpg?size=691x691&quality=96&crop=154,0,691,691&ava=1",
-       "https://sun6-20.userapi.com/s/v1/ig2/xDz_ZMkcr8iPWTjglREpbMUBCFSi2lopLDx3dsmoRICsH2S-7ayjPOtMjmD1Y2qhyAx-Q6HTYulbAp2GiMhjmSF-.jpg?size=1129x1131&quality=95&crop=159,198,1129,1131&ava=1",
+      "https://sun6-20.userapi.com/s/v1/ig2/xDz_ZMkcr8iPWTjglREpbMUBCFSi2lopLDx3dsmoRICsH2S-7ayjPOtMjmD1Y2qhyAx-Q6HTYulbAp2GiMhjmSF-.jpg?size=1129x1131&quality=95&crop=159,198,1129,1131&ava=1",
       "https://i.pinimg.com/originals/6a/e4/70/6ae47003679a20512bc46fb88e4ee288.jpg",
       "https://mittalblowers.com/wp-content/uploads/2025/03/career-1.webp"
     ]
@@ -682,14 +682,14 @@
     "isLiked": false,
     "age": "27 лет",
     "createdAt": "2025-11-28T08:20:00.000Z",
-     "description": "Йога для меня - это диалог с собственным телом. Люблю момент, когда напряжение уходит, а приходит покой.",
+    "description": "Йога для меня - это диалог с собственным телом. Люблю момент, когда напряжение уходит, а приходит покой.",
     "avatarUrl": "https://img.freepik.com/free-photo/portrait-young-woman-stretching-home-mat_23-2148896448.jpg?t=st=1764351230~exp=1764354830~hmac=c75979c3d619266d6808fe43def7ff09e09f6a43fa8428a89b9e4d5c0d26cda1&w=1060",
     "skillCanTeach": {
       "id": 1,
-    "name": "Медитация",
-    "fullDescription": "Провожу занятия по хатха йоге и медитации для всех уровней подготовки. Индивидуальный подход к построению практики с учетом особенностей здоровья и целей. Изучаем асаны, пранаямы, техники релаксации и mindfulness. Помогу развить гибкость, силу и найти внутренний баланс. Занятия онлайн и офлайн для начинающих и продвинутых.",
-    "categoryId": 6,
-    "subCategoryId": 36
+      "name": "Медитация",
+      "fullDescription": "Провожу занятия по хатха йоге и медитации для всех уровней подготовки. Индивидуальный подход к построению практики с учетом особенностей здоровья и целей. Изучаем асаны, пранаямы, техники релаксации и mindfulness. Помогу развить гибкость, силу и найти внутренний баланс. Занятия онлайн и офлайн для начинающих и продвинутых.",
+      "categoryId": 6,
+      "subCategoryId": 36
     },
     "subcategoriesWantToLearn": [
       { "id": 18, "name": "Французский" },
@@ -699,7 +699,7 @@
     ],
     "gender": "female",
     "images": [
-     "https://i.pinimg.com/originals/c0/60/21/c060215015e6d46a234cb4127af3237f.jpg",
+      "https://i.pinimg.com/originals/c0/60/21/c060215015e6d46a234cb4127af3237f.jpg",
       "https://cdn-image.zvuk.com/pic?hash=ab2801f2-5d2b-426e-81a2-015945decd50&id=39822077&size=large&type=release",
       "https://yt3.googleusercontent.com/ytc/AIdro_mEd9XuERpSaJ-D0Td4tLTLDWwZly9QSNp2d36ptN5gvg=s900-c-k-c0x00ffffff-no-rj",
       "https://digital-basket-01.wbbasket.ru/vol1/382/a6daf446c5ea49a2df10caf185ffcac4/1920.jpg",
@@ -718,10 +718,10 @@
     "avatarUrl": "https://img.freepik.com/free-photo/close-up-sad-man_23-2150896109.jpg?t=st=1764350141~exp=1764353741~hmac=8e7d8211590baa193e555c6ebab3a31878e1fa4306655066707db26cfd3e2bbb&w=1060",
     "skillCanTeach": {
       "id": 2,
-    "name": "Английский язык",
-    "fullDescription": "Преподаю английский с акцентом на живое общение и практическое применение. Разрабатываю индивидуальные программы с учетом ваших целей: бизнес-английский, подготовка к экзаменам или повседневное общение. Использую интерактивные методики, фильмы, музыку и реальные жизненные ситуации для погружения в язык.",
-    "categoryId": 3,
-    "subCategoryId": 17
+      "name": "Английский язык",
+      "fullDescription": "Преподаю английский с акцентом на живое общение и практическое применение. Разрабатываю индивидуальные программы с учетом ваших целей: бизнес-английский, подготовка к экзаменам или повседневное общение. Использую интерактивные методики, фильмы, музыку и реальные жизненные ситуации для погружения в язык.",
+      "categoryId": 3,
+      "subCategoryId": 17
     },
     "subcategoriesWantToLearn": [
       { "id": 21, "name": "Китайский" },
@@ -751,9 +751,9 @@
     "skillCanTeach": {
       "id": 3,
       "name": "Домашние растения",
-    "fullDescription": "Научу уходу за комнатными растениями и созданию зеленых уголков в городской квартире. Разберем подбор растений для разных условий, правильный полив, освещение, пересадку и борьбу с вредителями. Практические советы по созданию фито-дизайна и уходу за редкими видами. Помогу превратить ваш дом в цветущий сад.",
-     "categoryId": 5,
-    "subCategoryId": 33
+      "fullDescription": "Научу уходу за комнатными растениями и созданию зеленых уголков в городской квартире. Разберем подбор растений для разных условий, правильный полив, освещение, пересадку и борьбу с вредителями. Практические советы по созданию фито-дизайна и уходу за редкими видами. Помогу превратить ваш дом в цветущий сад.",
+      "categoryId": 5,
+      "subCategoryId": 33
     },
     "subcategoriesWantToLearn": [
       { "id": 9, "name": "Рисование и иллюстрация" },
@@ -763,7 +763,7 @@
     ],
     "gender": "female",
     "images": [
-    "https://i.pinimg.com/originals/08/54/4f/08544fae757659a2808827d362ee694a.webp",
+      "https://i.pinimg.com/originals/08/54/4f/08544fae757659a2808827d362ee694a.webp",
       "https://orton.ru/upload/iblock/8df/yr5c0q2203w1h5v0m9x21hc23ynkog7y.jpg",
       "https://64.media.tumblr.com/b3ccb570338a868e649d3e1820e91483/4ba63a61ae633ba5-6d/s1280x1920/a85a374dd7a35945570ef44acc3629e5810a09cd.jpg",
       "https://s3.eu-central-1.amazonaws.com/pressland-cms/cache/metatags_image/sk/19694808-zimowe-nawozy-podajemy-w-formie-wodnych-roztworow.jpeg",
@@ -783,9 +783,9 @@
     "skillCanTeach": {
       "id": 4,
       "name": "Коучинг",
-    "fullDescription": "Научу основам коучинга и техникам помощи в достижении личных и профессиональных целей. Работа с постановкой SMART-целей, преодолением ограничивающих убеждений, планированием действий и accountability. Практические инструменты для проведения коучинговых сессий и развития навыков активного слушания и задавания мощных вопросов.",
-    "categoryId": 4,
-    "subCategoryId": 29
+      "fullDescription": "Научу основам коучинга и техникам помощи в достижении личных и профессиональных целей. Работа с постановкой SMART-целей, преодолением ограничивающих убеждений, планированием действий и accountability. Практические инструменты для проведения коучинговых сессий и развития навыков активного слушания и задавания мощных вопросов.",
+      "categoryId": 4,
+      "subCategoryId": 29
     },
     "subcategoriesWantToLearn": [
       { "id": 17, "name": "Английский" },
@@ -814,10 +814,10 @@
     "avatarUrl": "https://img.freepik.com/free-photo/beautiful-young-woman-portrait-black-background_158595-1652.jpg?t=st=1764351137~exp=1764354737~hmac=114d0e70c4af6da63c3eb2e233b3d760d488fe3875f910c545905344388d6c82&w=1060",
     "skillCanTeach": {
       "id": 5,
-     "name": "Живопись",
-    "fullDescription": "Научу основам академического рисунка, живописи и цифровой иллюстрации. Индивидуальный подход для начинающих и продолжающих. Работа с различными материалами: акварель, масло, акрил, цифровые инструменты. Развиваем чувство композиции, цвета и перспективы. Помогу найти ваш уникальный стиль в искусстве.",
-     "categoryId": 2,
-    "subCategoryId": 9
+      "name": "Живопись",
+      "fullDescription": "Научу основам академического рисунка, живописи и цифровой иллюстрации. Индивидуальный подход для начинающих и продолжающих. Работа с различными материалами: акварель, масло, акрил, цифровые инструменты. Развиваем чувство композиции, цвета и перспективы. Помогу найти ваш уникальный стиль в искусстве.",
+      "categoryId": 2,
+      "subCategoryId": 9
     },
     "subcategoriesWantToLearn": [
       { "id": 20, "name": "Немецкий" },
@@ -827,7 +827,7 @@
     ],
     "gender": "female",
     "images": [
-       "https://i.pinimg.com/736x/9d/17/c4/9d17c4ade3f5245dfd109b87c2c134df.jpg",
+      "https://i.pinimg.com/736x/9d/17/c4/9d17c4ade3f5245dfd109b87c2c134df.jpg",
       "https://avatars.mds.yandex.net/i?id=66c959494ead1c4da8595d31913bdf85_l-12937750-images-thumbs&n=13",
       "https://static.tildacdn.com/stor6233-3337-4335-b836-353764326535/78969050.jpg",
       "https://avatars.mds.yandex.net/i?id=2f3f405091a808b2138ae11335c7658c_l-4979110-images-thumbs&n=13",
@@ -847,10 +847,10 @@
     "avatarUrl": "https://img.freepik.com/free-photo/man-therapy-holding-coffee-cup_23-2148913050.jpg?t=st=1764350219~exp=1764353819~hmac=11e2a649048304dcf02c03e8185416ab5d1eb9337a12ca00eb47073f78bf4353&w=1060",
     "skillCanTeach": {
       "id": 6,
-     "name": "Составление резюме",
-    "fullDescription": "Научу создавать резюме, которое заметят рекрутеры, и готовиться к собеседованиям так, чтобы получать офферы. Разберем составление сопроводительных писений, профилей в LinkedIn, самопрезентацию и ответы на каверзные вопросы. Практикуем стресс-интервью и технику переговоров о зарплате. Помогу найти ваши сильные стороны и правильно их подать.",
-     "categoryId": 1,
-    "subCategoryId": 5
+      "name": "Составление резюме",
+      "fullDescription": "Научу создавать резюме, которое заметят рекрутеры, и готовиться к собеседованиям так, чтобы получать офферы. Разберем составление сопроводительных писений, профилей в LinkedIn, самопрезентацию и ответы на каверзные вопросы. Практикуем стресс-интервью и технику переговоров о зарплате. Помогу найти ваши сильные стороны и правильно их подать.",
+      "categoryId": 1,
+      "subCategoryId": 5
     },
     "subcategoriesWantToLearn": [
       { "id": 22, "name": "Японский" },
@@ -879,10 +879,10 @@
     "avatarUrl": "https://img.freepik.com/free-photo/beautiful-smiling-tourist-woman-having-fun-amusement-park-hot-summer-day-trip_346278-454.jpg?t=st=1764351106~exp=1764354706~hmac=3132d0153ba669c7577a84a40809b6ce3fe8739e7ccc2ac5539c39f0c0b257eb&w=1060",
     "skillCanTeach": {
       "id": 7,
-     "name": "Предпринимательство",
-    "fullDescription": "Помогу с запуском и развитием бизнеса с нуля. Разберем создание бизнес-модели, финансовое планирование, маркетинговую стратегию и управление командой. Практические инструменты для стартаперов: бережливый стартап, работа с инвесторами, масштабирование. На основе реальных кейсов из разных отраслей. Поддержка на каждом этапе становления бизнеса.",
-     "categoryId": 1,
-    "subCategoryId": 8
+      "name": "Предпринимательство",
+      "fullDescription": "Помогу с запуском и развитием бизнеса с нуля. Разберем создание бизнес-модели, финансовое планирование, маркетинговую стратегию и управление командой. Практические инструменты для стартаперов: бережливый стартап, работа с инвесторами, масштабирование. На основе реальных кейсов из разных отраслей. Поддержка на каждом этапе становления бизнеса.",
+      "categoryId": 1,
+      "subCategoryId": 8
     },
     "subcategoriesWantToLearn": [
       { "id": 18, "name": "Французский" },
@@ -892,9 +892,9 @@
     ],
     "gender": "female",
     "images": [
-     "https://vhs-stuttgart.de/fileadmin/_processed_/c/8/csm_Beruf_copy_NDABCREATIVITY__AdobeStock_67b03f67c0.jpeg",
+      "https://vhs-stuttgart.de/fileadmin/_processed_/c/8/csm_Beruf_copy_NDABCREATIVITY__AdobeStock_67b03f67c0.jpeg",
       "https://sun6-23.userapi.com/s/v1/if1/PWH2hrudcjYil3kIR6BSXuXiGtOB-fvgFl1uyftcBYrmaUZkCny703C1ki8QCiA9FKk84RD2.jpg?size=691x691&quality=96&crop=154,0,691,691&ava=1",
-       "https://sun6-20.userapi.com/s/v1/ig2/xDz_ZMkcr8iPWTjglREpbMUBCFSi2lopLDx3dsmoRICsH2S-7ayjPOtMjmD1Y2qhyAx-Q6HTYulbAp2GiMhjmSF-.jpg?size=1129x1131&quality=95&crop=159,198,1129,1131&ava=1",
+      "https://sun6-20.userapi.com/s/v1/ig2/xDz_ZMkcr8iPWTjglREpbMUBCFSi2lopLDx3dsmoRICsH2S-7ayjPOtMjmD1Y2qhyAx-Q6HTYulbAp2GiMhjmSF-.jpg?size=1129x1131&quality=95&crop=159,198,1129,1131&ava=1",
       "https://i.pinimg.com/originals/6a/e4/70/6ae47003679a20512bc46fb88e4ee288.jpg",
       "https://mittalblowers.com/wp-content/uploads/2025/03/career-1.webp"
     ]
@@ -907,14 +907,14 @@
     "isLiked": false,
     "age": "30 лет",
     "createdAt": "2025-11-24T09:50:00.000Z",
-     "description": "Йога для меня - это диалог с собственным телом. Люблю момент, когда напряжение уходит, а приходит покой.",
+    "description": "Йога для меня - это диалог с собственным телом. Люблю момент, когда напряжение уходит, а приходит покой.",
     "avatarUrl": "https://img.freepik.com/free-photo/medium-shot-man-with-delicious-pina-colada_23-2150184025.jpg?t=st=1764350274~exp=1764353874~hmac=e5fda90e2aad095a5a45dc40e231dd0365d8471b120b0b4748fc3747227155ea&w=1060",
     "skillCanTeach": {
       "id": 1,
-    "name": "Медитация",
-    "fullDescription": "Провожу занятия по хатха йоге и медитации для всех уровней подготовки. Индивидуальный подход к построению практики с учетом особенностей здоровья и целей. Изучаем асаны, пранаямы, техники релаксации и mindfulness. Помогу развить гибкость, силу и найти внутренний баланс. Занятия онлайн и офлайн для начинающих и продвинутых.",
-    "categoryId": 6,
-    "subCategoryId": 36
+      "name": "Медитация",
+      "fullDescription": "Провожу занятия по хатха йоге и медитации для всех уровней подготовки. Индивидуальный подход к построению практики с учетом особенностей здоровья и целей. Изучаем асаны, пранаямы, техники релаксации и mindfulness. Помогу развить гибкость, силу и найти внутренний баланс. Занятия онлайн и офлайн для начинающих и продвинутых.",
+      "categoryId": 6,
+      "subCategoryId": 36
     },
     "subcategoriesWantToLearn": [
       { "id": 2, "name": "Маркетинг и реклама" },
@@ -924,7 +924,7 @@
     ],
     "gender": "male",
     "images": [
-    "https://i.pinimg.com/originals/c0/60/21/c060215015e6d46a234cb4127af3237f.jpg",
+      "https://i.pinimg.com/originals/c0/60/21/c060215015e6d46a234cb4127af3237f.jpg",
       "https://cdn-image.zvuk.com/pic?hash=ab2801f2-5d2b-426e-81a2-015945decd50&id=39822077&size=large&type=release",
       "https://yt3.googleusercontent.com/ytc/AIdro_mEd9XuERpSaJ-D0Td4tLTLDWwZly9QSNp2d36ptN5gvg=s900-c-k-c0x00ffffff-no-rj",
       "https://digital-basket-01.wbbasket.ru/vol1/382/a6daf446c5ea49a2df10caf185ffcac4/1920.jpg",
@@ -943,10 +943,10 @@
     "avatarUrl": "https://img.freepik.com/free-photo/elegant-young-woman-hat-eyeglasses_23-2148068353.jpg?t=st=1764351072~exp=1764354672~hmac=0475e2f9d8af310d667389594ccaace64d34cd543c73f94db991365e9d91842b&w=1060",
     "skillCanTeach": {
       "id": 2,
-    "name": "Английский язык",
-    "fullDescription": "Преподаю английский с акцентом на живое общение и практическое применение. Разрабатываю индивидуальные программы с учетом ваших целей: бизнес-английский, подготовка к экзаменам или повседневное общение. Использую интерактивные методики, фильмы, музыку и реальные жизненные ситуации для погружения в язык.",
-    "categoryId": 3,
-    "subCategoryId": 17
+      "name": "Английский язык",
+      "fullDescription": "Преподаю английский с акцентом на живое общение и практическое применение. Разрабатываю индивидуальные программы с учетом ваших целей: бизнес-английский, подготовка к экзаменам или повседневное общение. Использую интерактивные методики, фильмы, музыку и реальные жизненные ситуации для погружения в язык.",
+      "categoryId": 3,
+      "subCategoryId": 17
     },
     "subcategoriesWantToLearn": [
       { "id": 19, "name": "Испанский" },
@@ -956,14 +956,14 @@
     ],
     "gender": "female",
     "images": [
-     "https://is4-ssl.mzstatic.com/image/thumb/Podcasts126/v4/90/85/4f/90854f21-d484-1041-eda7-6c24810338bf/mza_16670632695750822409.jpg/1200x1200bb.jpg",
+      "https://is4-ssl.mzstatic.com/image/thumb/Podcasts126/v4/90/85/4f/90854f21-d484-1041-eda7-6c24810338bf/mza_16670632695750822409.jpg/1200x1200bb.jpg",
       "https://static.tildacdn.one/tild3032-3461-4165-b661-656464323064/yabanci.jpeg",
       "https://avatars.mds.yandex.net/get-yapic/59871/OKB4im81mzd4FniayNZfqTAc3Y-1/orig",
       "https://static3.tgstat.ru/channels/_0/04/0469b0037c6dc9bb4f1fc86a51b77df0.jpg",
       "https://www.formatformazione.com/wp/wp-content/uploads/2022/10/Laurea-in-lingue-sbocchi-professionali-e-lavoro-Format.jpg"
     ]
   },
-   {
+  {
     "id": 31,
     "name": "Станислав",
     "location": "Уфа",
@@ -976,9 +976,9 @@
     "skillCanTeach": {
       "id": 3,
       "name": "Домашние растения",
-    "fullDescription": "Научу уходу за комнатными растениями и созданию зеленых уголков в городской квартире. Разберем подбор растений для разных условий, правильный полив, освещение, пересадку и борьбу с вредителями. Практические советы по созданию фито-дизайна и уходу за редкими видами. Помогу превратить ваш дом в цветущий сад.",
-     "categoryId": 5,
-    "subCategoryId": 33
+      "fullDescription": "Научу уходу за комнатными растениями и созданию зеленых уголков в городской квартире. Разберем подбор растений для разных условий, правильный полив, освещение, пересадку и борьбу с вредителями. Практические советы по созданию фито-дизайна и уходу за редкими видами. Помогу превратить ваш дом в цветущий сад.",
+      "categoryId": 5,
+      "subCategoryId": 33
     },
     "subcategoriesWantToLearn": [
       { "id": 17, "name": "Английский" },
@@ -988,7 +988,7 @@
     ],
     "gender": "male",
     "images": [
-     "https://i.pinimg.com/originals/08/54/4f/08544fae757659a2808827d362ee694a.webp",
+      "https://i.pinimg.com/originals/08/54/4f/08544fae757659a2808827d362ee694a.webp",
       "https://orton.ru/upload/iblock/8df/yr5c0q2203w1h5v0m9x21hc23ynkog7y.jpg",
       "https://64.media.tumblr.com/b3ccb570338a868e649d3e1820e91483/4ba63a61ae633ba5-6d/s1280x1920/a85a374dd7a35945570ef44acc3629e5810a09cd.jpg",
       "https://s3.eu-central-1.amazonaws.com/pressland-cms/cache/metatags_image/sk/19694808-zimowe-nawozy-podajemy-w-formie-wodnych-roztworow.jpeg",
@@ -1008,9 +1008,9 @@
     "skillCanTeach": {
       "id": 4,
       "name": "Коучинг",
-    "fullDescription": "Научу основам коучинга и техникам помощи в достижении личных и профессиональных целей. Работа с постановкой SMART-целей, преодолением ограничивающих убеждений, планированием действий и accountability. Практические инструменты для проведения коучинговых сессий и развития навыков активного слушания и задавания мощных вопросов.",
-    "categoryId": 4,
-    "subCategoryId": 29
+      "fullDescription": "Научу основам коучинга и техникам помощи в достижении личных и профессиональных целей. Работа с постановкой SMART-целей, преодолением ограничивающих убеждений, планированием действий и accountability. Практические инструменты для проведения коучинговых сессий и развития навыков активного слушания и задавания мощных вопросов.",
+      "categoryId": 4,
+      "subCategoryId": 29
     },
     "subcategoriesWantToLearn": [
       { "id": 21, "name": "Китайский" },
@@ -1039,10 +1039,10 @@
     "avatarUrl": "https://img.freepik.com/free-photo/portrait-young-stylish-man-model-sitting-leg-leg-thoughtful_158595-2949.jpg?t=st=1764350375~exp=1764353975~hmac=fa917813986ac5e360afd8dd65db1a9f9240b42e1fd8a5b1e3fcb4f78e441be2&w=1060",
     "skillCanTeach": {
       "id": 5,
-     "name": "Живопись",
-    "fullDescription": "Научу основам академического рисунка, живописи и цифровой иллюстрации. Индивидуальный подход для начинающих и продолжающих. Работа с различными материалами: акварель, масло, акрил, цифровые инструменты. Развиваем чувство композиции, цвета и перспективы. Помогу найти ваш уникальный стиль в искусстве.",
-     "categoryId": 2,
-    "subCategoryId": 9
+      "name": "Живопись",
+      "fullDescription": "Научу основам академического рисунка, живописи и цифровой иллюстрации. Индивидуальный подход для начинающих и продолжающих. Работа с различными материалами: акварель, масло, акрил, цифровые инструменты. Развиваем чувство композиции, цвета и перспективы. Помогу найти ваш уникальный стиль в искусстве.",
+      "categoryId": 2,
+      "subCategoryId": 9
     },
     "subcategoriesWantToLearn": [
       { "id": 1, "name": "Управление командой" },
@@ -1052,7 +1052,7 @@
     ],
     "gender": "male",
     "images": [
-       "https://i.pinimg.com/736x/9d/17/c4/9d17c4ade3f5245dfd109b87c2c134df.jpg",
+      "https://i.pinimg.com/736x/9d/17/c4/9d17c4ade3f5245dfd109b87c2c134df.jpg",
       "https://avatars.mds.yandex.net/i?id=66c959494ead1c4da8595d31913bdf85_l-12937750-images-thumbs&n=13",
       "https://static.tildacdn.com/stor6233-3337-4335-b836-353764326535/78969050.jpg",
       "https://avatars.mds.yandex.net/i?id=2f3f405091a808b2138ae11335c7658c_l-4979110-images-thumbs&n=13",
@@ -1072,10 +1072,10 @@
     "avatarUrl": "https://img.freepik.com/free-photo/waiting-beauty-background-lonely-lady_1303-566.jpg?t=st=1764350997~exp=1764354597~hmac=ace1f322e5246db5a553d821306e828e944f3df0aa31e96e00465d80f8d5140b&w=1060",
     "skillCanTeach": {
       "id": 6,
-     "name": "Составление резюме",
-    "fullDescription": "Научу создавать резюме, которое заметят рекрутеры, и готовиться к собеседованиям так, чтобы получать офферы. Разберем составление сопроводительных писений, профилей в LinkedIn, самопрезентацию и ответы на каверзные вопросы. Практикуем стресс-интервью и технику переговоров о зарплате. Помогу найти ваши сильные стороны и правильно их подать.",
-     "categoryId": 1,
-    "subCategoryId": 5
+      "name": "Составление резюме",
+      "fullDescription": "Научу создавать резюме, которое заметят рекрутеры, и готовиться к собеседованиям так, чтобы получать офферы. Разберем составление сопроводительных писений, профилей в LinkedIn, самопрезентацию и ответы на каверзные вопросы. Практикуем стресс-интервью и технику переговоров о зарплате. Помогу найти ваши сильные стороны и правильно их подать.",
+      "categoryId": 1,
+      "subCategoryId": 5
     },
     "subcategoriesWantToLearn": [
       { "id": 18, "name": "Французский" },
@@ -1085,7 +1085,7 @@
     ],
     "gender": "female",
     "images": [
-     "https://solia-paref.com/wp-content/uploads/2024/05/AdobeStock_552746789-1-scaled-1.jpg",
+      "https://solia-paref.com/wp-content/uploads/2024/05/AdobeStock_552746789-1-scaled-1.jpg",
       "https://www.jobasv.net/wp-content/uploads/2021/06/Menanggapi-Pertanyaan-HRD-Ketika-Interview-Kerja-666x666.jpg",
       "https://blagoevgrad-news.com/wp-content/uploads/2019/02/zx640c_2905622.jpg",
       "https://image.lexica.art/full_webp/c7b5752c-2d0a-4134-9a4a-18f437eba432",
@@ -1104,10 +1104,10 @@
     "avatarUrl": "https://img.freepik.com/free-photo/portrait-male-model-wearing-reading-glasses_23-2148760664.jpg?t=st=1764350421~exp=1764354021~hmac=deb497b9f559f882e65b70f731091f5c0424f6782866be7cddc706c457fb76f3&w=1060",
     "skillCanTeach": {
       "id": 7,
-     "name": "Предпринимательство",
-    "fullDescription": "Помогу с запуском и развитием бизнеса с нуля. Разберем создание бизнес-модели, финансовое планирование, маркетинговую стратегию и управление командой. Практические инструменты для стартаперов: бережливый стартап, работа с инвесторами, масштабирование. На основе реальных кейсов из разных отраслей. Поддержка на каждом этапе становления бизнеса.",
-     "categoryId": 1,
-    "subCategoryId": 8
+      "name": "Предпринимательство",
+      "fullDescription": "Помогу с запуском и развитием бизнеса с нуля. Разберем создание бизнес-модели, финансовое планирование, маркетинговую стратегию и управление командой. Практические инструменты для стартаперов: бережливый стартап, работа с инвесторами, масштабирование. На основе реальных кейсов из разных отраслей. Поддержка на каждом этапе становления бизнеса.",
+      "categoryId": 1,
+      "subCategoryId": 8
     },
     "subcategoriesWantToLearn": [
       { "id": 22, "name": "Японский" },
@@ -1119,7 +1119,7 @@
     "images": [
       "https://vhs-stuttgart.de/fileadmin/_processed_/c/8/csm_Beruf_copy_NDABCREATIVITY__AdobeStock_67b03f67c0.jpeg",
       "https://sun6-23.userapi.com/s/v1/if1/PWH2hrudcjYil3kIR6BSXuXiGtOB-fvgFl1uyftcBYrmaUZkCny703C1ki8QCiA9FKk84RD2.jpg?size=691x691&quality=96&crop=154,0,691,691&ava=1",
-       "https://sun6-20.userapi.com/s/v1/ig2/xDz_ZMkcr8iPWTjglREpbMUBCFSi2lopLDx3dsmoRICsH2S-7ayjPOtMjmD1Y2qhyAx-Q6HTYulbAp2GiMhjmSF-.jpg?size=1129x1131&quality=95&crop=159,198,1129,1131&ava=1",
+      "https://sun6-20.userapi.com/s/v1/ig2/xDz_ZMkcr8iPWTjglREpbMUBCFSi2lopLDx3dsmoRICsH2S-7ayjPOtMjmD1Y2qhyAx-Q6HTYulbAp2GiMhjmSF-.jpg?size=1129x1131&quality=95&crop=159,198,1129,1131&ava=1",
       "https://i.pinimg.com/originals/6a/e4/70/6ae47003679a20512bc46fb88e4ee288.jpg",
       "https://mittalblowers.com/wp-content/uploads/2025/03/career-1.webp"
     ]
@@ -1132,14 +1132,14 @@
     "isLiked": false,
     "age": "28 лет",
     "createdAt": "2025-10-04T18:40:00.000Z",
-     "description": "Йога для меня - это диалог с собственным телом. Люблю момент, когда напряжение уходит, а приходит покой.",
+    "description": "Йога для меня - это диалог с собственным телом. Люблю момент, когда напряжение уходит, а приходит покой.",
     "avatarUrl": "https://img.freepik.com/free-photo/young-beautiful-girl-uses-smartphone-street-surfing-internet-listening-music_1296-910.jpg?t=st=1764350961~exp=1764354561~hmac=878cedce169e8d4da54a452d5be968e2304cb37ecfcbdf44e5d868f6234b5d08&w=1060",
     "skillCanTeach": {
       "id": 1,
-    "name": "Медитация",
-    "fullDescription": "Провожу занятия по хатха йоге и медитации для всех уровней подготовки. Индивидуальный подход к построению практики с учетом особенностей здоровья и целей. Изучаем асаны, пранаямы, техники релаксации и mindfulness. Помогу развить гибкость, силу и найти внутренний баланс. Занятия онлайн и офлайн для начинающих и продвинутых.",
-    "categoryId": 6,
-    "subCategoryId": 36
+      "name": "Медитация",
+      "fullDescription": "Провожу занятия по хатха йоге и медитации для всех уровней подготовки. Индивидуальный подход к построению практики с учетом особенностей здоровья и целей. Изучаем асаны, пранаямы, техники релаксации и mindfulness. Помогу развить гибкость, силу и найти внутренний баланс. Занятия онлайн и офлайн для начинающих и продвинутых.",
+      "categoryId": 6,
+      "subCategoryId": 36
     },
     "subcategoriesWantToLearn": [
       { "id": 17, "name": "Английский" },
@@ -1149,7 +1149,7 @@
     ],
     "gender": "female",
     "images": [
-     "https://i.pinimg.com/originals/c0/60/21/c060215015e6d46a234cb4127af3237f.jpg",
+      "https://i.pinimg.com/originals/c0/60/21/c060215015e6d46a234cb4127af3237f.jpg",
       "https://cdn-image.zvuk.com/pic?hash=ab2801f2-5d2b-426e-81a2-015945decd50&id=39822077&size=large&type=release",
       "https://yt3.googleusercontent.com/ytc/AIdro_mEd9XuERpSaJ-D0Td4tLTLDWwZly9QSNp2d36ptN5gvg=s900-c-k-c0x00ffffff-no-rj",
       "https://digital-basket-01.wbbasket.ru/vol1/382/a6daf446c5ea49a2df10caf185ffcac4/1920.jpg",
@@ -1168,10 +1168,10 @@
     "avatarUrl": "https://img.freepik.com/free-photo/portrait-handsome-man-sitting-sofa_329181-2737.jpg?t=st=1764350466~exp=1764354066~hmac=16dd05b9f9612abeb30d6f47de690a763958fa1b738d07faa5d9aefa621f6ec9&w=1060",
     "skillCanTeach": {
       "id": 2,
-    "name": "Английский язык",
-    "fullDescription": "Преподаю английский с акцентом на живое общение и практическое применение. Разрабатываю индивидуальные программы с учетом ваших целей: бизнес-английский, подготовка к экзаменам или повседневное общение. Использую интерактивные методики, фильмы, музыку и реальные жизненные ситуации для погружения в язык.",
-    "categoryId": 3,
-    "subCategoryId": 17
+      "name": "Английский язык",
+      "fullDescription": "Преподаю английский с акцентом на живое общение и практическое применение. Разрабатываю индивидуальные программы с учетом ваших целей: бизнес-английский, подготовка к экзаменам или повседневное общение. Использую интерактивные методики, фильмы, музыку и реальные жизненные ситуации для погружения в язык.",
+      "categoryId": 3,
+      "subCategoryId": 17
     },
     "subcategoriesWantToLearn": [
       { "id": 20, "name": "Немецкий" },
@@ -1196,14 +1196,14 @@
     "isLiked": false,
     "age": "24 года",
     "createdAt": "2025-10-13T12:10:00.000Z",
-   "description": "Растения для меня - это тихие друзья, которые делают дом уютнее. Люблю наблюдать, как они растут!",
+    "description": "Растения для меня - это тихие друзья, которые делают дом уютнее. Люблю наблюдать, как они растут!",
     "avatarUrl": "https://img.freepik.com/free-photo/side-view-woman-posing-chair_23-2149915943.jpg?t=st=1764350909~exp=1764354509~hmac=74e240ee053916adad3543b9b195c3774b24bbf094318a0f5b42093a642a4a9d&w=1060",
     "skillCanTeach": {
       "id": 3,
       "name": "Домашние растения",
-    "fullDescription": "Научу уходу за комнатными растениями и созданию зеленых уголков в городской квартире. Разберем подбор растений для разных условий, правильный полив, освещение, пересадку и борьбу с вредителями. Практические советы по созданию фито-дизайна и уходу за редкими видами. Помогу превратить ваш дом в цветущий сад.",
-     "categoryId": 5,
-    "subCategoryId": 33
+      "fullDescription": "Научу уходу за комнатными растениями и созданию зеленых уголков в городской квартире. Разберем подбор растений для разных условий, правильный полив, освещение, пересадку и борьбу с вредителями. Практические советы по созданию фито-дизайна и уходу за редкими видами. Помогу превратить ваш дом в цветущий сад.",
+      "categoryId": 5,
+      "subCategoryId": 33
     },
     "subcategoriesWantToLearn": [
       { "id": 19, "name": "Испанский" },
@@ -1213,7 +1213,7 @@
     ],
     "gender": "female",
     "images": [
-     "https://i.pinimg.com/originals/08/54/4f/08544fae757659a2808827d362ee694a.webp",
+      "https://i.pinimg.com/originals/08/54/4f/08544fae757659a2808827d362ee694a.webp",
       "https://orton.ru/upload/iblock/8df/yr5c0q2203w1h5v0m9x21hc23ynkog7y.jpg",
       "https://64.media.tumblr.com/b3ccb570338a868e649d3e1820e91483/4ba63a61ae633ba5-6d/s1280x1920/a85a374dd7a35945570ef44acc3629e5810a09cd.jpg",
       "https://s3.eu-central-1.amazonaws.com/pressland-cms/cache/metatags_image/sk/19694808-zimowe-nawozy-podajemy-w-formie-wodnych-roztworow.jpeg",
@@ -1233,9 +1233,9 @@
     "skillCanTeach": {
       "id": 4,
       "name": "Коучинг",
-    "fullDescription": "Научу основам коучинга и техникам помощи в достижении личных и профессиональных целей. Работа с постановкой SMART-целей, преодолением ограничивающих убеждений, планированием действий и accountability. Практические инструменты для проведения коучинговых сессий и развития навыков активного слушания и задавания мощных вопросов.",
-    "categoryId": 4,
-    "subCategoryId": 29
+      "fullDescription": "Научу основам коучинга и техникам помощи в достижении личных и профессиональных целей. Работа с постановкой SMART-целей, преодолением ограничивающих убеждений, планированием действий и accountability. Практические инструменты для проведения коучинговых сессий и развития навыков активного слушания и задавания мощных вопросов.",
+      "categoryId": 4,
+      "subCategoryId": 29
     },
     "subcategoriesWantToLearn": [
       { "id": 21, "name": "Китайский" },
@@ -1264,10 +1264,10 @@
     "avatarUrl": "https://img.freepik.com/free-photo/elegant-businesswoman-standing-office_1157-33427.jpg?t=st=1764350845~exp=1764354445~hmac=af5f6b7e006dfdb09652ec6b1d46ac8511bfe91f6474cf76f979132e7ebd6841&w=1060",
     "skillCanTeach": {
       "id": 5,
-     "name": "Живопись",
-    "fullDescription": "Научу основам академического рисунка, живописи и цифровой иллюстрации. Индивидуальный подход для начинающих и продолжающих. Работа с различными материалами: акварель, масло, акрил, цифровые инструменты. Развиваем чувство композиции, цвета и перспективы. Помогу найти ваш уникальный стиль в искусстве.",
-     "categoryId": 2,
-    "subCategoryId": 9
+      "name": "Живопись",
+      "fullDescription": "Научу основам академического рисунка, живописи и цифровой иллюстрации. Индивидуальный подход для начинающих и продолжающих. Работа с различными материалами: акварель, масло, акрил, цифровые инструменты. Развиваем чувство композиции, цвета и перспективы. Помогу найти ваш уникальный стиль в искусстве.",
+      "categoryId": 2,
+      "subCategoryId": 9
     },
     "subcategoriesWantToLearn": [
       { "id": 18, "name": "Французский" },
@@ -1277,7 +1277,7 @@
     ],
     "gender": "female",
     "images": [
-       "https://i.pinimg.com/736x/9d/17/c4/9d17c4ade3f5245dfd109b87c2c134df.jpg",
+      "https://i.pinimg.com/736x/9d/17/c4/9d17c4ade3f5245dfd109b87c2c134df.jpg",
       "https://avatars.mds.yandex.net/i?id=66c959494ead1c4da8595d31913bdf85_l-12937750-images-thumbs&n=13",
       "https://static.tildacdn.com/stor6233-3337-4335-b836-353764326535/78969050.jpg",
       "https://avatars.mds.yandex.net/i?id=2f3f405091a808b2138ae11335c7658c_l-4979110-images-thumbs&n=13",
@@ -1285,7 +1285,7 @@
       "https://i.pinimg.com/originals/86/f5/37/86f5372132c62f90eb0172f4bc8c735e.jpg"
     ]
   },
-   {
+  {
     "id": 41,
     "name": "Семен",
     "location": "Барнаул",
@@ -1297,10 +1297,10 @@
     "avatarUrl": "https://img.freepik.com/free-photo/close-up-male-carpenter-looking-digital-tablet-measuring-wooden-block_23-2147945073.jpg?t=st=1764350577~exp=1764354177~hmac=4f032f41355338af3c3d922b9dec9ce816b70678f3a0a2512868a2013ffe0f36&w=1060",
     "skillCanTeach": {
       "id": 6,
-     "name": "Составление резюме",
-    "fullDescription": "Научу создавать резюме, которое заметят рекрутеры, и готовиться к собеседованиям так, чтобы получать офферы. Разберем составление сопроводительных писений, профилей в LinkedIn, самопрезентацию и ответы на каверзные вопросы. Практикуем стресс-интервью и технику переговоров о зарплате. Помогу найти ваши сильные стороны и правильно их подать.",
-     "categoryId": 1,
-    "subCategoryId": 5
+      "name": "Составление резюме",
+      "fullDescription": "Научу создавать резюме, которое заметят рекрутеры, и готовиться к собеседованиям так, чтобы получать офферы. Разберем составление сопроводительных писений, профилей в LinkedIn, самопрезентацию и ответы на каверзные вопросы. Практикуем стресс-интервью и технику переговоров о зарплате. Помогу найти ваши сильные стороны и правильно их подать.",
+      "categoryId": 1,
+      "subCategoryId": 5
     },
     "subcategoriesWantToLearn": [
       { "id": 17, "name": "Английский" },
@@ -1310,7 +1310,7 @@
     ],
     "gender": "male",
     "images": [
-     "https://solia-paref.com/wp-content/uploads/2024/05/AdobeStock_552746789-1-scaled-1.jpg",
+      "https://solia-paref.com/wp-content/uploads/2024/05/AdobeStock_552746789-1-scaled-1.jpg",
       "https://www.jobasv.net/wp-content/uploads/2021/06/Menanggapi-Pertanyaan-HRD-Ketika-Interview-Kerja-666x666.jpg",
       "https://blagoevgrad-news.com/wp-content/uploads/2019/02/zx640c_2905622.jpg",
       "https://image.lexica.art/full_webp/c7b5752c-2d0a-4134-9a4a-18f437eba432",
@@ -1329,10 +1329,10 @@
     "avatarUrl": "https://img.freepik.com/free-photo/cute-young-woman-casual-wear-outdoor_624325-1123.jpg?t=st=1764350800~exp=1764354400~hmac=4b1e158a167a9d1172d2c4aa10945a32f82ccd804b92be8513a6bfae4de1fc83&w=1060",
     "skillCanTeach": {
       "id": 7,
-     "name": "Предпринимательство",
-    "fullDescription": "Помогу с запуском и развитием бизнеса с нуля. Разберем создание бизнес-модели, финансовое планирование, маркетинговую стратегию и управление командой. Практические инструменты для стартаперов: бережливый стартап, работа с инвесторами, масштабирование. На основе реальных кейсов из разных отраслей. Поддержка на каждом этапе становления бизнеса.",
-     "categoryId": 1,
-    "subCategoryId": 8
+      "name": "Предпринимательство",
+      "fullDescription": "Помогу с запуском и развитием бизнеса с нуля. Разберем создание бизнес-модели, финансовое планирование, маркетинговую стратегию и управление командой. Практические инструменты для стартаперов: бережливый стартап, работа с инвесторами, масштабирование. На основе реальных кейсов из разных отраслей. Поддержка на каждом этапе становления бизнеса.",
+      "categoryId": 1,
+      "subCategoryId": 8
     },
     "subcategoriesWantToLearn": [
       { "id": 20, "name": "Немецкий" },
@@ -1344,7 +1344,7 @@
     "images": [
       "https://vhs-stuttgart.de/fileadmin/_processed_/c/8/csm_Beruf_copy_NDABCREATIVITY__AdobeStock_67b03f67c0.jpeg",
       "https://sun6-23.userapi.com/s/v1/if1/PWH2hrudcjYil3kIR6BSXuXiGtOB-fvgFl1uyftcBYrmaUZkCny703C1ki8QCiA9FKk84RD2.jpg?size=691x691&quality=96&crop=154,0,691,691&ava=1",
-       "https://sun6-20.userapi.com/s/v1/ig2/xDz_ZMkcr8iPWTjglREpbMUBCFSi2lopLDx3dsmoRICsH2S-7ayjPOtMjmD1Y2qhyAx-Q6HTYulbAp2GiMhjmSF-.jpg?size=1129x1131&quality=95&crop=159,198,1129,1131&ava=1",
+      "https://sun6-20.userapi.com/s/v1/ig2/xDz_ZMkcr8iPWTjglREpbMUBCFSi2lopLDx3dsmoRICsH2S-7ayjPOtMjmD1Y2qhyAx-Q6HTYulbAp2GiMhjmSF-.jpg?size=1129x1131&quality=95&crop=159,198,1129,1131&ava=1",
       "https://i.pinimg.com/originals/6a/e4/70/6ae47003679a20512bc46fb88e4ee288.jpg",
       "https://mittalblowers.com/wp-content/uploads/2025/03/career-1.webp"
     ]
@@ -1357,14 +1357,14 @@
     "isLiked": false,
     "age": "29 лет",
     "createdAt": "2025-11-23T17:15:00.000Z",
-     "description": "Йога для меня - это диалог с собственным телом. Люблю момент, когда напряжение уходит, а приходит покой.",
+    "description": "Йога для меня - это диалог с собственным телом. Люблю момент, когда напряжение уходит, а приходит покой.",
     "avatarUrl": "https://img.freepik.com/free-photo/smiling-young-african-man-wearing-hat_171337-15958.jpg?t=st=1764350639~exp=1764354239~hmac=dcf3fe402f63eba7b27887ae98920d02e830dfc7b6c1b9f44ab8dcb4fff11601&w=1060",
     "skillCanTeach": {
       "id": 1,
-    "name": "Медитация",
-    "fullDescription": "Провожу занятия по хатха йоге и медитации для всех уровней подготовки. Индивидуальный подход к построению практики с учетом особенностей здоровья и целей. Изучаем асаны, пранаямы, техники релаксации и mindfulness. Помогу развить гибкость, силу и найти внутренний баланс. Занятия онлайн и офлайн для начинающих и продвинутых.",
-    "categoryId": 6,
-    "subCategoryId": 36
+      "name": "Медитация",
+      "fullDescription": "Провожу занятия по хатха йоге и медитации для всех уровней подготовки. Индивидуальный подход к построению практики с учетом особенностей здоровья и целей. Изучаем асаны, пранаямы, техники релаксации и mindfulness. Помогу развить гибкость, силу и найти внутренний баланс. Занятия онлайн и офлайн для начинающих и продвинутых.",
+      "categoryId": 6,
+      "subCategoryId": 36
     },
     "subcategoriesWantToLearn": [
       { "id": 22, "name": "Японский" },
@@ -1374,7 +1374,7 @@
     ],
     "gender": "male",
     "images": [
-     "https://i.pinimg.com/originals/c0/60/21/c060215015e6d46a234cb4127af3237f.jpg",
+      "https://i.pinimg.com/originals/c0/60/21/c060215015e6d46a234cb4127af3237f.jpg",
       "https://cdn-image.zvuk.com/pic?hash=ab2801f2-5d2b-426e-81a2-015945decd50&id=39822077&size=large&type=release",
       "https://yt3.googleusercontent.com/ytc/AIdro_mEd9XuERpSaJ-D0Td4tLTLDWwZly9QSNp2d36ptN5gvg=s900-c-k-c0x00ffffff-no-rj",
       "https://digital-basket-01.wbbasket.ru/vol1/382/a6daf446c5ea49a2df10caf185ffcac4/1920.jpg",
@@ -1393,10 +1393,10 @@
     "avatarUrl": "https://img.freepik.com/free-photo/attractive-girl-window-shows-different-emotions-mood_78826-2793.jpg?t=st=1764350763~exp=1764354363~hmac=bbeafee19cff395c4ffe80da0b01282a43f1397143c675bcd026414a0b7bad71&w=1060",
     "skillCanTeach": {
       "id": 2,
-    "name": "Английский язык",
-    "fullDescription": "Преподаю английский с акцентом на живое общение и практическое применение. Разрабатываю индивидуальные программы с учетом ваших целей: бизнес-английский, подготовка к экзаменам или повседневное общение. Использую интерактивные методики, фильмы, музыку и реальные жизненные ситуации для погружения в язык.",
-    "categoryId": 3,
-    "subCategoryId": 17
+      "name": "Английский язык",
+      "fullDescription": "Преподаю английский с акцентом на живое общение и практическое применение. Разрабатываю индивидуальные программы с учетом ваших целей: бизнес-английский, подготовка к экзаменам или повседневное общение. Использую интерактивные методики, фильмы, музыку и реальные жизненные ситуации для погружения в язык.",
+      "categoryId": 3,
+      "subCategoryId": 17
     },
     "subcategoriesWantToLearn": [
       { "id": 19, "name": "Испанский" },
@@ -1426,9 +1426,9 @@
     "skillCanTeach": {
       "id": 3,
       "name": "Домашние растения",
-    "fullDescription": "Научу уходу за комнатными растениями и созданию зеленых уголков в городской квартире. Разберем подбор растений для разных условий, правильный полив, освещение, пересадку и борьбу с вредителями. Практические советы по созданию фито-дизайна и уходу за редкими видами. Помогу превратить ваш дом в цветущий сад.",
-     "categoryId": 5,
-    "subCategoryId": 33
+      "fullDescription": "Научу уходу за комнатными растениями и созданию зеленых уголков в городской квартире. Разберем подбор растений для разных условий, правильный полив, освещение, пересадку и борьбу с вредителями. Практические советы по созданию фито-дизайна и уходу за редкими видами. Помогу превратить ваш дом в цветущий сад.",
+      "categoryId": 5,
+      "subCategoryId": 33
     },
     "subcategoriesWantToLearn": [
       { "id": 17, "name": "Английский" },
@@ -1438,7 +1438,7 @@
     ],
     "gender": "male",
     "images": [
-    "https://i.pinimg.com/originals/08/54/4f/08544fae757659a2808827d362ee694a.webp",
+      "https://i.pinimg.com/originals/08/54/4f/08544fae757659a2808827d362ee694a.webp",
       "https://orton.ru/upload/iblock/8df/yr5c0q2203w1h5v0m9x21hc23ynkog7y.jpg",
       "https://64.media.tumblr.com/b3ccb570338a868e649d3e1820e91483/4ba63a61ae633ba5-6d/s1280x1920/a85a374dd7a35945570ef44acc3629e5810a09cd.jpg",
       "https://s3.eu-central-1.amazonaws.com/pressland-cms/cache/metatags_image/sk/19694808-zimowe-nawozy-podajemy-w-formie-wodnych-roztworow.jpeg",
