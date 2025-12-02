@@ -1,17 +1,18 @@
-import styles from "./headerUI.module.css";
+import styles from "./header-element.module.css";
 import moon from "./../../../assets/icons/moon.svg";
 import type { FC } from "react";
 import { Logo } from "../../../shared/ui/logo";
 import { ArrowIcon } from "../../../assets/img/icons";
 import { SearchInput } from "../../../shared/ui/Input";
 import { Button } from "../../../shared/ui/Button/Button";
+import { TextLink } from "../../../shared/ui/text-link";
 
-type THeaderUIProps = {
+type THeaderElementProps = {
   isFilterEnabled: boolean;
   handleSkillsClick: () => void;
 };
 
-export const HeaderUI: FC<THeaderUIProps> = ({
+export const HeaderElement: FC<THeaderElementProps> = ({
   isFilterEnabled,
   handleSkillsClick,
 }) => {
@@ -21,14 +22,14 @@ export const HeaderUI: FC<THeaderUIProps> = ({
         <nav className={styles.menu}>
           <Logo />
           <ul className={styles.list}>
-            <li>О проекте</li>
             <li>
-              <button className={styles.skills} onClick={handleSkillsClick}>
-                <p>Все навыки</p>
-                <div className={styles.icon}>
-                  <ArrowIcon initialRotation={0} opened={false} />
-                </div>
-              </button>
+              <TextLink>{"О проекте"}</TextLink>
+            </li>
+            <li>
+              <TextLink onClick={handleSkillsClick}>
+                {"Все навыки "}
+                <ArrowIcon initialRotation={0} opened={false} />
+              </TextLink>
             </li>
           </ul>
           {!isFilterEnabled && (

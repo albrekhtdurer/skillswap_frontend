@@ -1,5 +1,5 @@
 import { type FC } from "react";
-import { HeaderUI } from "./headerUI/headerUI";
+import { HeaderElement } from "./header-element/header-element";
 
 export const Header: FC = () => {
   const isFilterEnabled = false; //нужно будет получить эту переменную динамически
@@ -9,7 +9,7 @@ export const Header: FC = () => {
   }
 
   return (
-    <HeaderUI
+    <HeaderElement
       isFilterEnabled={isFilterEnabled}
       handleSkillsClick={handleSkillsClick}
     />
