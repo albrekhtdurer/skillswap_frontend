@@ -1,3 +1,5 @@
+import styles from "./style.module.css";
+
 export type OptionType = {
   title: string;
   value: string;
@@ -18,10 +20,10 @@ export const Option = ({
 }: OptionProps) => {
   const handleChange = () => onChange({ title, value });
   return (
-    <div className="option" key={value} tabIndex={0}>
-      <label className="option__label">
+    <div className={styles.option} key={value} tabIndex={0}>
+      <label className={styles["option__label"]}>
         <input
-          className="option__input"
+          className={styles["option__input"]}
           checked={selected}
           type="radio"
           value={value}
@@ -29,10 +31,10 @@ export const Option = ({
           tabIndex={-1}
           name={groupName}
         />
-        <div className="option__check-icon-out">
-          <div className="option__check-icon-in"></div>
+        <div className={styles["option__check-icon-out"]}>
+          <div className={styles["option__check-icon-in"]}></div>
         </div>
-        <span className="option__title">{title}</span>
+        <span className={styles["option__title"]}>{title}</span>
       </label>
     </div>
   );

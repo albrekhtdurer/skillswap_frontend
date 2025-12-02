@@ -18,7 +18,7 @@ const initialState: TCategoriesState = {
 
 export const getCategories = createAsyncThunk(
   "categories/getCategories",
-  api.getCategories
+  api.getCategories,
 );
 
 export const categoriesSlice = createSlice({
