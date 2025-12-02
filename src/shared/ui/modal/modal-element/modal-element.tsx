@@ -1,16 +1,16 @@
 import type { FC } from "react";
 import styles from "./modalUI.module.css";
-import { ModalOverlayUI } from "../modal-overlay/modal-overlay";
+import { ModalOverlay } from "../modal-overlay/modal-overlay";
 import type React from "react";
 
-type TModalUIProps = {
+type TModalElementProps = {
   children: React.ReactNode;
   onClose: () => void;
 };
 
-export const ModalUI: FC<TModalUIProps> = ({ children, onClose }) => (
+export const ModalElement: FC<TModalElementProps> = ({ children, onClose }) => (
   <>
     <div className={styles.modal}>{children}</div>
-    <ModalOverlayUI onClick={onClose} />
+    <ModalOverlay onClick={onClose} />
   </>
 );

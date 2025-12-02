@@ -1,5 +1,5 @@
 import ReactDOM from "react-dom";
-import { ModalUI } from "./modal-ui/modalUI";
+import { ModalElement } from "./modal-element/modal-element";
 import React, { useEffect, type FC } from "react";
 
 const modalRoot = document.getElementById("modals");
@@ -24,7 +24,7 @@ export const Modal: FC<TModalProps> = ({ children, onClose }) => {
   }, [onClose]);
 
   return ReactDOM.createPortal(
-    <ModalUI onClose={onClose}>{children}</ModalUI>,
-    modalRoot as HTMLDivElement,
+    <ModalElement onClose={onClose}>{children}</ModalElement>,
+    modalRoot as HTMLDivElement
   );
 };
