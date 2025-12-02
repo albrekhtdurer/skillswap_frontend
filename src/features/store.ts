@@ -5,8 +5,9 @@ import {
 } from "react-redux";
 import type { TypedUseSelectorHook } from "react-redux";
 import { citiesSlice } from "./cities/citiesSlice";
+import { categoriesSlice } from "./categories/categoriesSlice";
 
-const rootReducer = combineSlices(citiesSlice);
+const rootReducer = combineSlices(citiesSlice, categoriesSlice);
 
 const store = configureStore({
   reducer: rootReducer,
