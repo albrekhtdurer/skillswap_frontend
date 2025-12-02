@@ -10,7 +10,8 @@
     "stylelint:fix": "stylelint \"src/**/*.{css,scss}\" --fix",
     "lint": "eslint --fix",
     "format": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\" --ignore-path ./.prettierignore",
-    "check": "npm run stylelint:fix && npm run lint && npm run format",
+    "git:add-all": "git add .",
+    "check": "npm run stylelint:fix && npm run format && npm run git:add-all && npm run lint && npm run git:add-all",
     "preview": "vite preview"
   },
   "dependencies": {
