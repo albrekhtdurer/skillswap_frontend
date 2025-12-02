@@ -1,5 +1,5 @@
 import { Option, type OptionType } from "./Option";
-import "./style.css";
+import styles from "./style.module.css";
 
 type RadioGroupProps = {
   name: string;
@@ -17,9 +17,9 @@ export const RadioGroup = ({
   selected,
 }: RadioGroupProps) => {
   return (
-    <div className="radio-group">
-      {title && <div className="radio-group__title">{title}</div>}
-      <div className="radio-group__options">
+    <div className={styles["radio-group"]}>
+      {title && <div className={styles["radio-group__title"]}>{title}</div>}
+      <div className={styles["radio-group__options"]}>
         {options.map((item, i) => (
           <Option
             selected={item.value === selected.value}
