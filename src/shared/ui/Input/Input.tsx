@@ -1,8 +1,13 @@
-import React, { type ReactNode } from "react";
+import React, { type ChangeEvent, type ReactNode } from "react";
 import style from "./style.module.css";
-import { InputElement, type InputElementProps } from "./InputElement";
 
-export type InputProps = InputElementProps & {
+export type InputProps = {
+  onChange: (e: ChangeEvent<HTMLInputElement>) => void;
+  name: string;
+  placeholder?: string;
+  id?: string;
+  value?: string;
+  type?: string;
   className?: string;
   label?: string;
   hint?: string;
@@ -21,6 +26,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
       classNameError = style.input_error,
       children,
       id,
+      type,
       ...props
     },
     ref,
@@ -28,7 +34,13 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
     <div className={`${className} ${isError ? classNameError : ""}`}>
       {label && <label htmlFor={id}>{label}</label>}
       <div>
-        <InputElement ref={ref} id={id} {...props} />
+        <input
+          className={style.input__element}
+          ref={ref}
+          type={type || "text"}
+          id={id}
+          {...props}
+        />
         {children}
       </div>
       {hint && <p>{hint}</p>}

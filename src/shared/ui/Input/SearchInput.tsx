@@ -1,10 +1,15 @@
-import React from "react";
+import React, { type ChangeEvent } from "react";
 import { Input } from "./Input";
 import searchIcon from "../../../assets/icons/search.svg";
 import style from "./style.module.css";
-import type { InputElementProps } from "./InputElement";
 
-type SearchInputProps = InputElementProps & {
+type SearchInputProps = {
+  onChange: (e: ChangeEvent<HTMLInputElement>) => void;
+  name: string;
+  placeholder?: string;
+  id?: string;
+  value?: string;
+  type?: string;
   onSearch: () => void;
   className?: string;
 };
