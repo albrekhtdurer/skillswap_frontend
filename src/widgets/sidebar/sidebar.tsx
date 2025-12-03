@@ -57,23 +57,6 @@ export const Sidebar = () => {
     value: city.id.toString(),
   }));
 
-  // const skillsOptionsExtended: CheckboxGroupProps[] = skillsOptions.map(
-  //   (item) => ({
-  //     ...item,
-  //     selectedItems: item.items.filter((it) =>
-  //       filters.skillIds.includes(it.id)
-  //     ),
-  //     handleSubItemChange: ({ id }: CheckboxType) => {
-  //       setFilters((prev) => ({
-  //         ...prev,
-  //         skillIds: prev.skillIds.includes(id)
-  //           ? prev.skillIds.filter((v) => v !== id)
-  //           : [...prev.skillIds, id],
-  //       }));
-  //     },
-  //   })
-  // );
-
   return (
     <div className={style.sidebar}>
       <div className={style.sidebar_title}>
