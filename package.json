@@ -9,13 +9,17 @@
     "stylelint": "stylelint \"src/**/*.{css,scss}\"",
     "stylelint:fix": "stylelint \"src/**/*.{css,scss}\" --fix",
     "lint": "eslint --fix",
-    "format": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\" --ignore-path ./.prettierignore",
-    "check": "npm run stylelint:fix && npm run lint && npm run format",
+    "format": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\" \"./public/**/*.{js,jsx,ts,tsx,json,css,scss,md}\" --ignore-path ./.prettierignore --list-different",
+    "git:add-all": "git add .",
+    "check": "npm run stylelint:fix && npm run format && npm run git:add-all && npm run lint && npm run git:add-all",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.11.0",
     "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "react-dom": "^19.2.0",
+    "react-redux": "^9.2.0",
+    "redux": "^5.0.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",

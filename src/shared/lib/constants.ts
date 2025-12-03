@@ -5,6 +5,8 @@ import type { OptionType } from "../ui/RadioGroup/Option";
 import type { CheckboxType } from "../ui/checkbox-group/checkbox/checkbox";
 import type { CheckboxGroupProps } from "../ui/checkbox-group/checkbox-group";
 
+// constants for filters
+
 export const modeOptions: OptionType[] = [
   { title: "Всё", value: "all" },
   { title: "Могу научить", value: "teach" },
@@ -34,3 +36,15 @@ export const citiesOptions: CheckboxType[] = cities.map((city) => ({
   ...city,
   value: city.id.toString(),
 }));
+
+// constants for colors
+
+export const categoryColors: Record<number, string> = {
+  1: "var(--tag-business-color)",
+  2: "var(--tag-art-color)",
+  3: "var(--tag-languages-color)",
+  4: "var(--tag-education-color)",
+  5: "var(--tag-home-color)",
+  6: "var(--tag-health-color)",
+};
+
