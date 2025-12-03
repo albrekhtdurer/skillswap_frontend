@@ -37,3 +37,10 @@ export interface User {
   gender: "male" | "female";
   images: string[];
 }
+
+export type Filters = {
+  mode: "all" | "teach" | "learn";
+  gender: "no_matter" | "male" | "female";
+  cityIds: number[];
+  skillIds: number[];
+}; // from here https://docs.google.com/document/d/1yXsUpRttw7yRXS7mT0eM_m_MqhMg_Mq6Fx8ne0JlA4U/edit?tab=t.0#heading=h.epowgaq476mf

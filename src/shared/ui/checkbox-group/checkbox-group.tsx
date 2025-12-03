@@ -6,17 +6,17 @@ import { useState } from "react";
 
 export type CheckboxGroupProps = {
   category: CheckboxType;
+  selectedItems: CheckboxType[];
+  handleSubItemChange: (item: CheckboxType) => void;
 } & Pick<CheckboxSubgroupProps, "items">;
 
-export const CheckboxGroup = ({ category, items }: CheckboxGroupProps) => {
+export const CheckboxGroup = ({
+  category,
+  items,
+  selectedItems,
+  handleSubItemChange,
+}: CheckboxGroupProps) => {
   const [categoryOpen, setCategoryOpen] = useState(false);
-  const [selectedItems, setSelectedItems] = useState<string[]>([]);
-
-  const handleSubItemChange = ({ value }: CheckboxType) => {
-    setSelectedItems((prev) =>
-      prev.includes(value) ? prev.filter((v) => v !== value) : [...prev, value],
-    );
-  };
 
   return (
     <div className={`${style.checkbox_group}`}>
@@ -33,7 +33,7 @@ export const CheckboxGroup = ({ category, items }: CheckboxGroupProps) => {
         <CheckboxSubgroup
           items={items}
           className={`${style.checkbox_subgroup}`}
-          selectedItems={selectedItems}
+          selectedItems={selectedItems.map((item) => item.value)}
           onItemChange={handleSubItemChange}
         />
       )}

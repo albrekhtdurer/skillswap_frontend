@@ -29,6 +29,8 @@ export const CheckboxGroupList = ({
               category={item.category}
               items={item.items}
               key={item.category.value}
+              selectedItems={item.selectedItems}
+              handleSubItemChange={item.handleSubItemChange}
             />
           );
         })}

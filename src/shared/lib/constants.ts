@@ -1,3 +1,21 @@
+import type { OptionType } from "../ui/RadioGroup/Option";
+
+// constants for filters
+
+export const modeOptions: OptionType[] = [
+  { title: "Всё", value: "all" },
+  { title: "Могу научить", value: "teach" },
+  { title: "Хочу научиться", value: "learn" },
+];
+
+export const genderOptions: OptionType[] = [
+  { title: "Не имеет значения", value: "no_matter" },
+  { title: "Мужской", value: "male" },
+  { title: "Женский", value: "female" },
+];
+
+// constants for colors
+
 export const categoryColors: Record<number, string> = {
   1: "var(--tag-business-color)",
   2: "var(--tag-art-color)",
