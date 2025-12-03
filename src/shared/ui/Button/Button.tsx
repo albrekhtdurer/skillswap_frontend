@@ -1,4 +1,4 @@
-import "./style.css";
+import style from "./style.module.css";
 
 // Типы кнопок
 export type ButtonType = "primary" | "secondary" | "tertiary";
@@ -23,8 +23,8 @@ export const Button: React.FC<ButtonProps> = ({
 }) => {
   return (
     <button
-      className={`button button-${type} ${
-        fullWidth ? "button-full-width" : ""
+      className={`${style.button} ${style["button-" + type]} ${
+        fullWidth ? style["button-full-width"] : ""
       } ${className}`}
       onClick={onClick}
       disabled={disabled}
