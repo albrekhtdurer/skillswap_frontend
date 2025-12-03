@@ -1,13 +1,16 @@
-import type { User } from "../../entities/types";
+import type { User, SkillCategory } from "../../entities/types";
 import styles from "./UserCard.module.css";
 import { getSubcategoryColor } from "../../entities/subcategoryColors";
 import HeartIcon from "../../assets/icons/heart.svg";
+import { Button } from "../../shared/ui/Button/Button";
 
+// Этот компонент отображает карточку пользователя с информацией и навыками
 type UserCardProps = {
   user: User;
+  categories: SkillCategory[];
 };
 
-export function UserCard({ user }: UserCardProps) {
+export function UserCard({ user, categories }: UserCardProps) {
   const {
     name,
     location,
@@ -19,6 +22,7 @@ export function UserCard({ user }: UserCardProps) {
     subcategoriesWantToLearn,
   } = user;
 
+  // Определяем видимые подкатегории для отображения и количество скрытых подкатегорий
   const visibleSubcategories = subcategoriesWantToLearn.slice(0, 2);
   const hiddenCount =
     subcategoriesWantToLearn.length - visibleSubcategories.length;
@@ -28,17 +32,9 @@ export function UserCard({ user }: UserCardProps) {
       <div className={styles.userBox}>
         <img className={styles.avatar} src={avatarUrl} alt={name} />
 
+        {/* Блок с аватаром, именем и лайками */}
         <div className={styles.userInfo}>
           <div className={styles.userHeader}>
-            <div className={styles.userText}>
-              <h3 className={styles.name}>{name}</h3>
-              <p className={styles.meta}>
-                <span>{location}</span>
-                <span>, </span>
-                <span>{age}</span>
-              </p>
-            </div>
-
             <div className={styles.likeWrapper}>
               <span className={styles.likeCount}>{likes}</span>
               <button
@@ -49,17 +45,30 @@ export function UserCard({ user }: UserCardProps) {
                 <img src={HeartIcon} alt="" className={styles.likeIcon} />
               </button>
             </div>
+
+            <div className={styles.userText}>
+              <h3 className={styles.name}>{name}</h3>
+              <p className={styles.meta}>
+                <span>{location}</span>
+                <span>, </span>
+                <span>{age}</span>
+              </p>
+            </div>
           </div>
         </div>
       </div>
 
+      {/* Секция "Может научить" с отображением навыка, которым может поделиться пользователь */}
       <div className={styles.section}>
         <p className={styles.sectionLabel}>Может научить:</p>
-        <div className={styles.chips}>
+        <div className={styles.chipsTeach}>
           <span
-            className={styles.chip}
+            className={styles.chipTeach}
             style={{
-              backgroundColor: getSubcategoryColor(skillCanTeach.subCategoryId),
+              backgroundColor: getSubcategoryColor(
+                categories,
+                skillCanTeach.subCategoryId,
+              ),
             }}
           >
             {skillCanTeach.name}
@@ -67,11 +76,12 @@ export function UserCard({ user }: UserCardProps) {
         </div>
       </div>
 
+      {/* Секция "Хочет научиться" с отображением подкатегорий и индикацией скрытых элементов */}
       <div className={styles.section}>
         <p className={styles.sectionLabel}>Хочет научиться:</p>
-        <div className={styles.chips}>
+        <div className={styles.chipsLearn}>
           {visibleSubcategories.map((subcategory) => {
-            const color = getSubcategoryColor(subcategory.id);
+            const color = getSubcategoryColor(categories, subcategory.id);
 
             return (
               <span
@@ -90,9 +100,10 @@ export function UserCard({ user }: UserCardProps) {
         </div>
       </div>
 
-      <button type="button" className={styles.moreButton}>
+      {/* Кнопка для навигации к модальному окну с подробностями */}
+      <Button type="primary" fullWidth onClick={() => {}}>
         Подробнее
-      </button>
+      </Button>
     </article>
   );
 }

@@ -1,8 +1,12 @@
+/* Блок секции карточки (заголовок + содержимое) */
+
 .section {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
+
+/* Общий контейнер карточки пользователя */
 
 .card {
   display: flex;
@@ -16,6 +20,8 @@
   border-radius: var(--border-raduis-main);
 }
 
+/* Контейнер аватара и информации о пользователе */
+
 .userBox {
   display: flex;
   gap: 16px;
@@ -25,24 +31,24 @@
   flex: 1;
 }
 
+/* Верхняя часть блока с лайками и текстовой информацией */
+
 .userHeader {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 12px;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .userText {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  padding-top: 28px;
 }
 
+/* Обертка для лайков */
+
 .likeWrapper {
-  display: flex;
-  align-items: flex-start;
-  gap: 4px;
+  margin-left: auto;
 }
 
 .likeCount {
@@ -70,11 +76,14 @@
   object-fit: contain;
 }
 
+/* Аватар пользователя */
+
 .avatar {
   width: 100px;
   height: 100px;
   border-radius: 50%;
   object-fit: cover;
+  object-position: top;
 }
 
 .name {
@@ -90,6 +99,8 @@
   font-size: var(--font-size-caption);
 }
 
+/* Плашки блоков "Может научить" и "Хочет научиться" */
+
 .sectionLabel {
   margin-bottom: 4px;
   font-weight: var(--font-weight-accent);
@@ -104,6 +115,29 @@
   overflow: hidden;
 }
 
+.chipsTeach {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chipsLearn {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 8px;
+  overflow: hidden;
+}
+
+.chipTeach {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 12px;
+  font-size: var(--font-size-caption);
+  line-height: 1.1;
+  border-radius: 16px;
+}
+
 .chip,
 .chipMore {
   display: inline-flex;
@@ -116,33 +150,17 @@
   border-radius: 16px;
 }
 
-.chip:nth-child(2) {
-  max-width: 90px;
-}
+/* Обрезка текста внутри плашки до троеточия */
 
 .chipText {
   display: inline-block;
   min-width: 0;
-  max-width: 100%;
+  max-width: 120px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
 .chipMore {
-  flex: 0 0 auto;
   background: var(--tag-add-color);
-}
-
-.moreButton {
-  width: 100%;
-  padding: 16px 0;
-  font-weight: var(--font-weight);
-  font-size: var(--font-size-main);
-  font-family: var(--font-accent);
-  background: var(--accent-color);
-  border: 1px solid #000000;
-  border-radius: 12px;
-  outline: none;
-  cursor: pointer;
 }
