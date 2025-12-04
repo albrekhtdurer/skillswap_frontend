@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import { Input, type InputProps } from "./Input";
+import { Input, type TInputProps } from "./Input";
 import eyeIcon from "../../../assets/icons/eye.svg";
 import style from "./style.module.css";
 
-type PasswordInputProps = Omit<InputProps, "type">;
+type TPasswordInputProps = Omit<TInputProps, "type">;
 
 export const PasswordInput = React.forwardRef<
   HTMLInputElement,
-  PasswordInputProps
+  TPasswordInputProps
 >(
   (
     {

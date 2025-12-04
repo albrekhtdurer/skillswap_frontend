@@ -1,12 +1,12 @@
-import type { CheckboxGroupProps } from "./checkbox-group";
+import type { TCheckboxGroupProps } from "./checkbox-group";
 import { CheckboxGroup } from "./checkbox-group";
 import style from "./checkbox-group.module.css";
 import { ArrowIcon } from "../../../assets/img/icons";
 import { useState } from "react";
 
-export type CheckboxGroupListProps = {
+export type TCheckboxGroupListProps = {
   title: string;
-  items: CheckboxGroupProps[];
+  items: TCheckboxGroupProps[];
   buttonText: string;
   limit?: number;
 };
@@ -16,7 +16,7 @@ export const CheckboxGroupList = ({
   items,
   buttonText,
   limit = 2,
-}: CheckboxGroupListProps) => {
+}: TCheckboxGroupListProps) => {
   const [expanded, setExpanded] = useState(false);
   const visibleItems = expanded ? items : items.slice(0, limit);
   return (

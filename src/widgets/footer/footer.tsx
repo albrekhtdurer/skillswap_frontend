@@ -2,11 +2,11 @@ import { Logo } from "../../shared/ui/logo";
 import { TextLink } from "../../shared/ui/text-link";
 import style from "./footer.module.css";
 
-export type FooterProps = {
+export type TFooterProps = {
   allSkillsOnClick?: () => void;
 };
 
-export const Footer = ({ allSkillsOnClick }: FooterProps) => {
+export const Footer = ({ allSkillsOnClick }: TFooterProps) => {
   return (
     <div className={style.footer}>
       <div className={style.footer_logo_section}>

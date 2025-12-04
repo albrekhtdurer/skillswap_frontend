@@ -1,16 +1,15 @@
-import type { User, SkillCategory } from "../../entities/types";
+import type { IUser, ISkillCategory } from "../../entities/types";
 import styles from "./UserCard.module.css";
 import { getSubcategoryColor } from "../../entities/subcategoryColors";
 import HeartIcon from "../../assets/icons/heart.svg";
 import { Button } from "../../shared/ui/Button/Button";
 
-// Этот компонент отображает карточку пользователя с информацией и навыками
-type UserCardProps = {
-  user: User;
-  categories: SkillCategory[];
+type TUserCardProps = {
+  user: IUser;
+  categories: ISkillCategory[];
 };
 
-export function UserCard({ user, categories }: UserCardProps) {
+export function UserCard({ user, categories }: TUserCardProps) {
   const {
     name,
     location,
@@ -22,7 +21,6 @@ export function UserCard({ user, categories }: UserCardProps) {
     subcategoriesWantToLearn,
   } = user;
 
-  // Определяем видимые подкатегории для отображения и количество скрытых подкатегорий
   const visibleSubcategories = subcategoriesWantToLearn.slice(0, 2);
   const hiddenCount =
     subcategoriesWantToLearn.length - visibleSubcategories.length;

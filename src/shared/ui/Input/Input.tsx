@@ -1,7 +1,7 @@
 import React, { type ChangeEvent, type HTMLProps, type ReactNode } from "react";
 import style from "./style.module.css";
 
-export type InputProps = Omit<HTMLProps<HTMLInputElement>, "onChange"> & {
+export type TInputProps = Omit<HTMLProps<HTMLInputElement>, "onChange"> & {
   onChange: (e: ChangeEvent<HTMLInputElement>) => void;
   name: string;
   placeholder?: string;
@@ -16,7 +16,7 @@ export type InputProps = Omit<HTMLProps<HTMLInputElement>, "onChange"> & {
   classNameError?: string;
 };
 
-export const Input = React.forwardRef<HTMLInputElement, InputProps>(
+export const Input = React.forwardRef<HTMLInputElement, TInputProps>(
   (
     {
       className = style.input,
