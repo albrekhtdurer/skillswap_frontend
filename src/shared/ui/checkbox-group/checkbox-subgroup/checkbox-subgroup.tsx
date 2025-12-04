@@ -1,12 +1,12 @@
-import { Checkbox, type CheckboxType } from "../checkbox/checkbox";
+import { Checkbox, type TCheckboxType } from "../checkbox/checkbox";
 import style from "./checkbox-subgroup.module.css";
 
-export type CheckboxSubgroupProps = {
-  items: CheckboxType[];
+export type TCheckboxSubgroupProps = {
+  items: TCheckboxType[];
   selectedItems: string[];
   className?: string;
   limit?: number;
-  onItemChange: (data: CheckboxType) => void;
+  onItemChange: (data: TCheckboxType) => void;
 };
 
 export const CheckboxSubgroup = ({
@@ -15,7 +15,7 @@ export const CheckboxSubgroup = ({
   className,
   onItemChange,
   limit,
-}: CheckboxSubgroupProps) => {
+}: TCheckboxSubgroupProps) => {
   const visibleItems = limit ? items.slice(0, limit) : items;
   return (
     <div className={`${style.checkbox_subgroup} ${className ? className : ""}`}>

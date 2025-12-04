@@ -1,9 +1,9 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { api } from "../../api";
-import type { User } from "../../entities/types";
+import type { IUser } from "../../entities/types";
 
 type TUsersState = {
-  users: User[];
+  users: IUser[];
   loading: boolean;
   error: string | undefined;
   selectedUserId: number | null;

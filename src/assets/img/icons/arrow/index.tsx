@@ -1,9 +1,9 @@
-export type ArrowIconProps = {
+export type TArrowIconProps = {
   initialRotation: number;
   opened: boolean;
 };
 
-export const ArrowIcon = ({ opened, initialRotation }: ArrowIconProps) => {
+export const ArrowIcon = ({ opened, initialRotation }: TArrowIconProps) => {
   return (
     <svg
       width="16"

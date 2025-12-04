@@ -1,9 +1,9 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import type { SkillCategory } from "../../entities/types";
+import type { ISkillCategory } from "../../entities/types";
 import { api } from "../../api";
 
 type TCategoriesState = {
-  categories: SkillCategory[];
+  categories: ISkillCategory[];
   loading: boolean;
   status: "idle" | "pending" | "rejected" | "fulfilled";
   error: string | undefined;

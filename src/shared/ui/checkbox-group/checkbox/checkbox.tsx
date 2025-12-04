@@ -1,18 +1,18 @@
 import styles from "./checkbox.module.css";
 import { CheckboxIcon, ArrowIcon } from "../../../../assets/img/icons";
-import type { Subcategory } from "../../../../entities/types";
+import type { ISubcategory } from "../../../../entities/types";
 import { useId } from "react";
 
-export type CheckboxType = {
+export type TCheckboxType = {
   value: string;
-} & Subcategory;
+} & ISubcategory;
 
-type CheckboxProps = {
+type TCheckboxProps = {
   isCategory: boolean;
   checked: boolean;
-  onChange?: (option: CheckboxType) => void;
+  onChange?: (option: TCheckboxType) => void;
   arrowOpened?: boolean;
-} & CheckboxType;
+} & TCheckboxType;
 
 export const Checkbox = ({
   isCategory = false,
@@ -22,7 +22,7 @@ export const Checkbox = ({
   checked,
   arrowOpened,
   onChange,
-}: CheckboxProps) => {
+}: TCheckboxProps) => {
   const _id = `${value}-${useId()}`;
   return (
     <div key={value}>
