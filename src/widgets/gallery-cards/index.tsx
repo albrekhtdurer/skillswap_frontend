@@ -1,1 +1,1 @@
-export { CardsGallery } from "./CardsGallery";
+export { CardsGallery } from "./cards-gallery";

@@ -1,8 +1,10 @@
 import type { User } from "../../entities/types";
 import { Button } from "../../shared/ui/Button/Button";
 import { UserCard } from "../UserCard/UserCard";
-import style from "./CardsGallery.module.css";
+import style from "./cards-gallery.module.css";
 import { SortIcon, RightIcon } from "../../assets/img/icons";
+import { useSelector } from "../../features/store";
+import { categoriesSelector } from "../../features/categories/categoriesSlice";
 
 export type CardsGalleryPros = {
   title: string;
@@ -24,8 +26,9 @@ export const CardsGallery = ({
   const shouldLimit = maxCards !== undefined && maxCards > 0;
   const displayedCards = shouldLimit ? cards.slice(0, maxCards) : cards;
   const hasMore = shouldLimit && cards.length > maxCards;
+  const categories = useSelector(categoriesSelector);
   return (
-    <div className={style.card_gallery}>
+    <div>
       <div className={style.card_gallery_header}>
         <h2 className={style.card_gallery_header_title}>{title}</h2>
         <div className={style.card_gallery_actions}>
@@ -50,9 +53,7 @@ export const CardsGallery = ({
       </div>
       <div className={style.card_gallery_main}>
         {displayedCards.map((user) => (
-          <div>
-            <UserCard user={user} categories={[]} />
-          </div>
+          <UserCard key={user.id} user={user} categories={categories} />
         ))}
       </div>
     </div>
