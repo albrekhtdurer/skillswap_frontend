@@ -13,7 +13,10 @@ import { modeOptions, genderOptions } from "../../shared/lib/constants";
 
 import { useSelector, useDispatch } from "../../features/store";
 import { setFilters, reset } from "../../features/filters/filtersSlice";
-import { isNotEmptySelector } from "../../features/filters/filtersSlice";
+import {
+  isNotEmptySelector,
+  filtersCounterSelector,
+} from "../../features/filters/filtersSlice";
 
 export const Sidebar = () => {
   const dispatch = useDispatch();
@@ -21,6 +24,7 @@ export const Sidebar = () => {
   const { cities } = useSelector((store) => store.cities);
   const { filters } = useSelector((store) => store.filters);
   const isNotEmpty = useSelector(isNotEmptySelector);
+  const filtersCounter = useSelector(filtersCounterSelector);
 
   const skillsOptions: CheckboxGroupProps[] = categories.map((cat) => ({
     category: {
@@ -59,8 +63,7 @@ export const Sidebar = () => {
       <div className={style.sidebar_title}>
         <p className={style.sidebar_title_text}>
           Фильтры
-          {isNotEmpty &&
-            ` (${filters.skillIds.length + filters.cityIds.length})`}
+          {isNotEmpty && ` (${filtersCounter})`}
         </p>
         {isNotEmpty && (
           <button
