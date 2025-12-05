@@ -1,8 +1,8 @@
 import { categoryColors } from "../shared/lib/constants";
-import type { SkillCategory } from "./types";
+import type { ISkillCategory } from "./types";
 
 export function getSubcategoryColor(
-  categories: SkillCategory[],
+  categories: ISkillCategory[],
   subcategoryId: number,
 ) {
   const category = categories.find((category) =>

@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { Input, type InputProps } from "./Input";
+import { Input, type TInputProps } from "./Input";
 import searchIcon from "../../../assets/icons/edit.svg";
 import style from "./style.module.css";
 
-type EditInputProps = InputProps;
+type TEditInputProps = TInputProps;
 
-export const EditInput = React.forwardRef<HTMLInputElement, EditInputProps>(
+export const EditInput = React.forwardRef<HTMLInputElement, TEditInputProps>(
   ({ className = `${style.input} ${style.input_edit}`, ...props }, ref) => {
     const [disabled, setDisabled] = useState(true);
     const onEdit = () => setDisabled((prev) => !prev);

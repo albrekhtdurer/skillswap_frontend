@@ -1,9 +1,9 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import type { City } from "../../entities/types";
+import type { ICity } from "../../entities/types";
 import { api } from "../../api";
 
 type TCitiesState = {
-  cities: City[];
+  cities: ICity[];
   loading: boolean;
   status: "idle" | "pending" | "rejected" | "fulfilled";
   error: string | undefined;

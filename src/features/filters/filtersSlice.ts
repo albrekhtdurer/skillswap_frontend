@@ -1,9 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
-import type { Filters } from "../../entities/types";
+import type { TFilters } from "../../entities/types";
 
 type TFiltersState = {
-  filters: Filters;
+  filters: TFilters;
 };
 
 const initialState: TFiltersState = {
@@ -14,7 +14,7 @@ export const filtersSlice = createSlice({
   name: "filters",
   initialState,
   reducers: {
-    setFilters: (state, action: PayloadAction<Partial<Filters>>) => {
+    setFilters: (state, action: PayloadAction<Partial<TFilters>>) => {
       state.filters = { ...state.filters, ...action.payload };
     },
     resetFilters: () => initialState,

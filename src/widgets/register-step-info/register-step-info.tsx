@@ -1,13 +1,13 @@
 import { type FC } from "react";
 import styles from "./register-step-info.module.css";
 
-interface RegisterStepInfoProps {
+interface IRegisterStepInfoProps {
   image: string;
   title: string;
   subtitle: string;
 }
 
-export const RegisterStepInfo: FC<RegisterStepInfoProps> = ({
+export const RegisterStepInfo: FC<IRegisterStepInfoProps> = ({
   image,
   title,
   subtitle,

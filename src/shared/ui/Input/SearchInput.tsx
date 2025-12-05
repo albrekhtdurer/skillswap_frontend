@@ -3,7 +3,7 @@ import { Input } from "./Input";
 import searchIcon from "../../../assets/icons/search.svg";
 import style from "./style.module.css";
 
-type SearchInputProps = {
+type TSearchInputProps = {
   onChange: (e: ChangeEvent<HTMLInputElement>) => void;
   name: string;
   placeholder?: string;
@@ -14,7 +14,10 @@ type SearchInputProps = {
   className?: string;
 };
 
-export const SearchInput = React.forwardRef<HTMLInputElement, SearchInputProps>(
+export const SearchInput = React.forwardRef<
+  HTMLInputElement,
+  TSearchInputProps
+>(
   (
     {
       className = `${style.input}  ${style.input_search}`,
