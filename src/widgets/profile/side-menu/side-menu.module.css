@@ -1,0 +1,27 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-inline-size: 324px;
+  block-size: 100%;
+  padding: 40px;
+  background-color: var(--card-input-color);
+  border-radius: 24px;
+}
+
+.item_wrapper {
+  inline-size: 100%;
+  max-inline-size: 100%;
+  border-radius: var(--border-raduis-main);
+}
+
+.menu_item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+}
+
+.menu_item_selected {
+  background-color: var(--button-hover-color);
+}

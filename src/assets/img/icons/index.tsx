@@ -3,3 +3,8 @@ export { ArrowIcon } from "./arrow";
 export { CrossIcon } from "./cross";
 export { SortIcon } from "./sort";
 export { RightIcon } from "./chevron-right";
+export { HeartIcon } from "./heart";
+export { SkillIcon } from "./skill";
+export { MessageIcon } from "./message";
+export { MessageTextIcon } from "./message-text";
+export { UserIcon } from "./user";
