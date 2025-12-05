@@ -16,7 +16,10 @@ const initialState: TUsersState = {
   selectedUserId: null,
 };
 
-export const getUsers = createAsyncThunk("users/getUsers", api.getAllUsers);
+export const getUsers = createAsyncThunk<IUser[], void>(
+  "users/getUsers",
+  async () => api.getAllUsers(),
+);
 
 export const usersSlice = createSlice({
   name: "users",
