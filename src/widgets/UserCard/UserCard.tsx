@@ -4,6 +4,7 @@ import { getSubcategoryColor } from "../../entities/subcategoryColors";
 import HeartIcon from "../../assets/icons/heart.svg";
 import { Button } from "../../shared/ui/Button/Button";
 
+// Этот компонент отображает карточку пользователя с информацией и навыками
 type TUserCardProps = {
   user: IUser;
   categories: ISkillCategory[];
