@@ -13,7 +13,7 @@ export const CardsGalleryWrapper = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getCategories());
-  }, []);
+  }, [dispatch]);
 
   return (
     <CardsGallery
