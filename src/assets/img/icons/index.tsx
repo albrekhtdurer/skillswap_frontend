@@ -5,5 +5,3 @@ export { LogoIcon } from "./logo";
 export { BellIcon } from "./bell";
 export { HeartOutlineIcon } from "./heart";
 export { MoonIcon } from "./moon";
-export { SortIcon } from "./sort";
-export { RightIcon } from "./chevron-right";
