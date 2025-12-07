@@ -2,20 +2,20 @@ import { useRef } from "react";
 import type { ChangeEvent, ReactNode } from "react";
 import styles from "./avatar-upload.module.css";
 
-type ButtonPlacement =
+type TButtonPlacement =
   | "bottom-right"
   | "bottom-left"
   | "top-right"
   | "top-left";
 
-type AvatarUploadProps = {
+type TAvatarUploadProps = {
   imageUrl?: string;
   placeholderIcon?: string;
   buttonIcon?: ReactNode;
   onChange: (file: File | null) => void;
   size?: number;
   disabled?: boolean;
-  buttonPlacement?: ButtonPlacement;
+  buttonPlacement?: TButtonPlacement;
   containerClassName?: string;
   avatarClassName?: string;
   buttonClassName?: string;
@@ -32,7 +32,7 @@ export function AvatarUpload({
   containerClassName,
   avatarClassName,
   buttonClassName,
-}: AvatarUploadProps) {
+}: TAvatarUploadProps) {
   const inputRef = useRef<HTMLInputElement | null>(null);
 
   const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -63,7 +63,7 @@ export function AvatarUpload({
         {imageUrl ? (
           <img
             src={imageUrl}
-            alt=""
+            alt="Аватар пользователя"
             className={`${styles.avatar} ${avatarClassName ?? ""}`}
           />
         ) : (
