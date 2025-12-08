@@ -6,7 +6,11 @@ function App() {
   return (
     <>
       <Header />
-      <RegForm onSubmit={() => console.log(123123)} />
+      <RegForm
+        onSubmit={({ email, password }) =>
+          console.log("отправлено", `email - ${email}`, `пароль - ${password}`)
+        }
+      />
       <Footer />
     </>
   );

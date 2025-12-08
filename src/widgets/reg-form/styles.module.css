@@ -3,6 +3,14 @@
   background-color: var(--card-input-color);
 }
 
+.registration__link {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  background-color: transparent;
+  border: 1px solid var(--caption-color);
+}
+
 .registration__link:first-of-type {
   margin-bottom: 16px;
 }
