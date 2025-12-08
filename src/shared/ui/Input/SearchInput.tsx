@@ -20,7 +20,7 @@ export const SearchInput = React.forwardRef<
 >(
   (
     {
-      className = `${style.input}  ${style.input_search}`,
+      className,
       onChange,
       onSearch,
       name,
@@ -32,7 +32,7 @@ export const SearchInput = React.forwardRef<
   ) => {
     return (
       <Input
-        className={className}
+        className={`${style.input_search} ${className || ""}`}
         name={name}
         onChange={onChange}
         ref={ref}

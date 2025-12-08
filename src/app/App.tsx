@@ -1,12 +1,12 @@
 import { Header } from "../widgets/header";
-import { NotFound404 } from "../pages/not-found-404/NotFound404";
 import { Footer } from "../widgets/footer";
+import { RegForm } from "../widgets/reg-form";
 
 function App() {
   return (
     <>
       <Header />
-      <NotFound404 />
+      <RegForm onSubmit={() => console.log(123123)} />
       <Footer />
     </>
   );
