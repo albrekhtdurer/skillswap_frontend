@@ -1,16 +1,41 @@
 import { type ReactNode } from "react";
+import { Navigate, useLocation } from "react-router-dom";
+import { useSelector } from "../../../features/store";
+import { authSlice } from "../../../features/auth/authSlice";
 
 type ProtectedRouteProps = {
   children: ReactNode;
+  forUnAuth?: boolean;
 };
 
-export const ProtectedRoute = ({ children }: ProtectedRouteProps) => {
-  // Пока нет авторизации, просто возвращаем children
-  // В будущем здесь можно добавить проверку авторизации
-  // const isAuthenticated = useSelector(selectIsAuthenticated);
-  // if (!isAuthenticated) {
-  //   return <Navigate to="/login" replace />;
-  // }
+export const ProtectedRoute = ({
+  children,
+  forUnAuth = false,
+}: ProtectedRouteProps) => {
+  const currentUser = useSelector(authSlice.selectors.selectCurrentUser);
+  const location = useLocation();
 
+  // Если страница для неавторизованных пользователей
+  if (forUnAuth) {
+    // Если пользователь авторизован, редиректим на предыдущую страницу или главную
+    if (currentUser) {
+      const { from } = (location.state as {
+        from?: { pathname: string };
+      } | null) || {
+        from: { pathname: "/" },
+      };
+      return <Navigate to={from} replace />;
+    }
+    // Если не авторизован, показываем страницу
+    return <>{children}</>;
+  }
+
+  // Если страница для авторизованных пользователей
+  // Если пользователь не авторизован, редиректим на логин
+  if (!currentUser) {
+    return <Navigate to="/login" state={{ from: location }} replace />;
+  }
+
+  // Если авторизован, показываем страницу
   return <>{children}</>;
 };
