@@ -1,12 +1,12 @@
 import { Header } from "../widgets/header";
 import { Footer } from "../widgets/footer";
-import { RegForm } from "../widgets/reg-form";
+import { AuthForm } from "../widgets/auth-form";
 
 function App() {
   return (
     <>
       <Header />
-      <RegForm
+      <AuthForm
         onSubmit={({ email, password }) =>
           console.log("отправлено", `email - ${email}`, `пароль - ${password}`)
         }

@@ -6,17 +6,17 @@ import { Input, PasswordInput } from "../../shared/ui/Input";
 import { Button } from "../../shared/ui/Button/Button";
 import styles from "./styles.module.css";
 
-type TRegData = {
+type TAuthData = {
   email: string;
   password: string;
 };
 
-type TRegFormProps = {
-  onSubmit: ({ email, password }: TRegData) => void;
+type TAuthFormProps = {
+  onSubmit: ({ email, password }: TAuthData) => void;
   className?: string;
 };
 
-export const RegForm: FC<TRegFormProps> = ({ onSubmit, className }) => {
+export const AuthForm: FC<TAuthFormProps> = ({ onSubmit, className }) => {
   const regSchema = yup.object().shape({
     email: yup
       .string()
@@ -31,10 +31,11 @@ export const RegForm: FC<TRegFormProps> = ({ onSubmit, className }) => {
   const {
     register,
     handleSubmit,
-    formState: { errors, touchedFields },
+    formState: { errors, touchedFields, isValid },
     getValues,
     reset,
   } = useForm({ resolver: yupResolver(regSchema), mode: "onChange" });
+
   const onError = () => {
     console.log();
   };
@@ -124,7 +125,7 @@ export const RegForm: FC<TRegFormProps> = ({ onSubmit, className }) => {
           }
           className={`${styles.registration__input} ${styles.input_password}`}
         ></PasswordInput>
-        <Button fullWidth onClick={() => {}}>
+        <Button disabled={!isValid} fullWidth onClick={() => {}}>
           Далее
         </Button>
       </form>
