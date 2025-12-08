@@ -1,9 +1,9 @@
-export type CheckboxIconProps = {
+export type TCheckboxIconProps = {
   checked: boolean;
   isCategory: boolean;
 };
 
-export const CheckboxIcon = ({ checked, isCategory }: CheckboxIconProps) => {
+export const CheckboxIcon = ({ checked, isCategory }: TCheckboxIconProps) => {
   return (
     <svg
       width="24"

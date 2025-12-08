@@ -1,24 +1,33 @@
-import cities from "../../public/db/cities.json";
-import categories from "../../public/db/categories.json";
-import users from "../../public/db/users.json";
+import type { ICity, ISkillCategory, IUser } from "../entities/types";
 
-import type { City, SkillCategory, User } from "../entities/types";
+const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms)); // для имитации реального запроса
 
-const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms)); //для иммитации реального запроса
+async function fetchJson<T>(url: string): Promise<T> {
+  const response = await fetch(url);
+
+  if (!response.ok) {
+    throw new Error(
+      `Failed to fetch ${url}: ${response.status} ${response.statusText}`,
+    );
+  }
+
+  const data = (await response.json()) as T;
+  return data;
+}
 
 export const api = {
-  async getCities(): Promise<City[]> {
+  async getCities(): Promise<ICity[]> {
     await delay(300);
-    return cities;
+    return fetchJson<ICity[]>("/db/cities.json");
   },
 
-  async getCategories(): Promise<SkillCategory[]> {
+  async getCategories(): Promise<ISkillCategory[]> {
     await delay(300);
-    return categories;
+    return fetchJson<ISkillCategory[]>("/db/categories.json");
   },
 
-  async getAllUsers(): Promise<User[]> {
+  async getAllUsers(): Promise<IUser[]> {
     await delay(300);
-    return users as User[];
+    return fetchJson<IUser[]>("/db/users.json");
   },
 };

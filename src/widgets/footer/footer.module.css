@@ -6,6 +6,7 @@
   inline-size: 100%;
   block-size: 232px;
   padding: 32px 36px;
+  background-color: var(--card-input-color);
 }
 
 .footer_logo_section {

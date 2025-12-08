@@ -1,19 +1,19 @@
-import "./style.css";
+import style from "./style.module.css";
 
 // Типы кнопок
-export type ButtonType = "primary" | "secondary" | "tertiary";
+export type TButtonType = "primary" | "secondary" | "tertiary";
 
 // Пропсы компонента
-export interface ButtonProps {
+export interface IButtonProps {
   onClick: () => void;
-  type?: ButtonType;
+  type?: TButtonType;
   disabled?: boolean;
   children: React.ReactNode;
   className?: string;
   fullWidth?: boolean;
 }
 
-export const Button: React.FC<ButtonProps> = ({
+export const Button: React.FC<IButtonProps> = ({
   onClick,
   type = "primary",
   disabled = false,
@@ -23,8 +23,8 @@ export const Button: React.FC<ButtonProps> = ({
 }) => {
   return (
     <button
-      className={`button button-${type} ${
-        fullWidth ? "button-full-width" : ""
+      className={`${style.button} ${style["button-" + type]} ${
+        fullWidth ? style["button-full-width"] : ""
       } ${className}`}
       onClick={onClick}
       disabled={disabled}

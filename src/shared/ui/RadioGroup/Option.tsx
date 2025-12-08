@@ -1,15 +1,15 @@
 import styles from "./style.module.css";
 
-export type OptionType = {
+export type TOptionType = {
   title: string;
   value: string;
 };
 
-type OptionProps = {
+type TOptionProps = {
   selected?: boolean;
-  onChange: (option: OptionType) => void;
+  onChange: (option: TOptionType) => void;
   groupName: string;
-} & OptionType;
+} & TOptionType;
 
 export const Option = ({
   title,
@@ -17,7 +17,7 @@ export const Option = ({
   onChange,
   selected,
   groupName,
-}: OptionProps) => {
+}: TOptionProps) => {
   const handleChange = () => onChange({ title, value });
   return (
     <div className={styles.option} key={value} tabIndex={0}>

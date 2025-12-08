@@ -1,22 +1,22 @@
 import { CheckboxSubgroup } from "./checkbox-subgroup/checkbox-subgroup";
-import type { CheckboxSubgroupProps } from "./checkbox-subgroup/checkbox-subgroup";
-import { Checkbox, type CheckboxType } from "./checkbox/checkbox";
+import type { TCheckboxSubgroupProps } from "./checkbox-subgroup/checkbox-subgroup";
+import { Checkbox, type TCheckboxType } from "./checkbox/checkbox";
 import style from "./checkbox-group.module.css";
 import { useState } from "react";
 
-export type CheckboxGroupProps = {
-  category: CheckboxType;
-} & Pick<CheckboxSubgroupProps, "items">;
+export type TCheckboxGroupProps = {
+  category: TCheckboxType;
+  selectedItems: TCheckboxType[];
+  handleSubItemChange: (item: TCheckboxType) => void;
+} & Pick<TCheckboxSubgroupProps, "items">;
 
-export const CheckboxGroup = ({ category, items }: CheckboxGroupProps) => {
+export const CheckboxGroup = ({
+  category,
+  items,
+  selectedItems,
+  handleSubItemChange,
+}: TCheckboxGroupProps) => {
   const [categoryOpen, setCategoryOpen] = useState(false);
-  const [selectedItems, setSelectedItems] = useState<string[]>([]);
-
-  const handleSubItemChange = ({ value }: CheckboxType) => {
-    setSelectedItems((prev) =>
-      prev.includes(value) ? prev.filter((v) => v !== value) : [...prev, value],
-    );
-  };
 
   return (
     <div className={`${style.checkbox_group}`}>
@@ -33,7 +33,7 @@ export const CheckboxGroup = ({ category, items }: CheckboxGroupProps) => {
         <CheckboxSubgroup
           items={items}
           className={`${style.checkbox_subgroup}`}
-          selectedItems={selectedItems}
+          selectedItems={selectedItems.map((item) => item.value)}
           onItemChange={handleSubItemChange}
         />
       )}

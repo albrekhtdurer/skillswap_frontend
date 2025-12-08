@@ -1,20 +1,20 @@
-export interface City {
+export interface ICity {
   id: number;
   name: string;
 }
 
-export interface Subcategory {
+export interface ISubcategory {
   id: number;
   name: string;
 }
 
-export interface SkillCategory {
+export interface ISkillCategory {
   id: number;
   name: string;
-  subcategories: Subcategory[];
+  subcategories: ISubcategory[];
 }
 
-export type Skill = {
+export type TSkill = {
   id: number;
   name: string;
   fullDescription: string;
@@ -22,7 +22,7 @@ export type Skill = {
   subCategoryId: number;
 };
 
-export interface User {
+export interface IUser {
   id: number;
   name: string;
   location: string;
@@ -32,8 +32,16 @@ export interface User {
   createdAt: string;
   description: string;
   avatarUrl: string;
-  skillCanTeach: Skill;
-  subcategoriesWantToLearn: Subcategory[];
+  skillCanTeach: TSkill;
+  subcategoriesWantToLearn: ISubcategory[];
   gender: "male" | "female";
   images: string[];
 }
+
+export type TFilters = {
+  mode: "all" | "teach" | "learn";
+  gender: "no_matter" | "male" | "female";
+  cityNames: string[];
+  skillIds: number[];
+  searchInputValue?: string;
+};
