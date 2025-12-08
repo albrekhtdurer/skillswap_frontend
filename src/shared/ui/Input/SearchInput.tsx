@@ -6,13 +6,7 @@ import { useDispatch } from "../../../features/store";
 import { setFilters } from "../../../features/filters/filtersSlice";
 
 type TSearchInputProps = {
-  // onChange: (e: ChangeEvent<HTMLInputElement>) => void;
-  // name?: string;
   placeholder: string;
-  // id?: string;
-  // value?: string;
-  // type?: string;
-  // onSearch: () => void;
   className?: string;
 };
 
@@ -21,15 +15,7 @@ export const SearchInput = React.forwardRef<
   TSearchInputProps
 >(
   (
-    {
-      className = `${style.input}  ${style.input_search}`,
-      // onChange,
-      // onSearch,
-      // name = "search-input",
-      placeholder,
-      // id,
-      // value,
-    },
+    { className = `${style.input}  ${style.input_search}`, placeholder },
     ref,
   ) => {
     const [enteredValue, setEnteredValue] = useState("");
@@ -42,7 +28,6 @@ export const SearchInput = React.forwardRef<
     const handleClick = () => {
       if (enteredValue.trim()) {
         dispatch(setFilters({ searchInputValue: enteredValue }));
-        console.log(`searchInputValue: ${enteredValue}`); //временно для проверки работы фильтра
       }
     };
 
@@ -61,7 +46,6 @@ export const SearchInput = React.forwardRef<
         onKeyDown={handleKeyDown}
         ref={ref}
         placeholder={placeholder}
-        // id={id}
         value={enteredValue}
       >
         <button type="button" onClick={handleClick}>

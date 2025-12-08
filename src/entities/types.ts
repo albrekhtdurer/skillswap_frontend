@@ -44,4 +44,4 @@ export type TFilters = {
   cityNames: string[];
   skillIds: number[];
   searchInputValue?: string;
-}; // from here https://docs.google.com/document/d/1yXsUpRttw7yRXS7mT0eM_m_MqhMg_Mq6Fx8ne0JlA4U/edit?tab=t.0#heading=h.epowgaq476mf
+};
