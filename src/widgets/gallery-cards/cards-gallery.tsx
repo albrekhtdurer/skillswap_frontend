@@ -1,7 +1,7 @@
 import { useState } from "react";
 import type { IUser } from "../../entities/types";
 import { Button } from "../../shared/ui/Button/Button";
-import { UserCard } from "../UserCard/UserCard";
+import { UserCard } from "../user-card/user-card";
 import style from "./cards-gallery.module.css";
 import { SortIcon, RightIcon } from "../../assets/img/icons";
 import { useSelector } from "../../features/store";
@@ -34,6 +34,11 @@ export const CardsGallery = ({
     setExpanded((prev) => !prev);
   };
 
+  // TODO: заменить на данные из стора авторизации,
+  // когда будет готов auth
+  const isAuthorized = true;
+  const currentUserId = "demo-user";
+
   return (
     <div>
       <div className={style.card_gallery_header}>
@@ -60,7 +65,13 @@ export const CardsGallery = ({
       </div>
       <div className={style.card_gallery_main}>
         {displayedCards.map((user) => (
-          <UserCard key={user.id} user={user} categories={categories} />
+          <UserCard
+            key={user.id}
+            user={user}
+            categories={categories}
+            isAuthorized={isAuthorized}
+            currentUserId={currentUserId}
+          />
         ))}
       </div>
     </div>

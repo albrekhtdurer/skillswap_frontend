@@ -1,22 +1,31 @@
 import type { IUser, ISkillCategory } from "../../entities/types";
-import styles from "./UserCard.module.css";
+import styles from "./user-card-element.module.css";
 import { getSubcategoryColor } from "../../entities/subcategoryColors";
 import HeartIcon from "../../assets/icons/heart.svg";
 import { Button } from "../../shared/ui/Button/Button";
 
 // Этот компонент отображает карточку пользователя с информацией и навыками
-type TUserCardProps = {
+type TUserCardElementProps = {
   user: IUser;
   categories: ISkillCategory[];
+  isLiked: boolean;
+  isLikeDisabled: boolean;
+  onToggleLike: () => void;
+  likesCount: number;
 };
 
-export function UserCard({ user, categories }: TUserCardProps) {
+export function UserCardElement({
+  user,
+  categories,
+  isLiked,
+  isLikeDisabled,
+  onToggleLike,
+  likesCount,
+}: TUserCardElementProps) {
   const {
     name,
     location,
     age,
-    likes,
-    isLiked,
     avatarUrl,
     skillCanTeach,
     subcategoriesWantToLearn,
@@ -36,11 +45,16 @@ export function UserCard({ user, categories }: TUserCardProps) {
         <div className={styles.userInfo}>
           <div className={styles.userHeader}>
             <div className={styles.likeWrapper}>
-              <span className={styles.likeCount}>{likes}</span>
+              <span className={styles.likeCount}>{likesCount}</span>
               <button
                 type="button"
                 className={styles.likeButton}
                 aria-pressed={isLiked}
+                aria-label={
+                  isLiked ? "Убрать из избранного" : "Добавить в избранное"
+                }
+                onClick={onToggleLike}
+                disabled={isLikeDisabled}
               >
                 <img src={HeartIcon} alt="" className={styles.likeIcon} />
               </button>
