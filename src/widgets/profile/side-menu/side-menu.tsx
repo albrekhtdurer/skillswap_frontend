@@ -4,10 +4,10 @@ import style from "./side-menu.module.css";
 
 import { useState } from "react";
 
-type SideMenuText = (typeof sideMenuItems)[number]["text"] | undefined;
+type TSideMenuText = (typeof sideMenuItems)[number]["text"] | undefined;
 
 export const ProfileSideMenu = () => {
-  const [selected, setSelected] = useState<SideMenuText>(undefined);
+  const [selected, setSelected] = useState<TSideMenuText>(undefined);
   return (
     <nav className={style.menu}>
       {sideMenuItems.map((item) => (

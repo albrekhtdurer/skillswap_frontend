@@ -1,7 +1,7 @@
 import { TextLink } from "../../../shared/ui/text-link";
 import style from "./side-menu.module.css";
 
-export type ProfileSideMenuItemProps = {
+export type TProfileSideMenuItemProps = {
   selected: boolean;
   text: string;
   children: React.ReactNode;
@@ -13,7 +13,7 @@ export const ProfileSideMenuItem = ({
   text,
   children,
   onClick,
-}: ProfileSideMenuItemProps) => {
+}: TProfileSideMenuItemProps) => {
   return (
     <TextLink
       className={`${style.item_wrapper} ${selected ? style.menu_item_selected : ""}`}

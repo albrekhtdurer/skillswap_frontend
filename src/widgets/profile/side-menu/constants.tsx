@@ -1,4 +1,4 @@
-import type { ProfileSideMenuItemProps } from "./side-menu-item";
+import type { TProfileSideMenuItemProps } from "./side-menu-item";
 import {
   HeartIcon,
   UserIcon,
@@ -8,7 +8,7 @@ import {
 } from "../../../assets/img/icons";
 
 export const sideMenuItems: Pick<
-  ProfileSideMenuItemProps,
+  TProfileSideMenuItemProps,
   "text" | "children"
 >[] = [
   { text: "Заявки", children: <MessageIcon /> },
