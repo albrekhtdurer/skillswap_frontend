@@ -3,6 +3,9 @@ import style from "./style.module.css";
 // Типы кнопок
 export type TButtonType = "primary" | "secondary" | "tertiary";
 
+// Типы позиции иконки
+export type TIconPosition = "left" | "right";
+
 // Пропсы компонента
 export interface IButtonProps {
   onClick: () => void;
@@ -11,6 +14,9 @@ export interface IButtonProps {
   children: React.ReactNode;
   className?: string;
   fullWidth?: boolean;
+  icon?: React.ReactNode; // Сама иконка
+  iconPosition?: TIconPosition; // Позиция: left или right
+  iconClassName?: string; // Дополнительный класс для иконки
 }
 
 export const Button: React.FC<IButtonProps> = ({
@@ -20,7 +26,20 @@ export const Button: React.FC<IButtonProps> = ({
   children,
   className = "",
   fullWidth = false,
+  icon,
+  iconPosition = "left", // Значение по умолчанию
+  iconClassName = "",
 }) => {
+  const renderIcon = () => {
+    if (!icon) return null;
+
+    const iconClass = `${style.icon} ${
+      iconPosition === "left" ? style.iconLeft : style.iconRight
+    } ${iconClassName}`;
+
+    return <span className={iconClass}>{icon}</span>;
+  };
+
   return (
     <button
       className={`${style.button} ${style["button-" + type]} ${
@@ -29,7 +48,9 @@ export const Button: React.FC<IButtonProps> = ({
       onClick={onClick}
       disabled={disabled}
     >
-      {children}
+      {icon && iconPosition === "left" && renderIcon()}
+      <span className={style.buttonText}>{children}</span>
+      {icon && iconPosition === "right" && renderIcon()}
     </button>
   );
 };
