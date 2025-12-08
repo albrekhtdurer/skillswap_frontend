@@ -13,45 +13,40 @@ type TSearchInputProps = {
 export const SearchInput = React.forwardRef<
   HTMLInputElement,
   TSearchInputProps
->(
-  (
-    { className = `${style.input}  ${style.input_search}`, placeholder },
-    ref,
-  ) => {
-    const [enteredValue, setEnteredValue] = useState("");
-    const dispatch = useDispatch();
+>(({ className, placeholder }, ref) => {
+  const [enteredValue, setEnteredValue] = useState("");
+  const dispatch = useDispatch();
 
-    const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-      setEnteredValue(event.target.value);
-    };
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setEnteredValue(event.target.value);
+  };
 
-    const handleClick = () => {
-      if (enteredValue.trim()) {
-        dispatch(setFilters({ searchInputValue: enteredValue }));
-      }
-    };
+  const handleClick = () => {
+    if (enteredValue.trim()) {
+      dispatch(setFilters({ searchInputValue: enteredValue }));
+    }
+  };
 
-    const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
-      if (event.key === "Enter") {
-        handleClick();
-      }
-    };
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === "Enter") {
+      handleClick();
+    }
+  };
 
-    return (
-      <Input
-        type="text"
-        className={className}
-        name="search-input"
-        onChange={handleChange}
-        onKeyDown={handleKeyDown}
-        ref={ref}
-        placeholder={placeholder}
-        value={enteredValue}
-      >
-        <button type="button" onClick={handleClick}>
-          <img src={searchIcon} alt={"Поиск"} />
-        </button>
-      </Input>
-    );
-  },
-);
+  return (
+    <Input
+      className={`${style.input_search} ${className || ""}`}
+      type="text"
+      name="search-input"
+      onChange={handleChange}
+      onKeyDown={handleKeyDown}
+      ref={ref}
+      placeholder={placeholder}
+      value={enteredValue}
+    >
+      <button type="button" onClick={handleClick}>
+        <img src={searchIcon} alt={"Поиск"} />
+      </button>
+    </Input>
+  );
+});
