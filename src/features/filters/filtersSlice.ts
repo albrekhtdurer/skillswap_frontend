@@ -31,7 +31,7 @@ export const filtersSlice = createSlice({
       state.filters.skillIds.length > 0 ||
       state.filters.mode !== initialState.filters.mode ||
       state.filters.gender !== initialState.filters.gender ||
-      !state.filters.searchInputValue?.trim(),
+      state.filters.searchInputValue?.trim(),
     filtersCounterSelector: (state) =>
       state.filters.cityNames.length +
       state.filters.skillIds.length +

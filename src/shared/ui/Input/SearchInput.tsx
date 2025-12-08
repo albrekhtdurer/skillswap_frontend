@@ -2,7 +2,7 @@ import React, { useState, type ChangeEvent } from "react";
 import { Input } from "./Input";
 import searchIcon from "../../../assets/icons/search.svg";
 import style from "./style.module.css";
-import { useDispatch } from "../../../features/store";
+import { useDispatch, useSelector } from "../../../features/store";
 import { setFilters } from "../../../features/filters/filtersSlice";
 
 type TSearchInputProps = {
@@ -20,15 +20,15 @@ export const SearchInput = React.forwardRef<
   ) => {
     const [enteredValue, setEnteredValue] = useState("");
     const dispatch = useDispatch();
+    const { searchInputValue } = useSelector((state) => state.filters.filters);
 
     const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
       setEnteredValue(event.target.value);
     };
 
     const handleClick = () => {
-      if (enteredValue.trim()) {
+      if (searchInputValue !== enteredValue)
         dispatch(setFilters({ searchInputValue: enteredValue }));
-      }
     };
 
     const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
