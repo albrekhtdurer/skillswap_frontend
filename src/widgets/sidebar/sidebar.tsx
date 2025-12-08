@@ -4,9 +4,9 @@ import {
   CheckboxGroupList,
   CheckboxSubgroupList,
 } from "../../shared/ui/checkbox-group";
-import type { CheckboxType } from "../../shared/ui/checkbox-group/checkbox/checkbox";
-import type { CheckboxGroupProps } from "../../shared/ui/checkbox-group/checkbox-group";
-import type { Filters } from "../../entities/types";
+import type { TCheckboxType } from "../../shared/ui/checkbox-group/checkbox/checkbox";
+import type { TCheckboxGroupProps } from "../../shared/ui/checkbox-group/checkbox-group";
+import type { TFilters } from "../../entities/types";
 
 import { CrossIcon } from "../../assets/img/icons";
 import { modeOptions, genderOptions } from "../../shared/lib/constants";
@@ -26,7 +26,7 @@ export const Sidebar = () => {
   const isNotEmpty = useSelector(isNotEmptySelector);
   const filtersCounter = useSelector(filtersCounterSelector);
 
-  const skillsOptions: CheckboxGroupProps[] = categories.map((cat) => ({
+  const skillsOptions: TCheckboxGroupProps[] = categories.map((cat) => ({
     category: {
       id: cat.id,
       name: cat.name,
@@ -42,7 +42,7 @@ export const Sidebar = () => {
         value: sub.id.toString(),
       }))
       .filter((sub) => filters.skillIds.includes(sub.id)),
-    handleSubItemChange: ({ id }: CheckboxType) => {
+    handleSubItemChange: ({ id }: TCheckboxType) => {
       dispatch(
         setFilters({
           skillIds: filters.skillIds.includes(id)
@@ -53,7 +53,7 @@ export const Sidebar = () => {
     },
   }));
 
-  const citiesOptions: CheckboxType[] = cities.map((city) => ({
+  const citiesOptions: TCheckboxType[] = cities.map((city) => ({
     ...city,
     value: city.id.toString(),
   }));
@@ -84,7 +84,7 @@ export const Sidebar = () => {
             modeOptions[0]
           }
           onChange={(option) =>
-            dispatch(setFilters({ mode: option.value as Filters["mode"] }))
+            dispatch(setFilters({ mode: option.value as TFilters["mode"] }))
           }
         />
         <CheckboxGroupList
@@ -102,7 +102,7 @@ export const Sidebar = () => {
             genderOptions[0]
           }
           onChange={(option) =>
-            dispatch(setFilters({ gender: option.value as Filters["gender"] }))
+            dispatch(setFilters({ gender: option.value as TFilters["gender"] }))
           }
         />
         <CheckboxSubgroupList
@@ -111,14 +111,14 @@ export const Sidebar = () => {
           limit={5}
           items={citiesOptions}
           selectedItems={citiesOptions.filter((item) =>
-            filters.cityIds.includes(item.id),
+            filters.cityNames.includes(item.name),
           )}
-          handleSubItemChange={({ id }: CheckboxType) => {
+          handleSubItemChange={({ name }: TCheckboxType) => {
             dispatch(
               setFilters({
-                cityIds: filters.cityIds.includes(id)
-                  ? filters.cityIds.filter((v) => v !== id)
-                  : [...filters.cityIds, id],
+                cityNames: filters.cityNames.includes(name)
+                  ? filters.cityNames.filter((v) => v !== name)
+                  : [...filters.cityNames, name],
               }),
             );
           }}

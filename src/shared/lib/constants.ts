@@ -1,14 +1,14 @@
-import type { OptionType } from "../ui/RadioGroup/Option";
+import type { TOptionType } from "../ui/RadioGroup/Option";
 
 // constants for filters
 
-export const modeOptions: OptionType[] = [
+export const modeOptions: TOptionType[] = [
   { title: "Всё", value: "all" },
   { title: "Могу научить", value: "teach" },
   { title: "Хочу научиться", value: "learn" },
 ];
 
-export const genderOptions: OptionType[] = [
+export const genderOptions: TOptionType[] = [
   { title: "Не имеет значения", value: "no_matter" },
   { title: "Мужской", value: "male" },
   { title: "Женский", value: "female" },

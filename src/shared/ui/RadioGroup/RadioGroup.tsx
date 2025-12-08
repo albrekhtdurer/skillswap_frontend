@@ -1,12 +1,12 @@
-import { Option, type OptionType } from "./Option";
+import { Option, type TOptionType } from "./Option";
 import styles from "./style.module.css";
 
-type RadioGroupProps = {
+type TRadioGroupProps = {
   name: string;
   title: string;
-  options: OptionType[];
-  selected: OptionType;
-  onChange: (option: OptionType) => void;
+  options: TOptionType[];
+  selected: TOptionType;
+  onChange: (option: TOptionType) => void;
 };
 
 export const RadioGroup = ({
@@ -15,7 +15,7 @@ export const RadioGroup = ({
   options,
   title,
   selected,
-}: RadioGroupProps) => {
+}: TRadioGroupProps) => {
   return (
     <div className={styles["radio-group"]}>
       {title && <div className={styles["radio-group__title"]}>{title}</div>}

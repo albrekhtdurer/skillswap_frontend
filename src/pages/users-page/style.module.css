@@ -1,0 +1,9 @@
+.users-page {
+  display: flex;
+  gap: 24px;
+  padding: 32px 36px 60px;
+}
+
+.users-page__body {
+  width: 100%;
+}

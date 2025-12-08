@@ -1,10 +1,14 @@
-import { ProfileSideMenu } from "../widgets/profile";
+import { Header } from "../widgets/header";
+import { NotFound404 } from "../pages/not-found-404/NotFound404";
+import { Footer } from "../widgets/footer";
 
 function App() {
   return (
-    <div style={{ height: "800px" }}>
-      <ProfileSideMenu />
-    </div>
+    <>
+      <Header />
+      <NotFound404 />
+      <Footer />
+    </>
   );
 }
 

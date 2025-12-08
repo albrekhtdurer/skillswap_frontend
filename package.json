@@ -16,9 +16,12 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.11.0",
+    "@splidejs/react-splide": "^0.7.12",
+    "@splidejs/splide": "^4.1.4",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-redux": "^9.2.0",
+    "react-select": "^5.10.2",
     "redux": "^5.0.1"
   },
   "devDependencies": {

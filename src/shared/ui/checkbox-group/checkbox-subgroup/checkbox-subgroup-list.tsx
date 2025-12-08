@@ -1,17 +1,17 @@
-import type { CheckboxSubgroupProps } from "./checkbox-subgroup";
+import type { TCheckboxSubgroupProps } from "./checkbox-subgroup";
 import { CheckboxSubgroup } from "./checkbox-subgroup";
-import type { CheckboxType } from "../checkbox/checkbox";
+import type { TCheckboxType } from "../checkbox/checkbox";
 import style from "./checkbox-subgroup.module.css";
 import { ArrowIcon } from "../../../../assets/img/icons";
 import { useState } from "react";
 
-export type CheckboxSubgroupListProps = {
+export type TCheckboxSubgroupListProps = {
   title: string;
   buttonText: string;
   limit?: number;
-  selectedItems: CheckboxType[];
-  handleSubItemChange: (item: CheckboxType) => void;
-} & Pick<CheckboxSubgroupProps, "items">;
+  selectedItems: TCheckboxType[];
+  handleSubItemChange: (item: TCheckboxType) => void;
+} & Pick<TCheckboxSubgroupProps, "items">;
 
 export const CheckboxSubgroupList = ({
   title,
@@ -20,7 +20,7 @@ export const CheckboxSubgroupList = ({
   limit,
   selectedItems,
   handleSubItemChange,
-}: CheckboxSubgroupListProps) => {
+}: TCheckboxSubgroupListProps) => {
   const [expanded, setExpanded] = useState(false);
 
   return (
