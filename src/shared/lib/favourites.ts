@@ -37,3 +37,35 @@ export function saveUserFavourites(
   store[currentUserId] = favourites;
   writeStore(store);
 }
+
+export function computeIsLiked(
+  currentUserId: string | null | undefined,
+  userId: number,
+  initialIsLiked: boolean,
+): boolean {
+  if (!currentUserId) return false;
+
+  const favourites = getUserFavourites(currentUserId);
+
+  return favourites.includes(userId) || initialIsLiked;
+}
+
+export function updateUserFavourites(
+  currentUserId: string | null | undefined,
+  userId: number,
+  isLiked: boolean,
+): boolean {
+  if (!currentUserId) return isLiked;
+
+  const current = getUserFavourites(currentUserId);
+
+  let next: number[];
+  if (isLiked) {
+    next = current.filter((id) => id !== userId);
+  } else {
+    next = current.includes(userId) ? current : [...current, userId];
+  }
+
+  saveUserFavourites(currentUserId, next);
+  return !isLiked;
+}
