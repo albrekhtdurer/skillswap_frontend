@@ -1,7 +1,9 @@
 import { useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
 import { Header } from "../widgets/header";
 import { Footer } from "../widgets/footer";
 import { UsersPage } from "../pages/users-page";
+import { NotFound404 } from "../pages/not-found-404/NotFound404";
 import { useDispatch } from "../features/store";
 import { getUsers } from "../features/users/usersSlice";
 import { getCategories } from "../features/categories/categoriesSlice";
@@ -21,7 +23,10 @@ function App() {
     <div className={styles.page}>
       <Header />
       <main className={styles.content}>
-        <UsersPage />
+        <Routes>
+          <Route path="/" element={<UsersPage />} />
+          <Route path="*" element={<NotFound404 />} />
+        </Routes>
       </main>
       <Footer />
     </div>

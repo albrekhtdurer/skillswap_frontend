@@ -24,6 +24,7 @@
     "react-dom": "^19.2.0",
     "react-hook-form": "^7.68.0",
     "react-redux": "^9.2.0",
+    "react-router-dom": "^7.10.1",
     "react-select": "^5.10.2",
     "redux": "^5.0.1",
     "yup": "^1.7.1"
