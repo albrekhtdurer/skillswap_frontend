@@ -1,77 +1,34 @@
-import { useState, useRef } from "react";
-import { PopupMenu } from "../shared/ui/popup-menu";
-import { SkillsMenu } from "../widgets/skills-menu";
-import { NotificationsMenu } from "../widgets/notifications-menu";
-import "./styles/index.css";
-import "./styles/variables.css";
-import "./styles/fonts.css";
+import { useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
+import { Header } from "../widgets/header";
+import { Footer } from "../widgets/footer";
+import { UsersPage } from "../pages/users-page";
+import { NotFound404 } from "../pages/not-found-404/NotFound404";
+import { useDispatch } from "../features/store";
+import { getUsers } from "../features/users/usersSlice";
+import { getCategories } from "../features/categories/categoriesSlice";
+import { getCities } from "../features/cities/citiesSlice";
+import styles from "./App.module.css";
 
 function App() {
-  const [isSkillsMenuOpen, setIsSkillsMenuOpen] = useState(false);
-  const [isNotificationsMenuOpen, setIsNotificationsMenuOpen] = useState(false);
-  const skillsButtonRef = useRef<HTMLButtonElement>(null);
-  const notificationsButtonRef = useRef<HTMLButtonElement>(null);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getUsers());
+    dispatch(getCategories());
+    dispatch(getCities());
+  }, [dispatch]);
 
   return (
-    <div
-      style={{ padding: "48px", minHeight: "150vh", paddingBottom: "800px" }}
-    >
-      <div
-        style={{
-          display: "flex",
-          gap: "20px",
-          justifyContent: "flex-start",
-          alignItems: "flex-start",
-          paddingTop: "0",
-        }}
-      >
-        <button
-          ref={skillsButtonRef}
-          onClick={() => setIsSkillsMenuOpen(!isSkillsMenuOpen)}
-          style={{
-            padding: "10px 20px",
-            fontSize: "16px",
-            cursor: "pointer",
-            border: "1px solid var(--border-color)",
-            borderRadius: "8px",
-            backgroundColor: "var(--card-input-color)",
-          }}
-        >
-          Все навыки
-        </button>
-
-        <button
-          ref={notificationsButtonRef}
-          onClick={() => setIsNotificationsMenuOpen(!isNotificationsMenuOpen)}
-          style={{
-            padding: "10px 20px",
-            fontSize: "16px",
-            cursor: "pointer",
-            border: "1px solid var(--border-color)",
-            borderRadius: "8px",
-            backgroundColor: "var(--card-input-color)",
-          }}
-        >
-          Уведомления
-        </button>
-      </div>
-
-      <PopupMenu
-        isOpen={isSkillsMenuOpen}
-        onClose={() => setIsSkillsMenuOpen(false)}
-        anchorRef={skillsButtonRef}
-        position="bottom-left"
-      >
-        <SkillsMenu />
-      </PopupMenu>
-
-      <PopupMenu
-        isOpen={isNotificationsMenuOpen}
-        onClose={() => setIsNotificationsMenuOpen(false)}
-        position="fixed-top-right"
-      >
-        <NotificationsMenu />
-      </PopupMenu>
+    <div className={styles.page}>
+      <Header />
+      <main className={styles.content}>
+        <Routes>
+          <Route path="/" element={<UsersPage />} />
+          <Route path="*" element={<NotFound404 />} />
+        </Routes>
+      </main>
+      <Footer />
     </div>
   );
 }
