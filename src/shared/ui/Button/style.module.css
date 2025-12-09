@@ -18,11 +18,6 @@
   transition: all 0.2s ease-in-out;
 }
 
-.buttonText {
-  display: inline-block;
-  order: 1; /* Базовый порядок для текста */
-}
-
 /* Базовые стили для иконок */
 
 .icon {
@@ -39,18 +34,6 @@
   height: 100%;
   fill: currentcolor;
   stroke: currentcolor;
-}
-
-/* Иконка слева */
-
-.iconLeft {
-  order: 0; /* Порядок перед текстом */
-}
-
-/* Иконка справа */
-
-.iconRight {
-  order: 2; /* Порядок после текста */
 }
 
 /* Модификатор полной ширины */
@@ -104,11 +87,11 @@
   cursor: not-allowed;
 }
 
-/* Tertiary Button */
+/* Tertiary Button - исправлен цвет фона */
 
 .button-tertiary {
   text-decoration: none;
-  background-color: var(--bg-color);
+  background-color: var(--card-input-color); /* Исправлено с var(--bg-color) */
 }
 
 .button-tertiary:hover {
