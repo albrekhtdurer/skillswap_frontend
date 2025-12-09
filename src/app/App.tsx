@@ -4,21 +4,26 @@ import { Footer } from "../widgets/footer/footer";
 import { Sidebar } from "../widgets/sidebar/sidebar";
 import { UserCard } from "../widgets/UserCard/UserCard";
 import { useSelector } from "../features/store";
-
-import usersData from "../../public/db/users.json";
-import categoriesData from "../../public/db/categories.json";
-import type { IUser, ISkillCategory } from "../entities/types";
+import { useEffect } from "react";
+import { useDispatch } from "../features/store";
 
 function App() {
+  const dispatch = useDispatch();
   const currentUser = useSelector((store) => store.auth.currentUser);
+  const categories = useSelector((store) => store.categories.categories);
+  const users = useSelector((store) => store.users.users);
 
-  const testUser = usersData[0] as IUser;
-  const categories = categoriesData as ISkillCategory[];
+  useEffect(() => {
+    const loadData = async () => {};
+    loadData();
+  }, [dispatch]);
 
   const handleForceLogout = () => {
     localStorage.removeItem("currentUser");
     window.location.reload();
   };
+
+  const testUser = users[0];
 
   return (
     <div
@@ -29,7 +34,6 @@ function App() {
         flexDirection: "column",
       }}
     >
-      {/* Хэдер */}
       <Header />
 
       <div
@@ -40,7 +44,6 @@ function App() {
           gap: "24px",
         }}
       >
-        {/* Сайдбар с фильтрами */}
         <Sidebar />
 
         <div
@@ -51,7 +54,6 @@ function App() {
             gap: "24px",
           }}
         >
-          {/* Заголовок раздела */}
           <h1
             style={{
               fontFamily: "var(--font-accent)",
@@ -64,45 +66,47 @@ function App() {
             Пользователи
           </h1>
 
-          {/* Индикатор авторизации для тестирования */}
-          <div
-            style={{
-              padding: "12px",
-              backgroundColor: "var(--card-input-color)",
-              borderRadius: "var(--border-raduis-main)",
-              marginBottom: "16px",
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-            }}
-          >
-            <p style={{ margin: 0 }}>
-              Статус авторизации:{" "}
-              <strong>{currentUser ? "Авторизован" : "Не авторизован"}</strong>
+          {testUser && (
+            <div
+              style={{
+                padding: "12px",
+                backgroundColor: "var(--card-input-color)",
+                borderRadius: "var(--border-raduis-main)",
+                marginBottom: "16px",
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+              }}
+            >
+              <p style={{ margin: 0 }}>
+                Статус авторизации:{" "}
+                <strong>
+                  {currentUser ? "Авторизован" : "Не авторизован"}
+                </strong>
+                {currentUser && (
+                  <span style={{ marginLeft: "16px" }}>
+                    Пользователь: <strong>{currentUser.name}</strong>
+                  </span>
+                )}
+              </p>
               {currentUser && (
-                <span style={{ marginLeft: "16px" }}>
-                  Пользователь: <strong>{currentUser.name}</strong>
-                </span>
+                <button
+                  onClick={handleForceLogout}
+                  style={{
+                    padding: "8px 16px",
+                    backgroundColor: "var(--alarm-color)",
+                    color: "white",
+                    border: "none",
+                    borderRadius: "8px",
+                    cursor: "pointer",
+                  }}
+                >
+                  Принудительный выход (для теста)
+                </button>
               )}
-            </p>
-            {currentUser && (
-              <button
-                onClick={handleForceLogout}
-                style={{
-                  padding: "8px 16px",
-                  backgroundColor: "var(--alarm-color)",
-                  color: "white",
-                  border: "none",
-                  borderRadius: "8px",
-                  cursor: "pointer",
-                }}
-              >
-                Принудительный выход (для теста)
-              </button>
-            )}
-          </div>
+            </div>
+          )}
 
-          {/* Карточки пользователей */}
           <div
             style={{
               display: "grid",
@@ -110,18 +114,18 @@ function App() {
               gap: "20px",
             }}
           >
-            {[testUser, testUser, testUser].map((user, index) => (
-              <UserCard
-                key={index}
-                user={{ ...user, id: index }}
-                categories={categories}
-              />
-            ))}
+            {testUser &&
+              [testUser, testUser, testUser].map((user, index) => (
+                <UserCard
+                  key={index}
+                  user={{ ...user, id: index }}
+                  categories={categories}
+                />
+              ))}
           </div>
         </div>
       </div>
 
-      {/* Футер */}
       <Footer />
     </div>
   );

@@ -3,7 +3,6 @@ export { ArrowIcon } from "./arrow";
 export { CrossIcon } from "./cross";
 export { LogoIcon } from "./logo";
 export { BellIcon } from "./bell";
-export { HeartOutlineIcon } from "./heart-outline";
 export { MoonIcon } from "./moon";
 export { SortIcon } from "./sort";
 export { RightIcon } from "./chevron-right";

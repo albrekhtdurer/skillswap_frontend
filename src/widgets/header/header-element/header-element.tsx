@@ -4,7 +4,7 @@ import { Logo } from "../../../shared/ui/logo";
 import {
   ArrowIcon,
   BellIcon,
-  HeartOutlineIcon,
+  HeartIcon,
   MoonIcon,
 } from "../../../assets/img/icons";
 import { SearchInput } from "../../../shared/ui/Input";
@@ -48,31 +48,26 @@ export const HeaderElement: FC<THeaderElementProps> = ({
           </div>
         )}
 
-        {/* Общая секция для иконок и пользователя */}
         <div className={styles.right_section}>
-          {/* Иконка луны (тема) - показывается всегда */}
           <button className={styles.icon_button}>
             <MoonIcon />
           </button>
 
           {user ? (
             <>
-              {/* Иконки для авторизованного состояния */}
               <button className={styles.icon_button}>
                 <BellIcon />
               </button>
               <button className={styles.icon_button}>
-                <HeartOutlineIcon />
+                <HeartIcon />
               </button>
 
-              {/* Имя пользователя и аватар - поменяли местами */}
               <div
                 className={styles.user_info}
                 onClick={onProfileClick}
                 role="button"
                 tabIndex={0}
               >
-                {/* Сначала имя, потом аватар */}
                 <span className={styles.user_name}>{user.name}</span>
                 <img
                   src={user.avatarUrl}
@@ -83,7 +78,6 @@ export const HeaderElement: FC<THeaderElementProps> = ({
             </>
           ) : (
             <>
-              {/* Кнопки для неавторизованного состояния */}
               <Button
                 onClick={onLogin}
                 type={"secondary"}

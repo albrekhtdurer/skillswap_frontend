@@ -22,6 +22,7 @@ export function UserCard({ user, categories }: TUserCardProps) {
     subcategoriesWantToLearn,
   } = user;
 
+  // Определяем видимые подкатегории для отображения и количество скрытых подкатегорий
   const visibleSubcategories = subcategoriesWantToLearn.slice(0, 2);
   const hiddenCount =
     subcategoriesWantToLearn.length - visibleSubcategories.length;

@@ -1,13 +1,13 @@
 import { type FC, useEffect } from "react";
 import { HeaderElement } from "./header-element/header-element";
 import { useSelector, useDispatch } from "../../features/store";
-import { loginSuccess, setUser } from "../../features/auth/authSlice";
+import { loginSuccess, setCurrentUser } from "../../features/auth/authSlice";
 import { loginWithMockUser } from "../../features/auth/authHelper";
 import type { IUser } from "../../entities/types";
 
 export const Header: FC = () => {
   const dispatch = useDispatch();
-  const isFilterEnabled = false;
+  const isFilterEnabled = false; //нужно будет получить эту переменную динамически
   const currentUser = useSelector((store) => store.auth.currentUser);
 
   useEffect(() => {
@@ -15,7 +15,7 @@ export const Header: FC = () => {
     if (savedUser) {
       try {
         const user = JSON.parse(savedUser) as IUser;
-        dispatch(setUser(user));
+        dispatch(setCurrentUser(user));
       } catch (error) {
         console.error("Failed to parse saved user:", error);
       }

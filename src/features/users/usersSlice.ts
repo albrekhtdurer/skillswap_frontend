@@ -27,7 +27,7 @@ export const usersSlice = createSlice({
   reducers: {
     selectUser: (state, action) => {
       state.selectedUserId = action.payload;
-    },
+    }, //для просмотра детальной информации
     clearSelectedUser: (state) => {
       state.selectedUserId = null;
     },

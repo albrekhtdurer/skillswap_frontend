@@ -1,10 +1,10 @@
-import usersData from "../../../public/db/users.json";
+import { api } from "../../api";
 import type { IUser } from "../../entities/types";
 
 export const loginWithMockUser = async (): Promise<IUser> => {
-  await new Promise((resolve) => setTimeout(resolve, 500));
+  const users = await api.getAllUsers();
 
-  const user = usersData[0] as IUser;
+  const user = users[0] as IUser;
 
   return user;
 };
