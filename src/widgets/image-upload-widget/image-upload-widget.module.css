@@ -11,8 +11,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 436px;
-  height: 96px;
   color: var(--caption-color);
   text-align: center;
   background-color: var(--card-input-color);
@@ -28,11 +26,13 @@
   flex-direction: column;
   align-items: center;
   gap: 12px;
-  max-width: 400px;
+  padding: 16px 20px;
 }
 
 .dropzoneText {
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
   color: var(--caption-color);
   font-weight: var(--font-weight);
   font-size: var(--font-size-main);
@@ -92,8 +92,8 @@
 }
 
 .fileList {
-  max-width: 436px;
-  background-color: var(--bg-color);
+  min-width: 360px;
+  background-color: transparent;
   border-radius: var(--border-raduis-main);
 }
 
@@ -112,15 +112,21 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: normal;
+  gap: 8px;
+  max-height: 24px;
 }
 
 .fileInfo {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   align-items: center;
-  gap: 10px;
-  padding-left: 24px;
+}
+
+.deleteFileButton {
+  padding: 0;
+  background-color: transparent;
 }
 
 .fileSize {

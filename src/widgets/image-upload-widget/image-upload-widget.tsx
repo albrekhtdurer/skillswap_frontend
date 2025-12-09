@@ -4,15 +4,15 @@ import styles from "./image-upload-widget.module.css";
 import { ImagesIcon, CrossIcon } from "../../assets/img/icons";
 import { Button } from "../../shared/ui/Button/Button";
 
-export interface UploadedFile extends File {
-  preview: string;
+export interface IUploadedFile extends File {
+  preview?: string;
   id: string;
 }
 
-export interface ImageUploaderProps {
+export interface IImageUploaderProps {
   maxFiles?: number;
-  onFilesUploaded?: (files: UploadedFile[]) => void;
-  onFileRemoved?: (file: UploadedFile) => void;
+  onFilesUploaded?: (files: IUploadedFile[]) => void;
+  onFileRemoved?: (file: IUploadedFile) => void;
   className?: string;
   accept?: Record<string, string[]>;
   multiple?: boolean;
@@ -25,7 +25,7 @@ export interface DropzoneStyles {
   reject: React.CSSProperties;
 }
 
-const ImageUploader: React.FC<ImageUploaderProps> = ({
+const ImageUploader: React.FC<IImageUploaderProps> = ({
   maxFiles = 10,
   onFilesUploaded,
   onFileRemoved,
@@ -38,7 +38,7 @@ const ImageUploader: React.FC<ImageUploaderProps> = ({
   },
   multiple = true,
 }) => {
-  const [files, setFiles] = useState<UploadedFile[]>([]);
+  const [files, setFiles] = useState<IUploadedFile[]>([]);
   const [errors, setErrors] = useState<string[]>([]);
   const onDrop = useCallback(
     (acceptedFiles: File[], fileRejections: FileRejection[]) => {
@@ -61,19 +61,17 @@ const ImageUploader: React.FC<ImageUploaderProps> = ({
         setErrors(newErrors);
       }
 
-      // Создание файлов с уникальными ID
-      const filesWithId: UploadedFile[] = acceptedFiles.map((file) => {
+      const filesWithId: IUploadedFile[] = acceptedFiles.map((file) => {
         const filesWithId = Object.assign(file, {
           id: `${file.name}-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
         });
-        return filesWithId as UploadedFile;
+        return filesWithId as IUploadedFile;
       });
       setFiles((prevFiles) => [...prevFiles, ...filesWithId]);
       if (onFilesUploaded) {
         onFilesUploaded(filesWithId);
       }
 
-      // Логирование для отладки
       console.log(
         "Загруженные файлы:",
         acceptedFiles.map((f) => ({
@@ -86,7 +84,6 @@ const ImageUploader: React.FC<ImageUploaderProps> = ({
     [onFilesUploaded],
   );
 
-  // Конфигурация react-dropzone
   const { getRootProps, getInputProps, isDragActive, isDragReject } =
     useDropzone({
       onDrop,
@@ -95,14 +92,12 @@ const ImageUploader: React.FC<ImageUploaderProps> = ({
       maxFiles,
     });
 
-  // Динамические стили для области перетаскивания
   const dropzoneStyle = useMemo(() => {
     let style = styles.dropzone;
     if (className) style += ` ${className}`;
     return style;
   }, [className]);
 
-  // Удаление файла из списка
   const removeFile = useCallback(
     (fileId: string) => {
       setFiles((prevFiles) => {
@@ -120,7 +115,6 @@ const ImageUploader: React.FC<ImageUploaderProps> = ({
     [onFileRemoved],
   );
 
-  // Форматирование размера файла
   const formatFileSize = useCallback((bytes: number): string => {
     if (bytes === 0) return "0 Bytes";
     const k = 1024;
@@ -134,7 +128,6 @@ const ImageUploader: React.FC<ImageUploaderProps> = ({
 
   return (
     <section className={styles.container}>
-      {/* Основная область для drag-n-drop */}
       <div
         {...getRootProps({
           className: dropzoneStyle,
@@ -152,8 +145,51 @@ const ImageUploader: React.FC<ImageUploaderProps> = ({
               </span>
             ) : (
               <>
-                Перетащите или выберите изображения навыка
-                <br />
+                {files.length > 0 ? (
+                  <aside className={styles.fileList}>
+                    <ul>
+                      {displayedFiles.map((file) => (
+                        <li
+                          key={file.id}
+                          className={styles.fileItem}
+                          data-testid={`file-item-${file.id}`}
+                        >
+                          <div className={styles.fileInfo}>
+                            <span className={styles.fileName} title={file.name}>
+                              {file.name}
+                            </span>
+                            <div className={styles.fileDetails}>
+                              <span className={styles.fileSize}>
+                                {formatFileSize(file.size)}
+                              </span>
+                              <span className={styles.fileType}>
+                                {file.type.split("/")[1]?.toUpperCase()}
+                              </span>
+                            </div>
+                          </div>
+                          <Button
+                            className={styles.deleteFileButton}
+                            type={"tertiary"}
+                            onClick={(
+                              e: React.MouseEvent<HTMLButtonElement>,
+                            ) => {
+                              e.stopPropagation();
+                              removeFile(file.id);
+                            }}
+                          >
+                            <CrossIcon />
+                          </Button>
+                        </li>
+                      ))}
+                    </ul>
+                  </aside>
+                ) : (
+                  <>
+                    Перетащите или выберите изображения навыка
+                    <br />
+                  </>
+                )}
+
                 <span className={styles.browseLink}>
                   <span className={styles.browseIcon}>
                     <ImagesIcon />
@@ -177,45 +213,6 @@ const ImageUploader: React.FC<ImageUploaderProps> = ({
           </ul>
         </div>
       )}
-
-      {/* Блок со списком загруженных файлов - отображается только если есть файлы */}
-      {files.length > 0 ? (
-        <aside className={styles.fileList}>
-          <ul>
-            {displayedFiles.map((file) => (
-              <li
-                key={file.id}
-                className={styles.fileItem}
-                data-testid={`file-item-${file.id}`}
-              >
-                <div className={styles.fileInfo}>
-                  <span className={styles.fileName} title={file.name}>
-                    {file.name}
-                  </span>
-                  <div className={styles.fileDetails}>
-                    <span className={styles.fileSize}>
-                      {formatFileSize(file.size)}
-                    </span>
-                    <span className={styles.fileType}>
-                      {file.type.split("/")[1]?.toUpperCase()}
-                    </span>
-                  </div>
-                </div>
-                <Button
-                  type={"tertiary"}
-                  onClick={() => {
-                    removeFile(file.id);
-                  }}
-                >
-                  <span className={styles.cross}>
-                    <CrossIcon />
-                  </span>
-                </Button>
-              </li>
-            ))}
-          </ul>
-        </aside>
-      ) : null}
     </section>
   );
 };

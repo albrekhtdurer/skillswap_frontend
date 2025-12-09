@@ -1,9 +1,9 @@
-import ImageUploader, { type UploadedFile } from "./image-upload-widget";
+import ImageUploader, { type IUploadedFile } from "./image-upload-widget";
 
-const handleFilesUploaded = (files: UploadedFile[]) => {
+const handleFilesUploaded = (files: IUploadedFile[]) => {
   console.log("Файлы в родительском компоненте:", files);
 };
-const handleFileRemoved = (file: UploadedFile) => {
+const handleFileRemoved = (file: IUploadedFile) => {
   console.log("Файл удален:", file.name);
 };
 

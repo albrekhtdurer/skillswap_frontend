@@ -1,4 +1,4 @@
 export type {
-  ImageUploaderProps,
-  UploadedFile,
+  IImageUploaderProps as ImageUploaderProps,
+  IUploadedFile as UploadedFile,
 } from "./image-upload-widget.tsx";
