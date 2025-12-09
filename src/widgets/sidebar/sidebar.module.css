@@ -1,7 +1,7 @@
 .sidebar {
   box-sizing: border-box;
   max-height: 100%;
-  max-inline-size: 324px;
+  min-inline-size: 324px;
   padding: 20px;
   overflow: scroll;
   background-color: var(--card-input-color);

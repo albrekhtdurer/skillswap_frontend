@@ -24,3 +24,20 @@ export const categoryColors: Record<number, string> = {
   5: "var(--tag-home-color)",
   6: "var(--tag-health-color)",
 };
+
+export const months: string[] = [
+  "Январь",
+  "Февраль",
+  "Март",
+  "Апрель",
+  "Май",
+  "Июнь",
+  "Июль",
+  "Август",
+  "Сентябрь",
+  "Октябрь",
+  "Ноябрь",
+  "Декабрь",
+];
+
+export const daysOfWeek: string[] = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"];
