@@ -40,8 +40,6 @@ export const usersSlice = createSlice({
     },
     userByIdSelector: (state, id: number) =>
       state.users.find((user) => user.id === id),
-    userBySkillId: (state, id: number) =>
-      state.users.find((user) => user.skillCanTeach.id === id),
   },
   extraReducers: (builder) => {
     builder
@@ -69,5 +67,4 @@ export const {
   usersLoadingSelector,
   selectedUserSelector,
   userByIdSelector,
-  userBySkillId,
 } = usersSlice.selectors;

@@ -3,7 +3,7 @@ import { SkillInfo } from "../../widgets/skill-info";
 import type { IUser } from "../../entities/types";
 import { UserCard } from "../../widgets/UserCard/UserCard";
 import { UsersSlider } from "../../widgets/slider/users-slider/users-slider";
-import { userBySkillId } from "../../features/users/usersSlice";
+import { userByIdSelector } from "../../features/users/usersSlice";
 import { useSelector } from "../../features/store";
 import { useParams } from "react-router-dom";
 
@@ -14,7 +14,7 @@ export type TSkillPageProps = {
 export const SkillPage = ({ similarUsers }: TSkillPageProps) => {
   const { categories, loading } = useSelector((store) => store.categories);
   const { id } = useParams();
-  const user = useSelector((store) => userBySkillId(store, Number(id)));
+  const user = useSelector((store) => userByIdSelector(store, Number(id)));
 
   return (
     <div className={style.page}>
