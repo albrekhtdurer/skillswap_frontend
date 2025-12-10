@@ -93,6 +93,8 @@
 
 .fileList {
   min-width: 360px;
+  max-height: 24px;
+  overflow-y: scroll;
   background-color: transparent;
   border-radius: var(--border-raduis-main);
 }
