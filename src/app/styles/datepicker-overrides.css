@@ -5,6 +5,7 @@
 @import url("react-datepicker/dist/react-datepicker.css");
 
 .react-datepicker__tab-loop > .react-datepicker-popper {
+  z-index: 1000;
   box-sizing: border-box;
   width: 280px;
   padding: 16px;

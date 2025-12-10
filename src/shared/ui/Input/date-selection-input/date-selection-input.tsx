@@ -8,17 +8,26 @@ import { CustomHeader } from "./custom-header";
 
 registerLocale("ru", ru);
 
-export const DateSelectionInput = () => {
-  const [selectedDate, setSelectedDate] = useState<Date | null>(null);
+type TDateSelectionInputProps = {
+  selectedDate: Date | null;
+  onDateChange: (date: Date | null) => void;
+  error?: string;
+};
+
+export const DateSelectionInput = ({
+  selectedDate,
+  onDateChange,
+  error,
+}: TDateSelectionInputProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentMonth, setCurrentMonth] = useState<Date>(new Date());
 
   const handleChange = (date: Date | null) => {
-    setSelectedDate(date);
+    onDateChange(date);
   };
 
   const handleCancel = () => {
-    setSelectedDate(null);
+    onDateChange(null);
     setIsOpen(false);
   };
 
@@ -47,7 +56,12 @@ export const DateSelectionInput = () => {
       dateFormat="dd.MM.yyyy"
       formatWeekDay={() => ""}
       calendarStartDay={1}
-      customInput={<CustomInput />}
+      customInput={
+        <CustomInput
+          value={selectedDate?.toLocaleDateString("ru-RU") || ""}
+          error={error}
+        />
+      }
       onMonthChange={handleMonthChange}
       onYearChange={handleMonthChange}
       filterDate={isCurrentMonthDay}

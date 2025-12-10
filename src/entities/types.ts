@@ -34,7 +34,7 @@ export interface IUser {
   avatarUrl: string;
   skillCanTeach: TSkill;
   subcategoriesWantToLearn: ISubcategory[];
-  gender: "male" | "female";
+  gender: "male" | "female" | "not specified";
   images: string[];
 }
 

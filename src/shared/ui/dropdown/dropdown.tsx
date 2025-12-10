@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Select, {
   type ControlProps,
   type CSSObjectWithLabel,
   type GroupBase,
+  type MultiValue,
   type OptionProps,
+  type SingleValue,
   type StylesConfig,
 } from "react-select";
 import {
@@ -11,8 +13,9 @@ import {
   CustomOption,
   CustomMultiValueContainer,
 } from "./dropdown-custom-components";
+import style from "./dropdown.module.css";
 
-type TDropdownComponentProps<T extends { name: string }> = {
+type TDropdownComponentProps<T extends { name: string; value?: string }> = {
   options: T[];
   placeholder: string;
   isMulti?: boolean; //возможен ли множественный выбор
@@ -20,6 +23,10 @@ type TDropdownComponentProps<T extends { name: string }> = {
   required: boolean; //обязательно что-то выбрать или нет
   withCheckbox?: boolean; //чекбокс нужно сделать {true} для множественного выбора
   isCategory?: boolean; //для внешнего вида чекбокса при множественном выборе, по умолчанию false
+  value?: string | string[] | null;
+  onChange?: (value: string | string[] | null) => void;
+  error?: string;
+  disabled?: boolean;
 };
 
 export type TSelectOptionProps = {
@@ -27,7 +34,7 @@ export type TSelectOptionProps = {
   label: string;
 };
 
-export const DropdownComponent = <T extends { name: string }>({
+export const DropdownComponent = <T extends { name: string; value?: string }>({
   options,
   closeMenuOnSelect = true,
   isMulti,
@@ -35,13 +42,52 @@ export const DropdownComponent = <T extends { name: string }>({
   required,
   isCategory = false,
   withCheckbox = false,
+  value,
+  onChange,
+  error,
+  disabled,
 }: TDropdownComponentProps<T>) => {
   const [isSearchable] = useState(true);
+  const selectRef = useRef(null);
 
   const selectOptions: TSelectOptionProps[] = options.map((option) => ({
-    value: option.name,
+    value: option.value || option.name,
     label: option.name,
   }));
+
+  const getValue = ():
+    | SingleValue<TSelectOptionProps>
+    | MultiValue<TSelectOptionProps> => {
+    if (value === null || value === undefined || value === "") {
+      return isMulti ? [] : null;
+    }
+
+    if (isMulti) {
+      if (Array.isArray(value)) {
+        return selectOptions.filter((option) => value.includes(option.value));
+      }
+      return [];
+    } else {
+      return (selectOptions.find((option) => option.value === value) ||
+        null) as SingleValue<TSelectOptionProps>;
+    }
+  };
+
+  const handleChange = (
+    selected: SingleValue<TSelectOptionProps> | MultiValue<TSelectOptionProps>,
+  ) => {
+    if (!onChange) return;
+
+    if (isMulti) {
+      const values = Array.isArray(selected)
+        ? selected.map((option) => option.value)
+        : [];
+      onChange(values);
+    } else {
+      const value = selected as SingleValue<TSelectOptionProps>;
+      onChange(value ? value.value : null);
+    }
+  };
 
   const baseComponents = {
     DropdownIndicator: CustomDropdownIndicator,
@@ -80,12 +126,21 @@ export const DropdownComponent = <T extends { name: string }>({
         minWidth: "48px",
         backgroundColor: "var(--card-input-color)",
 
-        borderTop: "1px solid var(--caption-color)",
-        borderLeft: "1px solid var(--caption-color)",
-        borderRight: "1px solid var(--caption-color)",
+        borderColor: error ? "var(--error-color)" : "var(--caption-color)",
+        borderTop: error
+          ? "1px solid var(--error-color)"
+          : "1px solid var(--caption-color)",
+        borderLeft: error
+          ? "1px solid var(--error-color)"
+          : "1px solid var(--caption-color)",
+        borderRight: error
+          ? "1px solid var(--error-color)"
+          : "1px solid var(--caption-color)",
         borderBottom: isMenuOpen
           ? "1px solid transparent"
-          : "1px solid var(--caption-color)",
+          : error
+            ? "1px solid var(--error-color)"
+            : "1px solid var(--caption-color)",
 
         borderTopLeftRadius: "var(--border-raduis-main, 50%)",
         borderTopRightRadius: "var(--border-raduis-main, 50%)",
@@ -223,6 +278,7 @@ export const DropdownComponent = <T extends { name: string }>({
   return (
     <>
       <Select<TSelectOptionProps, boolean, GroupBase<TSelectOptionProps>>
+        ref={selectRef}
         className="basic-single"
         classNamePrefix="select"
         isSearchable={isSearchable}
@@ -237,7 +293,11 @@ export const DropdownComponent = <T extends { name: string }>({
         components={components}
         hideSelectedOptions={false}
         isClearable={false}
+        isDisabled={disabled}
+        value={getValue()}
+        onChange={handleChange}
       />
+      {error && <span className={style.error}>{error}</span>}
     </>
   );
 };

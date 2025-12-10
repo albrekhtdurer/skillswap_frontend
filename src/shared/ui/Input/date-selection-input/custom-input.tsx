@@ -1,4 +1,4 @@
-import { forwardRef, type ChangeEvent, type FC } from "react";
+import { forwardRef, type FC } from "react";
 import { Input } from "../Input";
 import calendar from "./../../../../assets/icons/calendar.svg";
 import style from "./../style.module.css";
@@ -7,13 +7,13 @@ import "react-datepicker/dist/react-datepicker.css";
 type TCustomInputProps = {
   value?: string;
   onClick?: () => void;
-  onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
+  error?: string;
 };
 
 export const CustomInput: FC<TCustomInputProps> = forwardRef<
   HTMLInputElement,
   TCustomInputProps
->(({ value, onClick, onChange = () => {} }, ref) => {
+>(({ value, onClick, error }, ref) => {
   return (
     <Input
       readOnly
@@ -24,7 +24,9 @@ export const CustomInput: FC<TCustomInputProps> = forwardRef<
       value={value}
       placeholder="дд.мм.гггг"
       onClick={onClick}
-      onChange={onChange}
+      onChange={() => {}}
+      isError={error ? true : false}
+      hint={error}
     >
       <button type="button" onClick={onClick}>
         <img src={calendar} alt={"Календарь"} />

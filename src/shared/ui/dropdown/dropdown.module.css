@@ -10,3 +10,10 @@
 .children {
   flex: 1;
 }
+
+.error {
+  display: block;
+  color: var(--error-color);
+  font-size: var(--font-size-caption);
+  line-height: 1.3;
+}
