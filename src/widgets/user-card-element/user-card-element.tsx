@@ -1,22 +1,30 @@
 import type { IUser, ISkillCategory } from "../../entities/types";
-import styles from "./UserCard.module.css";
+import styles from "./user-card-element.module.css";
 import { getSubcategoryColor } from "../../entities/subcategoryColors";
-import HeartIcon from "../../assets/icons/heart.svg";
 import { Button } from "../../shared/ui/Button/Button";
 
 // Этот компонент отображает карточку пользователя с информацией и навыками
-type TUserCardProps = {
+type TUserCardElementProps = {
   user: IUser;
   categories: ISkillCategory[];
+  isLiked: boolean;
+  isLikeDisabled: boolean;
+  onToggleLike: () => void;
+  likesCount: number;
 };
 
-export function UserCard({ user, categories }: TUserCardProps) {
+export function UserCardElement({
+  user,
+  categories,
+  isLiked,
+  isLikeDisabled,
+  onToggleLike,
+  likesCount,
+}: TUserCardElementProps) {
   const {
     name,
     location,
     age,
-    likes,
-    isLiked,
     avatarUrl,
     skillCanTeach,
     subcategoriesWantToLearn,
@@ -36,13 +44,39 @@ export function UserCard({ user, categories }: TUserCardProps) {
         <div className={styles.userInfo}>
           <div className={styles.userHeader}>
             <div className={styles.likeWrapper}>
-              <span className={styles.likeCount}>{likes}</span>
+              <span className={styles.likeCount}>{likesCount}</span>
               <button
                 type="button"
                 className={styles.likeButton}
                 aria-pressed={isLiked}
+                aria-label={
+                  isLiked ? "Убрать из избранного" : "Добавить в избранное"
+                }
+                onClick={onToggleLike}
+                disabled={isLikeDisabled}
               >
-                <img src={HeartIcon} alt="" className={styles.likeIcon} />
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="-1 -1 22 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10 17C6 15 2 11.5 2 7.2C2 4.4 4.3 2 7.1 2C8.8 2 10.2 2.8 11 4C11.8 2.8 13.2 2 14.9 2C17.7 2 20 4.4 20 7.2C20 11.6 16 15 12 17C11.5 17.2 10.5 17.2 10 17Z"
+                    fill={
+                      isLiked
+                        ? "var(--accent-color)"
+                        : "var(--card-input-color)"
+                    }
+                    stroke={
+                      isLiked ? "var(--accent-color)" : "var(--border-color)"
+                    }
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
               </button>
             </div>
 
