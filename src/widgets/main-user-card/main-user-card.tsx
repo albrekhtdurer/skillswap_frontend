@@ -1,5 +1,5 @@
 import { useState } from "react";
-import type { IUser, ISkillCategory } from "../../entities/types";
+import type { IUser } from "../../entities/types";
 import { UserCardElement } from "../user-card-element";
 import {
   computeIsLiked,
@@ -8,15 +8,10 @@ import {
 
 type TMainUserCardProps = {
   user: IUser;
-  categories: ISkillCategory[];
   currentUserId?: string | null;
 };
 
-export function MainUserCard({
-  user,
-  categories,
-  currentUserId,
-}: TMainUserCardProps) {
+export function MainUserCard({ user, currentUserId }: TMainUserCardProps) {
   const isAuthorized = Boolean(currentUserId);
 
   const [isLiked, setIsLiked] = useState(() =>
@@ -37,11 +32,13 @@ export function MainUserCard({
   return (
     <UserCardElement
       user={user}
-      categories={categories}
-      isLiked={isLiked}
-      isLikeDisabled={!isAuthorized}
-      onToggleLike={handleToggleLike}
-      likesCount={likesCount}
+      like={{
+        isLiked,
+        isLikeDisabled: !isAuthorized,
+        onToggleLike: handleToggleLike,
+        likesCount,
+      }}
+      onMoreDetailsClick={() => {}}
     />
   );
 }

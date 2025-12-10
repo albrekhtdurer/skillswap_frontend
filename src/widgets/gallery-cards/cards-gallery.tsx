@@ -4,8 +4,6 @@ import { Button } from "../../shared/ui/Button/Button";
 import { MainUserCard } from "../main-user-card/main-user-card.tsx";
 import style from "./cards-gallery.module.css";
 import { SortIcon, RightIcon } from "../../assets/img/icons";
-import { useSelector } from "../../features/store";
-import { categoriesSelector } from "../../features/categories/categoriesSlice";
 
 export type CardsGalleryPros = {
   title: string;
@@ -22,7 +20,6 @@ export const CardsGallery = ({
   sortable,
   sortOnClick,
 }: CardsGalleryPros) => {
-  const categories = useSelector(categoriesSelector);
   const [expanded, setExpanded] = useState(false);
 
   const shouldLimit = maxCards !== undefined && maxCards > 0;
@@ -67,7 +64,6 @@ export const CardsGallery = ({
           <MainUserCard
             key={user.id}
             user={user}
-            categories={categories}
             currentUserId={currentUserId}
           />
         ))}
