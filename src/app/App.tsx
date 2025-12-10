@@ -1,11 +1,14 @@
 import { useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
 import { Header } from "../widgets/header";
 import { Footer } from "../widgets/footer";
 import { UsersPage } from "../pages/users-page";
+import { NotFound404 } from "../pages/not-found-404/NotFound404";
 import { useDispatch } from "../features/store";
 import { getUsers } from "../features/users/usersSlice";
 import { getCategories } from "../features/categories/categoriesSlice";
 import { getCities } from "../features/cities/citiesSlice";
+import styles from "./App.module.css";
 
 function App() {
   const dispatch = useDispatch();
@@ -17,10 +20,13 @@ function App() {
   }, [dispatch]);
 
   return (
-    <div>
+    <div className={styles.page}>
       <Header />
-      <main>
-        <UsersPage />
+      <main className={styles.content}>
+        <Routes>
+          <Route path="/" element={<UsersPage />} />
+          <Route path="*" element={<NotFound404 />} />
+        </Routes>
       </main>
       <Footer />
     </div>

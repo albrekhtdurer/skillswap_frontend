@@ -11,7 +11,7 @@ export const PasswordInput = React.forwardRef<
 >(
   (
     {
-      className = `${style.input} ${style.input_password}`,
+      className,
       classNameError = style.input_error,
       placeholder = "Придумайте надёжный пароль",
       hint = "Пароль должен содержать не менее 8 знаков",
@@ -24,7 +24,7 @@ export const PasswordInput = React.forwardRef<
     return (
       <Input
         ref={ref}
-        className={className}
+        className={`${style.input_password} ${className || ""}`}
         classNameError={classNameError}
         placeholder={placeholder}
         type={showPasswordState ? "" : "password"}

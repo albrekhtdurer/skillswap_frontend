@@ -19,7 +19,7 @@ export type TInputProps = Omit<HTMLProps<HTMLInputElement>, "onChange"> & {
 export const Input = React.forwardRef<HTMLInputElement, TInputProps>(
   (
     {
-      className = style.input,
+      className,
       hint,
       label,
       isError,
@@ -31,7 +31,9 @@ export const Input = React.forwardRef<HTMLInputElement, TInputProps>(
     },
     ref,
   ) => (
-    <div className={`${className} ${isError ? classNameError : ""}`}>
+    <div
+      className={`${style.input} ${className || ""} ${isError ? classNameError : ""}`}
+    >
       {label && <label htmlFor={id}>{label}</label>}
       <div>
         <input

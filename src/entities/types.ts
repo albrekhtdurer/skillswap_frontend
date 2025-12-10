@@ -43,4 +43,5 @@ export type TFilters = {
   gender: "no_matter" | "male" | "female";
   cityNames: string[];
   skillIds: number[];
-}; // from here https://docs.google.com/document/d/1yXsUpRttw7yRXS7mT0eM_m_MqhMg_Mq6Fx8ne0JlA4U/edit?tab=t.0#heading=h.epowgaq476mf
+  searchInputValue?: string;
+};
