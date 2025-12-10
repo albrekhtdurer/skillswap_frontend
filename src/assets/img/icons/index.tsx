@@ -15,6 +15,7 @@ export { BellIcon } from "./bell";
 export { MoonIcon } from "./moon";
 export { SortIcon } from "./sort";
 export { RightIcon } from "./chevron-right";
+export { ImagesIcon } from "./gallery-add";
 export { HeartIcon } from "./heart";
 export { SkillIcon } from "./skill";
 export { MessageIcon } from "./message";

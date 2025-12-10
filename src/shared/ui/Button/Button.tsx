@@ -1,3 +1,4 @@
+import type { MouseEventHandler } from "react";
 import style from "./style.module.css";
 
 // Типы кнопок
@@ -5,7 +6,7 @@ export type TButtonType = "primary" | "secondary" | "tertiary";
 
 // Пропсы компонента
 export interface IButtonProps {
-  onClick: () => void;
+  onClick: MouseEventHandler<HTMLButtonElement>;
   type?: TButtonType;
   disabled?: boolean;
   children: React.ReactNode;
