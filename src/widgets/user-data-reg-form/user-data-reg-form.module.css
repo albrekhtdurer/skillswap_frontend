@@ -37,7 +37,7 @@
   display: flex;
   flex-grow: 1;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-self: stretch;
   gap: 4px;
   color: var(--text-color);
@@ -48,4 +48,8 @@
 
 .element {
   align-self: stretch;
+}
+
+.width {
+  width: 206px;
 }

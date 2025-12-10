@@ -36,7 +36,7 @@ const userSchema = yup.object({
   birthDate: yup.date().nullable().required("Дата рождения обязательна"),
   gender: yup
     .string()
-    .oneOf(["male", "female", "not_specified"])
+    .oneOf(["male", "female", "not specified"])
     .required("Выберите пол"),
   location: yup.string().required("Выберите город"),
   categoriesWantToLearn: yup
@@ -172,7 +172,7 @@ export const UserDataRegForm: FC = () => {
               )}
             />
           </div>
-          <label className={styles.label}>
+          <label className={`${styles.label} ${styles.width}`}>
             Пол
             <Controller
               name="gender"
