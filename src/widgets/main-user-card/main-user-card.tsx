@@ -6,7 +6,7 @@ import {
   updateUserFavourites,
 } from "../../shared/lib/favourites";
 
-type TUserCardProps = {
+type TMainUserCardProps = {
   user: IUser;
   categories: ISkillCategory[];
   currentUserId?: string | null;
@@ -16,7 +16,7 @@ export function MainUserCard({
   user,
   categories,
   currentUserId,
-}: TUserCardProps) {
+}: TMainUserCardProps) {
   const isAuthorized = Boolean(currentUserId);
 
   const [isLiked, setIsLiked] = useState(() =>
