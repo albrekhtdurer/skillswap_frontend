@@ -11,11 +11,12 @@ import { DropdownComponent } from "../../shared/ui/dropdown";
 import { Button } from "../../shared/ui/Button/Button";
 import { RegistrationAvatarField } from "../../pages/registration/registration-avatar";
 import styles from "./user-data-reg-form.module.css";
-import cities from "../../../public/db/cities.json";
-import categories from "../../../public/db/categories.json";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import type { ISubcategory } from "../../entities/types";
+import { useSelector } from "../../features/store";
+import { categoriesSelector } from "../../features/categories/categoriesSlice";
+import { citiesSelector } from "../../features/cities/citiesSlice";
 
 const gender = [
   { name: "Не указан", value: "not specified" },
@@ -53,6 +54,9 @@ const userSchema = yup.object({
 type TUserData = yup.InferType<typeof userSchema>;
 
 export const UserDataRegForm: FC = () => {
+  const categories = useSelector(categoriesSelector);
+  const cities = useSelector(citiesSelector);
+
   const {
     handleSubmit,
     control,
@@ -97,7 +101,7 @@ export const UserDataRegForm: FC = () => {
     });
 
     return allSubcategories;
-  }, [selectedCategories]);
+  }, [selectedCategories, categories]);
 
   useEffect(() => {
     if (selectedSubcategories && selectedSubcategories.length > 0) {

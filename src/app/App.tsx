@@ -9,7 +9,6 @@ import { getUsers } from "../features/users/usersSlice";
 import { getCategories } from "../features/categories/categoriesSlice";
 import { getCities } from "../features/cities/citiesSlice";
 import styles from "./App.module.css";
-import { UserDataRegForm } from "../widgets/user-data-reg-form";
 
 function App() {
   const dispatch = useDispatch();
@@ -23,11 +22,6 @@ function App() {
   return (
     <div className={styles.page}>
       <Header />
-
-      <div style={{ width: "556px" }}>
-        <UserDataRegForm />
-      </div>
-
       <main className={styles.content}>
         <Routes>
           <Route path="/" element={<UsersPage />} />
