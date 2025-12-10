@@ -1,21 +1,10 @@
-import { useEffect } from "react";
 import styles from "./skills-menu.module.css";
 import { CategoryIcon } from "./category-icon";
-import { useSelector, useDispatch } from "../../features/store";
-import {
-  categoriesSlice,
-  getCategories,
-} from "../../features/categories/categoriesSlice";
+import { useSelector } from "../../features/store";
+import { categoriesSlice } from "../../features/categories/categoriesSlice";
 
 export const SkillsMenu = () => {
-  const dispatch = useDispatch();
   const categories = useSelector(categoriesSlice.selectors.categoriesSelector);
-
-  useEffect(() => {
-    if (categories.length === 0) {
-      dispatch(getCategories());
-    }
-  }, [dispatch, categories.length]);
 
   const leftColumnCategories = categories.filter((cat) => cat.id % 2 === 1);
   const rightColumnCategories = categories.filter((cat) => cat.id % 2 === 0);

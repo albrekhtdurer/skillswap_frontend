@@ -1,6 +1,7 @@
 import { useEffect, useRef, type ReactNode } from "react";
 import { createPortal } from "react-dom";
 import styles from "./popup-menu.module.css";
+import { updatePosition } from "../../lib/helpers/updatePosition";
 
 export type PopupMenuPosition =
   | "top-left"
@@ -60,6 +61,23 @@ export const PopupMenu = ({
       document.removeEventListener("keydown", handleEscape);
     };
   }, [isOpen, onClose, anchorRef, position]);
+
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const handleUpdatePosition = () => {
+      updatePosition(menuRef, anchorRef, position);
+    };
+
+    handleUpdatePosition();
+    window.addEventListener("resize", handleUpdatePosition);
+    window.addEventListener("scroll", handleUpdatePosition, true);
+
+    return () => {
+      window.removeEventListener("resize", handleUpdatePosition);
+      window.removeEventListener("scroll", handleUpdatePosition, true);
+    };
+  }, [isOpen, position, anchorRef]);
 
   if (!isOpen) return null;
 

@@ -17,7 +17,11 @@ function App() {
   const [popupIsOpen, setPopupIsOpen] = useState<boolean>(false);
   const headerRef = useRef<HTMLElement>(null);
 
-  const openPopup = () => setPopupIsOpen(true);
+  const openPopup = () => {
+    setPopupIsOpen(true);
+    if (headerRef.current)
+      headerRef.current.scrollIntoView({ behavior: "smooth", block: "end" });
+  };
   const closePopup = () => setPopupIsOpen(false);
 
   useEffect(() => {

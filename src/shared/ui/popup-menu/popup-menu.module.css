@@ -4,9 +4,9 @@
   left: 0;
   z-index: 1000;
   max-width: 80%;
-  height: 100%;
+  height: auto;
   max-height: none;
-  overflow: scroll;
+  overflow: visible;
   background-color: var(--card-input-color);
   border-width: 1px;
   border-style: solid;
