@@ -30,9 +30,14 @@ export function useImages() {
     }
   };
 
+  const clearAllImages = async () => {
+    await db.images.clear();
+  };
+
   return {
     images: images ?? [],
     addImages,
     removeImage,
+    clearAllImages,
   };
 }

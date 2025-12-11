@@ -46,7 +46,6 @@ export const ImagesSlider: React.FC<TImagesSliderProps> = ({
     if (total <= visibleTotal) {
       const indices: number[] = [];
 
-      // Добавляем следующие после текущей
       for (let i = 1; i < total; i++) {
         const nextIdx = (currentIndex + i) % total;
         if (nextIdx !== currentIndex && !indices.includes(nextIdx)) {
@@ -54,7 +53,6 @@ export const ImagesSlider: React.FC<TImagesSliderProps> = ({
         }
       }
 
-      // Добавляем предыдущие, если не хватает
       let offset = 1;
       while (indices.length < thumbsCount && indices.length < total - 1) {
         const prevIdx = (currentIndex - offset + total) % total;
@@ -67,7 +65,6 @@ export const ImagesSlider: React.FC<TImagesSliderProps> = ({
       return indices.slice(0, thumbsCount);
     }
 
-    // > 4 — обычное зацикленное поведение
     return Array.from(
       { length: thumbsCount },
       (_, i) => (currentIndex + 1 + i) % total,
@@ -78,11 +75,6 @@ export const ImagesSlider: React.FC<TImagesSliderProps> = ({
   const showPlusOverlay =
     total > visibleTotal && thumbIndices.length === thumbsCount;
   const showThumbsColumn = thumbIndices.length > 0;
-
-  // const thumbIndices = Array.from(
-  //   { length: thumbsCount },
-  //   (_, i) => (currentIndex + 1 + i) % total,
-  // );
 
   return (
     <div className={styles.sliderWrapper}>
@@ -121,9 +113,12 @@ export const ImagesSlider: React.FC<TImagesSliderProps> = ({
 
             return (
               <div
-                key={idx}
+                key={pos}
                 className={thumbClasses}
-                onClick={() => mainRef.current?.go(idx)}
+                onClick={() => {
+                  mainRef.current?.go(idx);
+                  setCurrentIndex(idx);
+                }}
               >
                 <img src={images[idx]} alt="" className={styles.thumbImg} />
                 {showPlus && (

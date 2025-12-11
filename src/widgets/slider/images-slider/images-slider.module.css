@@ -84,6 +84,11 @@
   transform: translateY(-4px) scale(1.08);
 }
 
+.thumb.firstThumb.lastThumb:hover {
+  box-shadow: 0 8px 20px rgb(0 0 0 / 18%);
+  transform: translateY(4px) scale(1.08); /* или -4px — как тебе больше нравится */
+}
+
 .thumbImg {
   width: 100%;
   height: 100%;

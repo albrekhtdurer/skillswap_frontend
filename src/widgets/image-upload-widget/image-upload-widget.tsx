@@ -1,9 +1,8 @@
-import React, { useCallback, useMemo, useState } from "react";
+import React, { useCallback, useMemo, useState, useEffect } from "react";
 import { useDropzone, type FileRejection } from "react-dropzone";
 import styles from "./image-upload-widget.module.css";
 import { ImagesIcon, CrossIcon } from "../../assets/img/icons";
 import { Button } from "../../shared/ui/Button/Button";
-import { useImages } from "../../shared/hooks/useImages";
 
 export interface IUploadedFile extends File {
   preview: string;
@@ -28,6 +27,8 @@ export interface DropzoneStyles {
 
 const ImageUploader: React.FC<IImageUploaderProps> = ({
   maxFiles = 10,
+  onFilesUploaded,
+  onFileRemoved,
   className = "",
   accept = {
     "image/jpeg": [".jpg", ".jpeg"],
@@ -37,10 +38,19 @@ const ImageUploader: React.FC<IImageUploaderProps> = ({
   },
   multiple = true,
 }) => {
-  const { addImages, removeImage } = useImages();
-
   const [files, setFiles] = useState<IUploadedFile[]>([]);
   const [errors, setErrors] = useState<string[]>([]);
+
+  useEffect(() => {
+    onFilesUploaded?.(files);
+  }, [files, onFilesUploaded]);
+
+  useEffect(() => {
+    return () => {
+      files.forEach((file) => URL.revokeObjectURL(file.preview));
+    };
+  }, [files]);
+
   const onDrop = useCallback(
     (acceptedFiles: File[], fileRejections: FileRejection[]) => {
       setErrors([]);
@@ -70,11 +80,8 @@ const ImageUploader: React.FC<IImageUploaderProps> = ({
         return filesWithId as IUploadedFile;
       });
       setFiles((prevFiles) => [...prevFiles, ...filesWithId]);
-
-      // Добавляем в indexDB
-      addImages(acceptedFiles);
     },
-    [addImages],
+    [],
   );
 
   const { getRootProps, getInputProps, isDragActive, isDragReject } =
@@ -97,15 +104,13 @@ const ImageUploader: React.FC<IImageUploaderProps> = ({
         const fileToRemove = prevFiles.find((f) => f.id === fileId);
 
         if (fileToRemove) {
-          // Удаляем из IndexedDB
-          removeImage(fileToRemove);
-          // Освобождаем память
           URL.revokeObjectURL(fileToRemove.preview);
+          onFileRemoved?.(fileToRemove);
         }
         return prevFiles.filter((f) => f.id !== fileId);
       });
     },
-    [removeImage],
+    [onFileRemoved],
   );
 
   const formatFileSize = useCallback((bytes: number): string => {
