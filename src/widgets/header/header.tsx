@@ -5,7 +5,7 @@ import { selectCurrentUser } from "../../features/auth/authSlice";
 import { isNotEmptyWithoutSearchSelector } from "../../features/filters/filtersSlice";
 
 export const Header: FC = () => {
-  const isFilterEnabled = useSelector(isNotEmptyWithoutSearchSelector); //нужно будет получить эту переменную динамически
+  const isFilterEnabled = useSelector(isNotEmptyWithoutSearchSelector);
   const currentUser = useSelector(selectCurrentUser) || null;
 
   const handleSkillsClick = () => {
