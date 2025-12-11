@@ -2,14 +2,16 @@ import { type FC } from "react";
 import { HeaderElement } from "./header-element/header-element";
 import { useSelector } from "../../features/store";
 import { selectCurrentUser } from "../../features/auth/authSlice";
+import { isNotEmptyWithoutSearchSelector } from "../../features/filters/filtersSlice";
 
-export const Header: FC = () => {
-  const isFilterEnabled = false; //нужно будет получить эту переменную динамически
+type THeaderProps = {
+  handleSkillsClick?: () => void;
+  ref?: React.Ref<HTMLElement>;
+};
+
+export const Header: FC<THeaderProps> = ({ handleSkillsClick, ref }) => {
+  const isFilterEnabled = useSelector(isNotEmptyWithoutSearchSelector);
   const currentUser = useSelector(selectCurrentUser) || null;
-
-  const handleSkillsClick = () => {
-    console.log("Показать/убрать виджет ВСЕ НАВЫКИ");
-  };
 
   const handleLogin = () => {
     console.log("Логин");
@@ -21,6 +23,7 @@ export const Header: FC = () => {
 
   return (
     <HeaderElement
+      ref={ref}
       isFilterEnabled={isFilterEnabled}
       handleSkillsClick={handleSkillsClick}
       user={currentUser}

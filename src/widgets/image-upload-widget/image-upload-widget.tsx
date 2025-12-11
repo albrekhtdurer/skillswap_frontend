@@ -3,9 +3,10 @@ import { useDropzone, type FileRejection } from "react-dropzone";
 import styles from "./image-upload-widget.module.css";
 import { ImagesIcon, CrossIcon } from "../../assets/img/icons";
 import { Button } from "../../shared/ui/Button/Button";
+import { useImages } from "../../shared/hooks/useImages";
 
 export interface IUploadedFile extends File {
-  preview?: string;
+  preview: string;
   id: string;
 }
 
@@ -27,8 +28,6 @@ export interface DropzoneStyles {
 
 const ImageUploader: React.FC<IImageUploaderProps> = ({
   maxFiles = 10,
-  onFilesUploaded,
-  onFileRemoved,
   className = "",
   accept = {
     "image/jpeg": [".jpg", ".jpeg"],
@@ -38,6 +37,8 @@ const ImageUploader: React.FC<IImageUploaderProps> = ({
   },
   multiple = true,
 }) => {
+  const { addImages, removeImage } = useImages();
+
   const [files, setFiles] = useState<IUploadedFile[]>([]);
   const [errors, setErrors] = useState<string[]>([]);
   const onDrop = useCallback(
@@ -64,24 +65,16 @@ const ImageUploader: React.FC<IImageUploaderProps> = ({
       const filesWithId: IUploadedFile[] = acceptedFiles.map((file) => {
         const filesWithId = Object.assign(file, {
           id: `${file.name}-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+          preview: URL.createObjectURL(file),
         });
         return filesWithId as IUploadedFile;
       });
       setFiles((prevFiles) => [...prevFiles, ...filesWithId]);
-      if (onFilesUploaded) {
-        onFilesUploaded(filesWithId);
-      }
 
-      console.log(
-        "Загруженные файлы:",
-        acceptedFiles.map((f) => ({
-          name: f.name,
-          size: f.size,
-          type: f.type,
-        })),
-      );
+      // Добавляем в indexDB
+      addImages(acceptedFiles);
     },
-    [onFilesUploaded],
+    [addImages],
   );
 
   const { getRootProps, getInputProps, isDragActive, isDragReject } =
@@ -102,17 +95,17 @@ const ImageUploader: React.FC<IImageUploaderProps> = ({
     (fileId: string) => {
       setFiles((prevFiles) => {
         const fileToRemove = prevFiles.find((f) => f.id === fileId);
+
         if (fileToRemove) {
-          if (onFileRemoved) {
-            onFileRemoved(fileToRemove);
-          }
-          console.log("Удален файл:", fileToRemove.name);
-          return prevFiles.filter((file) => file.id !== fileId);
+          // Удаляем из IndexedDB
+          removeImage(fileToRemove);
+          // Освобождаем память
+          URL.revokeObjectURL(fileToRemove.preview);
         }
-        return prevFiles;
+        return prevFiles.filter((f) => f.id !== fileId);
       });
     },
-    [onFileRemoved],
+    [removeImage],
   );
 
   const formatFileSize = useCallback((bytes: number): string => {
@@ -136,7 +129,7 @@ const ImageUploader: React.FC<IImageUploaderProps> = ({
       >
         <input {...getInputProps()} aria-label="Поле загрузки файлов" />
         <div className={styles.dropzoneContent}>
-          <p className={styles.dropzoneText}>
+          <div className={styles.dropzoneText}>
             {isDragActive ? (
               <span>Отпустите файлы здесь...</span>
             ) : isDragReject ? (
@@ -198,7 +191,7 @@ const ImageUploader: React.FC<IImageUploaderProps> = ({
                 </span>
               </>
             )}
-          </p>
+          </div>
         </div>
       </div>
       {errors.length > 0 && (
