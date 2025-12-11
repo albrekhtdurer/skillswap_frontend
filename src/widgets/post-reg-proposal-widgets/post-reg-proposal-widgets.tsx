@@ -1,9 +1,9 @@
 import { Button } from "../../shared/ui/Button/Button";
-import { ImagesSlider } from "../slider/images-slider/images-slider";
 import { PencilIcon } from "../../assets/img/icons/edit";
 import style from "./post-reg-proposal-widgets.module.css";
 import { useSelector } from "../../features/store";
 import { categoriesSelector } from "../../features/categories/categoriesSlice";
+import { ImagesAuthorSlider } from "../slider/images-author-slider/images-author-slider";
 
 export type TProposalWidgetsProps = {
   title: string;
@@ -13,13 +13,11 @@ export type TProposalWidgetsProps = {
     categoryId: number;
     subCategoryId: number;
   };
-  images: string[];
   onClickEdit: () => void;
   onClickReady: () => void;
 };
 export const ProposalWidgets = ({
   title,
-  images,
   skillCanTeach,
   onClickEdit,
   onClickReady,
@@ -68,7 +66,7 @@ export const ProposalWidgets = ({
           </div>
         </div>
         <div>
-          <ImagesSlider images={images} options={{ arrows: false }} />
+          <ImagesAuthorSlider />
         </div>
       </div>
     </div>
