@@ -13,7 +13,7 @@ import { SkillPage } from "../pages/skill-page";
 
 function App() {
   const dispatch = useDispatch();
-  const { users, loading } = useSelector((store) => store.users);
+  const { users } = useSelector((store) => store.users);
 
   useEffect(() => {
     dispatch(getUsers());
@@ -28,12 +28,11 @@ function App() {
         <Routes>
           <Route path="/" element={<UsersPage />} />
           <Route path="*" element={<NotFound404 />} />
-          {!loading && (
-            <Route
-              path="skill/:id"
-              element={<SkillPage similarUsers={users.slice(1, 9)} />}
-            />
-          )}
+
+          <Route
+            path="skill/:id"
+            element={<SkillPage similarUsers={users.slice(1, 9)} />}
+          />
         </Routes>
       </main>
       <Footer />
