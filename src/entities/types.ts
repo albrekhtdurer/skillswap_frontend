@@ -36,6 +36,7 @@ export interface IUser {
   subcategoriesWantToLearn: ISubcategory[];
   gender: "male" | "female" | "not specified";
   images: string[];
+  email: string;
 }
 
 export type TFilters = {
@@ -45,3 +46,37 @@ export type TFilters = {
   skillIds: number[];
   searchInputValue?: string;
 };
+
+export interface LoginCredentials {
+  email: string;
+  password: string;
+}
+
+export interface ApiUser {
+  id: number;
+  name: string;
+  email: string;
+  location: string;
+  gender: string;
+  avatarUrl: string;
+  description: string;
+  birthDate: string;
+}
+
+export interface LoginResponse {
+  status: number;
+  data: {
+    access_token: string;
+    token_type: string;
+    user: ApiUser;
+  };
+  error: string;
+}
+
+export interface UserResponse {
+  status: number;
+  data: {
+    user: ApiUser;
+  };
+  error: string;
+}

@@ -15,7 +15,6 @@ import { SkillsMenu } from "../widgets/skills-menu";
 
 function App() {
   const dispatch = useDispatch();
-
   const { users } = useSelector((store) => store.users);
 
   const [popupIsOpen, setPopupIsOpen] = useState<boolean>(false);
@@ -40,7 +39,6 @@ function App() {
         <Routes>
           <Route path="/" element={<UsersPage />} />
           <Route path="*" element={<NotFound404 />} />
-
           <Route
             path="skill/:id"
             element={<SkillPage similarUsers={users.slice(1, 9)} />}
