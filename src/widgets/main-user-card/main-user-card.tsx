@@ -6,6 +6,7 @@ import {
   computeIsLiked,
   updateUserFavourites,
 } from "../../shared/lib/favourites";
+import { useNavigate } from "react-router-dom";
 
 type TMainUserCardProps = {
   user: IUser;
