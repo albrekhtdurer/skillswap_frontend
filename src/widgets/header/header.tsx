@@ -11,7 +11,6 @@ import {
   clearError,
 } from "../../features/auth/authSlice";
 import { isNotEmptyWithoutSearchSelector } from "../../features/filters/filtersSlice";
-import { useNavigate } from "react-router-dom";
 
 type THeaderProps = {
   handleSkillsClick?: () => void;

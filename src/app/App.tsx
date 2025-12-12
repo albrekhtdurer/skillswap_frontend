@@ -12,7 +12,6 @@ import { getCities } from "../features/cities/citiesSlice";
 import styles from "./App.module.css";
 import { PopupMenu } from "../shared/ui/popup-menu";
 import { SkillsMenu } from "../widgets/skills-menu";
-import { Login } from "../pages/login";
 
 function App() {
   const dispatch = useDispatch();
