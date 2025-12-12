@@ -92,7 +92,3 @@
   text-decoration: none;
   background-color: var(--card-input-color);
 }
-
-.button-tertiary:hover {
-  text-decoration: underline;
-}
