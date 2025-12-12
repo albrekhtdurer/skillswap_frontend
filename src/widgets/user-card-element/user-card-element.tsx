@@ -80,9 +80,9 @@ export function UserCardElement({
       {/* Секция "Может научить" с отображением навыка, которым может поделиться пользователь */}
       <div className={styles.section}>
         <p className={styles.sectionLabel}>Может научить:</p>
-        <div className={styles.chipsTeach}>
+        <div className={styles.chips}>
           <span
-            className={styles.chipTeach}
+            className={styles.chip}
             style={{
               backgroundColor: getSubcategoryColor(
                 categories,
@@ -98,7 +98,7 @@ export function UserCardElement({
       {/* Секция "Хочет научиться" с отображением подкатегорий и индикацией скрытых элементов */}
       <div className={styles.section}>
         <p className={styles.sectionLabel}>Хочет научиться:</p>
-        <div className={styles.chipsLearn}>
+        <div className={styles.chips}>
           {visibleSubcategories.map((subcategory) => {
             const color = getSubcategoryColor(categories, subcategory.id);
 

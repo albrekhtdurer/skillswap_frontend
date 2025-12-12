@@ -113,33 +113,11 @@
 }
 
 .chips {
-  display: flex;
-  flex-wrap: nowrap;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, min-content)) min-content;
   gap: 8px;
+  max-width: max-content;
   overflow: hidden;
-}
-
-.chipsTeach {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.chipsLearn {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 8px;
-  overflow: hidden;
-}
-
-.chipTeach {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  padding: 8px 12px;
-  font-size: var(--font-size-caption);
-  line-height: 1.1;
-  border-radius: 16px;
 }
 
 .chip,
@@ -158,8 +136,6 @@
 
 .chipText {
   display: inline-block;
-  min-width: 0;
-  max-width: 120px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
