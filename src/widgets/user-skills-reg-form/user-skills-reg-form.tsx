@@ -28,13 +28,7 @@ const skillsSchema = yup.object({
   subCategoryId: yup
     .number()
     .required("Подкатегория обязательна для заполнения"),
-  fullDescription: yup
-    .string()
-    .required("Описание обязательно для заполнения")
-    .matches(
-      /^[а-яА-ЯёЁ\s-]+$/,
-      "Навык может содержать только кириллические символы, пробелы и дефис",
-    ),
+  fullDescription: yup.string().required("Описание обязательно для заполнения"),
   // images: yup
   //   .array()
   //   .of(yup.mixed<IUploadedFile>())
