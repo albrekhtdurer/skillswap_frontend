@@ -5,6 +5,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { Input, PasswordInput } from "../../shared/ui/Input";
 import { Button } from "../../shared/ui/Button/Button";
 import styles from "./styles.module.css";
+import { TextLink } from "../../shared/ui/text-link";
 
 type TAuthData = {
   email: string;
@@ -15,12 +16,14 @@ type TAuthFormProps = {
   onSubmit: ({ email, password }: TAuthData) => void;
   className?: string;
   submitButtonText: string;
+  optionalLinkText?: string;
 };
 
 export const AuthForm: FC<TAuthFormProps> = ({
   onSubmit,
   className,
   submitButtonText,
+  optionalLinkText,
 }) => {
   const regSchema = yup.object().shape({
     email: yup
@@ -133,6 +136,11 @@ export const AuthForm: FC<TAuthFormProps> = ({
         <Button disabled={!isValid} fullWidth onClick={() => {}}>
           {submitButtonText}
         </Button>
+        {optionalLinkText && (
+          <TextLink className={styles.registration__optional}>
+            {optionalLinkText}
+          </TextLink>
+        )}
       </form>
     </div>
   );

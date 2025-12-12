@@ -14,21 +14,23 @@ import type { IUser } from "../../../entities/types";
 
 type THeaderElementProps = {
   isFilterEnabled: boolean;
-  handleSkillsClick: () => void;
+  handleSkillsClick?: () => void;
   user?: IUser | null;
   onLogin?: () => void;
   onProfileClick?: () => void;
+  ref?: React.Ref<HTMLElement>;
 };
 
 export const HeaderElement: FC<THeaderElementProps> = ({
   isFilterEnabled,
   handleSkillsClick,
   user,
+  ref,
   onLogin = () => console.log("Вход"),
   onProfileClick = () => console.log("Профиль"),
 }) => {
   return (
-    <header className={styles.header}>
+    <header ref={ref} className={styles.header}>
       <nav className={styles.menu}>
         <Logo />
         <ul className={styles.list}>

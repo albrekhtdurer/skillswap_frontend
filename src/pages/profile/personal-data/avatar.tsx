@@ -1,25 +1,20 @@
 import { AvatarUpload } from "../../../shared/ui/avatar-upload/avatar-upload";
 import EditIcon from "../../../assets/icons/edit-image.svg";
 import styles from "./avatar.module.css";
+import { useAvatar } from "../../../shared/hooks/useAvatar";
 
-type ProfileAvatarProps = {
-  avatarUrl?: string;
-  onAvatarChange: (file: File | null) => void;
-};
+export function ProfileAvatar() {
+  const { avatarFile, setAvatar } = useAvatar();
 
-export function ProfileAvatar({
-  avatarUrl,
-  onAvatarChange,
-}: ProfileAvatarProps) {
   return (
     <AvatarUpload
       size={244}
-      imageUrl={avatarUrl}
+      imageUrl={avatarFile ? URL.createObjectURL(avatarFile) : undefined}
       buttonIcon={
         <img src={EditIcon} alt="" className={styles.profileAvatarIcon} />
       }
       buttonPlacement="bottom-right"
-      onChange={onAvatarChange}
+      onChange={setAvatar}
       buttonClassName={styles.profileAvatarButton}
     />
   );
