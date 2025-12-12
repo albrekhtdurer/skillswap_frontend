@@ -3,6 +3,7 @@ import { HeaderElement } from "./header-element/header-element";
 import { useSelector } from "../../features/store";
 import { selectCurrentUser } from "../../features/auth/authSlice";
 import { isNotEmptyWithoutSearchSelector } from "../../features/filters/filtersSlice";
+import { useNavigate } from "react-router-dom";
 
 type THeaderProps = {
   handleSkillsClick?: () => void;
@@ -12,9 +13,10 @@ type THeaderProps = {
 export const Header: FC<THeaderProps> = ({ handleSkillsClick, ref }) => {
   const isFilterEnabled = useSelector(isNotEmptyWithoutSearchSelector);
   const currentUser = useSelector(selectCurrentUser) || null;
+  const navigate = useNavigate();
 
   const handleLogin = () => {
-    console.log("Логин");
+    navigate("/login");
   };
 
   const handleProfileClick = () => {
