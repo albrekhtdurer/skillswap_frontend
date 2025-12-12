@@ -7,10 +7,14 @@ export type TButtonType = "primary" | "secondary" | "tertiary";
 // Типы позиции иконки
 export type TIconPosition = "left" | "right";
 
+// Типы HTML кнопок
+export type TButtonHtmlType = "button" | "submit" | "reset";
+
 // Пропсы компонента
 export interface IButtonProps {
-  onClick: MouseEventHandler<HTMLButtonElement>;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
   type?: TButtonType;
+  htmlType?: TButtonHtmlType;
   disabled?: boolean;
   children: React.ReactNode;
   className?: string;
@@ -23,6 +27,7 @@ export interface IButtonProps {
 export const Button: React.FC<IButtonProps> = ({
   onClick,
   type = "primary",
+  htmlType = "button",
   disabled = false,
   children,
   className = "",
@@ -41,6 +46,7 @@ export const Button: React.FC<IButtonProps> = ({
 
   return (
     <button
+      type={htmlType}
       className={`${style.button} ${style["button-" + type]} ${
         fullWidth ? style["button-full-width"] : ""
       } ${className}`}
