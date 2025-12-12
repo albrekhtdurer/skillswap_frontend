@@ -86,11 +86,11 @@
   cursor: not-allowed;
 }
 
-/* Tertiary Button - исправлен цвет фона */
+/* Tertiary Button */
 
 .button-tertiary {
   text-decoration: none;
-  background-color: var(--card-input-color); /* Исправлено с var(--bg-color) */
+  background-color: var(--card-input-color);
 }
 
 .button-tertiary:hover {
