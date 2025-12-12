@@ -48,6 +48,10 @@
 /* Обертка для лайков */
 
 .likeWrapper {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  block-size: 24px;
   margin-left: auto;
 }
 

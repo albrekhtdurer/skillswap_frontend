@@ -7,10 +7,8 @@ import {
 import type { TCheckboxType } from "../../shared/ui/checkbox-group/checkbox/checkbox";
 import type { TCheckboxGroupProps } from "../../shared/ui/checkbox-group/checkbox-group";
 import type { TFilters } from "../../entities/types";
-
 import { CrossIcon } from "../../assets/img/icons";
 import { modeOptions, genderOptions } from "../../shared/lib/constants";
-
 import { useSelector, useDispatch } from "../../features/store";
 import { setFilters, resetFilters } from "../../features/filters/filtersSlice";
 import {

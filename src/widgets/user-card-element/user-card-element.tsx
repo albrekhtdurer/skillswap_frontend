@@ -1,25 +1,40 @@
-import type { IUser, ISkillCategory } from "../../entities/types";
-import styles from "./UserCard.module.css";
+import type { IUser } from "../../entities/types";
+import styles from "./user-card-element.module.css";
 import { getSubcategoryColor } from "../../entities/subcategoryColors";
-import HeartIcon from "../../assets/icons/heart.svg";
 import { Button } from "../../shared/ui/Button/Button";
+import { LikeButton } from "../../shared/ui/like-button";
+import { useSelector } from "../../features/store";
 
-// Этот компонент отображает карточку пользователя с информацией и навыками
-type TUserCardProps = {
-  user: IUser;
-  categories: ISkillCategory[];
+export type TLikeInfo = {
+  isLiked: boolean;
+  isLikeDisabled: boolean;
+  onToggleLike: () => void;
+  likesCount: number;
 };
 
-export function UserCard({ user, categories }: TUserCardProps) {
+// Этот компонент отображает карточку пользователя с информацией и навыками
+type TUserCardElementProps = {
+  user: IUser;
+  like?: TLikeInfo;
+  withDescription?: boolean;
+  onMoreDetailsClick?: () => void;
+};
+
+export function UserCardElement({
+  user,
+  like,
+  onMoreDetailsClick,
+  withDescription = false,
+}: TUserCardElementProps) {
+  const { categories } = useSelector((store) => store.categories);
   const {
     name,
     location,
     age,
-    likes,
-    isLiked,
     avatarUrl,
     skillCanTeach,
     subcategoriesWantToLearn,
+    description,
   } = user;
 
   // Определяем видимые подкатегории для отображения и количество скрытых подкатегорий
@@ -36,14 +51,16 @@ export function UserCard({ user, categories }: TUserCardProps) {
         <div className={styles.userInfo}>
           <div className={styles.userHeader}>
             <div className={styles.likeWrapper}>
-              <span className={styles.likeCount}>{likes}</span>
-              <button
-                type="button"
-                className={styles.likeButton}
-                aria-pressed={isLiked}
-              >
-                <img src={HeartIcon} alt="" className={styles.likeIcon} />
-              </button>
+              {like && (
+                <>
+                  <span className={styles.likeCount}>{like.likesCount}</span>
+                  <LikeButton
+                    isLiked={like.isLiked}
+                    isLikeDisabled={like.isLikeDisabled}
+                    toggleLike={like.onToggleLike}
+                  />
+                </>
+              )}
             </div>
 
             <div className={styles.userText}>
@@ -57,6 +74,8 @@ export function UserCard({ user, categories }: TUserCardProps) {
           </div>
         </div>
       </div>
+
+      {withDescription && <p>{description}</p>}
 
       {/* Секция "Может научить" с отображением навыка, которым может поделиться пользователь */}
       <div className={styles.section}>
@@ -101,9 +120,11 @@ export function UserCard({ user, categories }: TUserCardProps) {
       </div>
 
       {/* Кнопка для навигации к модальному окну с подробностями */}
-      <Button type="primary" fullWidth onClick={() => {}}>
-        Подробнее
-      </Button>
+      {onMoreDetailsClick && (
+        <Button type="primary" fullWidth onClick={onMoreDetailsClick}>
+          Подробнее
+        </Button>
+      )}
     </article>
   );
 }

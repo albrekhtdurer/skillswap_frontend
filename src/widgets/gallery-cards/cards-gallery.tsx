@@ -1,11 +1,9 @@
 import { useState } from "react";
 import type { IUser } from "../../entities/types";
 import { Button } from "../../shared/ui/Button/Button";
-import { UserCard } from "../UserCard/UserCard";
+import { MainUserCard } from "../main-user-card/main-user-card.tsx";
 import style from "./cards-gallery.module.css";
 import { SortIcon, RightIcon } from "../../assets/img/icons";
-import { useSelector } from "../../features/store";
-import { categoriesSelector } from "../../features/categories/categoriesSlice";
 
 export type CardsGalleryPros = {
   title: string;
@@ -22,7 +20,6 @@ export const CardsGallery = ({
   sortable,
   sortOnClick,
 }: CardsGalleryPros) => {
-  const categories = useSelector(categoriesSelector);
   const [expanded, setExpanded] = useState(false);
 
   const shouldLimit = maxCards !== undefined && maxCards > 0;
@@ -33,6 +30,10 @@ export const CardsGallery = ({
   const toggleExpanded = () => {
     setExpanded((prev) => !prev);
   };
+
+  // TODO: заменить на данные из стора авторизации,
+  // когда будет готов auth
+  const currentUserId = "demo-user";
 
   return (
     <div>
@@ -60,7 +61,11 @@ export const CardsGallery = ({
       </div>
       <div className={style.card_gallery_main}>
         {displayedCards.map((user) => (
-          <UserCard key={user.id} user={user} categories={categories} />
+          <MainUserCard
+            key={user.id}
+            user={user}
+            currentUserId={currentUserId}
+          />
         ))}
       </div>
     </div>

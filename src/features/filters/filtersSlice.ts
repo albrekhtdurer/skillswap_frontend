@@ -7,7 +7,13 @@ type TFiltersState = {
 };
 
 const initialState: TFiltersState = {
-  filters: { mode: "all", gender: "no_matter", skillIds: [], cityNames: [] },
+  filters: {
+    mode: "all",
+    gender: "no_matter",
+    skillIds: [],
+    cityNames: [],
+    searchInputValue: "",
+  },
 };
 
 export const filtersSlice = createSlice({
@@ -24,16 +30,26 @@ export const filtersSlice = createSlice({
       state.filters.cityNames.length > 0 ||
       state.filters.skillIds.length > 0 ||
       state.filters.mode !== initialState.filters.mode ||
-      state.filters.gender !== initialState.filters.gender,
+      state.filters.gender !== initialState.filters.gender ||
+      state.filters.searchInputValue?.trim(),
     filtersCounterSelector: (state) =>
       state.filters.cityNames.length +
       state.filters.skillIds.length +
       (state.filters.mode !== initialState.filters.mode ? 1 : 0) +
-      (state.filters.gender !== initialState.filters.gender ? 1 : 0),
+      (state.filters.gender !== initialState.filters.gender ? 1 : 0) +
+      (state.filters.searchInputValue?.trim() ? 1 : 0),
+    isNotEmptyWithoutSearchSelector: (state) =>
+      state.filters.cityNames.length > 0 ||
+      state.filters.skillIds.length > 0 ||
+      state.filters.mode !== initialState.filters.mode ||
+      state.filters.gender !== initialState.filters.gender,
   },
 });
 
 export const { setFilters, resetFilters } = filtersSlice.actions;
-export const { isNotEmptySelector, filtersCounterSelector } =
-  filtersSlice.selectors;
+export const {
+  isNotEmptySelector,
+  filtersCounterSelector,
+  isNotEmptyWithoutSearchSelector,
+} = filtersSlice.selectors;
 export default filtersSlice.reducer;

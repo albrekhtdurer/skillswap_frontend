@@ -1,3 +1,4 @@
+import type { MouseEventHandler } from "react";
 import style from "./style.module.css";
 
 // Типы кнопок
@@ -8,7 +9,7 @@ export type TIconPosition = "left" | "right";
 
 // Пропсы компонента
 export interface IButtonProps {
-  onClick: () => void;
+  onClick: MouseEventHandler<HTMLButtonElement>;
   type?: TButtonType;
   disabled?: boolean;
   children: React.ReactNode;
