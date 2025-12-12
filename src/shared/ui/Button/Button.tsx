@@ -33,9 +33,7 @@ export const Button: React.FC<IButtonProps> = ({
   const renderIcon = () => {
     if (!icon) return null;
 
-    const iconClass = `${style.icon} ${
-      iconPosition === "left" ? style.iconLeft : style.iconRight
-    } ${iconClassName}`;
+    const iconClass = `${style.icon} ${iconClassName}`;
 
     return <span className={iconClass}>{icon}</span>;
   };
