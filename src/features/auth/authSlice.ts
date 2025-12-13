@@ -2,6 +2,7 @@ import {
   createSlice,
   type PayloadAction,
   createAsyncThunk,
+  createAction,
 } from "@reduxjs/toolkit";
 import type { ILoginCredentials, IApiUser } from "../../entities/types";
 import { authApi } from "../../api/auth";
@@ -11,6 +12,7 @@ type TAuthState = {
   isAuthenticated: boolean;
   loading: boolean;
   error: string | null;
+  authChecked: boolean;
 };
 
 const initialState: TAuthState = {
@@ -18,12 +20,15 @@ const initialState: TAuthState = {
   isAuthenticated: false,
   loading: false,
   error: null,
+  authChecked: false,
 };
 
 type TLoginResult = {
   user: IApiUser;
   token: string;
 };
+
+export const setAuthChecked = createAction<boolean>("auth/setAuthChecked");
 
 export const loginUser = createAsyncThunk<
   TLoginResult,
@@ -45,7 +50,7 @@ export const fetchUserData = createAsyncThunk<
   TLoginResult,
   void,
   { rejectValue: string }
->("auth/fetchUserData", async (_, { rejectWithValue }) => {
+>("auth/fetchUserData", async (_, { rejectWithValue, dispatch }) => {
   try {
     const token = localStorage.getItem("access_token");
     if (!token) {
@@ -62,6 +67,8 @@ export const fetchUserData = createAsyncThunk<
       return rejectWithValue(error.message);
     }
     return rejectWithValue("Ошибка при получении данных пользователя");
+  } finally {
+    dispatch(setAuthChecked(true));
   }
 });
 
@@ -84,6 +91,9 @@ export const authSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
+      .addCase(setAuthChecked, (state, action) => {
+        state.authChecked = action.payload;
+      })
       .addCase(loginUser.pending, (state) => {
         state.loading = true;
         state.error = null;
@@ -120,6 +130,7 @@ export const authSlice = createSlice({
     selectIsAuthenticated: (state) => state.isAuthenticated,
     selectAuthLoading: (state) => state.loading,
     selectAuthError: (state) => state.error,
+    selectAuthChecked: (state) => state.authChecked,
   },
 });
 
@@ -129,4 +140,5 @@ export const {
   selectIsAuthenticated,
   selectAuthLoading,
   selectAuthError,
+  selectAuthChecked,
 } = authSlice.selectors;

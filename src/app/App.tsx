@@ -13,6 +13,7 @@ import styles from "./App.module.css";
 import { PopupMenu } from "../shared/ui/popup-menu";
 import { SkillsMenu } from "../widgets/skills-menu";
 import { Login } from "../pages/login";
+import { fetchUserData } from "../features/auth/authSlice";
 
 function App() {
   const dispatch = useDispatch();
@@ -29,6 +30,7 @@ function App() {
   const closePopup = () => setPopupIsOpen(false);
 
   useEffect(() => {
+    dispatch(fetchUserData());
     dispatch(getUsers());
     dispatch(getCategories());
     dispatch(getCities());
