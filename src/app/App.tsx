@@ -12,6 +12,7 @@ import { getCities } from "../features/cities/citiesSlice";
 import styles from "./App.module.css";
 import { PopupMenu } from "../shared/ui/popup-menu";
 import { SkillsMenu } from "../widgets/skills-menu";
+import { HeaderMenuAvatarContent } from "../widgets/header-popup-widget/header-menu-avatar-content";
 import { Login } from "../pages/login";
 
 function App() {
@@ -26,7 +27,17 @@ function App() {
     if (headerRef.current)
       headerRef.current.scrollIntoView({ behavior: "smooth", block: "end" });
   };
+
+  const [popupMenuAvatarIsOpen, setPopupMenuAvatarIsOpen] =
+    useState<boolean>(false);
+  const openPopupMenuAvatar = () => {
+    setPopupMenuAvatarIsOpen(true);
+    if (headerRef.current)
+      headerRef.current.scrollIntoView({ behavior: "smooth", block: "end" });
+  };
+
   const closePopup = () => setPopupIsOpen(false);
+  const closePopupMenuAvatar = () => setPopupMenuAvatarIsOpen(false);
 
   useEffect(() => {
     dispatch(getUsers());
@@ -36,7 +47,11 @@ function App() {
 
   return (
     <div className={styles.page}>
-      <Header ref={headerRef} handleSkillsClick={openPopup} />
+      <Header
+        ref={headerRef}
+        handleSkillsClick={openPopup}
+        onProfileClick={openPopupMenuAvatar}
+      />
       <main className={styles.content}>
         <Routes>
           <Route path="/" element={<UsersPage />} />
@@ -55,6 +70,14 @@ function App() {
         onClose={closePopup}
       >
         <SkillsMenu />
+      </PopupMenu>
+      <PopupMenu
+        anchorRef={headerRef}
+        isOpen={popupMenuAvatarIsOpen}
+        onClose={closePopupMenuAvatar}
+        position="bottom-right"
+      >
+        <HeaderMenuAvatarContent />
       </PopupMenu>
     </div>
   );

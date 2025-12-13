@@ -24,3 +24,4 @@ export { UserIcon } from "./user";
 export { PencilIcon } from "./edit";
 export { ShareIcon } from "./share";
 export { MoreIcon } from "./more";
+export { LogoutIcon } from "./logout";
