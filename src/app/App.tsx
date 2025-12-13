@@ -13,6 +13,7 @@ import styles from "./App.module.css";
 import { PopupMenu } from "../shared/ui/popup-menu";
 import { SkillsMenu } from "../widgets/skills-menu";
 import { HeaderMenuAvatarContent } from "../widgets/header-popup-widget/header-menu-avatar-content";
+import { Login } from "../pages/login";
 
 function App() {
   const dispatch = useDispatch();
@@ -55,7 +56,7 @@ function App() {
         <Routes>
           <Route path="/" element={<UsersPage />} />
           <Route path="*" element={<NotFound404 />} />
-
+          <Route path="login" element={<Login />} />
           <Route
             path="skill/:id"
             element={<SkillPage similarUsers={users.slice(1, 9)} />}

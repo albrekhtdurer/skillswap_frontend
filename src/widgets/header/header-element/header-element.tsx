@@ -10,12 +10,12 @@ import {
 import { SearchInput } from "../../../shared/ui/Input";
 import { Button } from "../../../shared/ui/Button/Button";
 import { TextLink } from "../../../shared/ui/text-link";
-import type { IUser } from "../../../entities/types";
+import type { IApiUser } from "../../../entities/types";
 
 type THeaderElementProps = {
   isFilterEnabled: boolean;
   handleSkillsClick?: () => void;
-  user?: IUser | null;
+  user?: IApiUser | null;
   onLogin?: () => void;
   onProfileClick?: () => void;
   ref?: React.Ref<HTMLElement>;

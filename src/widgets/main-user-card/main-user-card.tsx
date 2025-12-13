@@ -5,6 +5,7 @@ import {
   computeIsLiked,
   updateUserFavourites,
 } from "../../shared/lib/favourites";
+import { useNavigate } from "react-router-dom";
 
 type TMainUserCardProps = {
   user: IUser;
@@ -12,6 +13,7 @@ type TMainUserCardProps = {
 };
 
 export function MainUserCard({ user, currentUserId }: TMainUserCardProps) {
+  const navigate = useNavigate();
   const isAuthorized = Boolean(currentUserId);
 
   const [isLiked, setIsLiked] = useState(() =>
@@ -29,6 +31,10 @@ export function MainUserCard({ user, currentUserId }: TMainUserCardProps) {
     setIsLiked(newIsLiked);
   };
 
+  const handleMoreDetailsClick = () => {
+    navigate(`/skill/${user.id}`);
+  };
+
   return (
     <UserCardElement
       user={user}
@@ -38,7 +44,7 @@ export function MainUserCard({ user, currentUserId }: TMainUserCardProps) {
         onToggleLike: handleToggleLike,
         likesCount,
       }}
-      onMoreDetailsClick={() => {}}
+      onMoreDetailsClick={handleMoreDetailsClick}
     />
   );
 }
