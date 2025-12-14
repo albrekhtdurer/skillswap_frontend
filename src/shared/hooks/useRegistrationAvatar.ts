@@ -42,6 +42,7 @@ export function useRegistrationAvatar() {
 
   const commitAvatar = async () => {
     const tempRecord = await db.tempRegistrationAvatars.get(TEMP_KEY);
+    await db.avatars.delete(PERMANENT_KEY);
     if (tempRecord?.blob) {
       await db.avatars.put({
         key: PERMANENT_KEY,

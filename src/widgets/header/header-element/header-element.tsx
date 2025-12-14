@@ -11,7 +11,8 @@ import { SearchInput } from "../../../shared/ui/Input";
 import { Button } from "../../../shared/ui/Button/Button";
 import { TextLink } from "../../../shared/ui/text-link";
 import type { IApiUser } from "../../../entities/types";
-import { useRegistrationAvatar } from "../../../shared/hooks/useRegistrationAvatar"; //удалить в случае ненадобности
+import { useRegistrationAvatar } from "../../../shared/hooks/useRegistrationAvatar"; //удалить после маршрутизации авторизации, успешного создания карточки навыков и проверки location
+import { useTempSkillImages } from "../../../shared/hooks/useTempSkillImages"; //удалить после маршрутизации авторизации, успешного создания карточки навыков и проверки location
 
 type THeaderElementProps = {
   isFilterEnabled: boolean;
@@ -30,10 +31,12 @@ export const HeaderElement: FC<THeaderElementProps> = ({
   onLogin = () => console.log("Вход"),
   onProfileClick = () => console.log("Профиль"),
 }) => {
-  const { discardAvatar } = useRegistrationAvatar(); //удалить в случае ненадобности
+  const { discardAvatar } = useRegistrationAvatar();
+  const { discardImages } = useTempSkillImages();
 
   const handleRegisterClick = () => {
-    discardAvatar(); //удалить в случае ненадобности
+    discardAvatar();
+    discardImages();
   };
   return (
     <header ref={ref} className={styles.header}>

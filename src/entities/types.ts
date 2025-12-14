@@ -80,3 +80,8 @@ export interface IUserResponse {
   };
   error: string;
 }
+
+export interface IUploadedFile extends File {
+  preview?: string;
+  id: string;
+}

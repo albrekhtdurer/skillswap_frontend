@@ -1,6 +1,6 @@
 import { useLiveQuery } from "dexie-react-hooks";
 import { db } from "../../db/db";
-import type { IUploadedFile } from "../../widgets/image-upload-widget/image-upload-widget";
+import type { IUploadedFile } from "../../entities/types";
 
 export function useTempSkillImages() {
   const tempImages = useLiveQuery<IUploadedFile[]>(

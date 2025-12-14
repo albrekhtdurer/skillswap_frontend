@@ -3,19 +3,17 @@ import { useDropzone, type FileRejection } from "react-dropzone";
 import styles from "./image-upload-widget.module.css";
 import { ImagesIcon, CrossIcon } from "../../assets/img/icons";
 import { Button } from "../../shared/ui/Button/Button";
-
-export interface IUploadedFile extends File {
-  preview?: string;
-  id: string;
-}
+import { type IUploadedFile } from "../../entities/types";
 
 export interface IImageUploaderProps {
   maxFiles?: number;
-  onFilesUploaded?: (files: IUploadedFile[]) => void;
-  onFileRemoved?: (file: IUploadedFile) => void;
+  onFilesUploaded?: (files: File[]) => void;
+  onFileRemoved?: (fileId: string) => void;
+  state: IUploadedFile[] | [];
   className?: string;
   accept?: Record<string, string[]>;
   multiple?: boolean;
+  onChange?: (newValue: IUploadedFile[]) => void;
 }
 
 export interface DropzoneStyles {
@@ -37,9 +35,11 @@ const ImageUploader: React.FC<IImageUploaderProps> = ({
     "image/gif": [".gif"],
   },
   multiple = true,
+  state,
+  onChange,
 }) => {
-  const [files, setFiles] = useState<IUploadedFile[]>([]);
   const [errors, setErrors] = useState<string[]>([]);
+
   const onDrop = useCallback(
     (acceptedFiles: File[], fileRejections: FileRejection[]) => {
       setErrors([]);
@@ -67,21 +67,17 @@ const ImageUploader: React.FC<IImageUploaderProps> = ({
         });
         return filesWithId as IUploadedFile;
       });
-      setFiles((prevFiles) => [...prevFiles, ...filesWithId]);
+
       if (onFilesUploaded) {
         onFilesUploaded(filesWithId);
       }
 
-      console.log(
-        "Загруженные файлы:",
-        acceptedFiles.map((f) => ({
-          name: f.name,
-          size: f.size,
-          type: f.type,
-        })),
-      );
+      if (onChange) {
+        const newFiles = [...state, ...filesWithId];
+        onChange(newFiles);
+      }
     },
-    [onFilesUploaded],
+    [onFilesUploaded, onChange, state],
   );
 
   const { getRootProps, getInputProps, isDragActive, isDragReject } =
@@ -100,19 +96,16 @@ const ImageUploader: React.FC<IImageUploaderProps> = ({
 
   const removeFile = useCallback(
     (fileId: string) => {
-      setFiles((prevFiles) => {
-        const fileToRemove = prevFiles.find((f) => f.id === fileId);
-        if (fileToRemove) {
-          if (onFileRemoved) {
-            onFileRemoved(fileToRemove);
-          }
-          console.log("Удален файл:", fileToRemove.name);
-          return prevFiles.filter((file) => file.id !== fileId);
-        }
-        return prevFiles;
-      });
+      if (onFileRemoved) {
+        onFileRemoved(fileId);
+      }
+
+      if (onChange) {
+        const newFiles = state.filter((file) => file.id !== fileId);
+        onChange(newFiles);
+      }
     },
-    [onFileRemoved],
+    [onFileRemoved, onChange, state],
   );
 
   const formatFileSize = useCallback((bytes: number): string => {
@@ -124,7 +117,8 @@ const ImageUploader: React.FC<IImageUploaderProps> = ({
   }, []);
 
   const shouldLimit = maxFiles !== undefined && maxFiles > 0;
-  const displayedFiles = shouldLimit ? files.slice(0, maxFiles) : files;
+
+  const displayedFiles = shouldLimit ? state.slice(0, maxFiles) : state;
 
   return (
     <section className={styles.container}>
@@ -145,7 +139,7 @@ const ImageUploader: React.FC<IImageUploaderProps> = ({
               </span>
             ) : (
               <>
-                {files.length > 0 ? (
+                {state.length > 0 ? (
                   <aside className={styles.fileList}>
                     <ul>
                       {displayedFiles.map((file) => (

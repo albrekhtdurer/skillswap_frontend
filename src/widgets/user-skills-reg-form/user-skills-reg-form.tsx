@@ -15,6 +15,8 @@ import { useSelector } from "../../features/store";
 import { categoriesSelector } from "../../features/categories/categoriesSlice";
 import ImageUploader from "../image-upload-widget/image-upload-widget";
 import type { ISkillCategory, ISubcategory } from "../../entities/types";
+import { useTempSkillImages } from "../../shared/hooks/useTempSkillImages";
+import type { IUploadedFile } from "../../entities/types";
 
 const skillsSchema = yup.object({
   name: yup
@@ -29,11 +31,11 @@ const skillsSchema = yup.object({
     .number()
     .required("Подкатегория обязательна для заполнения"),
   fullDescription: yup.string().required("Описание обязательно для заполнения"),
-  // images: yup
-  //   .array()
-  //   .of(yup.mixed<IUploadedFile>())
-  //   .min(1, "Загрузите хотя бы одно изображение")
-  //   .required("Изображения обязательны"),
+  images: yup
+    .array()
+    .of(yup.mixed<IUploadedFile>())
+    .min(1, "Загрузите хотя бы одно изображение")
+    .required("Изображения обязательны"),
 });
 
 type TUserSkills = yup.InferType<typeof skillsSchema>;
@@ -51,6 +53,7 @@ export const UserSkillsRegForm: FC = () => {
     register,
     handleSubmit,
     control,
+    setValue,
     trigger,
     formState: { errors, isValid },
   } = useForm<TUserSkills>({
@@ -60,7 +63,7 @@ export const UserSkillsRegForm: FC = () => {
       categoryId: undefined,
       subCategoryId: undefined,
       fullDescription: "",
-      // images: [],
+      images: [],
     },
     mode: "onChange",
   });
@@ -86,6 +89,8 @@ export const UserSkillsRegForm: FC = () => {
       }),
     );
   }, [selectedCategoryId, categoriesData]);
+
+  const { tempImages, addTempImages, removeTempImage } = useTempSkillImages();
 
   const onSubmit: SubmitHandler<TUserSkills> = (data) => {
     console.log("Отправленные данные:", data);
@@ -191,7 +196,17 @@ export const UserSkillsRegForm: FC = () => {
         </label>
 
         <div>
-          <ImageUploader />
+          <ImageUploader
+            onFilesUploaded={addTempImages}
+            onFileRemoved={removeTempImage}
+            state={tempImages}
+            onChange={(newFiles) => {
+              setValue("images", newFiles, { shouldValidate: true });
+            }}
+          />
+          {errors.images && (
+            <span className={styles.image_error}>{errors.images.message}</span>
+          )}
         </div>
 
         <div className={styles.button_section}>

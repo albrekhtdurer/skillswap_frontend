@@ -59,6 +59,14 @@
   line-height: 1.3;
 }
 
+.image_error {
+  display: block;
+  color: var(--error-color);
+  font-size: var(--font-size-caption);
+  line-height: 1.3;
+  text-align: center;
+}
+
 .textarea_error {
   border-color: var(--error-color);
 }

@@ -1,12 +1,18 @@
+import type { FC } from "react";
 import { ImagesSlider } from "../images-slider/images-slider";
-import { useImages } from "../../../shared/hooks/useImages";
+// import { useImages } from "../../../shared/hooks/useImages";
 import { useMemo, useEffect } from "react";
+import type { IUploadedFile } from "../../../entities/types";
 
 import styles from "./images-author-slider.module.css";
 
-export function ImagesAuthorSlider() {
-  const { images } = useImages();
+type TImagesAuthorSliderProps = {
+  images: IUploadedFile[] | File[];
+};
 
+export const ImagesAuthorSlider: FC<TImagesAuthorSliderProps> = ({
+  images,
+}) => {
   // Превращаем File[] в string[] (blob URLs)
   const imageUrls = useMemo(() => {
     return images.map((file) => URL.createObjectURL(file));
@@ -31,4 +37,4 @@ export function ImagesAuthorSlider() {
       }}
     />
   );
-}
+};

@@ -1,12 +1,18 @@
 import { useLiveQuery } from "dexie-react-hooks";
 import { db } from "../../db/db";
+import type { IUploadedFile } from "../../entities/types";
 
 export function useImages() {
-  const images = useLiveQuery<File[]>(() => {
+  const images = useLiveQuery<IUploadedFile[]>(() => {
     return db.images
       .orderBy("createdAt")
       .toArray()
-      .then((arr) => arr.map((r) => r.blob));
+      .then((arr) =>
+        arr.map(
+          (r) =>
+            Object.assign(r.blob, { id: r.id!.toString() }) as IUploadedFile,
+        ),
+      );
   }, []);
 
   const addImages = async (files: File[]) => {
@@ -17,16 +23,10 @@ export function useImages() {
     await db.images.bulkAdd(records);
   };
 
-  const removeImage = async (fileToRemove: File) => {
-    const records = await db.images.toArray();
-    const record = records.find(
-      (r) =>
-        r.blob.name === fileToRemove.name &&
-        r.blob.size === fileToRemove.size &&
-        r.blob.lastModified === fileToRemove.lastModified,
-    );
-    if (record?.id) {
-      await db.images.delete(record.id);
+  const removeImage = async (imageId: string) => {
+    const id = parseInt(imageId, 10);
+    if (!isNaN(id)) {
+      await db.images.delete(id);
     }
   };
 
