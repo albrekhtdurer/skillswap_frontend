@@ -1,6 +1,7 @@
 .container {
   padding: 40px 60px;
   background-color: var(--card-input-color);
+  border-radius: var(--border-raduis-main);
 }
 
 .form {

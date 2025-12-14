@@ -15,6 +15,9 @@ import { SkillsMenu } from "../widgets/skills-menu";
 import { HeaderMenuAvatarContent } from "../widgets/header-popup-widget/header-menu-avatar-content";
 import { Login } from "../pages/login";
 import { fetchUserData } from "../features/auth/authSlice";
+import { RegisterStep2Page } from "../pages/register-step2";
+import { RegisterStep3Page } from "../pages/register-step3";
+import { RegisterStep1Page } from "../pages/register-step1";
 
 function App() {
   const dispatch = useDispatch();
@@ -58,6 +61,22 @@ function App() {
           <Route path="*" element={<NotFound404 />} />
           <Route path="login" element={<Login />} />
           <Route path="skill/:id" element={<SkillPage />} />
+
+          <Route
+            path="register/step-1"
+            element={<RegisterStep1Page />} /*
+          Для проверки шага 1*/
+          />
+          <Route
+            path="register/step-2"
+            element={<RegisterStep2Page />} /*
+          Для проверки шага 2*/
+          />
+          <Route
+            path="register/step-3"
+            element={<RegisterStep3Page />} /*
+          Для проверки шага 3*/
+          />
         </Routes>
       </main>
       <Footer allSkillsOnClick={openPopup} />
