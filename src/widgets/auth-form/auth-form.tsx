@@ -153,7 +153,9 @@ export const AuthForm: FC<TAuthFormProps> = ({
             touchedFields.password
               ? errors.password
                 ? errors.password.message
-                : "Надежный"
+                : mode === "login"
+                  ? ""
+                  : "Надежный"
               : mode === "login"
                 ? ""
                 : "Пароль должен содержать не менее 8 знаков"
