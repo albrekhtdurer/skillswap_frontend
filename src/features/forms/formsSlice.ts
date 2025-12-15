@@ -1,17 +1,13 @@
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
-import type {
-  ISkillCategory,
-  ISubcategory,
-  IUploadedFile,
-} from "../../entities/types";
+import type { ISkillCategory, ISubcategory } from "../../entities/types";
 
 type TRegForm = {
   email: string | null;
   password: string | null;
   name: string | null;
-  borndate: string | null;
-  sex: "male" | "female" | null;
-  city: string | null;
+  birthDate: string | null;
+  gender: "male" | "female" | null;
+  location: string | null;
   categoryWantToLearn: ISkillCategory | null;
   subcategoryWantToLearn: ISubcategory | null;
   skillCanTeach: {
@@ -19,7 +15,6 @@ type TRegForm = {
     category: ISkillCategory | null;
     subcategory: ISubcategory | null;
     description: string | null;
-    images: IUploadedFile[];
   };
 };
 
@@ -32,9 +27,9 @@ const initialState: TFormsSliceState = {
     email: null,
     password: null,
     name: null,
-    borndate: null,
-    sex: null,
-    city: null,
+    birthDate: null,
+    gender: null,
+    location: null,
     categoryWantToLearn: null,
     subcategoryWantToLearn: null,
     skillCanTeach: {
@@ -42,7 +37,6 @@ const initialState: TFormsSliceState = {
       category: null,
       subcategory: null,
       description: null,
-      images: [],
     },
   },
 };
