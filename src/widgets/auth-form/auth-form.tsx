@@ -6,6 +6,7 @@ import { Input, PasswordInput } from "../../shared/ui/Input";
 import { Button } from "../../shared/ui/Button/Button";
 import styles from "./styles.module.css";
 import { TextLink } from "../../shared/ui/text-link";
+import { useNavigate } from "react-router-dom";
 
 type TAuthData = {
   email: string;
@@ -19,6 +20,7 @@ type TAuthFormProps = {
   className?: string;
   submitButtonText: string;
   optionalLinkText?: string;
+  optionalLinkUrl?: string;
   mode?: TAuthFormMode;
   submitErrorText?: string | null;
 };
@@ -28,6 +30,7 @@ export const AuthForm: FC<TAuthFormProps> = ({
   className,
   submitButtonText,
   optionalLinkText,
+  optionalLinkUrl,
   mode = "register",
   submitErrorText = null,
 }) => {
@@ -58,6 +61,8 @@ export const AuthForm: FC<TAuthFormProps> = ({
     getValues,
     reset,
   } = useForm({ resolver: yupResolver(schema), mode: "onChange" });
+
+  const navigate = useNavigate();
 
   const onError = () => {
     console.log();
@@ -162,7 +167,6 @@ export const AuthForm: FC<TAuthFormProps> = ({
           }
           className={`${styles.registration__input} ${styles.input_password}`}
         ></PasswordInput>
-
         {submitErrorText ? (
           <div className={styles.registration__error}>{submitErrorText}</div>
         ) : null}
@@ -177,7 +181,10 @@ export const AuthForm: FC<TAuthFormProps> = ({
         </Button>
 
         {optionalLinkText && (
-          <TextLink className={styles.registration__optional}>
+          <TextLink
+            onClick={() => navigate(optionalLinkUrl || "/")}
+            className={styles.registration__optional}
+          >
             {optionalLinkText}
           </TextLink>
         )}

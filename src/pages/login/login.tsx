@@ -48,6 +48,7 @@ export const Login = () => {
             onSubmit={handleSubmit}
             submitButtonText="Войти"
             optionalLinkText="Зарегистрироваться"
+            optionalLinkUrl="/register/step1"
             submitErrorText={
               authError
                 ? "Email или пароль введён неверно. Пожалуйста проверьте правильность введённых данных"
