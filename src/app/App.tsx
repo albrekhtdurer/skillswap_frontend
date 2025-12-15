@@ -13,6 +13,7 @@ import styles from "./App.module.css";
 import { PopupMenu } from "../shared/ui/popup-menu";
 import { SkillsMenu } from "../widgets/skills-menu";
 import { Login } from "../pages/login";
+import { UserDataEditFrom } from "../widgets/user-data-edit-form/user-data-edit-from";
 
 function App() {
   const dispatch = useDispatch();
@@ -46,6 +47,7 @@ function App() {
             path="skill/:id"
             element={<SkillPage similarUsers={users.slice(1, 9)} />}
           />
+          <Route path="user" element={<UserDataEditFrom />} />
         </Routes>
       </main>
       <Footer allSkillsOnClick={openPopup} />
