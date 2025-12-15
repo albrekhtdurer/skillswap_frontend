@@ -84,7 +84,7 @@ function App() {
         onClose={closePopupMenuAvatar}
         position="bottom-right"
       >
-        <HeaderMenuAvatarContent />
+        <HeaderMenuAvatarContent onClose={closePopupMenuAvatar} />
       </PopupMenu>
     </div>
   );
