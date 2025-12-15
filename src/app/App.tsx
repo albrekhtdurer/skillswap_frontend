@@ -16,6 +16,8 @@ import { HeaderMenuAvatarContent } from "../widgets/header-popup-widget/header-m
 import { Login } from "../pages/login";
 import { fetchUserData } from "../features/auth/authSlice";
 import { UserFavourites } from "../widgets/user-favourites/user-favourites";
+import { RegisterStep1Page } from "../pages/register-step1";
+import { ProtectedRoute } from "../shared/ui/ProtectedRoute";
 
 function App() {
   const dispatch = useDispatch();
@@ -60,6 +62,14 @@ function App() {
           <Route path="*" element={<NotFound404 />} />
           <Route path="login" element={<Login />} />
           <Route path="skill/:id" element={<SkillPage />} />
+          <Route
+            path="register/step1"
+            element={
+              <ProtectedRoute forUnAuth>
+                <RegisterStep1Page />
+              </ProtectedRoute>
+            }
+          />
         </Routes>
       </main>
       <Footer allSkillsOnClick={openPopup} />
@@ -76,7 +86,7 @@ function App() {
         onClose={closePopupMenuAvatar}
         position="bottom-right"
       >
-        <HeaderMenuAvatarContent />
+        <HeaderMenuAvatarContent onClose={closePopupMenuAvatar} />
       </PopupMenu>
     </div>
   );

@@ -9,6 +9,7 @@ import { categoriesSlice } from "./categories/categoriesSlice";
 import { usersSlice } from "./users/usersSlice";
 import { filtersSlice } from "./filters/filtersSlice";
 import { authSlice } from "./auth/authSlice";
+import { formsSlice } from "./forms/formsSlice";
 
 const rootReducer = combineSlices(
   citiesSlice,
@@ -16,6 +17,7 @@ const rootReducer = combineSlices(
   usersSlice,
   filtersSlice,
   authSlice,
+  formsSlice,
 );
 
 const store = configureStore({
