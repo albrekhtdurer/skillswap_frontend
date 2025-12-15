@@ -17,6 +17,9 @@ import { useSelector } from "../../features/store";
 import { categoriesSelector } from "../../features/categories/categoriesSlice";
 import { citiesSelector } from "../../features/cities/citiesSlice";
 import { useRegistrationAvatar } from "../../shared/hooks/useRegistrationAvatar";
+import { setRegFormState } from "../../features/forms/formsSlice";
+import { useDispatch } from "../../features/store";
+import { useNavigate } from "react-router-dom";
 
 const gender = [
   { name: "Не указан", value: "not specified" },
@@ -56,7 +59,10 @@ type TUserData = yup.InferType<typeof userSchema>;
 export const UserDataRegForm: FC = () => {
   const categories = useSelector(categoriesSelector);
   const cities = useSelector(citiesSelector);
-  const { previewUrl, setAvatar } = useRegistrationAvatar();
+  const { previewUrl, setAvatar, commitAvatar, discardAvatar } =
+    useRegistrationAvatar();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const categoryOptions = useMemo(() => {
     return categories.map((category) => ({
@@ -115,14 +121,21 @@ export const UserDataRegForm: FC = () => {
   const onSubmit: SubmitHandler<TUserData> = (data) => {
     const dataToSend = {
       ...data,
-      categoriesWantToLearn: data.categoriesWantToLearn.map((id) =>
+      categoryWantToLearn: data.categoriesWantToLearn.map((id) =>
         parseInt(id as string, 10),
       ),
-      subcategoriesWantToLearn: data.subcategoriesWantToLearn.map((id) =>
+      subcategoryWantToLearn: data.subcategoriesWantToLearn.map((id) =>
         parseInt(id as string, 10),
       ),
+      birthDate: data.birthDate.toISOString(),
+      gender:
+        data.gender === "male" || data.gender === "female" ? data.gender : null,
     };
-    console.log("Отправленные данные:", dataToSend);
+
+    // console.log("Отправленные данные:", dataToSend);
+    dispatch(setRegFormState(dataToSend));
+    commitAvatar();
+    navigate("/register/step3");
   };
 
   return (
@@ -279,7 +292,14 @@ export const UserDataRegForm: FC = () => {
         </label>
 
         <div className={styles.button_section}>
-          <Button fullWidth type="secondary">
+          <Button
+            fullWidth
+            type="secondary"
+            onClick={() => {
+              navigate("/register/step1");
+              discardAvatar();
+            }}
+          >
             Назад
           </Button>
           <Button disabled={!isValid} fullWidth htmlType="submit">

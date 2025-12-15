@@ -1,5 +1,4 @@
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
-import type { ISkillCategory, ISubcategory } from "../../entities/types";
 
 type TRegForm = {
   email: string | null;
@@ -8,12 +7,12 @@ type TRegForm = {
   birthDate: string | null;
   gender: "male" | "female" | null;
   location: string | null;
-  categoryWantToLearn: ISkillCategory | null;
-  subcategoryWantToLearn: ISubcategory | null;
+  categoryWantToLearn: number[] | null;
+  subcategoryWantToLearn: number[] | null;
   skillCanTeach: {
     name: string | null;
-    category: ISkillCategory | null;
-    subcategory: ISubcategory | null;
+    category: number | null;
+    subcategory: number | null;
     description: string | null;
   };
 };

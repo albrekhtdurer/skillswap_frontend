@@ -5,12 +5,14 @@ import Lamp from "../../assets/icons/light-bulb.svg";
 import styles from "./register-step1.module.css";
 import { useDispatch } from "../../features/store";
 import { setRegFormState } from "../../features/forms/formsSlice";
+import { useNavigate } from "react-router-dom";
 export const RegisterStep1Page = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   return (
     <div className={styles.page}>
       <div className={styles.header}>
-        <RegisterHeader step={1} />
+        <RegisterHeader />
       </div>
 
       <div className={styles.container}>
@@ -18,6 +20,7 @@ export const RegisterStep1Page = () => {
           <AuthForm
             onSubmit={({ email, password }) => {
               dispatch(setRegFormState({ email, password }));
+              navigate("/register/step2");
             }}
             submitButtonText="Далее"
             mode="register"

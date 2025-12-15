@@ -7,7 +7,7 @@ export const RegisterStep2Page = () => {
   return (
     <div className={styles.page}>
       <div className={styles.header}>
-        <RegisterHeader step={2} />
+        <RegisterHeader />
       </div>
 
       <div className={styles.container}>

@@ -17,6 +17,9 @@ import ImageUploader from "../image-upload-widget/image-upload-widget";
 import type { ISkillCategory, ISubcategory } from "../../entities/types";
 import { useTempSkillImages } from "../../shared/hooks/useTempSkillImages";
 import type { IUploadedFile } from "../../entities/types";
+import { setRegFormState } from "../../features/forms/formsSlice";
+import { useDispatch } from "../../features/store";
+import { useNavigate } from "react-router-dom";
 
 const skillsSchema = yup.object({
   name: yup
@@ -40,7 +43,13 @@ const skillsSchema = yup.object({
 
 type TUserSkills = yup.InferType<typeof skillsSchema>;
 
-export const UserSkillsRegForm: FC = () => {
+type TUserSkillsRegFormProps = {
+  setIsProposalOpen: (open: boolean) => void;
+};
+
+export const UserSkillsRegForm: FC<TUserSkillsRegFormProps> = ({
+  setIsProposalOpen,
+}) => {
   const categoriesData = useSelector(categoriesSelector);
   const categoryOptions = useMemo(() => {
     return categoriesData.map((category: ISkillCategory) => ({
@@ -48,6 +57,8 @@ export const UserSkillsRegForm: FC = () => {
       value: category.id.toString(),
     }));
   }, [categoriesData]);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const {
     register,
@@ -90,10 +101,27 @@ export const UserSkillsRegForm: FC = () => {
     );
   }, [selectedCategoryId, categoriesData]);
 
-  const { tempImages, addTempImages, removeTempImage } = useTempSkillImages();
+  const {
+    tempImages,
+    addTempImages,
+    removeTempImage,
+    commitImages,
+    discardImages,
+  } = useTempSkillImages();
 
   const onSubmit: SubmitHandler<TUserSkills> = (data) => {
-    console.log("Отправленные данные:", data);
+    const dataToSend = {
+      name: data.name,
+      category: data.categoryId,
+      subcategory: data.subCategoryId,
+      description: data.fullDescription,
+    };
+
+    // console.log("Отправленные данные:", dataToSend);
+    dispatch(setRegFormState({ skillCanTeach: dataToSend }));
+    commitImages();
+
+    setIsProposalOpen(true);
   };
 
   return (
@@ -210,7 +238,14 @@ export const UserSkillsRegForm: FC = () => {
         </div>
 
         <div className={styles.button_section}>
-          <Button fullWidth type="secondary">
+          <Button
+            fullWidth
+            type="secondary"
+            onClick={() => {
+              navigate("/register/step2");
+              discardImages();
+            }}
+          >
             Назад
           </Button>
           <Button disabled={!isValid} fullWidth htmlType="submit">
