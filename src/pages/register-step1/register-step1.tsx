@@ -12,7 +12,11 @@ export const RegisterStep1Page = () => {
 
       <div className={styles.container}>
         <div className={styles.left}>
-          <AuthForm onSubmit={() => {}} submitButtonText="Далее" />
+          <AuthForm
+            onSubmit={() => {}}
+            submitButtonText="Далее"
+            mode="register"
+          />
         </div>
 
         <div className={styles.right}>
