@@ -17,7 +17,6 @@ import { Login } from "../pages/login";
 import { fetchUserData } from "../features/auth/authSlice";
 import { RegisterStep1Page } from "../pages/register-step1";
 import { ProtectedRoute } from "../shared/ui/ProtectedRoute";
-import { UserDataEditFrom } from "../widgets/user-data-edit-form/user-data-edit-from";
 
 function App() {
   const dispatch = useDispatch();
@@ -69,7 +68,6 @@ function App() {
               </ProtectedRoute>
             }
           />
-          <Route path="user" element={<UserDataEditFrom />} />
         </Routes>
       </main>
       <Footer allSkillsOnClick={openPopup} />
