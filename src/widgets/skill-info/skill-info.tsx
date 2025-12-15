@@ -14,7 +14,7 @@ import {
   getCategories,
 } from "../../features/categories/categoriesSlice";
 import { useSelector, useDispatch } from "../../features/store";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect } from "react";
 import { selectCurrentUser } from "../../features/auth/authSlice";
 import { addProposal, hasProposal } from "../../shared/lib/proposals";
 
@@ -37,8 +37,6 @@ export const SkillInfo = ({
   const currentUser = useSelector(selectCurrentUser);
   const currentUserId = currentUser ? String(currentUser.id) : null;
 
-  const [proposalsTick, setProposalsTick] = useState(0);
-
   const categoryItem = categories.find((item) => item.id === skill.categoryId);
   const subcategoryItem = categoryItem?.subcategories.find(
     (item) => item.id == skill.subCategoryId,
@@ -48,15 +46,12 @@ export const SkillInfo = ({
     dispatch(getCategories());
   }, [dispatch]);
 
-  const isExchangeProposed = useMemo(() => {
-    return hasProposal(currentUserId, ownerUserId);
-  }, [currentUserId, ownerUserId, proposalsTick]);
+  const isExchangeProposed = hasProposal(currentUserId, ownerUserId);
 
   const handleProposeExchange = () => {
-    if (!currentUserId) return;
+    if (!currentUserId || isExchangeProposed) return;
 
     addProposal(currentUserId, ownerUserId);
-    setProposalsTick((v) => v + 1);
     onProposalConfirmOpen?.();
   };
 
@@ -95,11 +90,11 @@ export const SkillInfo = ({
           </p>
           <p>{skill.fullDescription}</p>
           <Button
-            type={isExchangeProposed ? "tertiary" : "primary"}
-            onClick={isExchangeProposed ? () => {} : handleProposeExchange}
+            type={isExchangeProposed ? "secondary" : "primary"}
+            onClick={handleProposeExchange}
             className={style.swap_button}
             fullWidth
-            disabled={!currentUserId}
+            disabled={!currentUserId || isExchangeProposed}
             icon={isExchangeProposed ? <ClockIcon /> : undefined}
           >
             {isExchangeProposed ? "Обмен предложен" : "Предложить обмен"}

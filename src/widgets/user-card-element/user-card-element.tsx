@@ -4,6 +4,15 @@ import { getSubcategoryColor } from "../../entities/subcategoryColors";
 import { Button } from "../../shared/ui/Button/Button";
 import { LikeButton } from "../../shared/ui/like-button";
 import { useSelector } from "../../features/store";
+import type React from "react";
+
+type TActionButton = {
+  text: string;
+  type?: "primary" | "secondary" | "tertiary";
+  icon?: React.ReactNode;
+  disabled?: boolean;
+  onClick: () => void;
+};
 
 export type TLikeInfo = {
   isLiked: boolean;
@@ -18,6 +27,7 @@ type TUserCardElementProps = {
   like?: TLikeInfo;
   withDescription?: boolean;
   onMoreDetailsClick?: () => void;
+  actionButton?: TActionButton;
 };
 
 export function UserCardElement({
@@ -25,6 +35,7 @@ export function UserCardElement({
   like,
   onMoreDetailsClick,
   withDescription = false,
+  actionButton,
 }: TUserCardElementProps) {
   const { categories } = useSelector((store) => store.categories);
   const {
@@ -120,10 +131,22 @@ export function UserCardElement({
       </div>
 
       {/* Кнопка для навигации к модальному окну с подробностями */}
-      {onMoreDetailsClick && (
-        <Button type="primary" fullWidth onClick={onMoreDetailsClick}>
-          Подробнее
+      {actionButton ? (
+        <Button
+          type={actionButton.type ?? "primary"}
+          fullWidth
+          onClick={actionButton.onClick}
+          disabled={actionButton.disabled}
+          icon={actionButton.icon}
+        >
+          {actionButton.text}
         </Button>
+      ) : (
+        onMoreDetailsClick && (
+          <Button type="primary" fullWidth onClick={onMoreDetailsClick}>
+            Подробнее
+          </Button>
+        )
       )}
     </article>
   );

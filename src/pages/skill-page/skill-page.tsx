@@ -10,9 +10,9 @@ import { useSelector } from "../../features/store";
 import { useParams } from "react-router-dom";
 import { useMemo, useState } from "react";
 
-import { PopupMenu } from "../../shared/ui/popup-menu";
+import { Modal } from "../../shared/ui/modal/modal";
 import { ModalConfirm } from "../../widgets/modal-confirm/modal-confirm";
-import Lamp from "../../assets/icons/light-bulb.svg";
+import Bell from "../../assets/icons/bell.svg";
 
 export const SkillPage = () => {
   const { id } = useParams();
@@ -54,19 +54,17 @@ export const SkillPage = () => {
         )}
       </div>
 
-      <PopupMenu
-        isOpen={confirmOpen}
-        onClose={() => setConfirmOpen(false)}
-        position="fixed-top-right"
-      >
-        <ModalConfirm
-          image={Lamp}
-          title="Вы предложили обмен"
-          text="Теперь дождитесь подтверждения. Вам придёт уведомление"
-          buttonText="Готово"
-          onClose={() => setConfirmOpen(false)}
-        />
-      </PopupMenu>
+      {confirmOpen && (
+        <Modal onClose={() => setConfirmOpen(false)}>
+          <ModalConfirm
+            image={Bell}
+            title="Вы предложили обмен"
+            text="Теперь дождитесь подтверждения. Вам придёт уведомление"
+            buttonText="Готово"
+            onClose={() => setConfirmOpen(false)}
+          />
+        </Modal>
+      )}
     </div>
   );
 };

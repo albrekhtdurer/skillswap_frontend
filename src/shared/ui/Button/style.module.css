@@ -67,7 +67,7 @@
 /* Secondary Button */
 
 .button-secondary {
-  background-color: var(--bg-color);
+  background-color: transparent;
   border: 2px solid var(--accent-color);
 }
 
