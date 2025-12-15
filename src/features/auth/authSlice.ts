@@ -87,6 +87,7 @@ export const authSlice = createSlice({
       state.isAuthenticated = false;
       state.error = null;
       state.loginError = null;
+      state.favourites = [];
     },
     clearError: (state) => {
       state.error = null;
