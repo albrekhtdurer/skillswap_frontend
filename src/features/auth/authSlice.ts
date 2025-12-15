@@ -12,6 +12,7 @@ type TAuthState = {
   isAuthenticated: boolean;
   loading: boolean;
   error: string | null;
+  loginError: string | null;
   authChecked: boolean;
 };
 
@@ -20,6 +21,7 @@ const initialState: TAuthState = {
   isAuthenticated: false,
   loading: false,
   error: null,
+  loginError: null,
   authChecked: false,
 };
 
@@ -81,9 +83,11 @@ export const authSlice = createSlice({
       state.currentUser = null;
       state.isAuthenticated = false;
       state.error = null;
+      state.loginError = null;
     },
     clearError: (state) => {
       state.error = null;
+      state.loginError = null;
     },
     setCurrentUser: (state, action: PayloadAction<IApiUser>) => {
       state.currentUser = action.payload;
@@ -97,17 +101,17 @@ export const authSlice = createSlice({
       })
       .addCase(loginUser.pending, (state) => {
         state.loading = true;
-        state.error = null;
+        state.loginError = null;
       })
       .addCase(loginUser.fulfilled, (state, action) => {
         state.loading = false;
         state.currentUser = action.payload.user;
         state.isAuthenticated = true;
-        state.error = null;
+        state.loginError = null;
       })
       .addCase(loginUser.rejected, (state, action) => {
         state.loading = false;
-        state.error = action.payload || "Ошибка авторизации";
+        state.loginError = action.payload || "Ошибка авторизации";
         state.isAuthenticated = false;
       })
       .addCase(fetchUserData.pending, (state) => {
@@ -132,6 +136,7 @@ export const authSlice = createSlice({
     selectAuthLoading: (state) => state.loading,
     selectAuthError: (state) => state.error,
     selectAuthChecked: (state) => state.authChecked,
+    selectLoginError: (state) => state.loginError,
   },
 });
 
@@ -142,4 +147,5 @@ export const {
   selectAuthLoading,
   selectAuthError,
   selectAuthChecked,
+  selectLoginError,
 } = authSlice.selectors;
