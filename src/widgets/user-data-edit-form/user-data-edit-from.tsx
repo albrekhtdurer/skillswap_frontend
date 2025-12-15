@@ -4,7 +4,7 @@ import { Controller, useForm, type SubmitHandler } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useSelector } from "../../features/store";
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 
 import { EditInput } from "../../shared/ui/Input";
 import { Button } from "../../shared/ui/Button/Button";
@@ -43,14 +43,16 @@ export const UserDataEditFrom = () => {
   const { cities } = useSelector((store) => store.cities);
   const { currentUser } = useSelector((store) => store.auth);
 
-  const defaultValues: TUserData = {
-    name: "",
-    email: "",
-    birthDate: new Date(),
-    gender: "not specified",
-    location: "",
-    description: "",
-  };
+  const defaultValues: TUserData = useMemo(() => {
+    return {
+      name: "",
+      email: "",
+      birthDate: new Date(),
+      gender: "not specified",
+      location: "",
+      description: "",
+    };
+  }, []);
 
   const {
     handleSubmit,
@@ -80,7 +82,7 @@ export const UserDataEditFrom = () => {
           description: currentUser.description,
         },
       });
-  }, [currentUser, reset]);
+  }, [currentUser, defaultValues, reset]);
 
   const onSubmit: SubmitHandler<TUserData> = (data) => {
     console.log("Отправленные данные:", data);
