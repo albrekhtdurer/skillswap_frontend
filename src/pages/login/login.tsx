@@ -6,7 +6,7 @@ import Lamp from "../../assets/icons/light-bulb.svg";
 import styles from "./login.module.css";
 import {
   loginUser,
-  selectAuthError,
+  selectLoginError,
   clearError,
 } from "../../features/auth/authSlice";
 
@@ -14,7 +14,7 @@ export const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const location = useLocation();
-  const authError = useSelector(selectAuthError);
+  const authError = useSelector(selectLoginError);
 
   const handleSubmit = async ({
     email,

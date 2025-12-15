@@ -17,6 +17,7 @@ import { Login } from "../pages/login";
 import { fetchUserData } from "../features/auth/authSlice";
 import { RegisterStep1Page } from "../pages/register-step1";
 import { ProtectedRoute } from "../shared/ui/ProtectedRoute";
+import { ServerError500 } from "../pages/server-error-500/ServerError500";
 
 function App() {
   const dispatch = useDispatch();
@@ -57,6 +58,7 @@ function App() {
       <main className={styles.content}>
         <Routes>
           <Route path="/" element={<UsersPage />} />
+          <Route path="/error" element={<ServerError500 />} />
           <Route path="*" element={<NotFound404 />} />
           <Route path="login" element={<Login />} />
           <Route path="skill/:id" element={<SkillPage />} />
@@ -84,7 +86,7 @@ function App() {
         onClose={closePopupMenuAvatar}
         position="bottom-right"
       >
-        <HeaderMenuAvatarContent />
+        <HeaderMenuAvatarContent onClose={closePopupMenuAvatar} />
       </PopupMenu>
     </div>
   );

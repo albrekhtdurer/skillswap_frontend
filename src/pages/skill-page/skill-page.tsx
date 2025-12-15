@@ -2,10 +2,7 @@ import style from "./skill-page.module.css";
 import { SkillInfo } from "../../widgets/skill-info";
 import { SkillUserCard } from "../../widgets/skill-user-card";
 import { UsersSlider } from "../../widgets/slider/users-slider/users-slider";
-import {
-  userByIdSelector,
-  usersBySkillIdSelector,
-} from "../../features/users/usersSlice";
+import { userByIdSelector } from "../../features/users/usersSlice";
 import { useSelector } from "../../features/store";
 import { useParams } from "react-router-dom";
 import { useMemo, useState } from "react";
@@ -20,8 +17,14 @@ export const SkillPage = () => {
 
   const user = useSelector((store) => userByIdSelector(store, userId));
 
-  const usersWithSameSkill = useSelector((store) =>
-    user ? usersBySkillIdSelector(store, user.skillCanTeach.id) : [],
+  const allUsers = useSelector((store) => store.users.users);
+
+  const usersWithSameSkill = useMemo(
+    () =>
+      user?.skillCanTeach?.id
+        ? allUsers.filter((u) => u.skillCanTeach?.id === user.skillCanTeach.id)
+        : [],
+    [allUsers, user],
   );
 
   const similarUsers = useMemo(() => {
