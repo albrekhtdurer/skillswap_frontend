@@ -1,3 +1,5 @@
+import { setCurrentUserFavourites } from "../../features/auth/authSlice";
+
 const FAVOURITES_STORAGE_KEY = "userFavourites";
 
 type TFavouritesStore = Record<string, number[]>;
@@ -67,5 +69,6 @@ export function updateUserFavourites(
   }
 
   saveUserFavourites(currentUserId, next);
+  setCurrentUserFavourites(next);
   return !isLiked;
 }
