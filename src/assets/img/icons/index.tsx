@@ -25,3 +25,4 @@ export { PencilIcon } from "./edit";
 export { ShareIcon } from "./share";
 export { MoreIcon } from "./more";
 export { LogoutIcon } from "./logout";
+export { ClockIcon } from "./clock";
