@@ -1,29 +1,46 @@
 import style from "./skill-page.module.css";
 import { SkillInfo } from "../../widgets/skill-info";
-import type { IUser } from "../../entities/types";
 import { SkillUserCard } from "../../widgets/skill-user-card";
 import { UsersSlider } from "../../widgets/slider/users-slider/users-slider";
-import { userByIdSelector } from "../../features/users/usersSlice";
+import {
+  userByIdSelector,
+  usersBySkillIdSelector,
+} from "../../features/users/usersSlice";
 import { useSelector } from "../../features/store";
 import { useParams } from "react-router-dom";
+import { useMemo } from "react";
 
-export type TSkillPageProps = {
-  similarUsers: IUser[];
-};
-
-export const SkillPage = ({ similarUsers }: TSkillPageProps) => {
+export const SkillPage = () => {
   const { id } = useParams();
-  const user = useSelector((store) => userByIdSelector(store, Number(id)));
+  const userId = Number(id);
+
+  const user = useSelector((store) => userByIdSelector(store, userId));
+
+  const usersWithSameSkill = useSelector((store) =>
+    user ? usersBySkillIdSelector(store, user.skillCanTeach.id) : [],
+  );
+
+  const similarUsers = useMemo(() => {
+    return usersWithSameSkill.filter((u) => u.id !== userId);
+  }, [usersWithSameSkill, userId]);
+
+  if (!user) {
+    return <div>Пользователь не найден</div>;
+  }
 
   return (
     <div className={style.page}>
       <div className={style.info}>
-        {user && <SkillUserCard user={user} />}
-        {user && <SkillInfo skill={user.skillCanTeach} images={user.images} />}
+        <SkillUserCard user={user} />
+        <SkillInfo skill={user.skillCanTeach} images={user.images} />
       </div>
       <div>
         <p className={style.similar_offers_title}>Похожие предложения</p>
-        <UsersSlider users={similarUsers} />
+        {similarUsers.length > 0 ? (
+          <UsersSlider users={similarUsers} />
+        ) : (
+          <p>Нет пользователей с таким же навыком</p>
+        )}
       </div>
     </div>
   );

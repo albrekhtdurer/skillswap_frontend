@@ -2,7 +2,7 @@
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 // @ts-expect-error - Библиотека @splidejs/react-splide имеет несовместимую конфигурацию типов
 import type { Splide as SplideInstance } from "@splidejs/react-splide";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import type { Options } from "@splidejs/splide";
 import { IMAGES_OPTIONS } from "../constants/sliderOptions";
 
@@ -22,12 +22,6 @@ export const ImagesSlider: React.FC<TImagesSliderProps> = ({
   const mainRef = useRef<SplideInstance>(null);
   const thumbsCount = 3;
 
-  useEffect(() => {
-    if (images && mainRef.current?.splide) {
-      mainRef.current.splide.go(0);
-    }
-  }, [images]);
-
   if (!images || images.length === 0) {
     return <div className={styles.noImages}>Нет фотографий</div>;
   }
@@ -36,16 +30,45 @@ export const ImagesSlider: React.FC<TImagesSliderProps> = ({
   const visibleTotal = 1 + thumbsCount;
   const remaining = total > visibleTotal ? total - visibleTotal : 0;
 
-  const finalOptions = {
+  const finalOptions: Options = {
     ...IMAGES_OPTIONS,
     ...options,
     arrows: (options?.arrows ?? IMAGES_OPTIONS.arrows ?? true) && total > 1,
   };
 
-  const thumbIndices = Array.from(
-    { length: thumbsCount },
-    (_, i) => (currentIndex + 1 + i) % total,
-  );
+  const getThumbIndices = (): number[] => {
+    if (total <= visibleTotal) {
+      const indices: number[] = [];
+
+      for (let i = 1; i < total; i++) {
+        const nextIdx = (currentIndex + i) % total;
+        if (nextIdx !== currentIndex && !indices.includes(nextIdx)) {
+          indices.push(nextIdx);
+        }
+      }
+
+      let offset = 1;
+      while (indices.length < thumbsCount && indices.length < total - 1) {
+        const prevIdx = (currentIndex - offset + total) % total;
+        if (prevIdx !== currentIndex && !indices.includes(prevIdx)) {
+          indices.push(prevIdx);
+        }
+        offset++;
+      }
+
+      return indices.slice(0, thumbsCount);
+    }
+
+    return Array.from(
+      { length: thumbsCount },
+      (_, i) => (currentIndex + 1 + i) % total,
+    );
+  };
+
+  const thumbIndices = getThumbIndices();
+  const showPlusOverlay =
+    total > visibleTotal && thumbIndices.length === thumbsCount;
+  const showThumbsColumn = thumbIndices.length > 0;
 
   return (
     <div className={styles.sliderWrapper}>
@@ -54,20 +77,25 @@ export const ImagesSlider: React.FC<TImagesSliderProps> = ({
         options={finalOptions}
         ref={mainRef}
         onMoved={(splide: SplideInstance) => setCurrentIndex(splide.index)}
+        key={images.length > 0 ? images[0] : "empty"}
       >
         {images.map((src, i) => (
-          <SplideSlide key={i}>
-            <img src={src} alt="" className={styles.mainImage} />
+          <SplideSlide key={src}>
+            <img
+              src={src}
+              alt={`Изображение ${i + 1}`}
+              className={styles.mainImage}
+            />
           </SplideSlide>
         ))}
       </Splide>
 
-      {total > 1 && (
+      {showThumbsColumn && (
         <div className={styles.thumbsColumn}>
           {thumbIndices.map((idx, pos) => {
             const isFirst = pos === 0;
-            const isLast = pos === thumbsCount - 1;
-            const showPlus = isLast && remaining > 0;
+            const isLast = pos === thumbIndices.length - 1;
+            const showPlus = showPlusOverlay && isLast;
 
             const thumbClasses = [
               styles.thumb,
@@ -79,9 +107,12 @@ export const ImagesSlider: React.FC<TImagesSliderProps> = ({
 
             return (
               <div
-                key={idx}
+                key={pos}
                 className={thumbClasses}
-                onClick={() => mainRef.current?.go(idx)}
+                onClick={() => {
+                  mainRef.current?.go(idx);
+                  setCurrentIndex(idx);
+                }}
               >
                 <img src={images[idx]} alt="" className={styles.thumbImg} />
                 {showPlus && (

@@ -1,4 +1,4 @@
-import { useEffect, useMemo, type FC } from "react";
+import { useMemo, type FC } from "react";
 import {
   Controller,
   useForm,
@@ -13,10 +13,10 @@ import { RegistrationAvatarField } from "../../pages/registration/registration-a
 import styles from "./user-data-reg-form.module.css";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-import type { ISubcategory } from "../../entities/types";
 import { useSelector } from "../../features/store";
 import { categoriesSelector } from "../../features/categories/categoriesSlice";
 import { citiesSelector } from "../../features/cities/citiesSlice";
+import { useRegistrationAvatar } from "../../shared/hooks/useRegistrationAvatar";
 
 const gender = [
   { name: "Не указан", value: "not specified" },
@@ -56,11 +56,18 @@ type TUserData = yup.InferType<typeof userSchema>;
 export const UserDataRegForm: FC = () => {
   const categories = useSelector(categoriesSelector);
   const cities = useSelector(citiesSelector);
+  const { previewUrl, setAvatar } = useRegistrationAvatar();
+
+  const categoryOptions = useMemo(() => {
+    return categories.map((category) => ({
+      name: category.name,
+      value: category.id.toString(),
+    }));
+  }, [categories]);
 
   const {
     handleSubmit,
     control,
-    setValue,
     trigger,
     formState: { isValid },
   } = useForm({
@@ -80,45 +87,42 @@ export const UserDataRegForm: FC = () => {
     defaultValue: [],
   });
 
-  const selectedSubcategories = useWatch({
-    control,
-    name: "subcategoriesWantToLearn",
-    defaultValue: [],
-  });
-
   const availableSubcategories = useMemo(() => {
     if (!selectedCategories || selectedCategories.length === 0) {
       return [];
     }
 
+    const selectedCategoryIds = selectedCategories.map((id) =>
+      parseInt(id as string, 10),
+    );
     const selectedCategoriesData = categories.filter((category) =>
-      selectedCategories.includes(category.name),
+      selectedCategoryIds.includes(category.id),
     );
 
-    const allSubcategories: ISubcategory[] = [];
+    const allSubcategories: Array<{ name: string; value: string }> = [];
     selectedCategoriesData.forEach((category) => {
-      allSubcategories.push(...category.subcategories);
+      category.subcategories.forEach((subcategory) => {
+        allSubcategories.push({
+          name: subcategory.name,
+          value: subcategory.id.toString(),
+        });
+      });
     });
 
     return allSubcategories;
   }, [selectedCategories, categories]);
 
-  useEffect(() => {
-    if (selectedSubcategories && selectedSubcategories.length > 0) {
-      const validSubcategories = selectedSubcategories.filter((subName) =>
-        availableSubcategories.some((sub) => sub.name === subName),
-      );
-
-      if (validSubcategories.length !== selectedSubcategories.length) {
-        setValue("subcategoriesWantToLearn", validSubcategories, {
-          shouldValidate: true,
-        });
-      }
-    }
-  }, [availableSubcategories, selectedSubcategories, setValue]);
-
   const onSubmit: SubmitHandler<TUserData> = (data) => {
-    console.log("Отправленные данные:", data);
+    const dataToSend = {
+      ...data,
+      categoriesWantToLearn: data.categoriesWantToLearn.map((id) =>
+        parseInt(id as string, 10),
+      ),
+      subcategoriesWantToLearn: data.subcategoriesWantToLearn.map((id) =>
+        parseInt(id as string, 10),
+      ),
+    };
+    console.log("Отправленные данные:", dataToSend);
   };
 
   return (
@@ -129,7 +133,11 @@ export const UserDataRegForm: FC = () => {
           control={control}
           render={({ field }) => (
             <RegistrationAvatarField
-              onAvatarChange={(file) => field.onChange(file)}
+              avatarUrl={previewUrl}
+              onAvatarChange={(file) => {
+                setAvatar(file);
+                field.onChange(file);
+              }}
             />
           )}
         />
@@ -224,7 +232,7 @@ export const UserDataRegForm: FC = () => {
             render={({ field, fieldState }) => (
               <DropdownComponent
                 {...field}
-                options={categories}
+                options={categoryOptions}
                 placeholder={"Выберите категорию"}
                 required={false}
                 isMulti={true}
@@ -271,10 +279,10 @@ export const UserDataRegForm: FC = () => {
         </label>
 
         <div className={styles.button_section}>
-          <Button fullWidth onClick={() => {}} type="secondary">
+          <Button fullWidth type="secondary">
             Назад
           </Button>
-          <Button disabled={!isValid} fullWidth onClick={() => {}}>
+          <Button disabled={!isValid} fullWidth htmlType="submit">
             Продолжить
           </Button>
         </div>

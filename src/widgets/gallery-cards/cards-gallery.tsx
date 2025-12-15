@@ -4,6 +4,8 @@ import { Button } from "../../shared/ui/Button/Button";
 import { MainUserCard } from "../main-user-card/main-user-card.tsx";
 import style from "./cards-gallery.module.css";
 import { SortIcon, RightIcon } from "../../assets/img/icons";
+import { useSelector } from "../../features/store";
+import { selectCurrentUser } from "../../features/auth/authSlice";
 
 export type CardsGalleryPros = {
   title: string;
@@ -11,6 +13,7 @@ export type CardsGalleryPros = {
   maxCards?: number;
   sortable?: boolean;
   sortOnClick?: () => void;
+  sortLabel?: string;
 };
 
 export const CardsGallery = ({
@@ -19,6 +22,7 @@ export const CardsGallery = ({
   maxCards,
   sortable,
   sortOnClick,
+  sortLabel,
 }: CardsGalleryPros) => {
   const [expanded, setExpanded] = useState(false);
 
@@ -31,9 +35,8 @@ export const CardsGallery = ({
     setExpanded((prev) => !prev);
   };
 
-  // TODO: заменить на данные из стора авторизации,
-  // когда будет готов auth
-  const currentUserId = "demo-user";
+  const currentUser = useSelector(selectCurrentUser);
+  const currentUserId = currentUser ? String(currentUser.id) : null;
 
   return (
     <div>
@@ -53,7 +56,7 @@ export const CardsGallery = ({
             <Button type="tertiary" onClick={sortOnClick || (() => {})}>
               <div className={style.card_gallery_button}>
                 <SortIcon />
-                Сначала новые
+                {sortLabel ?? "Сначала новые"}
               </div>
             </Button>
           )}
@@ -62,7 +65,7 @@ export const CardsGallery = ({
       <div className={style.card_gallery_main}>
         {displayedCards.map((user) => (
           <MainUserCard
-            key={user.id}
+            key={`${currentUserId ?? "guest"}-${user.id}`}
             user={user}
             currentUserId={currentUserId}
           />

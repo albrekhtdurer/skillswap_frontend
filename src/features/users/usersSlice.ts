@@ -40,6 +40,9 @@ export const usersSlice = createSlice({
     },
     userByIdSelector: (state, id: number) =>
       state.users.find((user) => user.id === id),
+    usersBySkillIdSelector: (state, skillId: number) => {
+      return state.users.filter((user) => user.skillCanTeach.id === skillId);
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -67,4 +70,5 @@ export const {
   usersLoadingSelector,
   selectedUserSelector,
   userByIdSelector,
+  usersBySkillIdSelector,
 } = usersSlice.selectors;

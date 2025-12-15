@@ -4,6 +4,7 @@ import style from "./post-reg-proposal-widgets.module.css";
 import { useSelector } from "../../features/store";
 import { categoriesSelector } from "../../features/categories/categoriesSlice";
 import { ImagesAuthorSlider } from "../slider/images-author-slider/images-author-slider";
+import { useTempSkillImages } from "../../shared/hooks/useTempSkillImages";
 
 export type TProposalWidgetsProps = {
   title: string;
@@ -23,6 +24,7 @@ export const ProposalWidgets = ({
   onClickReady,
 }: TProposalWidgetsProps) => {
   const categories = useSelector(categoriesSelector);
+  const { tempImages } = useTempSkillImages();
   const categorie = categories.find(
     (item) => item.id == skillCanTeach.categoryId,
   );
@@ -66,7 +68,7 @@ export const ProposalWidgets = ({
           </div>
         </div>
         <div>
-          <ImagesAuthorSlider />
+          <ImagesAuthorSlider images={tempImages} />
         </div>
       </div>
     </div>

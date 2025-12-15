@@ -23,7 +23,7 @@ type TDropdownComponentProps<T extends { name: string; value?: string }> = {
   required: boolean; //обязательно что-то выбрать или нет
   withCheckbox?: boolean; //чекбокс нужно сделать {true} для множественного выбора
   isCategory?: boolean; //для внешнего вида чекбокса при множественном выборе, по умолчанию false
-  value?: string | string[] | null;
+  value?: string | number | (string | number)[] | null;
   onChange?: (value: string | string[] | null) => void;
   error?: string;
   disabled?: boolean;
@@ -58,17 +58,29 @@ export const DropdownComponent = <T extends { name: string; value?: string }>({
   const getValue = ():
     | SingleValue<TSelectOptionProps>
     | MultiValue<TSelectOptionProps> => {
-    if (value === null || value === undefined || value === "") {
+    if (value === null || value === undefined) {
       return isMulti ? [] : null;
     }
 
     if (isMulti) {
       if (Array.isArray(value)) {
-        return selectOptions.filter((option) => value.includes(option.value));
+        const stringValues = value.map((v) =>
+          typeof v === "number" ? v.toString() : v || "",
+        );
+        return selectOptions.filter((option) =>
+          stringValues.includes(option.value),
+        );
       }
       return [];
     } else {
-      return (selectOptions.find((option) => option.value === value) ||
+      const stringValue =
+        typeof value === "number"
+          ? value.toString()
+          : typeof value === "string"
+            ? value
+            : "";
+
+      return (selectOptions.find((option) => option.value === stringValue) ||
         null) as SingleValue<TSelectOptionProps>;
     }
   };

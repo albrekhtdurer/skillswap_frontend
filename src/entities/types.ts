@@ -36,6 +36,7 @@ export interface IUser {
   subcategoriesWantToLearn: ISubcategory[];
   gender: "male" | "female" | "not specified";
   images: string[];
+  email: string;
 }
 
 export type TFilters = {
@@ -45,3 +46,42 @@ export type TFilters = {
   skillIds: number[];
   searchInputValue?: string;
 };
+
+export interface ILoginCredentials {
+  email: string;
+  password: string;
+}
+
+export interface IApiUser {
+  id: number;
+  name: string;
+  email: string;
+  location: string;
+  gender: string;
+  avatarUrl: string;
+  description: string;
+  birthDate: string;
+}
+
+export interface ILoginResponse {
+  status: number;
+  data: {
+    access_token: string;
+    token_type: string;
+    user: IApiUser;
+  };
+  error: string;
+}
+
+export interface IUserResponse {
+  status: number;
+  data: {
+    user: IApiUser;
+  };
+  error: string;
+}
+
+export interface IUploadedFile extends File {
+  preview?: string;
+  id: string;
+}

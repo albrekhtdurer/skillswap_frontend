@@ -8,19 +8,20 @@ import { useNavigate } from "react-router-dom";
 type THeaderProps = {
   handleSkillsClick?: () => void;
   ref?: React.Ref<HTMLElement>;
+  onProfileClick?: () => void;
 };
 
-export const Header: FC<THeaderProps> = ({ handleSkillsClick, ref }) => {
+export const Header: FC<THeaderProps> = ({
+  handleSkillsClick,
+  ref,
+  onProfileClick,
+}) => {
   const isFilterEnabled = useSelector(isNotEmptyWithoutSearchSelector);
-  const currentUser = useSelector(selectCurrentUser) || null;
+  const currentUser = useSelector(selectCurrentUser);
   const navigate = useNavigate();
 
   const handleLogin = () => {
     navigate("/login");
-  };
-
-  const handleProfileClick = () => {
-    console.log("Переход в профиль пользователя");
   };
 
   return (
@@ -30,7 +31,7 @@ export const Header: FC<THeaderProps> = ({ handleSkillsClick, ref }) => {
       handleSkillsClick={handleSkillsClick}
       user={currentUser}
       onLogin={handleLogin}
-      onProfileClick={handleProfileClick}
+      onProfileClick={onProfileClick}
     />
   );
 };

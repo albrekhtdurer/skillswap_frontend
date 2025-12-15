@@ -1,4 +1,4 @@
-import { useMemo, type FC } from "react";
+import { useMemo, useState, type FC } from "react";
 import { Sidebar } from "../../widgets/sidebar";
 import { useSelector } from "../../features/store";
 import style from "./style.module.css";
@@ -14,6 +14,12 @@ export const UsersPage: FC = () => {
   const filters = useSelector((state) => state.filters.filters);
   const users = useSelector((state) => state.users.users);
   const hasActiveFilters = useSelector(isNotEmptySelector);
+
+  const [sortOrder, setSortOrder] = useState<"desc" | "asc">("desc");
+
+  const handleToggleSort = () => {
+    setSortOrder((prev) => (prev === "desc" ? "asc" : "desc"));
+  };
 
   const popularUsers = useMemo(
     () => users.filter((user) => user.likes > 15),
@@ -34,15 +40,34 @@ export const UsersPage: FC = () => {
     [filters, users],
   );
 
+  const sortedFilteredUsers = useMemo(() => {
+    const copy = filteredUsers.slice();
+
+    copy.sort((a, b) => {
+      const aTime = new Date(a.createdAt).getTime();
+      const bTime = new Date(b.createdAt).getTime();
+
+      if (Number.isNaN(aTime) || Number.isNaN(bTime)) return 0;
+
+      return sortOrder === "desc" ? bTime - aTime : aTime - bTime;
+    });
+
+    return copy;
+  }, [filteredUsers, sortOrder]);
+
   return (
     <div className={style["users-page"]}>
       <Sidebar />
       <div className={style["users-page__body"]}>
         {hasActiveFilters ? (
           <CardsGallery
-            cards={filteredUsers}
-            title={`Подходящие предложения: ${filteredUsers.length}`}
+            cards={sortedFilteredUsers}
+            title={`Подходящие предложения: ${sortedFilteredUsers.length}`}
             sortable
+            sortLabel={
+              sortOrder === "desc" ? "Сначала старые" : "Сначала новые"
+            }
+            sortOnClick={handleToggleSort}
           />
         ) : (
           <>

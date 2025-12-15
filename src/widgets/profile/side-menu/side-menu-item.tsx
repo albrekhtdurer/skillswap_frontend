@@ -1,4 +1,4 @@
-import { TextLink } from "../../../shared/ui/text-link";
+import { NavLink } from "react-router-dom";
 import style from "./side-menu.module.css";
 
 export type TProfileSideMenuItemProps = {
@@ -6,6 +6,7 @@ export type TProfileSideMenuItemProps = {
   text: string;
   children: React.ReactNode;
   onClick: () => void;
+  to: string;
 };
 
 export const ProfileSideMenuItem = ({
@@ -13,9 +14,11 @@ export const ProfileSideMenuItem = ({
   text,
   children,
   onClick,
+  to,
 }: TProfileSideMenuItemProps) => {
   return (
-    <TextLink
+    <NavLink
+      to={to}
       className={`${style.item_wrapper} ${selected ? style.menu_item_selected : ""}`}
       onClick={onClick}
     >
@@ -23,6 +26,6 @@ export const ProfileSideMenuItem = ({
         {children}
         {text}
       </div>
-    </TextLink>
+    </NavLink>
   );
 };

@@ -12,6 +12,8 @@
 .item_wrapper {
   inline-size: 100%;
   max-inline-size: 100%;
+  color: inherit;
+  text-decoration: none;
   border-radius: var(--border-raduis-main);
 }
 

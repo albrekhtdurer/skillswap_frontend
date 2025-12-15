@@ -9,11 +9,11 @@ import {
 
 export const sideMenuItems: Pick<
   TProfileSideMenuItemProps,
-  "text" | "children"
+  "text" | "children" | "to"
 >[] = [
-  { text: "Заявки", children: <MessageIcon /> },
-  { text: "Мои обмены", children: <MessageTextIcon /> },
-  { text: "Избранное", children: <HeartIcon /> },
-  { text: "Мои навыки", children: <SkillIcon /> },
-  { text: "Личные данные", children: <UserIcon /> },
+  { text: "Заявки", children: <MessageIcon />, to: "/profile/requests" },
+  { text: "Мои обмены", children: <MessageTextIcon />, to: "/profile/trades" },
+  { text: "Избранное", children: <HeartIcon />, to: "/profile/favourites" },
+  { text: "Мои навыки", children: <SkillIcon />, to: "/profile/skills" },
+  { text: "Личные данные", children: <UserIcon />, to: "/profile" },
 ];

@@ -11,8 +11,11 @@
     "lint": "eslint --fix",
     "format": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\" \"./public/**/*.{js,jsx,ts,tsx,json,css,scss,md}\" --ignore-path ./.prettierignore --list-different",
     "git:add-all": "git add .",
-    "check": "npm run stylelint:fix && npm run format && npm run git:add-all && npm run lint && npm run git:add-all",
-    "preview": "vite preview"
+    "check": "npm run stylelint:fix && npm run format && npm run git:add-all && npm run lint && npm run git:add-all && npm run build && npm run git:add-all",
+    "preview": "vite preview",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.11.0",
@@ -35,6 +38,9 @@
   "devDependencies": {
     "@eslint/js": "^9.39.1",
     "@hookform/resolvers": "^5.2.2",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.0",
+    "@types/jest": "^30.0.0",
     "@types/node": "^24.10.1",
     "@types/react": "^19.2.5",
     "@types/react-dom": "^19.2.3",
@@ -51,16 +57,22 @@
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
     "globals": "^16.5.0",
+    "jest": "^30.2.0",
+    "jest-environment-jsdom": "^30.2.0",
     "prettier": "^3.7.1",
     "simple-git-hooks": "^2.13.1",
     "stylelint": "^16.26.1",
     "stylelint-config-standard": "^39.0.1",
     "stylelint-order": "^7.0.0",
+    "ts-jest": "^29.4.6",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.46.4",
     "vite": "^7.2.4"
   },
   "simple-git-hooks": {
     "pre-commit": "npm run check"
+  },
+  "optionalDependencies": {
+    "@rollup/rollup-win32-x64-msvc": "^4.53.3"
   }
 }

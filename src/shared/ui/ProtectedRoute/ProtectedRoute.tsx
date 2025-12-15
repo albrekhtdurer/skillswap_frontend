@@ -19,11 +19,7 @@ export const ProtectedRoute = ({
   if (forUnAuth) {
     // Если пользователь авторизован, редиректим на предыдущую страницу или главную
     if (currentUser) {
-      const { from } = (location.state as {
-        from?: { pathname: string };
-      } | null) || {
-        from: { pathname: "/" },
-      };
+      const { from } = location.state || { from: { pathname: "/" } };
       return <Navigate to={from} replace />;
     }
     // Если не авторизован, показываем страницу

@@ -3,20 +3,17 @@ import { useDropzone, type FileRejection } from "react-dropzone";
 import styles from "./image-upload-widget.module.css";
 import { ImagesIcon, CrossIcon } from "../../assets/img/icons";
 import { Button } from "../../shared/ui/Button/Button";
-import { useImages } from "../../shared/hooks/useImages";
-
-export interface IUploadedFile extends File {
-  preview: string;
-  id: string;
-}
+import { type IUploadedFile } from "../../entities/types";
 
 export interface IImageUploaderProps {
   maxFiles?: number;
-  onFilesUploaded?: (files: IUploadedFile[]) => void;
-  onFileRemoved?: (file: IUploadedFile) => void;
+  onFilesUploaded?: (files: File[]) => void;
+  onFileRemoved?: (fileId: string) => void;
+  state: IUploadedFile[] | [];
   className?: string;
   accept?: Record<string, string[]>;
   multiple?: boolean;
+  onChange?: (newValue: IUploadedFile[]) => void;
 }
 
 export interface DropzoneStyles {
@@ -28,6 +25,8 @@ export interface DropzoneStyles {
 
 const ImageUploader: React.FC<IImageUploaderProps> = ({
   maxFiles = 10,
+  onFilesUploaded,
+  onFileRemoved,
   className = "",
   accept = {
     "image/jpeg": [".jpg", ".jpeg"],
@@ -36,11 +35,11 @@ const ImageUploader: React.FC<IImageUploaderProps> = ({
     "image/gif": [".gif"],
   },
   multiple = true,
+  state,
+  onChange,
 }) => {
-  const { addImages, removeImage } = useImages();
-
-  const [files, setFiles] = useState<IUploadedFile[]>([]);
   const [errors, setErrors] = useState<string[]>([]);
+
   const onDrop = useCallback(
     (acceptedFiles: File[], fileRejections: FileRejection[]) => {
       setErrors([]);
@@ -65,16 +64,20 @@ const ImageUploader: React.FC<IImageUploaderProps> = ({
       const filesWithId: IUploadedFile[] = acceptedFiles.map((file) => {
         const filesWithId = Object.assign(file, {
           id: `${file.name}-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
-          preview: URL.createObjectURL(file),
         });
         return filesWithId as IUploadedFile;
       });
-      setFiles((prevFiles) => [...prevFiles, ...filesWithId]);
 
-      // Добавляем в indexDB
-      addImages(acceptedFiles);
+      if (onFilesUploaded) {
+        onFilesUploaded(filesWithId);
+      }
+
+      if (onChange) {
+        const newFiles = [...state, ...filesWithId];
+        onChange(newFiles);
+      }
     },
-    [addImages],
+    [onFilesUploaded, onChange, state],
   );
 
   const { getRootProps, getInputProps, isDragActive, isDragReject } =
@@ -93,19 +96,16 @@ const ImageUploader: React.FC<IImageUploaderProps> = ({
 
   const removeFile = useCallback(
     (fileId: string) => {
-      setFiles((prevFiles) => {
-        const fileToRemove = prevFiles.find((f) => f.id === fileId);
+      if (onFileRemoved) {
+        onFileRemoved(fileId);
+      }
 
-        if (fileToRemove) {
-          // Удаляем из IndexedDB
-          removeImage(fileToRemove);
-          // Освобождаем память
-          URL.revokeObjectURL(fileToRemove.preview);
-        }
-        return prevFiles.filter((f) => f.id !== fileId);
-      });
+      if (onChange) {
+        const newFiles = state.filter((file) => file.id !== fileId);
+        onChange(newFiles);
+      }
     },
-    [removeImage],
+    [onFileRemoved, onChange, state],
   );
 
   const formatFileSize = useCallback((bytes: number): string => {
@@ -117,7 +117,8 @@ const ImageUploader: React.FC<IImageUploaderProps> = ({
   }, []);
 
   const shouldLimit = maxFiles !== undefined && maxFiles > 0;
-  const displayedFiles = shouldLimit ? files.slice(0, maxFiles) : files;
+
+  const displayedFiles = shouldLimit ? state.slice(0, maxFiles) : state;
 
   return (
     <section className={styles.container}>
@@ -138,7 +139,7 @@ const ImageUploader: React.FC<IImageUploaderProps> = ({
               </span>
             ) : (
               <>
-                {files.length > 0 ? (
+                {state.length > 0 ? (
                   <aside className={styles.fileList}>
                     <ul>
                       {displayedFiles.map((file) => (

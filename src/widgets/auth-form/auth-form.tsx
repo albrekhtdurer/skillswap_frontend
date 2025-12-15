@@ -6,17 +6,23 @@ import { Input, PasswordInput } from "../../shared/ui/Input";
 import { Button } from "../../shared/ui/Button/Button";
 import styles from "./styles.module.css";
 import { TextLink } from "../../shared/ui/text-link";
+import { useNavigate } from "react-router-dom";
 
 type TAuthData = {
   email: string;
   password: string;
 };
 
+type TAuthFormMode = "login" | "register";
+
 type TAuthFormProps = {
   onSubmit: ({ email, password }: TAuthData) => void;
   className?: string;
   submitButtonText: string;
   optionalLinkText?: string;
+  optionalLinkUrl?: string;
+  mode?: TAuthFormMode;
+  submitErrorText?: string | null;
 };
 
 export const AuthForm: FC<TAuthFormProps> = ({
@@ -24,17 +30,29 @@ export const AuthForm: FC<TAuthFormProps> = ({
   className,
   submitButtonText,
   optionalLinkText,
+  optionalLinkUrl,
+  mode = "register",
+  submitErrorText = null,
 }) => {
-  const regSchema = yup.object().shape({
-    email: yup
-      .string()
-      .email("Не похоже на email")
-      .required("Это обязательное поле"),
-    password: yup
-      .string()
-      .min(8, "Пароль должен содержать не менее 8 знаков")
-      .required("Это обязательное поле"),
-  });
+  const schema =
+    mode === "login"
+      ? yup.object().shape({
+          email: yup
+            .string()
+            .email("Не похоже на email")
+            .required("Это обязательное поле"),
+          password: yup.string().required("Это обязательное поле"),
+        })
+      : yup.object().shape({
+          email: yup
+            .string()
+            .email("Не похоже на email")
+            .required("Это обязательное поле"),
+          password: yup
+            .string()
+            .min(8, "Пароль должен содержать не менее 8 знаков")
+            .required("Это обязательное поле"),
+        });
 
   const {
     register,
@@ -42,7 +60,9 @@ export const AuthForm: FC<TAuthFormProps> = ({
     formState: { errors, touchedFields, isValid },
     getValues,
     reset,
-  } = useForm({ resolver: yupResolver(regSchema), mode: "onChange" });
+  } = useForm({ resolver: yupResolver(schema), mode: "onChange" });
+
+  const navigate = useNavigate();
 
   const onError = () => {
     console.log();
@@ -55,6 +75,7 @@ export const AuthForm: FC<TAuthFormProps> = ({
         className={styles.registration__link}
         fullWidth
         type="secondary"
+        htmlType="button"
       >
         <svg
           width="24"
@@ -82,11 +103,13 @@ export const AuthForm: FC<TAuthFormProps> = ({
         </svg>
         Продолжить с Google
       </Button>
+
       <Button
         onClick={() => {}}
         className={styles.registration__link}
         fullWidth
         type="secondary"
+        htmlType="button"
       >
         <svg
           width="24"
@@ -102,10 +125,12 @@ export const AuthForm: FC<TAuthFormProps> = ({
         </svg>
         Продолжить с Apple
       </Button>
+
       <div className={styles.registration__separator}>или</div>
+
       <form
         onSubmit={handleSubmit(() => {
-          onSubmit(getValues());
+          onSubmit(getValues() as TAuthData);
           reset();
         }, onError)}
       >
@@ -118,26 +143,48 @@ export const AuthForm: FC<TAuthFormProps> = ({
           hint={errors.email && touchedFields.email ? errors.email.message : ""}
           className={styles.registration__input}
         ></Input>
+
         <PasswordInput
           {...register("password")}
           isError={errors.password && touchedFields.password}
           name="password"
           label="Пароль"
-          placeholder="Придумайте надежный пароль"
+          placeholder={
+            mode === "login"
+              ? "Введите ваш пароль"
+              : "Придумайте надежный пароль"
+          }
           hint={
             touchedFields.password
               ? errors.password
                 ? errors.password.message
-                : "Надежный"
-              : "Пароль должен содержать не менее 8 знаков"
+                : mode === "login"
+                  ? ""
+                  : "Надежный"
+              : mode === "login"
+                ? ""
+                : "Пароль должен содержать не менее 8 знаков"
           }
           className={`${styles.registration__input} ${styles.input_password}`}
         ></PasswordInput>
-        <Button disabled={!isValid} fullWidth onClick={() => {}}>
+        {submitErrorText ? (
+          <div className={styles.registration__error}>{submitErrorText}</div>
+        ) : null}
+
+        <Button
+          disabled={!isValid}
+          fullWidth
+          onClick={() => {}}
+          htmlType="submit"
+        >
           {submitButtonText}
         </Button>
+
         {optionalLinkText && (
-          <TextLink className={styles.registration__optional}>
+          <TextLink
+            onClick={() => navigate(optionalLinkUrl || "/")}
+            className={styles.registration__optional}
+          >
             {optionalLinkText}
           </TextLink>
         )}

@@ -33,23 +33,24 @@ export const updatePosition = (
   let left = 0;
 
   const gap = 8; // Отступ между якорем и меню
+  const edgeOffset = 40; // Отступ от края якоря
 
   switch (position) {
     case "top-left":
       top = anchorTop - menuHeight - gap;
-      left = anchorLeft;
+      left = anchorLeft + edgeOffset;
       break;
     case "top-right":
       top = anchorTop - menuHeight - gap;
-      left = anchorRight - menuWidth;
+      left = anchorRight - menuWidth - edgeOffset;
       break;
     case "bottom-left":
       top = anchorBottom + gap;
-      left = anchorLeft;
+      left = anchorLeft + edgeOffset;
       break;
     case "bottom-right":
       top = anchorBottom + gap;
-      left = anchorRight - menuWidth;
+      left = anchorRight - menuWidth - edgeOffset;
       break;
   }
 
@@ -58,10 +59,10 @@ export const updatePosition = (
   const viewportHeight = window.innerHeight;
 
   if (left + menuWidth > viewportWidth) {
-    left = viewportWidth - menuWidth - 8;
+    left = viewportWidth - menuWidth - edgeOffset;
   }
   if (left < 0) {
-    left = 8;
+    left = edgeOffset;
   }
 
   if (top + menuHeight > viewportHeight) {
