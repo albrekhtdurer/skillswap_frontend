@@ -112,7 +112,14 @@ function App() {
           <Route path="/" element={<UsersPage />} />
           <Route path="/error" element={<ServerError500 />} />
           <Route path="*" element={<NotFound404 />} />
-          <Route path="login" element={<Login />} />
+          <Route
+            path="login"
+            element={
+              <ProtectedRoute forUnAuth>
+                <Login />
+              </ProtectedRoute>
+            }
+          />
           <Route path="skill/:id" element={<SkillPage />} />
           <Route
             path="register/step1"
