@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import type { ISkillCategory } from "../../entities/types";
-import { api } from "../../api";
+import { categoriesApi } from "../../api/categories";
 
 type TCategoriesState = {
   categories: ISkillCategory[];
@@ -18,7 +18,7 @@ const initialState: TCategoriesState = {
 
 export const getCategories = createAsyncThunk(
   "categories/getCategories",
-  api.getCategories,
+  categoriesApi.getCategories,
 );
 
 export const categoriesSlice = createSlice({
@@ -35,13 +35,11 @@ export const categoriesSlice = createSlice({
         state.loading = true;
         state.status = "pending";
         state.error = undefined;
-        console.log(state.status);
       })
       .addCase(getCategories.rejected, (state, action) => {
         state.loading = false;
         state.status = "rejected";
         state.error = action.error.message;
-        console.log(state.status);
       })
       .addCase(getCategories.fulfilled, (state, action) => {
         state.loading = false;
