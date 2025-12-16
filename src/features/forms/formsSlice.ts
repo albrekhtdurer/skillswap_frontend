@@ -1,21 +1,5 @@
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
-
-type TRegForm = {
-  email: string | null;
-  password: string | null;
-  name: string | null;
-  birthDate: string | null;
-  gender: "male" | "female" | "not specified" | null;
-  location: string | null;
-  categoryWantToLearn: number[] | null;
-  subcategoryWantToLearn: number[] | null;
-  skillCanTeach: {
-    name: string | null;
-    category: number | null;
-    subcategory: number | null;
-    description: string | null;
-  };
-};
+import type { TRegForm } from "../../entities/types";
 
 type TFormsSliceState = {
   reg: TRegForm;
@@ -33,8 +17,8 @@ const initialState: TFormsSliceState = {
     subcategoryWantToLearn: null,
     skillCanTeach: {
       name: null,
-      category: null,
-      subcategory: null,
+      categoryId: null,
+      subcategoryId: null,
       description: null,
     },
   },

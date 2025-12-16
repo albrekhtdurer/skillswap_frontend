@@ -26,3 +26,4 @@ export { ShareIcon } from "./share";
 export { MoreIcon } from "./more";
 export { LogoutIcon } from "./logout";
 export { ClockIcon } from "./clock";
+export { DoneIcon } from "./done";

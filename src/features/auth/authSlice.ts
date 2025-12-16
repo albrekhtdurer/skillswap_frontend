@@ -4,7 +4,11 @@ import {
   createAsyncThunk,
   createAction,
 } from "@reduxjs/toolkit";
-import type { ILoginCredentials, IApiUser } from "../../entities/types";
+import type {
+  ILoginCredentials,
+  IApiUser,
+  IRegData,
+} from "../../entities/types";
 import { authApi } from "../../api/auth";
 import { getUserFavourites } from "../../shared/lib/favourites";
 
@@ -14,6 +18,7 @@ type TAuthState = {
   loading: boolean;
   error: string | null;
   loginError: string | null;
+  registerError: string | null;
   authChecked: boolean;
   favourites: number[];
 };
@@ -24,6 +29,7 @@ const initialState: TAuthState = {
   loading: false,
   error: null,
   loginError: null,
+  registerError: null,
   authChecked: false,
   favourites: [],
 };
@@ -77,6 +83,26 @@ export const fetchUserData = createAsyncThunk<
   }
 });
 
+export const registerUser = createAsyncThunk<
+  TLoginResult,
+  IRegData,
+  { rejectValue: string }
+>("auth/register", async (data: IRegData, { rejectWithValue }) => {
+  try {
+    const result = await authApi.registerUser(
+      data.form,
+      data.avatar,
+      data.images,
+    );
+    return result;
+  } catch (error) {
+    if (error instanceof Error) {
+      return rejectWithValue(error.message);
+    }
+    return rejectWithValue("Ошибка при регистрации пользователя");
+  }
+});
+
 export const authSlice = createSlice({
   name: "auth",
   initialState,
@@ -92,6 +118,7 @@ export const authSlice = createSlice({
     clearError: (state) => {
       state.error = null;
       state.loginError = null;
+      state.registerError = null;
     },
     setCurrentUser: (state, action: PayloadAction<IApiUser>) => {
       state.currentUser = action.payload;
@@ -138,6 +165,23 @@ export const authSlice = createSlice({
         state.loading = false;
         state.error =
           action.payload || "Ошибка при получении данных пользователя";
+      })
+      .addCase(registerUser.pending, (state) => {
+        state.loading = true;
+        state.registerError = null;
+      })
+      .addCase(registerUser.fulfilled, (state, action) => {
+        state.loading = false;
+        state.currentUser = action.payload.user;
+        state.isAuthenticated = true;
+        state.error = null;
+        state.registerError = null;
+        state.authChecked = true;
+      })
+      .addCase(registerUser.rejected, (state, action) => {
+        state.loading = false;
+        state.registerError = action.payload || "Ошибка регистрации";
+        state.isAuthenticated = false;
       });
   },
   selectors: {
@@ -148,6 +192,7 @@ export const authSlice = createSlice({
     selectAuthChecked: (state) => state.authChecked,
     selectCurrentUserFavourites: (state) => state.favourites,
     selectLoginError: (state) => state.loginError,
+    selectRegisterError: (state) => state.registerError,
   },
 });
 
@@ -161,4 +206,5 @@ export const {
   selectAuthChecked,
   selectCurrentUserFavourites,
   selectLoginError,
+  selectRegisterError,
 } = authSlice.selectors;

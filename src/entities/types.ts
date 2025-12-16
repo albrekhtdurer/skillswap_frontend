@@ -81,7 +81,38 @@ export interface IUserResponse {
   error: string;
 }
 
+export interface IAvatarResponse {
+  status: number;
+  data: {
+    avatar: string;
+  };
+  error: string;
+}
+
 export interface IUploadedFile extends File {
   preview?: string;
   id: string;
+}
+
+export type TRegForm = {
+  email: string | null;
+  password: string | null;
+  name: string | null;
+  birthDate: string | null;
+  gender: "male" | "female" | "not specified" | null;
+  location: string | null;
+  categoryWantToLearn: number[] | null;
+  subcategoryWantToLearn: number[] | null;
+  skillCanTeach: {
+    name: string | null;
+    categoryId: number | null;
+    subcategoryId: number | null;
+    description: string | null;
+  };
+};
+
+export interface IRegData {
+  form: TRegForm;
+  avatar: File;
+  images: File[];
 }

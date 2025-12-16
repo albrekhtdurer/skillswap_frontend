@@ -77,8 +77,8 @@ export const UserSkillsRegForm: FC<TUserSkillsRegFormProps> = ({
     resolver: yupResolver(skillsSchema),
     defaultValues: {
       name: reg.skillCanTeach.name || "",
-      categoryId: reg.skillCanTeach.category || undefined,
-      subCategoryId: reg.skillCanTeach.subcategory || undefined,
+      categoryId: reg.skillCanTeach.categoryId || undefined,
+      subCategoryId: reg.skillCanTeach.subcategoryId || undefined,
       fullDescription: reg.skillCanTeach.description || "",
       // images: tempImages, // doesnt work as default value. instead this see useEffect below
     },
@@ -117,8 +117,8 @@ export const UserSkillsRegForm: FC<TUserSkillsRegFormProps> = ({
   const dispatchSkill = (data: TUserSkills) => {
     const dataToSend = {
       name: data.name,
-      category: data.categoryId,
-      subcategory: data.subCategoryId,
+      categoryId: data.categoryId,
+      subcategoryId: data.subCategoryId,
       description: data.fullDescription,
     };
     dispatch(setRegFormState({ skillCanTeach: dataToSend }));
