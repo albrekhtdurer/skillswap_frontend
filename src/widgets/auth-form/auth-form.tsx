@@ -7,6 +7,7 @@ import { Button } from "../../shared/ui/Button/Button";
 import styles from "./styles.module.css";
 import { TextLink } from "../../shared/ui/text-link";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "../../features/store";
 
 type TAuthData = {
   email: string;
@@ -34,6 +35,7 @@ export const AuthForm: FC<TAuthFormProps> = ({
   mode = "register",
   submitErrorText = null,
 }) => {
+  const { reg } = useSelector((store) => store.forms);
   const schema =
     mode === "login"
       ? yup.object().shape({
@@ -60,7 +62,14 @@ export const AuthForm: FC<TAuthFormProps> = ({
     formState: { errors, touchedFields, isValid },
     getValues,
     reset,
-  } = useForm({ resolver: yupResolver(schema), mode: "onChange" });
+  } = useForm({
+    resolver: yupResolver(schema),
+    mode: "onChange",
+    defaultValues:
+      mode === "register"
+        ? { email: reg.email || "", password: reg.password || "" }
+        : { email: "", password: "" },
+  });
 
   const navigate = useNavigate();
 

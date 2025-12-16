@@ -17,6 +17,8 @@ import { NotificationsMenu } from "../widgets/notifications-menu";
 import { Login } from "../pages/login";
 import { fetchUserData } from "../features/auth/authSlice";
 import { RegisterStep1Page } from "../pages/register-step1";
+import { RegisterStep2Page } from "../pages/register-step2";
+import { RegisterStep3Page } from "../pages/register-step3";
 import { ProtectedRoute } from "../shared/ui/ProtectedRoute";
 import { ServerError500 } from "../pages/server-error-500/ServerError500";
 import { Profile } from "../pages/profile/profile";
@@ -126,6 +128,23 @@ function App() {
             element={
               <ProtectedRoute forUnAuth>
                 <RegisterStep1Page />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="register/step2"
+            element={
+              <ProtectedRoute forUnAuth>
+                <RegisterStep2Page />
+              </ProtectedRoute>
+            }
+          />
+
+          <Route
+            path="register/step3"
+            element={
+              <ProtectedRoute forUnAuth>
+                <RegisterStep3Page />
               </ProtectedRoute>
             }
           />

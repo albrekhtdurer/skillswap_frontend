@@ -17,6 +17,10 @@ import { useSelector } from "../../features/store";
 import { categoriesSelector } from "../../features/categories/categoriesSlice";
 import { citiesSelector } from "../../features/cities/citiesSlice";
 import { useRegistrationAvatar } from "../../shared/hooks/useRegistrationAvatar";
+import { setRegFormState } from "../../features/forms/formsSlice";
+import { useDispatch } from "../../features/store";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 const gender = [
   { name: "Не указан", value: "not specified" },
@@ -56,7 +60,10 @@ type TUserData = yup.InferType<typeof userSchema>;
 export const UserDataRegForm: FC = () => {
   const categories = useSelector(categoriesSelector);
   const cities = useSelector(citiesSelector);
-  const { previewUrl, setAvatar } = useRegistrationAvatar();
+  const { avatarFile, previewUrl, setAvatar } = useRegistrationAvatar();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const { reg } = useSelector((store) => store.forms);
 
   const categoryOptions = useMemo(() => {
     return categories.map((category) => ({
@@ -69,17 +76,32 @@ export const UserDataRegForm: FC = () => {
     handleSubmit,
     control,
     trigger,
+    getValues,
+    setValue,
     formState: { isValid },
   } = useForm({
     resolver: yupResolver(userSchema),
     defaultValues: {
-      name: "",
-      location: "",
-      categoriesWantToLearn: [],
-      subcategoriesWantToLearn: [],
+      name: reg.name || "",
+      location: reg.location || "",
+      categoriesWantToLearn: reg.categoryWantToLearn
+        ? reg.categoryWantToLearn.map((cat) => cat.toString())
+        : [],
+      subcategoriesWantToLearn: reg.subcategoryWantToLearn
+        ? reg.subcategoryWantToLearn.map((cat) => cat.toString())
+        : [],
+      gender: reg.gender || undefined,
+      birthDate: reg.birthDate ? new Date(reg.birthDate) : undefined,
+      // avatar: avatarFile || undefined, // doesnt work as default value. instead this see useEffect below
     },
     mode: "onChange",
   });
+
+  useEffect(() => {
+    setValue("avatar", avatarFile ?? null, {
+      shouldValidate: true,
+    });
+  }, [avatarFile, setValue]); // necessary to autocomplete form cause tempImages at 1st render is undefined
 
   const selectedCategories = useWatch({
     control,
@@ -112,17 +134,27 @@ export const UserDataRegForm: FC = () => {
     return allSubcategories;
   }, [selectedCategories, categories]);
 
-  const onSubmit: SubmitHandler<TUserData> = (data) => {
+  const dispatchData = (data: TUserData) => {
     const dataToSend = {
-      ...data,
-      categoriesWantToLearn: data.categoriesWantToLearn.map((id) =>
+      name: data.name,
+      location: data.location,
+      categoryWantToLearn: data.categoriesWantToLearn.map((id) =>
         parseInt(id as string, 10),
       ),
-      subcategoriesWantToLearn: data.subcategoriesWantToLearn.map((id) =>
+      subcategoryWantToLearn: data.subcategoriesWantToLearn.map((id) =>
         parseInt(id as string, 10),
       ),
+      birthDate: data.birthDate.toISOString(),
+      gender: ["male", "female", "not specified"].includes(data.gender)
+        ? data.gender
+        : null,
     };
-    console.log("Отправленные данные:", dataToSend);
+    dispatch(setRegFormState(dataToSend));
+  };
+
+  const onSubmit: SubmitHandler<TUserData> = (data) => {
+    dispatchData(data);
+    navigate("/register/step3");
   };
 
   return (
@@ -279,7 +311,14 @@ export const UserDataRegForm: FC = () => {
         </label>
 
         <div className={styles.button_section}>
-          <Button fullWidth type="secondary">
+          <Button
+            fullWidth
+            type="secondary"
+            onClick={() => {
+              dispatchData(getValues());
+              navigate("/register/step1", { state: { from: "step2" } });
+            }}
+          >
             Назад
           </Button>
           <Button disabled={!isValid} fullWidth htmlType="submit">

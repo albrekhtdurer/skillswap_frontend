@@ -5,6 +5,7 @@ import { useSelector } from "../../features/store";
 import { categoriesSelector } from "../../features/categories/categoriesSlice";
 import { ImagesAuthorSlider } from "../slider/images-author-slider/images-author-slider";
 import { useTempSkillImages } from "../../shared/hooks/useTempSkillImages";
+// import { useImages } from "../../shared/hooks/useImages";
 
 export type TProposalWidgetsProps = {
   title: string;
@@ -25,6 +26,7 @@ export const ProposalWidgets = ({
 }: TProposalWidgetsProps) => {
   const categories = useSelector(categoriesSelector);
   const { tempImages } = useTempSkillImages();
+  // const { images } = useImages(); // cause commit is not processed yet
   const categorie = categories.find(
     (item) => item.id == skillCanTeach.categoryId,
   );

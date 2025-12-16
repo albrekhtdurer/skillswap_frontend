@@ -17,6 +17,11 @@ import ImageUploader from "../image-upload-widget/image-upload-widget";
 import type { ISkillCategory, ISubcategory } from "../../entities/types";
 import { useTempSkillImages } from "../../shared/hooks/useTempSkillImages";
 import type { IUploadedFile } from "../../entities/types";
+import { setRegFormState } from "../../features/forms/formsSlice";
+import { useDispatch } from "../../features/store";
+import { useNavigate } from "react-router-dom";
+
+import { useEffect } from "react";
 
 const skillsSchema = yup.object({
   name: yup
@@ -40,7 +45,13 @@ const skillsSchema = yup.object({
 
 type TUserSkills = yup.InferType<typeof skillsSchema>;
 
-export const UserSkillsRegForm: FC = () => {
+type TUserSkillsRegFormProps = {
+  setIsProposalOpen: (open: boolean) => void;
+};
+
+export const UserSkillsRegForm: FC<TUserSkillsRegFormProps> = ({
+  setIsProposalOpen,
+}) => {
   const categoriesData = useSelector(categoriesSelector);
   const categoryOptions = useMemo(() => {
     return categoriesData.map((category: ISkillCategory) => ({
@@ -48,25 +59,38 @@ export const UserSkillsRegForm: FC = () => {
       value: category.id.toString(),
     }));
   }, [categoriesData]);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const { reg } = useSelector((store) => store.forms);
+
+  const { tempImages, addTempImages, removeTempImage } = useTempSkillImages();
 
   const {
     register,
     handleSubmit,
     control,
     setValue,
+    getValues,
     trigger,
     formState: { errors, isValid },
   } = useForm<TUserSkills>({
     resolver: yupResolver(skillsSchema),
     defaultValues: {
-      name: "",
-      categoryId: undefined,
-      subCategoryId: undefined,
-      fullDescription: "",
-      images: [],
+      name: reg.skillCanTeach.name || "",
+      categoryId: reg.skillCanTeach.category || undefined,
+      subCategoryId: reg.skillCanTeach.subcategory || undefined,
+      fullDescription: reg.skillCanTeach.description || "",
+      // images: tempImages, // doesnt work as default value. instead this see useEffect below
     },
     mode: "onChange",
   });
+
+  useEffect(() => {
+    setValue("images", tempImages ?? [], {
+      shouldValidate: true,
+      shouldDirty: true,
+    });
+  }, [tempImages, setValue]); // necessary to autocomplete form cause tempImages at 1st render is undefined
 
   const selectedCategoryId = useWatch({
     control,
@@ -90,10 +114,19 @@ export const UserSkillsRegForm: FC = () => {
     );
   }, [selectedCategoryId, categoriesData]);
 
-  const { tempImages, addTempImages, removeTempImage } = useTempSkillImages();
+  const dispatchSkill = (data: TUserSkills) => {
+    const dataToSend = {
+      name: data.name,
+      category: data.categoryId,
+      subcategory: data.subCategoryId,
+      description: data.fullDescription,
+    };
+    dispatch(setRegFormState({ skillCanTeach: dataToSend }));
+  };
 
   const onSubmit: SubmitHandler<TUserSkills> = (data) => {
-    console.log("Отправленные данные:", data);
+    dispatchSkill(data);
+    setIsProposalOpen(true);
   };
 
   return (
@@ -210,7 +243,14 @@ export const UserSkillsRegForm: FC = () => {
         </div>
 
         <div className={styles.button_section}>
-          <Button fullWidth type="secondary">
+          <Button
+            fullWidth
+            type="secondary"
+            onClick={() => {
+              navigate("/register/step2");
+              dispatchSkill(getValues());
+            }}
+          >
             Назад
           </Button>
           <Button disabled={!isValid} fullWidth htmlType="submit">
