@@ -171,7 +171,6 @@ describe("usersSlice", () => {
       it("должен возвращать выбранного пользователя", () => {
         const user = usersSlice.selectors.selectedUserSelector(mockRootState);
         expect(user).toEqual(mockUsers[0]);
-        expect(user?.id).toBe(1);
       });
 
       it("должен возвращать undefined если пользователь не выбран", () => {
@@ -203,7 +202,6 @@ describe("usersSlice", () => {
       it("должен возвращать пользователя по ID", () => {
         const user = usersSlice.selectors.userByIdSelector(mockRootState, 2);
         expect(user).toEqual(mockUsers[1]);
-        expect(user?.name).toBe("Jane Smith");
       });
 
       it("должен возвращать undefined если пользователь не найден", () => {
@@ -260,8 +258,12 @@ describe("usersSlice", () => {
         const action = { type: getUsers.pending.type };
         const state = usersSlice.reducer(initialState, action);
 
-        expect(state.loading).toBe(true);
-        expect(state.error).toBeUndefined();
+        expect(state).toEqual({
+          users: [],
+          loading: true,
+          error: undefined,
+          selectedUserId: null,
+        });
       });
 
       it("должен обрабатывать fulfilled состояние", () => {
@@ -272,9 +274,12 @@ describe("usersSlice", () => {
         };
         const state = usersSlice.reducer(initialState, action);
 
-        expect(state.loading).toBe(false);
-        expect(state.users).toEqual(mockUsers);
-        expect(state.error).toBeUndefined();
+        expect(state).toEqual({
+          users: mockUsers,
+          loading: false,
+          error: undefined,
+          selectedUserId: null,
+        });
       });
 
       it("должен обрабатывать rejected состояние", () => {
@@ -285,9 +290,12 @@ describe("usersSlice", () => {
         };
         const state = usersSlice.reducer(initialState, action);
 
-        expect(state.loading).toBe(false);
-        expect(state.users).toEqual([]);
-        expect(state.error).toBe("Network error");
+        expect(state).toEqual({
+          users: [],
+          loading: false,
+          error: "Network error",
+          selectedUserId: null,
+        });
       });
 
       it("должен сохранять порядок пользователей", () => {
@@ -299,9 +307,12 @@ describe("usersSlice", () => {
         };
         const state = usersSlice.reducer(initialState, action);
 
-        expect(state.users).toEqual(reversedUsers);
-        expect(state.users[0].id).toBe(2);
-        expect(state.users[1].id).toBe(1);
+        expect(state).toEqual({
+          users: reversedUsers,
+          loading: false,
+          error: undefined,
+          selectedUserId: null,
+        });
       });
 
       it("должен заменять существующих пользователей при новом запросе", () => {
@@ -317,8 +328,12 @@ describe("usersSlice", () => {
         };
         const state = usersSlice.reducer(initialState, action);
 
-        expect(state.users).toEqual([mockUsers[1]]);
-        expect(state.users[0].id).toBe(2);
+        expect(state).toEqual({
+          users: [mockUsers[1]],
+          loading: false,
+          error: undefined,
+          selectedUserId: null,
+        });
       });
     });
   });
@@ -336,9 +351,14 @@ describe("usersSlice", () => {
       await store.dispatch(getUsers());
       const state = store.getState();
 
-      expect(state.users.users).toHaveLength(2);
-      expect(state.users.users[0].email).toBe("john@example.com");
-      expect(state.users.users[1].email).toBe("jane@example.com");
+      expect(state).toEqual({
+        users: {
+          users: mockUsers,
+          loading: false,
+          error: undefined,
+          selectedUserId: null,
+        },
+      });
       expect(mockApi.getAllUsers).toHaveBeenCalledTimes(1);
     });
 
@@ -358,8 +378,14 @@ describe("usersSlice", () => {
       store.dispatch(clearSelectedUser());
 
       const state = store.getState();
-      expect(state.users.users).toHaveLength(2);
-      expect(state.users.selectedUserId).toBeNull();
+      expect(state).toEqual({
+        users: {
+          users: mockUsers,
+          loading: false,
+          error: undefined,
+          selectedUserId: null,
+        },
+      });
     });
   });
 });
