@@ -21,6 +21,8 @@ import { setRegFormState } from "../../features/forms/formsSlice";
 import { useDispatch } from "../../features/store";
 import { useNavigate } from "react-router-dom";
 
+import { useEffect } from "react";
+
 const skillsSchema = yup.object({
   name: yup
     .string()
@@ -59,25 +61,36 @@ export const UserSkillsRegForm: FC<TUserSkillsRegFormProps> = ({
   }, [categoriesData]);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const { reg } = useSelector((store) => store.forms);
+
+  const { tempImages, addTempImages, removeTempImage } = useTempSkillImages();
 
   const {
     register,
     handleSubmit,
     control,
     setValue,
+    getValues,
     trigger,
     formState: { errors, isValid },
   } = useForm<TUserSkills>({
     resolver: yupResolver(skillsSchema),
     defaultValues: {
-      name: "",
-      categoryId: undefined,
-      subCategoryId: undefined,
-      fullDescription: "",
-      images: [],
+      name: reg.skillCanTeach.name || "",
+      categoryId: reg.skillCanTeach.category || undefined,
+      subCategoryId: reg.skillCanTeach.subcategory || undefined,
+      fullDescription: reg.skillCanTeach.description || "",
+      // images: tempImages, // doesnt work as default value. instead this see useEffect below
     },
     mode: "onChange",
   });
+
+  useEffect(() => {
+    setValue("images", tempImages ?? [], {
+      shouldValidate: true,
+      shouldDirty: true,
+    });
+  }, [tempImages, setValue]); // necessary to autocomplete form cause tempImages at 1st render is undefined
 
   const selectedCategoryId = useWatch({
     control,
@@ -101,26 +114,18 @@ export const UserSkillsRegForm: FC<TUserSkillsRegFormProps> = ({
     );
   }, [selectedCategoryId, categoriesData]);
 
-  const {
-    tempImages,
-    addTempImages,
-    removeTempImage,
-    commitImages,
-    discardImages,
-  } = useTempSkillImages();
-
-  const onSubmit: SubmitHandler<TUserSkills> = (data) => {
+  const dispatchSkill = (data: TUserSkills) => {
     const dataToSend = {
       name: data.name,
       category: data.categoryId,
       subcategory: data.subCategoryId,
       description: data.fullDescription,
     };
-
-    // console.log("Отправленные данные:", dataToSend);
     dispatch(setRegFormState({ skillCanTeach: dataToSend }));
-    commitImages();
+  };
 
+  const onSubmit: SubmitHandler<TUserSkills> = (data) => {
+    dispatchSkill(data);
     setIsProposalOpen(true);
   };
 
@@ -243,7 +248,7 @@ export const UserSkillsRegForm: FC<TUserSkillsRegFormProps> = ({
             type="secondary"
             onClick={() => {
               navigate("/register/step2");
-              discardImages();
+              dispatchSkill(getValues());
             }}
           >
             Назад

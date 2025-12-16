@@ -7,9 +7,15 @@ import { useState } from "react";
 import { Modal } from "../../shared/ui/modal";
 import { useSelector } from "../../features/store";
 import { ProposalWidgets } from "../../widgets/post-reg-proposal-widgets/post-reg-proposal-widgets";
+import { useTempSkillImages } from "../../shared/hooks/useTempSkillImages";
+import { useRegistrationAvatar } from "../../shared/hooks/useRegistrationAvatar";
+
 export const RegisterStep3Page = () => {
   const [isProposalOpen, setIsProposalOpen] = useState(false);
   const { reg } = useSelector((store) => store.forms);
+  const { commitAvatar } = useRegistrationAvatar();
+  const { commitImages } = useTempSkillImages();
+
   return (
     <div className={styles.page}>
       <div className={styles.header}>
@@ -42,6 +48,8 @@ export const RegisterStep3Page = () => {
             onClickEdit={() => setIsProposalOpen(false)}
             onClickReady={() => {
               console.log("Reg form:", reg);
+              commitAvatar();
+              commitImages();
             }}
           />
         </Modal>

@@ -5,7 +5,7 @@ type TRegForm = {
   password: string | null;
   name: string | null;
   birthDate: string | null;
-  gender: "male" | "female" | null;
+  gender: "male" | "female" | "not specified" | null;
   location: string | null;
   categoryWantToLearn: number[] | null;
   subcategoryWantToLearn: number[] | null;
@@ -47,7 +47,10 @@ export const formsSlice = createSlice({
     setRegFormState: (state, action: PayloadAction<Partial<TRegForm>>) => {
       state.reg = { ...state.reg, ...action.payload };
     },
+    reset: (state) => {
+      state.reg = { ...initialState.reg };
+    },
   },
 });
 
-export const { setRegFormState } = formsSlice.actions;
+export const { setRegFormState, reset } = formsSlice.actions;

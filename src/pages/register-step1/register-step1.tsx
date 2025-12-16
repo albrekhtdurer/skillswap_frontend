@@ -6,9 +6,29 @@ import styles from "./register-step1.module.css";
 import { useDispatch } from "../../features/store";
 import { setRegFormState } from "../../features/forms/formsSlice";
 import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import { reset } from "../../features/forms/formsSlice";
+import { useRegistrationAvatar } from "../../shared/hooks/useRegistrationAvatar";
+import { useTempSkillImages } from "../../shared/hooks/useTempSkillImages";
+import { useEffect } from "react";
+
 export const RegisterStep1Page = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const location = useLocation();
+  const { discardAvatar } = useRegistrationAvatar();
+  const { discardImages } = useTempSkillImages();
+
+  useEffect(() => {
+    const fromStep2 = location.state?.from === "step2";
+
+    if (!fromStep2) {
+      dispatch(reset());
+      discardAvatar();
+      discardImages();
+    }
+  }, [location.state, dispatch, discardAvatar, discardImages]);
+
   return (
     <div className={styles.page}>
       <div className={styles.header}>
