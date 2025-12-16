@@ -3,6 +3,7 @@ import { LogoutIcon } from "../../assets/img/icons";
 import { Button } from "../../shared/ui/Button/Button";
 import { useDispatch } from "../../features/store";
 import { logout } from "../../features/auth/authSlice";
+import { useNavigate } from "react-router-dom";
 
 export const HeaderMenuAvatarContent = ({
   onClose,
@@ -10,6 +11,13 @@ export const HeaderMenuAvatarContent = ({
   onClose: () => void;
 }) => {
   const dispatch = useDispatch();
+
+  const navigate = useNavigate();
+
+  const handleProfileClick = () => {
+    navigate("/profile");
+    onClose();
+  };
 
   const handleLogout = () => {
     dispatch(logout());
@@ -19,7 +27,11 @@ export const HeaderMenuAvatarContent = ({
   return (
     <ul className={styles.menuList}>
       <li className={styles.menuItemButton}>
-        <Button type="tertiary" onClick={onClose} className={styles.menuItem}>
+        <Button
+          type="tertiary"
+          onClick={handleProfileClick}
+          className={styles.menuItem}
+        >
           Личный кабинет
         </Button>
       </li>

@@ -197,23 +197,26 @@ export const UserDataEditFrom = () => {
             )}
           />
         </label>
-        <Controller
-          name="description"
-          control={control}
-          render={({ field, fieldState }) => (
-            <EditTextarea
-              {...field}
-              placeholder={"Введите описание"}
-              label={"Описание"}
-              onChange={(e) => {
-                field.onChange(e.target.value);
-                trigger("description");
-              }}
-              className={styles.description_field}
-              hint={fieldState.error?.message}
-            />
-          )}
-        />
+        <label className={styles.label}>
+          О себе
+          <Controller
+            name="description"
+            control={control}
+            render={({ field, fieldState }) => (
+              <EditTextarea
+                {...field}
+                placeholder={"Введите описание"}
+                label={"Описание"}
+                onChange={(e) => {
+                  field.onChange(e.target.value);
+                  trigger("description");
+                }}
+                className={styles.description_field}
+                hint={fieldState.error?.message}
+              />
+            )}
+          />
+        </label>
         <Button
           onClick={() => {}}
           fullWidth

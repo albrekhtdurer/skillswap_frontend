@@ -18,6 +18,8 @@ import { fetchUserData } from "../features/auth/authSlice";
 import { RegisterStep1Page } from "../pages/register-step1";
 import { ProtectedRoute } from "../shared/ui/ProtectedRoute";
 import { ServerError500 } from "../pages/server-error-500/ServerError500";
+import { Profile } from "../pages/profile/profile";
+import { UserDataEditFrom } from "../widgets/user-data-edit-form/user-data-edit-from";
 
 function App() {
   const dispatch = useDispatch();
@@ -70,6 +72,16 @@ function App() {
               </ProtectedRoute>
             }
           />
+          <Route
+            path="/profile/*"
+            element={
+              <ProtectedRoute>
+                <Profile />
+              </ProtectedRoute>
+            }
+          >
+            <Route index element={<UserDataEditFrom />} />
+          </Route>
         </Routes>
       </main>
       <Footer allSkillsOnClick={openPopup} />
