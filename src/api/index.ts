@@ -30,4 +30,10 @@ export const api = {
     await delay(300);
     return fetchJson<IUser[]>("/db/users.json");
   },
+
+  async getUserById(id: number): Promise<IUser | undefined> {
+    await delay(300);
+    const users = await fetchJson<IUser[]>("/db/users.json");
+    return users.find((user) => user.id === id);
+  },
 };

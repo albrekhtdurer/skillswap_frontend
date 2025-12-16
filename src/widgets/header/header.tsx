@@ -9,12 +9,14 @@ type THeaderProps = {
   handleSkillsClick?: () => void;
   ref?: React.Ref<HTMLElement>;
   onProfileClick?: () => void;
+  onNotificationsClick?: () => void;
 };
 
 export const Header: FC<THeaderProps> = ({
   handleSkillsClick,
   ref,
   onProfileClick,
+  onNotificationsClick,
 }) => {
   const isFilterEnabled = useSelector(isNotEmptyWithoutSearchSelector);
   const currentUser = useSelector(selectCurrentUser);
@@ -32,6 +34,7 @@ export const Header: FC<THeaderProps> = ({
       user={currentUser}
       onLogin={handleLogin}
       onProfileClick={onProfileClick}
+      onNotificationsClick={onNotificationsClick}
     />
   );
 };
