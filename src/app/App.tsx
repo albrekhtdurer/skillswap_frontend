@@ -15,7 +15,6 @@ import { SkillsMenu } from "../widgets/skills-menu";
 import { HeaderMenuAvatarContent } from "../widgets/header-popup-widget/header-menu-avatar-content";
 import { Login } from "../pages/login";
 import { fetchUserData } from "../features/auth/authSlice";
-import { UserFavourites } from "../widgets/user-favourites/user-favourites";
 import { RegisterStep1Page } from "../pages/register-step1";
 import { ProtectedRoute } from "../shared/ui/ProtectedRoute";
 
@@ -58,7 +57,6 @@ function App() {
       <main className={styles.content}>
         <Routes>
           <Route path="/" element={<UsersPage />} />
-          <Route path="favs" element={<UserFavourites />} />
           <Route path="*" element={<NotFound404 />} />
           <Route path="login" element={<Login />} />
           <Route path="skill/:id" element={<SkillPage />} />
