@@ -1,7 +1,8 @@
 .wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin: 20px; /* remove it before git push */
+  flex-grow: 1;
+  min-inline-size: 752px;
   padding: 60px;
   background-color: var(--card-input-color);
   border-top-left-radius: 24px;
