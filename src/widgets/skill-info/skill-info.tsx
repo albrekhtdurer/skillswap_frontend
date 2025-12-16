@@ -9,12 +9,8 @@ import {
 } from "../../assets/img/icons";
 import style from "./skill-info.module.css";
 
-import {
-  categoriesSelector,
-  getCategories,
-} from "../../features/categories/categoriesSlice";
-import { useSelector, useDispatch } from "../../features/store";
-import { useEffect } from "react";
+import { categoriesSelector } from "../../features/categories/categoriesSlice";
+import { useSelector } from "../../features/store";
 import { selectCurrentUser } from "../../features/auth/authSlice";
 import { addProposal, hasProposal } from "../../shared/lib/proposals";
 
@@ -31,7 +27,6 @@ export const SkillInfo = ({
   ownerUserId,
   onProposalConfirmOpen,
 }: TSkillInfoProps) => {
-  const dispatch = useDispatch();
   const categories = useSelector(categoriesSelector);
 
   const currentUser = useSelector(selectCurrentUser);
@@ -41,10 +36,6 @@ export const SkillInfo = ({
   const subcategoryItem = categoryItem?.subcategories.find(
     (item) => item.id == skill.subCategoryId,
   );
-
-  useEffect(() => {
-    dispatch(getCategories());
-  }, [dispatch]);
 
   const isExchangeProposed = hasProposal(currentUserId, ownerUserId);
 
