@@ -6,6 +6,7 @@ import {
 } from "@reduxjs/toolkit";
 import type { ILoginCredentials, IApiUser } from "../../entities/types";
 import { authApi } from "../../api/auth";
+import { getUserFavourites } from "../../shared/lib/favourites";
 
 type TAuthState = {
   currentUser: IApiUser | null;
@@ -14,6 +15,7 @@ type TAuthState = {
   error: string | null;
   loginError: string | null;
   authChecked: boolean;
+  favourites: number[];
 };
 
 const initialState: TAuthState = {
@@ -23,6 +25,7 @@ const initialState: TAuthState = {
   error: null,
   loginError: null,
   authChecked: false,
+  favourites: [],
 };
 
 type TLoginResult = {
@@ -84,6 +87,7 @@ export const authSlice = createSlice({
       state.isAuthenticated = false;
       state.error = null;
       state.loginError = null;
+      state.favourites = [];
     },
     clearError: (state) => {
       state.error = null;
@@ -92,6 +96,9 @@ export const authSlice = createSlice({
     setCurrentUser: (state, action: PayloadAction<IApiUser>) => {
       state.currentUser = action.payload;
       state.isAuthenticated = true;
+    },
+    setCurrentUserFavourites: (state, action: PayloadAction<number[]>) => {
+      state.favourites = action.payload;
     },
   },
   extraReducers: (builder) => {
@@ -107,7 +114,9 @@ export const authSlice = createSlice({
         state.loading = false;
         state.currentUser = action.payload.user;
         state.isAuthenticated = true;
+        state.error = null;
         state.loginError = null;
+        state.favourites = getUserFavourites(action.payload.user.id.toString());
       })
       .addCase(loginUser.rejected, (state, action) => {
         state.loading = false;
@@ -123,6 +132,7 @@ export const authSlice = createSlice({
         state.currentUser = action.payload.user;
         state.isAuthenticated = true;
         state.error = null;
+        state.favourites = getUserFavourites(action.payload.user.id.toString());
       })
       .addCase(fetchUserData.rejected, (state, action) => {
         state.loading = false;
@@ -136,16 +146,19 @@ export const authSlice = createSlice({
     selectAuthLoading: (state) => state.loading,
     selectAuthError: (state) => state.error,
     selectAuthChecked: (state) => state.authChecked,
+    selectCurrentUserFavourites: (state) => state.favourites,
     selectLoginError: (state) => state.loginError,
   },
 });
 
-export const { logout, clearError, setCurrentUser } = authSlice.actions;
+export const { logout, clearError, setCurrentUser, setCurrentUserFavourites } =
+  authSlice.actions;
 export const {
   selectCurrentUser,
   selectIsAuthenticated,
   selectAuthLoading,
   selectAuthError,
   selectAuthChecked,
+  selectCurrentUserFavourites,
   selectLoginError,
 } = authSlice.selectors;

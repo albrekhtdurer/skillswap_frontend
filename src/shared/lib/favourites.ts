@@ -1,3 +1,5 @@
+import { addElementInArray, excludeElementFromArray } from "./helpers";
+
 const FAVOURITES_STORAGE_KEY = "userFavourites";
 
 type TFavouritesStore = Record<string, number[]>;
@@ -61,9 +63,9 @@ export function updateUserFavourites(
 
   let next: number[];
   if (isLiked) {
-    next = current.filter((id) => id !== userId);
+    next = excludeElementFromArray(current, userId);
   } else {
-    next = current.includes(userId) ? current : [...current, userId];
+    next = addElementInArray(current, userId);
   }
 
   saveUserFavourites(currentUserId, next);
