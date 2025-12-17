@@ -22,6 +22,7 @@ import { RegisterStep3Page } from "../pages/register-step3";
 import { ProtectedRoute } from "../shared/ui/ProtectedRoute";
 import { ServerError500 } from "../pages/server-error-500/ServerError500";
 import { Profile } from "../pages/profile/profile";
+import { FavouritesPage } from "../pages/favourites-page/favourites-page";
 import { UserDataEditFrom } from "../widgets/user-data-edit-form/user-data-edit-from";
 import { Loader } from "../shared/ui/loader/Loader";
 
@@ -174,6 +175,17 @@ function App() {
                 </ProtectedRoute>
               }
             >
+              <Route index element={<UserDataEditFrom />} />
+            </Route>
+            <Route
+              path="/profile/*"
+              element={
+                <ProtectedRoute>
+                  <Profile />
+                </ProtectedRoute>
+              }
+            >
+              <Route path="favourites" element={<FavouritesPage />} />
               <Route index element={<UserDataEditFrom />} />
             </Route>
           </Routes>
