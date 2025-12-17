@@ -5,6 +5,8 @@ import style from "./style.module.css";
 import { getFilteredUsers } from "../../entities/get-filtered-users";
 import { CardsGallery } from "../../widgets/gallery-cards";
 import { isNotEmptySelector } from "../../features/filters/filtersSlice";
+import { CardsScrollableGallery } from "../../widgets/cards-scrollable-gallery/cards-scrollable-gallery";
+import { selectCurrentUser } from "../../features/auth/authSlice";
 
 const MONTH_IN_MS = 30 * 24 * 60 * 60 * 1000;
 const NOW = Date.now();
@@ -20,6 +22,9 @@ export const UsersPage: FC = () => {
   const handleToggleSort = () => {
     setSortOrder((prev) => (prev === "desc" ? "asc" : "desc"));
   };
+
+  const currentUser = useSelector(selectCurrentUser);
+  const currentUserId = currentUser ? String(currentUser.id) : null;
 
   const popularUsers = useMemo(
     () => users.filter((user) => user.likes > 15),
@@ -83,9 +88,12 @@ export const UsersPage: FC = () => {
               <div className={style.section}>
                 <CardsGallery cards={newUsers} title="Новое" maxCards={3} />
               </div>
-
               <div className={style.section}>
-                <CardsGallery cards={users} title="Рекомендуем" />
+                <CardsScrollableGallery
+                  cards={users}
+                  title="Рекомендуем"
+                  currentUserId={currentUserId}
+                />
               </div>
             </>
           </>
