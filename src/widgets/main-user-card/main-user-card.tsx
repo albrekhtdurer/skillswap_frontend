@@ -1,22 +1,10 @@
-import { useMemo, useState } from "react";
+import { useMemo /* useState */ } from "react";
 import { useNavigate } from "react-router-dom";
 import type { IUser } from "../../entities/types";
 import { UserCardElement } from "../user-card-element";
-import {
-  computeIsLiked,
-  updateUserFavourites,
-} from "../../shared/lib/favourites";
-import { useDispatch, useSelector } from "../../features/store";
-import {
-  selectCurrentUserFavourites,
-  setCurrentUserFavourites,
-} from "../../features/auth/authSlice";
-import {
-  addElementInArray,
-  excludeElementFromArray,
-} from "../../shared/lib/helpers";
 import { hasProposal } from "../../shared/lib/proposals";
 import { ClockIcon } from "../../assets/img/icons";
+import { useLike } from "../../shared/hooks/useLike";
 
 type TMainUserCardProps = {
   user: IUser;
@@ -25,13 +13,11 @@ type TMainUserCardProps = {
 
 export function MainUserCard({ user, currentUserId }: TMainUserCardProps) {
   const navigate = useNavigate();
-  const dispatch = useDispatch();
-  const favourites = useSelector(selectCurrentUserFavourites);
-  const isAuthorized = Boolean(currentUserId);
-
-  const [isLiked, setIsLiked] = useState(() =>
-    computeIsLiked(currentUserId, user.id, user.isLiked),
-  );
+  const { isLiked, isLikeDisabled, toggleLike } = useLike({
+    targetUserId: user.id,
+    currentUserId: currentUserId || null,
+    initialIsLiked: user.isLiked,
+  });
 
   const baseLikes = user.likes;
   const likesCount = baseLikes + (isLiked ? 1 : 0);
@@ -39,19 +25,6 @@ export function MainUserCard({ user, currentUserId }: TMainUserCardProps) {
   const isExchangeProposed = useMemo(() => {
     return hasProposal(currentUserId, user.id);
   }, [currentUserId, user.id]);
-
-  const handleToggleLike = () => {
-    if (!currentUserId) return;
-    const newIsLiked = updateUserFavourites(currentUserId, user.id, isLiked);
-    dispatch(
-      setCurrentUserFavourites(
-        isLiked
-          ? excludeElementFromArray(favourites, user.id)
-          : addElementInArray(favourites, user.id),
-      ),
-    );
-    setIsLiked(newIsLiked);
-  };
 
   const handleMoreDetailsClick = () => {
     navigate(`/skill/${user.id}`);
@@ -62,8 +35,8 @@ export function MainUserCard({ user, currentUserId }: TMainUserCardProps) {
       user={user}
       like={{
         isLiked,
-        isLikeDisabled: !isAuthorized,
-        onToggleLike: handleToggleLike,
+        isLikeDisabled,
+        onToggleLike: toggleLike,
         likesCount,
       }}
       actionButton={{

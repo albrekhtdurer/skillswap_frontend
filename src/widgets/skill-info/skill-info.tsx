@@ -1,18 +1,15 @@
 import type { TSkill } from "../../entities/types";
 import { ImagesSlider } from "../slider/images-slider/images-slider";
 import { Button } from "../../shared/ui/Button/Button";
-import {
-  HeartIcon,
-  ShareIcon,
-  MoreIcon,
-  ClockIcon,
-} from "../../assets/img/icons";
+import { LikeButton } from "../../shared/ui/like-button";
+import { ShareIcon, MoreIcon, ClockIcon } from "../../assets/img/icons";
 import style from "./skill-info.module.css";
 
 import { categoriesSelector } from "../../features/categories/categoriesSlice";
 import { useSelector } from "../../features/store";
 import { selectCurrentUser } from "../../features/auth/authSlice";
 import { addProposal, hasProposal } from "../../shared/lib/proposals";
+import { useLike } from "../../shared/hooks/useLike";
 
 export type TSkillInfoProps = {
   skill: TSkill;
@@ -39,6 +36,11 @@ export const SkillInfo = ({
 
   const isExchangeProposed = hasProposal(currentUserId, ownerUserId);
 
+  const { isLiked, isLikeDisabled, toggleLike } = useLike({
+    targetUserId: ownerUserId,
+    currentUserId,
+  });
+
   const handleProposeExchange = () => {
     if (!currentUserId || isExchangeProposed) return;
 
@@ -49,13 +51,11 @@ export const SkillInfo = ({
   return (
     <div className={style.skill_info_section}>
       <div className={style.icon_buttons}>
-        <Button
-          type="tertiary"
-          onClick={() => {}}
-          className={style.icon_button}
-        >
-          <HeartIcon />
-        </Button>
+        <LikeButton
+          isLiked={isLiked}
+          isLikeDisabled={isLikeDisabled}
+          toggleLike={toggleLike}
+        />
         <Button
           type="tertiary"
           onClick={() => {}}
