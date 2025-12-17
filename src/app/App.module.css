@@ -8,3 +8,13 @@
   flex: 1;
   overflow-y: auto;
 }
+
+.loaderWrapper {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  transform: scale(1.4);
+}

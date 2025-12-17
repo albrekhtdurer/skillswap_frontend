@@ -5,7 +5,7 @@ import { Footer } from "../widgets/footer";
 import { UsersPage } from "../pages/users-page";
 import { NotFound404 } from "../pages/not-found-404/NotFound404";
 import { SkillPage } from "../pages/skill-page";
-import { useDispatch } from "../features/store";
+import { useDispatch, useSelector } from "../features/store";
 import { getUsers } from "../features/users/usersSlice";
 import { getCategories } from "../features/categories/categoriesSlice";
 import { getCities } from "../features/cities/citiesSlice";
@@ -23,12 +23,26 @@ import { ProtectedRoute } from "../shared/ui/ProtectedRoute";
 import { ServerError500 } from "../pages/server-error-500/ServerError500";
 import { Profile } from "../pages/profile/profile";
 import { UserDataEditFrom } from "../widgets/user-data-edit-form/user-data-edit-from";
+import { Loader } from "../shared/ui/loader/Loader";
 
 type PopupContent = "skills" | "avatar" | "notifications" | null;
 
 function App() {
   const dispatch = useDispatch();
   const headerRef = useRef<HTMLElement>(null);
+
+  const authChecked = useSelector((store) => store.auth.authChecked);
+  const authLoading = useSelector((store) => store.auth.loading);
+  const usersLoading = useSelector((store) => store.users.loading);
+  const categoriesLoading = useSelector((store) => store.categories.loading);
+  const citiesLoading = useSelector((store) => store.cities.loading);
+
+  const showLoader =
+    !authChecked ||
+    authLoading ||
+    usersLoading ||
+    categoriesLoading ||
+    citiesLoading;
 
   const [popupState, setPopupState] = useState<{
     isOpen: boolean;
@@ -110,55 +124,60 @@ function App() {
         onNotificationsClick={openNotificationsPopup}
       />
       <main className={styles.content}>
-        <Routes>
-          <Route path="/" element={<UsersPage />} />
-          <Route path="/error" element={<ServerError500 />} />
-          <Route path="*" element={<NotFound404 />} />
-          <Route
-            path="login"
-            element={
-              <ProtectedRoute forUnAuth>
-                <Login />
-              </ProtectedRoute>
-            }
-          />
-          <Route path="skill/:id" element={<SkillPage />} />
-          <Route
-            path="register/step1"
-            element={
-              <ProtectedRoute forUnAuth>
-                <RegisterStep1Page />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="register/step2"
-            element={
-              <ProtectedRoute forUnAuth>
-                <RegisterStep2Page />
-              </ProtectedRoute>
-            }
-          />
-
-          <Route
-            path="register/step3"
-            element={
-              <ProtectedRoute forUnAuth>
-                <RegisterStep3Page />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/profile/*"
-            element={
-              <ProtectedRoute>
-                <Profile />
-              </ProtectedRoute>
-            }
-          >
-            <Route index element={<UserDataEditFrom />} />
-          </Route>
-        </Routes>
+        {showLoader ? (
+          <div className={styles.loaderWrapper}>
+            <Loader />
+          </div>
+        ) : (
+          <Routes>
+            <Route path="/" element={<UsersPage />} />
+            <Route path="/error" element={<ServerError500 />} />
+            <Route path="*" element={<NotFound404 />} />
+            <Route
+              path="login"
+              element={
+                <ProtectedRoute forUnAuth>
+                  <Login />
+                </ProtectedRoute>
+              }
+            />
+            <Route path="skill/:id" element={<SkillPage />} />
+            <Route
+              path="register/step1"
+              element={
+                <ProtectedRoute forUnAuth>
+                  <RegisterStep1Page />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="register/step2"
+              element={
+                <ProtectedRoute forUnAuth>
+                  <RegisterStep2Page />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="register/step3"
+              element={
+                <ProtectedRoute forUnAuth>
+                  <RegisterStep3Page />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/profile/*"
+              element={
+                <ProtectedRoute>
+                  <Profile />
+                </ProtectedRoute>
+              }
+            >
+              <Route index element={<UserDataEditFrom />} />
+            </Route>
+          </Routes>
+        )}
       </main>
       <Footer allSkillsOnClick={openSkillsPopup} />
 

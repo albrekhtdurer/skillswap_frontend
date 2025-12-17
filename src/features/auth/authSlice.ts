@@ -160,11 +160,13 @@ export const authSlice = createSlice({
         state.isAuthenticated = true;
         state.error = null;
         state.favourites = getUserFavourites(action.payload.user.id.toString());
+        state.authChecked = true;
       })
       .addCase(fetchUserData.rejected, (state, action) => {
         state.loading = false;
         state.error =
           action.payload || "Ошибка при получении данных пользователя";
+        state.authChecked = true;
       })
       .addCase(registerUser.pending, (state) => {
         state.loading = true;
