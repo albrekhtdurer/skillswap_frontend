@@ -6,30 +6,7 @@ import type {
   TRegForm,
   IAvatarResponse,
 } from "../entities/types";
-import { apiRequest } from "./base";
-
-async function apiFileRequest<T>(
-  endpoint: string,
-  options: RequestInit = {},
-): Promise<T> {
-  const url = `${API_BASE_URL}${endpoint}`;
-
-  const defaultHeaders = {};
-
-  const response = await fetch(url, {
-    ...options,
-    headers: defaultHeaders,
-  });
-
-  if (!response.ok) {
-    const errorText = await response.text();
-    throw new Error(
-      `HTTP error! status: ${response.status}, message: ${errorText}`,
-    );
-  }
-
-  return response.json();
-}
+import { apiRequest, apiFileRequest } from "./base";
 
 export const authApi = {
   async login(credentials: ILoginCredentials): Promise<{
