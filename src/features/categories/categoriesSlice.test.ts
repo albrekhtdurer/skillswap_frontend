@@ -7,11 +7,15 @@ import {
   categoriesLoadingSelector,
 } from "./categoriesSlice";
 import type { ISkillCategory, ISubcategory } from "../../entities/types";
-import { api } from "../../api";
+import { categoriesApi } from "../../api/categories";
 
-jest.mock("../../api");
+jest.mock("../../api/categories", () => ({
+  categoriesApi: {
+    getCategories: jest.fn(),
+  },
+}));
 
-const mockApi = api as jest.Mocked<typeof api>;
+const mockedCategoriesApi = jest.mocked(categoriesApi);
 
 type RootStateForCategories = {
   categories: {
@@ -296,7 +300,7 @@ describe("categoriesSlice", () => {
         },
       });
 
-      mockApi.getCategories.mockResolvedValueOnce(mockCategories);
+      mockedCategoriesApi.getCategories.mockResolvedValueOnce(mockCategories);
 
       await store.dispatch(getCategories());
       const state = store.getState();
@@ -319,7 +323,9 @@ describe("categoriesSlice", () => {
       });
 
       const errorMessage = "Failed to fetch categories";
-      mockApi.getCategories.mockRejectedValueOnce(new Error(errorMessage));
+      mockedCategoriesApi.getCategories.mockRejectedValueOnce(
+        new Error(errorMessage),
+      );
 
       await store.dispatch(getCategories());
       const state = store.getState();

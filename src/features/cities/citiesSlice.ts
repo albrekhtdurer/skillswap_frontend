@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import type { ICity } from "../../entities/types";
-import { api } from "../../api";
+import { citiesApi } from "../../api/cities";
 
 type TCitiesState = {
   cities: ICity[];
@@ -16,7 +16,10 @@ const initialState: TCitiesState = {
   error: undefined,
 };
 
-export const getCities = createAsyncThunk("cities/getCities", api.getCities);
+export const getCities = createAsyncThunk(
+  "cities/getCities",
+  citiesApi.getCities,
+);
 
 export const citiesSlice = createSlice({
   name: "cities",
@@ -32,13 +35,11 @@ export const citiesSlice = createSlice({
         state.loading = true;
         state.status = "pending";
         state.error = undefined;
-        console.log(state.status);
       })
       .addCase(getCities.rejected, (state, action) => {
         state.loading = false;
         state.status = "rejected";
         state.error = action.error.message;
-        console.log(state.status);
       })
       .addCase(getCities.fulfilled, (state, action) => {
         state.loading = false;

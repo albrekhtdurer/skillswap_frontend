@@ -1,15 +1,15 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { citiesSlice, getCities } from "./citiesSlice";
-import { api } from "../../api";
+import { citiesApi } from "../../api/cities";
 import type { ICity } from "../../entities/types";
+import { citiesSlice, getCities } from "./citiesSlice";
 
-jest.mock("../../api", () => ({
-  api: {
+jest.mock("../../api/cities", () => ({
+  citiesApi: {
     getCities: jest.fn(),
   },
 }));
 
-const mockedApi = api as jest.Mocked<typeof api>;
+const mockedCitiesApi = jest.mocked(citiesApi);
 
 describe("citiesSlice", () => {
   const initialState = citiesSlice.getInitialState();
@@ -84,7 +84,7 @@ describe("citiesSlice", () => {
 
   describe("async thunk getCities", () => {
     it("should dispatch fulfilled when api call succeeds", async () => {
-      mockedApi.getCities.mockResolvedValue(mockCities);
+      mockedCitiesApi.getCities.mockResolvedValue(mockCities);
 
       const store = configureStore({
         reducer: {
@@ -102,12 +102,12 @@ describe("citiesSlice", () => {
         status: "fulfilled",
         error: undefined,
       });
-      expect(mockedApi.getCities).toHaveBeenCalledTimes(1);
+      expect(mockedCitiesApi.getCities).toHaveBeenCalledTimes(1);
     });
 
     it("should dispatch rejected when api call fails", async () => {
       const errorMessage = "Failed to fetch cities";
-      mockedApi.getCities.mockRejectedValue(new Error(errorMessage));
+      mockedCitiesApi.getCities.mockRejectedValue(new Error(errorMessage));
 
       const store = configureStore({
         reducer: {
