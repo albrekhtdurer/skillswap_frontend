@@ -24,3 +24,5 @@ coverage
 *.sln
 *.sw?
 .vite
+*storybook.log
+storybook-static
