@@ -8,13 +8,14 @@ export type CardsScrollableGalleryProps = {
   cards: IUser[];
   currentUserId?: string | null;
   batchSize?: number;
+  preloadDistance?: number;
 };
 
 export const CardsScrollableGallery = ({
   title,
   cards,
   currentUserId,
-  batchSize = 4,
+  batchSize = 15,
 }: CardsScrollableGalleryProps) => {
   const [loadedBatches, setLoadedBatches] = useState<number>(1);
   const [isClient, setIsClient] = useState<boolean>(false);
@@ -47,17 +48,19 @@ export const CardsScrollableGallery = ({
       if (!entries.length) return;
 
       const entry = entries[0];
-      if (!entry.isIntersecting) return;
+
+      const shouldLoad = entry.isIntersecting || entry.intersectionRatio > 0.25;
+      if (!shouldLoad) {
+        return;
+      }
 
       const now = Date.now();
-      if (isLoadingRef.current || now - lastLoadTimeRef.current < 300) {
+      if (isLoadingRef.current || now - lastLoadTimeRef.current < 100) {
         return;
       }
 
       const currentLoadedBatches = loadedBatches;
-      const nextVisibleCards = (currentLoadedBatches + 1) * batchSize;
-
-      if (nextVisibleCards > cards.length) {
+      if (currentLoadedBatches * batchSize >= cards.length) {
         return;
       }
 
