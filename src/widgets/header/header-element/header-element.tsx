@@ -77,7 +77,11 @@ export const HeaderElement: FC<THeaderElementProps> = ({
               >
                 <BellIcon />
               </button>
-              <button className={styles.icon_button}>
+              <button
+                className={styles.icon_button}
+                onClick={() => navigate("/profile/favourites")}
+                aria-label="Избранное"
+              >
                 <HeartIcon />
               </button>
 
