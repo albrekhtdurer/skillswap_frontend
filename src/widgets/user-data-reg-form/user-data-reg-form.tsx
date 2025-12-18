@@ -144,7 +144,7 @@ export const UserDataRegForm: FC = () => {
       subcategoryWantToLearn: data.subcategoriesWantToLearn.map((id) =>
         parseInt(id as string, 10),
       ),
-      birthDate: data.birthDate.toISOString(),
+      birthDate: data.birthDate?.toISOString() || "",
       gender: ["male", "female", "not specified"].includes(data.gender)
         ? data.gender
         : null,
@@ -318,6 +318,7 @@ export const UserDataRegForm: FC = () => {
               dispatchData(getValues());
               navigate("/register/step1", { state: { from: "step2" } });
             }}
+            htmlType="button"
           >
             Назад
           </Button>
