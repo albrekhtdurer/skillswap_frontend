@@ -20,7 +20,9 @@ export const DateSelectionInput = ({
   error,
 }: TDateSelectionInputProps) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [currentMonth, setCurrentMonth] = useState<Date>(new Date());
+  const [currentMonth, setCurrentMonth] = useState<Date>(
+    selectedDate || new Date(),
+  );
 
   const handleChange = (date: Date | null) => {
     onDateChange(date);
@@ -37,6 +39,13 @@ export const DateSelectionInput = ({
 
   const handleMonthChange = (date: Date) => {
     setCurrentMonth(date);
+  };
+
+  const handleClick = () => {
+    setIsOpen((prev) => !prev);
+    if (selectedDate) {
+      setCurrentMonth(selectedDate);
+    }
   };
 
   const isCurrentMonthDay = (date: Date) => {
@@ -66,8 +75,7 @@ export const DateSelectionInput = ({
       onYearChange={handleMonthChange}
       filterDate={isCurrentMonthDay}
       open={isOpen}
-      onInputClick={() => setIsOpen(true)}
-      onClickOutside={() => setIsOpen(false)}
+      onInputClick={handleClick}
     >
       <div className={style.buttons_container}>
         <Button onClick={handleCancel} type={"secondary"}>
