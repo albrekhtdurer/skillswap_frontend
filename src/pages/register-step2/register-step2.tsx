@@ -14,7 +14,8 @@ export const RegisterStep2Page = () => {
     if (location.state?.from !== "step1" && location.state?.from !== "step3") {
       navigate("/register/step1");
     }
-  });
+  }, [location.state?.from, navigate]);
+
   return (
     <div className={styles.page}>
       <div className={styles.header}>

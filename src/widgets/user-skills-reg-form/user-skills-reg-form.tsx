@@ -19,7 +19,7 @@ import { useTempSkillImages } from "../../shared/hooks/useTempSkillImages";
 import type { IUploadedFile } from "../../entities/types";
 import { setRegFormState } from "../../features/forms/formsSlice";
 import { useDispatch } from "../../features/store";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import { useEffect } from "react";
 
@@ -61,7 +61,6 @@ export const UserSkillsRegForm: FC<TUserSkillsRegFormProps> = ({
   }, [categoriesData]);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const location = useLocation();
   const { reg } = useSelector((store) => store.forms);
 
   const { tempImages, addTempImages, removeTempImage } = useTempSkillImages();
@@ -84,12 +83,6 @@ export const UserSkillsRegForm: FC<TUserSkillsRegFormProps> = ({
       // images: tempImages, // doesnt work as default value. instead this see useEffect below
     },
     mode: "onChange",
-  });
-
-  useEffect(() => {
-    if (location.state?.from !== "step2") {
-      navigate("/register/step1");
-    }
   });
 
   useEffect(() => {

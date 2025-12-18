@@ -11,8 +11,6 @@ import { SearchInput } from "../../../shared/ui/input";
 import { Button } from "../../../shared/ui/button/button";
 import { TextLink } from "../../../shared/ui/text-link";
 import type { IApiUser } from "../../../entities/types";
-import { useRegistrationAvatar } from "../../../shared/hooks/useRegistrationAvatar"; //удалить после маршрутизации авторизации, успешного создания карточки навыков и проверки location
-import { useTempSkillImages } from "../../../shared/hooks/useTempSkillImages"; //удалить после маршрутизации авторизации, успешного создания карточки навыков и проверки location
 import { useNavigate } from "react-router-dom";
 import avatarPlaceholder from "../../../assets/icons/avatar-placeholder.svg";
 
@@ -35,16 +33,15 @@ export const HeaderElement: FC<THeaderElementProps> = ({
   onProfileClick = () => console.log("Профиль"),
   onNotificationsClick = () => console.log("Уведомления"),
 }) => {
-  const { discardAvatar } = useRegistrationAvatar();
-  const { discardImages } = useTempSkillImages();
   const navigate = useNavigate();
 
   const handleRegisterClick = () => {
-    discardAvatar();
-    discardImages();
     navigate("/register/step1");
   };
-  const avatarSrc = user?.avatarUrl || avatarPlaceholder;
+  const avatarSrc =
+    user?.avatarUrl && user?.avatarUrl !== "no avatar"
+      ? user?.avatarUrl
+      : avatarPlaceholder;
   return (
     <header ref={ref} className={styles.header}>
       <nav className={styles.menu}>
