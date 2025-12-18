@@ -1,43 +1,55 @@
 import styles from "./notifications-menu.module.css";
 import { LightbulbIcon } from "../../assets/img/icons";
 import { Button } from "../../shared/ui/Button/Button";
+import { getSelectedUsers } from "../../shared/lib/proposals";
+import { useSelector } from "../../features/store";
+import { selectCurrentUser } from "../../features/auth/authSlice";
+import { usersSelector } from "../../features/users/usersSlice";
+import type { IUser } from "../../entities/types";
 
 type Notification = {
   id: number;
   title: string;
   description: string;
   date: string;
+  type: "new" | "viewed";
 };
 
-const newNotifications: Notification[] = [
-  {
-    id: 1,
-    title: "Николай принял ваш обмен",
-    description: "Перейдите в профиль, чтобы обсудить детали",
-    date: "сегодня",
-  },
-  {
-    id: 2,
-    title: "Татьяна предлагает вам обмен",
-    description: "Примите обмен, чтобы обсудить детали",
-    date: "сегодня",
-  },
-];
+const getProposalNotifications = (users: IUser[]): Notification[] => {
+  if (!users || users.length === 0) {
+    return [];
+  }
 
-const viewedNotifications: Notification[] = [
-  {
-    id: 3,
-    title: "Олег предлагает вам обмен",
-    description: "Примите обмен, чтобы обсудить детали",
-    date: "вчера",
-  },
-  {
-    id: 4,
-    title: "Игорь принял ваш обмен",
-    description: "Перейдите в профиль, чтобы обсудить детали",
-    date: "23 мая",
-  },
-];
+  const notifications: Notification[] = [];
+
+  const newProposals = users.slice(0, 2);
+  newProposals.forEach((user) => {
+    const gender = user.gender === "female" ? "она" : "он";
+    notifications.push({
+      id: Math.random(),
+      title: `Вы предложили обмен пользователю ${user.name}`,
+      description: `Дождитесь, когда ${gender} примет предложение`,
+      date: "сегодня",
+      type: "new",
+    });
+  });
+
+  if (users.length > 2) {
+    const viewedUsers = users.slice(2, 4);
+    viewedUsers.forEach((user) => {
+      const gender = user.gender === "female" ? "она" : "он";
+      notifications.push({
+        id: Math.random(),
+        title: `Вы предложили обмен пользователю ${user.name}`,
+        description: `Дождитесь, когда ${gender} примет предложение`,
+        date: "вчера",
+        type: "viewed",
+      });
+    });
+  }
+
+  return notifications;
+};
 
 type NotificationItemProps = {
   notification: Notification;
@@ -80,6 +92,22 @@ const NotificationItem = ({
 };
 
 export const NotificationsMenu = () => {
+  const currentUser = useSelector(selectCurrentUser);
+  const users = useSelector(usersSelector);
+
+  if (!currentUser || !users) {
+    return null;
+  }
+  const userId = currentUser.id.toString();
+  const selectedUsers = getSelectedUsers(userId, users);
+  const allNotifications = getProposalNotifications(selectedUsers);
+  const newNotifications = allNotifications.filter(
+    (item) => item.type === "new",
+  );
+  const viewedNotifications = allNotifications.filter(
+    (item) => item.type === "viewed",
+  );
+
   return (
     <div className={styles.notificationsMenu}>
       <div className={styles.header}>
@@ -89,31 +117,37 @@ export const NotificationsMenu = () => {
         </button>
       </div>
 
-      <div className={styles.section}>
-        {newNotifications.map((notification) => (
-          <NotificationItem
-            key={notification.id}
-            notification={notification}
-            showButton
-          />
-        ))}
-      </div>
-
-      <div className={styles.viewedSection}>
-        <div className={styles.sectionHeader}>
-          <h4 className={styles.title}>Просмотренные</h4>
-          <button className={styles.link} onClick={() => {}}>
-            Очистить
-          </button>
+      {newNotifications.length === 0 ? (
+        <div className={styles.section}>Нет уведомлений</div>
+      ) : (
+        <div className={styles.section}>
+          {newNotifications.map((notification) => (
+            <NotificationItem
+              key={notification.id}
+              notification={notification}
+              showButton
+            />
+          ))}
         </div>
-        {viewedNotifications.map((notification) => (
-          <NotificationItem
-            key={notification.id}
-            notification={notification}
-            isViewed
-          />
-        ))}
-      </div>
+      )}
+
+      {viewedNotifications.length > 0 && (
+        <div className={styles.viewedSection}>
+          <div className={styles.sectionHeader}>
+            <h4 className={styles.title}>Просмотренные</h4>
+            <button className={styles.link} onClick={() => {}}>
+              Очистить
+            </button>
+          </div>
+          {viewedNotifications.map((notification) => (
+            <NotificationItem
+              key={notification.id}
+              notification={notification}
+              isViewed
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 };

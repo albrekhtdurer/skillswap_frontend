@@ -1,3 +1,5 @@
+import type { IUser } from "../../entities/types";
+
 const STORAGE_KEY = "userProposals";
 
 type TUserProposals = Record<string, number[]>;
@@ -37,4 +39,22 @@ export const addProposal = (fromUserId: string, toUserId: number): void => {
     proposals[fromUserId] = [toUserId, ...list];
     setUserProposals(proposals);
   }
+};
+
+export const getSelectedUsers = (
+  fromUserId: string,
+  users: IUser[],
+): IUser[] => {
+  const proposals = getUserProposals();
+  const usersId = proposals[fromUserId];
+
+  if (!usersId) {
+    return [];
+  }
+
+  const usersMap = new Map(users.map((user) => [user.id, user]));
+
+  return usersId
+    .map((userId) => usersMap.get(userId))
+    .filter((user) => user !== undefined);
 };
