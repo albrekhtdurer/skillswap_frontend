@@ -10,7 +10,6 @@ import styles from "./user-favourites.module.css";
 
 export function UserFavourites() {
   const favourites = useSelector(selectCurrentUserFavourites);
-  console.log(favourites);
   const allUsers = useSelector(usersSelector);
   const favouriteUsers = useMemo(() => {
     return favourites.reduce((currentArray, id) => {
