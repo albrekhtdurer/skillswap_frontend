@@ -55,33 +55,20 @@ function App() {
     position: "bottom-left",
   });
 
-  const openSkillsPopup = () => {
-    setPopupState({
-      isOpen: true,
-      content: "skills",
-      position: "bottom-left",
-    });
-    if (headerRef.current) {
-      headerRef.current.scrollIntoView({ behavior: "smooth", block: "end" });
-    }
-  };
-
-  const openAvatarPopup = () => {
-    setPopupState({
-      isOpen: true,
-      content: "avatar",
-      position: "bottom-right",
-    });
-    if (headerRef.current) {
-      headerRef.current.scrollIntoView({ behavior: "smooth", block: "end" });
-    }
-  };
-
-  const openNotificationsPopup = () => {
-    setPopupState({
-      isOpen: true,
-      content: "notifications",
-      position: "bottom-right",
+  const togglePopup = (content: PopupContent, position: PopupMenuPosition) => {
+    setPopupState((prev) => {
+      if (prev.isOpen && prev.content === content) {
+        return {
+          ...prev,
+          isOpen: false,
+          content: null,
+        };
+      }
+      return {
+        isOpen: true,
+        content,
+        position,
+      };
     });
     if (headerRef.current) {
       headerRef.current.scrollIntoView({ behavior: "smooth", block: "end" });
@@ -120,9 +107,11 @@ function App() {
     <div className={styles.page}>
       <Header
         ref={headerRef}
-        handleSkillsClick={openSkillsPopup}
-        onProfileClick={openAvatarPopup}
-        onNotificationsClick={openNotificationsPopup}
+        handleSkillsClick={() => togglePopup("skills", "bottom-left")}
+        onProfileClick={() => togglePopup("avatar", "bottom-right")}
+        onNotificationsClick={() =>
+          togglePopup("notifications", "bottom-right")
+        }
       />
       <main className={styles.content}>
         {showLoader ? (
@@ -191,7 +180,7 @@ function App() {
           </Routes>
         )}
       </main>
-      <Footer allSkillsOnClick={openSkillsPopup} />
+      <Footer allSkillsOnClick={() => togglePopup("skills", "bottom-left")} />
 
       <PopupMenu
         anchorRef={headerRef}
