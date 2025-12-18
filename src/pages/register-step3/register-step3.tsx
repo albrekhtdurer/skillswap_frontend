@@ -18,13 +18,12 @@ import { registerUser } from "../../features/user/actions";
 import { Loader } from "../../shared/ui/loader";
 import { ModalConfirm } from "../../widgets/modal-confirm/modal-confirm";
 import Done from "../../assets/icons/done.svg";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 export const RegisterStep3Page = () => {
   const [isProposalOpen, setIsProposalOpen] = useState(false);
   const [isRegisterStatusOpen, setIsRegisterStatusOpen] = useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const location = useLocation();
   const isLoadingRegister = useSelector(selectAuthLoading);
   const isRegisterError = useSelector(selectRegisterError);
   const { reg } = useSelector((store) => store.forms);
@@ -39,10 +38,10 @@ export const RegisterStep3Page = () => {
   }, [isRegisterError, navigate, dispatch]);
 
   useEffect(() => {
-    if (location.state?.from !== "step2") {
+    if (!reg.email) {
       navigate("/register/step1");
     }
-  }, [location.state?.from, navigate]);
+  }, [navigate]);
 
   return (
     <div className={styles.page}>

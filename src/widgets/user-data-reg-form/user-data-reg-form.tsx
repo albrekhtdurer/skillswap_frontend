@@ -154,7 +154,7 @@ export const UserDataRegForm: FC = () => {
 
   const onSubmit: SubmitHandler<TUserData> = (data) => {
     dispatchData(data);
-    navigate("/register/step3", { state: { from: "step2" } });
+    navigate("/register/step3");
   };
 
   return (
@@ -316,7 +316,7 @@ export const UserDataRegForm: FC = () => {
             type="secondary"
             onClick={() => {
               dispatchData(getValues());
-              navigate("/register/step1", { state: { from: "step2" } });
+              navigate("/register/step1");
             }}
             htmlType="button"
           >

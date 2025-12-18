@@ -3,18 +3,19 @@ import { UserDataRegForm } from "../../widgets/user-data-reg-form";
 import { RegisterStepInfo } from "../../widgets/register-step-info";
 import UserInfo from "../../assets/icons/user-info.svg";
 import styles from "./register-step2.module.css";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import { useSelector } from "../../features/store";
 
 export const RegisterStep2Page = () => {
   const navigate = useNavigate();
-  const location = useLocation();
+  const { reg } = useSelector((store) => store.forms);
 
   useEffect(() => {
-    if (location.state?.from !== "step1" && location.state?.from !== "step3") {
+    if (!reg.email) {
       navigate("/register/step1");
     }
-  }, [location.state?.from, navigate]);
+  }, [navigate]);
 
   return (
     <div className={styles.page}>
