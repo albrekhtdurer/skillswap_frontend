@@ -8,8 +8,8 @@ import {
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import styles from "./user-skills-reg-form.module.css";
-import { Button } from "../../shared/ui/Button/Button";
-import { Input } from "../../shared/ui/Input";
+import { Button } from "../../shared/ui/button/button";
+import { Input } from "../../shared/ui/input";
 import { DropdownComponent } from "../../shared/ui/dropdown";
 import { useSelector } from "../../features/store";
 import { categoriesSelector } from "../../features/categories/categoriesSlice";

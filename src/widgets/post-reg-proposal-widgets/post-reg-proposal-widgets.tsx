@@ -1,4 +1,4 @@
-import { Button } from "../../shared/ui/Button/Button";
+import { Button } from "../../shared/ui/button/button";
 import { PencilIcon } from "../../assets/img/icons/edit";
 import style from "./post-reg-proposal-widgets.module.css";
 import { useSelector } from "../../features/store";

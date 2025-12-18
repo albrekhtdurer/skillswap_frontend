@@ -1,4 +1,4 @@
-import { Button } from "../Button/Button";
+import { Button } from "../button/button";
 import style from "./like-button.module.css";
 
 export type TLikeButtonProps = {

@@ -1,7 +1,7 @@
 import type { IUser } from "../../entities/types";
 import styles from "./user-card-element.module.css";
 import { getSubcategoryColor } from "../../entities/subcategoryColors";
-import { Button } from "../../shared/ui/Button/Button";
+import { Button } from "../../shared/ui/button/button";
 import { LikeButton } from "../../shared/ui/like-button";
 import { useSelector } from "../../features/store";
 import type React from "react";

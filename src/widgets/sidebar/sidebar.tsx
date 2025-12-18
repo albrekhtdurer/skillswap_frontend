@@ -1,5 +1,5 @@
 import style from "./sidebar.module.css";
-import { RadioGroup } from "../../shared/ui/RadioGroup/RadioGroup";
+import { RadioGroup } from "../../shared/ui/radio-group/radio-group";
 import {
   CheckboxGroupList,
   CheckboxSubgroupList,

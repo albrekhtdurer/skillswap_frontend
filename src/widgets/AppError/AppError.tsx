@@ -1,5 +1,5 @@
 import styles from "./AppError.module.css";
-import { Button } from "../../shared/ui/Button/Button";
+import { Button } from "../../shared/ui/button/button";
 
 type AppErrorProps = {
   title: string;

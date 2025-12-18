@@ -1,6 +1,6 @@
 import styles from "./header-menu-avatar-content.module.css";
 import { LogoutIcon } from "../../assets/img/icons";
-import { Button } from "../../shared/ui/Button/Button";
+import { Button } from "../../shared/ui/button/button";
 import { useDispatch } from "../../features/store";
 import { logout } from "../../features/auth/authSlice";
 import { useNavigate } from "react-router-dom";

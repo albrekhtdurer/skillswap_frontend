@@ -1,4 +1,4 @@
-import type { TOptionType } from "../ui/RadioGroup/Option";
+import type { TOptionType } from "../ui/radio-group/option";
 
 // constants for filters
 

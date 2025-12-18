@@ -5,10 +5,10 @@ import {
   useWatch,
   type SubmitHandler,
 } from "react-hook-form";
-import { Input } from "../../shared/ui/Input";
-import { DateSelectionInput } from "../../shared/ui/Input/date-selection-input";
+import { Input } from "../../shared/ui/input";
+import { DateSelectionInput } from "../../shared/ui/input/date-selection-input";
 import { DropdownComponent } from "../../shared/ui/dropdown";
-import { Button } from "../../shared/ui/Button/Button";
+import { Button } from "../../shared/ui/button/button";
 import { RegistrationAvatarField } from "../../pages/registration/registration-avatar";
 import styles from "./user-data-reg-form.module.css";
 import * as yup from "yup";

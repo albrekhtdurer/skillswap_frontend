@@ -1,6 +1,6 @@
 import type { FC } from "react";
 import styles from "./modal-confirm.module.css";
-import { Button } from "../../shared/ui/Button/Button";
+import { Button } from "../../shared/ui/button/button";
 
 type TModalConfirmProps = {
   image: string;

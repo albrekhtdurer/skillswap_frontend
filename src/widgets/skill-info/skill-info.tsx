@@ -1,6 +1,6 @@
 import type { TSkill } from "../../entities/types";
 import { ImagesSlider } from "../slider/images-slider/images-slider";
-import { Button } from "../../shared/ui/Button/Button";
+import { Button } from "../../shared/ui/button/button";
 import { LikeButton } from "../../shared/ui/like-button";
 import { ShareIcon, MoreIcon, ClockIcon } from "../../assets/img/icons";
 import style from "./skill-info.module.css";

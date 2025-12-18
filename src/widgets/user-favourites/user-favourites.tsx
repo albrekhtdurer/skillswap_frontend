@@ -4,7 +4,7 @@ import { usersSelector } from "../../features/users/usersSlice";
 import { selectCurrentUserFavourites } from "../../features/auth/authSlice";
 import { CardsGallery } from "../gallery-cards";
 import type { IUser } from "../../entities/types";
-import { Button } from "../../shared/ui/Button/Button";
+import { Button } from "../../shared/ui/button/button";
 import { Link } from "react-router-dom";
 import styles from "./user-favourites.module.css";
 

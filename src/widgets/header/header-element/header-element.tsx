@@ -7,8 +7,8 @@ import {
   HeartIcon,
   MoonIcon,
 } from "../../../assets/img/icons";
-import { SearchInput } from "../../../shared/ui/Input";
-import { Button } from "../../../shared/ui/Button/Button";
+import { SearchInput } from "../../../shared/ui/input";
+import { Button } from "../../../shared/ui/button/button";
 import { TextLink } from "../../../shared/ui/text-link";
 import type { IApiUser } from "../../../entities/types";
 import { useRegistrationAvatar } from "../../../shared/hooks/useRegistrationAvatar"; //удалить после маршрутизации авторизации, успешного создания карточки навыков и проверки location

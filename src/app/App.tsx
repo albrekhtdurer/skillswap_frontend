@@ -19,12 +19,12 @@ import { fetchUserData } from "../features/auth/authSlice";
 import { RegisterStep1Page } from "../pages/register-step1";
 import { RegisterStep2Page } from "../pages/register-step2";
 import { RegisterStep3Page } from "../pages/register-step3";
-import { ProtectedRoute } from "../shared/ui/ProtectedRoute";
+import { ProtectedRoute } from "../shared/ui/protected-route";
 import { ServerError500 } from "../pages/server-error-500/ServerError500";
 import { Profile } from "../pages/profile/profile";
 import { FavouritesPage } from "../pages/favourites-page/favourites-page";
 import { UserDataEditFrom } from "../widgets/user-data-edit-form/user-data-edit-from";
-import { Loader } from "../shared/ui/loader/Loader";
+import { Loader } from "../shared/ui/loader/loader";
 
 type PopupContent = "skills" | "avatar" | "notifications" | null;
 

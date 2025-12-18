@@ -1,5 +1,5 @@
 import React, { useEffect, useState, type ChangeEvent } from "react";
-import { Input } from "./Input";
+import { Input } from "./input";
 import searchIcon from "../../../assets/icons/search.svg";
 import style from "./style.module.css";
 import { useDispatch, useSelector } from "../../../features/store";

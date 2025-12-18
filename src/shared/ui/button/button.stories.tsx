@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Button } from "./Button";
+import { Button } from "./button";
 import { ClockIcon } from "../../../assets/img/icons";
 
 const meta: Meta<typeof Button> = {

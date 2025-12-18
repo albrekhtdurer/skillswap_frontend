@@ -1,4 +1,4 @@
-import { Option, type TOptionType } from "./Option";
+import { Option, type TOptionType } from "./option";
 import styles from "./style.module.css";
 
 type TRadioGroupProps = {

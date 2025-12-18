@@ -1,7 +1,7 @@
 import { useState } from "react";
 import style from "./date-selection-input.module.css";
 import DatePicker, { registerLocale } from "react-datepicker";
-import { Button } from "../../Button/Button";
+import { Button } from "../../button/button";
 import { ru } from "date-fns/locale/ru";
 import { CustomInput } from "./custom-input";
 import { CustomHeader } from "./custom-header";

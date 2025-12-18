@@ -1,5 +1,5 @@
 import { forwardRef, type FC } from "react";
-import { Input } from "../Input";
+import { Input } from "../input";
 import calendar from "./../../../../assets/icons/calendar.svg";
 import style from "./../style.module.css";
 import "react-datepicker/dist/react-datepicker.css";

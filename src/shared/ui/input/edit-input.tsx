@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Input, type TInputProps } from "./Input";
+import { Input, type TInputProps } from "./input";
 import searchIcon from "../../../assets/icons/edit.svg";
 import style from "./style.module.css";
 

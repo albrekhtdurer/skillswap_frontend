@@ -1,6 +1,6 @@
 import styles from "./notifications-menu.module.css";
 import { LightbulbIcon } from "../../assets/img/icons";
-import { Button } from "../../shared/ui/Button/Button";
+import { Button } from "../../shared/ui/button/button";
 import { getSelectedUsers } from "../../shared/lib/proposals";
 import { useSelector } from "../../features/store";
 import { selectCurrentUser } from "../../features/auth/authSlice";

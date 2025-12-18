@@ -6,9 +6,9 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useSelector } from "../../features/store";
 import { useEffect, useMemo } from "react";
 
-import { EditInput } from "../../shared/ui/Input";
-import { Button } from "../../shared/ui/Button/Button";
-import { DateSelectionInput } from "../../shared/ui/Input/date-selection-input";
+import { EditInput } from "../../shared/ui/input";
+import { Button } from "../../shared/ui/button/button";
+import { DateSelectionInput } from "../../shared/ui/input/date-selection-input";
 import { DropdownComponent } from "../../shared/ui/dropdown";
 import { EditTextarea } from "../../shared/ui/edit-textarea";
 import { ProfileAvatar } from "../../pages/profile/personal-data/avatar";

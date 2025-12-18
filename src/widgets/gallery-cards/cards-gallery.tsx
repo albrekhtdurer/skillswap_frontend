@@ -1,6 +1,6 @@
 import { useState } from "react";
 import type { IUser } from "../../entities/types";
-import { Button } from "../../shared/ui/Button/Button";
+import { Button } from "../../shared/ui/button/button.tsx";
 import { MainUserCard } from "../main-user-card/main-user-card.tsx";
 import style from "./cards-gallery.module.css";
 import { SortIcon, RightIcon } from "../../assets/img/icons";
