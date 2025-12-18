@@ -42,7 +42,7 @@ export const RegisterStep3Page = () => {
     if (location.state?.from !== "step2") {
       navigate("/register/step1");
     }
-  }, []);
+  }, [location.state?.from, navigate]);
 
   return (
     <div className={styles.page}>
