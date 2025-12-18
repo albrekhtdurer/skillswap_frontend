@@ -1,5 +1,9 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { api } from "../../api";
+import {
+  createAsyncThunk,
+  createSlice,
+  type PayloadAction,
+} from "@reduxjs/toolkit";
+import { usersApi } from "../../api/users";
 import type { IUser } from "../../entities/types";
 
 type TUsersState = {
@@ -18,14 +22,14 @@ const initialState: TUsersState = {
 
 export const getUsers = createAsyncThunk<IUser[], void>(
   "users/getUsers",
-  async () => api.getAllUsers(),
+  async () => usersApi.getUsers(),
 );
 
 export const usersSlice = createSlice({
   name: "users",
   initialState,
   reducers: {
-    selectUser: (state, action) => {
+    selectUser: (state, action: PayloadAction<number>) => {
       state.selectedUserId = action.payload;
     }, //для просмотра детальной информации
     clearSelectedUser: (state) => {
@@ -49,17 +53,14 @@ export const usersSlice = createSlice({
       .addCase(getUsers.pending, (state) => {
         state.loading = true;
         state.error = undefined;
-        console.log("Загрузка пользователей...");
       })
       .addCase(getUsers.rejected, (state, action) => {
         state.loading = false;
         state.error = action.error.message;
-        console.log("Ошибка загрузки пользователей:", action.error.message);
       })
       .addCase(getUsers.fulfilled, (state, action) => {
         state.loading = false;
         state.users = action.payload;
-        console.log(`Пользователи загружены: ${action.payload.length} записей`);
       });
   },
 });

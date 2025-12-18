@@ -7,11 +7,15 @@ import {
   clearSelectedUser,
 } from "./usersSlice";
 import type { IUser, TSkill, ISubcategory } from "../../entities/types";
-import { api } from "../../api";
+import { usersApi } from "../../api/users";
 
-jest.mock("../../api");
+jest.mock("../../api/users", () => ({
+  usersApi: {
+    getUsers: jest.fn(),
+  },
+}));
 
-const mockApi = api as jest.Mocked<typeof api>;
+const mockUsersApi = usersApi as jest.Mocked<typeof usersApi>;
 
 type RootStateForUsers = {
   users: {
@@ -346,7 +350,7 @@ describe("usersSlice", () => {
         },
       });
 
-      mockApi.getAllUsers.mockResolvedValueOnce(mockUsers);
+      mockUsersApi.getUsers.mockResolvedValueOnce(mockUsers);
 
       await store.dispatch(getUsers());
       const state = store.getState();
@@ -359,7 +363,7 @@ describe("usersSlice", () => {
           selectedUserId: null,
         },
       });
-      expect(mockApi.getAllUsers).toHaveBeenCalledTimes(1);
+      expect(mockUsersApi.getUsers).toHaveBeenCalledTimes(1);
     });
 
     it("должен обрабатывать несколько последовательных действий", async () => {
@@ -369,7 +373,7 @@ describe("usersSlice", () => {
         },
       });
 
-      mockApi.getAllUsers.mockResolvedValueOnce(mockUsers);
+      mockUsersApi.getUsers.mockResolvedValueOnce(mockUsers);
 
       await store.dispatch(getUsers());
 

@@ -26,23 +26,28 @@ export const UsersPage: FC = () => {
   const currentUser = useSelector(selectCurrentUser);
   const currentUserId = currentUser ? String(currentUser.id) : null;
 
+  const usersWithoutCurrent = useMemo(() => {
+    if (!currentUserId) return users;
+    return users.filter((user) => String(user.id) !== currentUserId);
+  }, [users, currentUserId]);
+
   const popularUsers = useMemo(
-    () => users.filter((user) => user.likes > 15),
-    [users],
+    () => usersWithoutCurrent.filter((user) => user.likes > 15),
+    [usersWithoutCurrent],
   );
 
   const newUsers = useMemo(
     () =>
-      users.filter((user) => {
+      usersWithoutCurrent.filter((user) => {
         const createdTime = new Date(user.createdAt).getTime();
         return !Number.isNaN(createdTime) && createdTime >= MONTH_AGO;
       }),
-    [users],
+    [usersWithoutCurrent],
   );
 
   const filteredUsers = useMemo(
-    () => getFilteredUsers(users, filters),
-    [filters, users],
+    () => getFilteredUsers(usersWithoutCurrent, filters),
+    [filters, usersWithoutCurrent],
   );
 
   const sortedFilteredUsers = useMemo(() => {
@@ -90,7 +95,7 @@ export const UsersPage: FC = () => {
               </div>
               <div className={style.section}>
                 <CardsScrollableGallery
-                  cards={users}
+                  cards={usersWithoutCurrent}
                   title="Рекомендуем"
                   currentUserId={currentUserId}
                 />
