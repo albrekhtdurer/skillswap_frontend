@@ -75,39 +75,6 @@ function App() {
     }
   };
 
-  // const openSkillsPopup = () => {
-  //   setPopupState({
-  //     isOpen: true,
-  //     content: "skills",
-  //     position: "bottom-left",
-  //   });
-  //   if (headerRef.current) {
-  //     headerRef.current.scrollIntoView({ behavior: "smooth", block: "end" });
-  //   }
-  // };
-
-  // const openAvatarPopup = () => {
-  //   setPopupState({
-  //     isOpen: true,
-  //     content: "avatar",
-  //     position: "bottom-right",
-  //   });
-  //   if (headerRef.current) {
-  //     headerRef.current.scrollIntoView({ behavior: "smooth", block: "end" });
-  //   }
-  // };
-
-  // const openNotificationsPopup = () => {
-  //   setPopupState({
-  //     isOpen: true,
-  //     content: "notifications",
-  //     position: "bottom-right",
-  //   });
-  //   if (headerRef.current) {
-  //     headerRef.current.scrollIntoView({ behavior: "smooth", block: "end" });
-  //   }
-  // };
-
   const closePopup = () => {
     setPopupState({
       isOpen: false,
