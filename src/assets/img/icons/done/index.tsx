@@ -10,13 +10,13 @@ export const DoneIcon = () => {
       <path
         d="M87.5 50C87.5 70.7107 70.7107 87.5 50 87.5C29.2893 87.5 12.5 70.7107 12.5 50C12.5 29.2893 29.2893 12.5 50 12.5C70.7107 12.5 87.5 29.2893 87.5 50Z"
         stroke="#253017"
-        stroke-width="1.5"
+        strokeWidth="1.5"
       />
       <path
         d="M36.8506 50.8401L43.356 57.3457C45.258 59.2477 48.3417 59.2477 50.2435 57.3456L64.6858 42.9023"
         stroke="#253017"
-        stroke-width="1.5"
-        stroke-linecap="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
       />
     </svg>
   );
