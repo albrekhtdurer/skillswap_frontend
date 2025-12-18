@@ -4,6 +4,7 @@ import styles from "./avatar.module.css";
 import PlaceholderIcom from "../../../assets/icons/avatar-placeholder.svg";
 import { useSelector } from "../../../features/store";
 import { selectCurrentUser } from "../../../features/user/userSlice";
+import avatarPlaceholder from "../../../assets/icons/avatar-placeholder.svg";
 
 type ProfileAvatarFieldProps = {
   avatarUrl?: string;
@@ -15,7 +16,11 @@ export function ProfileAvatar({
   onAvatarChange,
 }: ProfileAvatarFieldProps) {
   const currentUser = useSelector(selectCurrentUser);
-  const avatarSrc = avatarUrl || currentUser?.avatarUrl || undefined;
+  const avatarSrc = avatarUrl
+    ? avatarUrl
+    : currentUser?.avatarUrl && currentUser?.avatarUrl !== "no avatar"
+      ? currentUser?.avatarUrl
+      : avatarPlaceholder;
 
   return (
     <AvatarUpload

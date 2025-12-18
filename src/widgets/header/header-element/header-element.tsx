@@ -44,7 +44,10 @@ export const HeaderElement: FC<THeaderElementProps> = ({
     discardImages();
     navigate("/register/step1");
   };
-  const avatarSrc = user?.avatarUrl || avatarPlaceholder;
+  const avatarSrc =
+    user?.avatarUrl && user?.avatarUrl !== "no avatar"
+      ? user?.avatarUrl
+      : avatarPlaceholder;
   return (
     <header ref={ref} className={styles.header}>
       <nav className={styles.menu}>
