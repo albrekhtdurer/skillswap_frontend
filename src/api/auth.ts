@@ -43,8 +43,8 @@ export const authApi = {
 
   async registerUser(
     data: TRegForm,
-    avatar: File,
-    images: File[],
+    avatar?: File,
+    images?: File[],
   ): Promise<{
     user: IApiUser;
     token: string;
@@ -59,7 +59,6 @@ export const authApi = {
       description: "",
       birthDate: "",
     };
-    const avatarData = new FormData();
     const imagesData = new FormData();
 
     const userResponse = await apiRequest<ILoginResponse>("/user/", {
@@ -73,35 +72,41 @@ export const authApi = {
       throw new Error(userResponse.error || "Ошибка регистрации");
     }
     const id = resultUser.id;
-    avatarData.append("file", avatar);
-    const avatarResponse = await apiFileRequest<IAvatarResponse>(
-      `/user/${id}/avatar`,
-      {
-        method: "POST",
-        body: avatarData,
-      },
-    );
-    if (avatarResponse.status === 200 && avatarResponse.data.avatar) {
+    if (avatar) {
+      const avatarData = new FormData();
+      avatarData.append("file", avatar);
+      const avatarResponse = await apiFileRequest<IAvatarResponse>(
+        `/user/${id}/avatar`,
+        {
+          method: "POST",
+          body: avatarData,
+        },
+      );
+      if (avatarResponse.status === 200 && avatarResponse.data.avatar) {
+        resultUser.avatarUrl = avatarResponse.data.avatar;
+      } else {
+        throw new Error(avatarResponse.error || "Ошибка при загрузке аватара");
+      }
       resultUser.avatarUrl = avatarResponse.data.avatar;
-    } else {
-      throw new Error(avatarResponse.error || "Ошибка при загрузке аватара");
-    }
-    resultUser.avatarUrl = avatarResponse.data.avatar;
-
-    images.forEach((image) => imagesData.append("files", image));
-
-    const imagesReponse = await apiFileRequest<{
-      status: number;
-      error: string;
-    }>(`/user/${id}/images`, {
-      method: "POST",
-      body: imagesData,
-    });
-
-    if (imagesReponse.status !== 200) {
-      throw new Error(imagesReponse.error || "Ошибка при загрузке изображений");
     }
 
+    if (Array.isArray(images) && images.length > 0) {
+      images.forEach((image) => imagesData.append("files", image));
+
+      const imagesReponse = await apiFileRequest<{
+        status: number;
+        error: string;
+      }>(`/user/${id}/images`, {
+        method: "POST",
+        body: imagesData,
+      });
+
+      if (imagesReponse.status !== 200) {
+        throw new Error(
+          imagesReponse.error || "Ошибка при загрузке изображений",
+        );
+      }
+    }
     return { user: resultUser, token: userResponse.data.access_token };
   },
 
@@ -115,6 +120,26 @@ export const authApi = {
     });
     if (response.status === 200) {
       return response.data.user;
+    } else {
+      throw new Error(
+        response.error || "Ошибка обновления данных пользователя",
+      );
+    }
+  },
+
+  async updateUserAvatar(avatar: File, id: string) {
+    const avatarData = new FormData();
+    avatarData.append("file", avatar);
+
+    const response = await apiFileRequest<IAvatarResponse>(
+      `/user/${id}/avatar`,
+      {
+        method: "PATCH",
+        body: avatarData,
+      },
+    );
+    if (response.status === 200) {
+      return response.data.avatar;
     } else {
       throw new Error(
         response.error || "Ошибка обновления данных пользователя",

@@ -129,3 +129,8 @@ export type TLoginResult = {
   user: IApiUser;
   token: string;
 };
+
+export type TUpdateAvatarData = {
+  avatar: File;
+  id: string;
+};

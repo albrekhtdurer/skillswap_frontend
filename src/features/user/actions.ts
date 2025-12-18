@@ -4,6 +4,7 @@ import type {
   ILoginCredentials,
   IRegData,
   TLoginResult,
+  TUpdateAvatarData,
   TUserDataForm,
 } from "../../entities/types";
 import { authApi } from "../../api/auth";
@@ -88,5 +89,21 @@ export const updateUserData = createAsyncThunk<
       return rejectWithValue(error.message);
     }
     return rejectWithValue("Ошибка при обновлении данных пользователя");
+  }
+});
+
+export const updateUserAvatar = createAsyncThunk<
+  string,
+  TUpdateAvatarData,
+  { rejectValue: string }
+>("user/updateAvatar", async (data: TUpdateAvatarData, { rejectWithValue }) => {
+  try {
+    const result = await authApi.updateUserAvatar(data.avatar, data.id);
+    return result;
+  } catch (error) {
+    if (error instanceof Error) {
+      return rejectWithValue(error.message);
+    }
+    return rejectWithValue("Ошибка при обновлении аватарки");
   }
 });

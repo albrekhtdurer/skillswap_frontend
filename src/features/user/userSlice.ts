@@ -9,6 +9,7 @@ import {
   fetchUserData,
   loginUser,
   registerUser,
+  updateUserAvatar,
   updateUserData,
 } from "./actions";
 
@@ -126,6 +127,16 @@ export const userSlice = createSlice({
         state.currentUser = action.payload;
       })
       .addCase(updateUserData.rejected, (state) => {
+        state.loading = false;
+      })
+      .addCase(updateUserAvatar.pending, (state) => {
+        state.loading = true;
+      })
+      .addCase(updateUserAvatar.fulfilled, (state, action) => {
+        state.loading = false;
+        state.currentUser!.avatarUrl = action.payload;
+      })
+      .addCase(updateUserAvatar.rejected, (state) => {
         state.loading = false;
       });
   },

@@ -5,6 +5,7 @@ import { Button } from "../../shared/ui/button/button";
 import { LikeButton } from "../../shared/ui/like-button";
 import { useSelector } from "../../features/store";
 import type React from "react";
+import avatarPlaceholder from "../../assets/icons/avatar-placeholder.svg";
 
 type TActionButton = {
   text: string;
@@ -52,11 +53,12 @@ export function UserCardElement({
   const visibleSubcategories = subcategoriesWantToLearn.slice(0, 2);
   const hiddenCount =
     subcategoriesWantToLearn.length - visibleSubcategories.length;
+  const avatarSrc = avatarUrl || avatarPlaceholder;
 
   return (
     <article className={styles.card}>
       <div className={styles.userBox}>
-        <img className={styles.avatar} src={avatarUrl} alt={name} />
+        <img className={styles.avatar} src={avatarSrc} alt={name} />
 
         {/* Блок с аватаром, именем и лайками */}
         <div className={styles.userInfo}>

@@ -1,6 +1,11 @@
 import styles from "./user-data-edit-from.module.css";
 
-import { Controller, useForm, type SubmitHandler } from "react-hook-form";
+import {
+  Controller,
+  useForm,
+  type Resolver,
+  type SubmitHandler,
+} from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useDispatch, useSelector } from "../../features/store";
@@ -12,7 +17,8 @@ import { DateSelectionInput } from "../../shared/ui/input/date-selection-input";
 import { DropdownComponent } from "../../shared/ui/dropdown";
 import { EditTextarea } from "../../shared/ui/edit-textarea";
 import { ProfileAvatar } from "../../pages/profile/personal-data/avatar";
-import { updateUserData } from "../../features/user/actions";
+import { updateUserAvatar, updateUserData } from "../../features/user/actions";
+import { useRegistrationAvatar } from "../../shared/hooks/useRegistrationAvatar";
 
 const gender = [
   { name: "Не указан", value: "not specified" },
@@ -20,7 +26,7 @@ const gender = [
   { name: "Женский", value: "female" },
 ];
 
-const userSchema = yup.object({
+const userDataSchema = yup.object({
   name: yup
     .string()
     .required("Имя обязательно для заполнения")
@@ -36,12 +42,15 @@ const userSchema = yup.object({
   location: yup.string().required("Выберите город"),
   email: yup.string().email("Некорректный email").required("Email обязателен"),
   description: yup.string().required(),
+  avatar: yup.mixed<File>().nullable().optional(),
 });
 
-type TUserData = yup.InferType<typeof userSchema>;
+type TUserData = yup.InferType<typeof userDataSchema>;
 
 export const UserDataEditFrom = () => {
   const dispatch = useDispatch();
+  const { avatarFile, previewUrl, setAvatar, discardAvatar } =
+    useRegistrationAvatar();
   const { cities } = useSelector((store) => store.cities);
   const { currentUser } = useSelector((store) => store.auth);
 
@@ -53,6 +62,7 @@ export const UserDataEditFrom = () => {
       gender: "not specified",
       location: "",
       description: "",
+      //avatar: null, // doesnt work as default value. instead this see useEffect below
     };
   }, []);
 
@@ -62,11 +72,18 @@ export const UserDataEditFrom = () => {
     reset,
     trigger,
     formState: { isValid, isDirty },
+    setValue,
   } = useForm<TUserData>({
-    resolver: yupResolver(userSchema),
+    resolver: yupResolver(userDataSchema) as Resolver<TUserData>,
     defaultValues,
     mode: "onChange",
   });
+
+  useEffect(() => {
+    setValue("avatar", avatarFile ?? undefined, {
+      shouldValidate: true,
+    });
+  }, [avatarFile, setValue]);
 
   useEffect(() => {
     if (currentUser)
@@ -98,137 +115,159 @@ export const UserDataEditFrom = () => {
       userDescription: data.description,
     };
     dispatch(updateUserData(dataToSend));
+    if (avatarFile) {
+      const data = { avatar: avatarFile, id: currentUser!.id.toString() };
+      dispatch(updateUserAvatar(data));
+      discardAvatar();
+    }
     reset(data);
   };
 
   return (
     <div className={styles.wrapper}>
       <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
-        <div>
+        <div className={styles.text_data_wrapper}>
+          <div>
+            <Controller
+              name="email"
+              control={control}
+              render={({ field, fieldState }) => (
+                <EditInput
+                  {...field}
+                  placeholder={"Введите вашу почту"}
+                  label={"Почта"}
+                  onChange={(e) => {
+                    field.onChange(e.target.value);
+                    trigger("email");
+                  }}
+                  isError={!!fieldState.error}
+                  hint={fieldState.error?.message}
+                />
+              )}
+            />
+            <Button
+              type="tertiary"
+              onClick={() => {}}
+              className={styles.change_password_button}
+            >
+              Изменить пароль
+            </Button>
+          </div>
           <Controller
-            name="email"
+            name="name"
             control={control}
             render={({ field, fieldState }) => (
               <EditInput
                 {...field}
-                placeholder={"Введите вашу почту"}
-                label={"Почта"}
+                placeholder={"Введите ваше имя"}
+                label={"Имя"}
                 onChange={(e) => {
                   field.onChange(e.target.value);
-                  trigger("email");
+                  trigger("name");
                 }}
                 isError={!!fieldState.error}
                 hint={fieldState.error?.message}
               />
             )}
           />
-          <Button
-            type="tertiary"
-            onClick={() => {}}
-            className={styles.change_password_button}
-          >
-            Изменить пароль
-          </Button>
-        </div>
-        <Controller
-          name="name"
-          control={control}
-          render={({ field, fieldState }) => (
-            <EditInput
-              {...field}
-              placeholder={"Введите ваше имя"}
-              label={"Имя"}
-              onChange={(e) => {
-                field.onChange(e.target.value);
-                trigger("name");
-              }}
-              isError={!!fieldState.error}
-              hint={fieldState.error?.message}
-            />
-          )}
-        />
-        <div className={styles.data_gender_section}>
-          <div className={styles.calendar}>
-            <Controller
-              name="birthDate"
-              control={control}
-              render={({ field, fieldState }) => (
-                <DateSelectionInput
-                  selectedDate={field.value ? new Date(field.value) : null}
-                  onDateChange={(date) => {
-                    field.onChange(date);
-                    if (!date) {
-                      trigger("birthDate");
-                    }
-                  }}
-                  error={fieldState.error?.message}
-                />
-              )}
-            />
+          <div className={styles.data_gender_section}>
+            <div className={styles.calendar}>
+              <Controller
+                name="birthDate"
+                control={control}
+                render={({ field, fieldState }) => (
+                  <DateSelectionInput
+                    selectedDate={field.value ? new Date(field.value) : null}
+                    onDateChange={(date) => {
+                      field.onChange(date);
+                      if (!date) {
+                        trigger("birthDate");
+                      }
+                    }}
+                    error={fieldState.error?.message}
+                  />
+                )}
+              />
+            </div>
+            <label className={`${styles.label} ${styles.width}`}>
+              Пол
+              <Controller
+                name="gender"
+                control={control}
+                render={({ field, fieldState }) => (
+                  <DropdownComponent
+                    {...field}
+                    options={gender}
+                    placeholder={"Не указан"}
+                    required={false}
+                    value={field.value}
+                    onChange={(value) => {
+                      field.onChange(value);
+                      trigger("gender");
+                    }}
+                    error={fieldState.error?.message}
+                  />
+                )}
+              />
+            </label>
           </div>
-          <label className={`${styles.label} ${styles.width}`}>
-            Пол
+          <label className={styles.label}>
+            Город
             <Controller
-              name="gender"
+              name="location"
               control={control}
               render={({ field, fieldState }) => (
                 <DropdownComponent
                   {...field}
-                  options={gender}
+                  options={cities}
                   placeholder={"Не указан"}
                   required={false}
                   value={field.value}
                   onChange={(value) => {
                     field.onChange(value);
-                    trigger("gender");
+                    trigger("location");
                   }}
                   error={fieldState.error?.message}
                 />
               )}
             />
           </label>
+          <label className={styles.label}>
+            О себе
+            <Controller
+              name="description"
+              control={control}
+              render={({ field, fieldState }) => (
+                <EditTextarea
+                  {...field}
+                  placeholder={"Введите описание"}
+                  label={"Описание"}
+                  onChange={(e) => {
+                    field.onChange(e.target.value);
+                    trigger("description");
+                  }}
+                  className={styles.description_field}
+                  hint={fieldState.error?.message}
+                />
+              )}
+            />
+          </label>
         </div>
-        <label className={styles.label}>
-          Город
+        <div className={styles.avatar_section}>
           <Controller
-            name="location"
+            name="avatar"
             control={control}
-            render={({ field, fieldState }) => (
-              <DropdownComponent
-                {...field}
-                options={cities}
-                placeholder={"Не указан"}
-                required={false}
-                value={field.value}
-                onChange={(value) => {
-                  field.onChange(value);
-                  trigger("location");
+            render={({ field }) => (
+              <ProfileAvatar
+                avatarUrl={previewUrl}
+                onAvatarChange={(file) => {
+                  setAvatar(file);
+                  field.onChange(file);
                 }}
-                error={fieldState.error?.message}
               />
             )}
           />
-        </label>
-        <label className={styles.label}>
-          О себе
-          <Controller
-            name="description"
-            control={control}
-            render={({ field, fieldState }) => (
-              <EditTextarea
-                {...field}
-                placeholder={"Введите описание"}
-                label={"Описание"}
-                onChange={(e) => {
-                  field.onChange(e.target.value);
-                  trigger("description");
-                }}
-                className={styles.description_field}
-                hint={fieldState.error?.message}
-              />
-            )}
-          />
-        </label>
+        </div>
         <Button
           onClick={() => {}}
           fullWidth
@@ -238,9 +277,6 @@ export const UserDataEditFrom = () => {
           Сохранить
         </Button>
       </form>
-      <div className={styles.avatar_section}>
-        <ProfileAvatar />
-      </div>
     </div>
   );
 };

@@ -32,11 +32,13 @@ export async function apiFileRequest<T>(
 ): Promise<T> {
   const url = `${API_BASE_URL}${endpoint}`;
 
-  const defaultHeaders = {};
+  const headers: HeadersInit = {
+    ...(options.headers ?? {}),
+  };
 
   const response = await fetch(url, {
     ...options,
-    headers: defaultHeaders,
+    headers: headers,
   });
 
   if (!response.ok) {

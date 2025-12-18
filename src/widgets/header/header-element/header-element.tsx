@@ -14,6 +14,7 @@ import type { IApiUser } from "../../../entities/types";
 import { useRegistrationAvatar } from "../../../shared/hooks/useRegistrationAvatar"; //удалить после маршрутизации авторизации, успешного создания карточки навыков и проверки location
 import { useTempSkillImages } from "../../../shared/hooks/useTempSkillImages"; //удалить после маршрутизации авторизации, успешного создания карточки навыков и проверки location
 import { useNavigate } from "react-router-dom";
+import avatarPlaceholder from "../../../assets/icons/avatar-placeholder.svg";
 
 type THeaderElementProps = {
   isFilterEnabled: boolean;
@@ -43,6 +44,7 @@ export const HeaderElement: FC<THeaderElementProps> = ({
     discardImages();
     navigate("/register/step1");
   };
+  const avatarSrc = user?.avatarUrl || avatarPlaceholder;
   return (
     <header ref={ref} className={styles.header}>
       <nav className={styles.menu}>
@@ -93,7 +95,7 @@ export const HeaderElement: FC<THeaderElementProps> = ({
               >
                 <span className={styles.user_name}>{user.name}</span>
                 <img
-                  src={user.avatarUrl}
+                  src={avatarSrc}
                   alt={`Аватар ${user.name}`}
                   className={styles.user_avatar}
                 />
